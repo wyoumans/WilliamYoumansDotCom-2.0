@@ -2586,3 +2586,5 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0; }
 
 body { border-top: 4px solid #cc6600; }
+
+.navbar ul li.cta { background-color: #3085d6; }

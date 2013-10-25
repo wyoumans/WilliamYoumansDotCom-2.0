@@ -68,22 +68,22 @@ $absurd: ms(10);
 
 $black: #000000;
 $white: #FFFFFF;
-$lightBlue: #AAC8E0;
-$darkBlue: #223344;
+$light-blue: #AAC8E0;
+$dark-blue: #223344;
 $orange: #CC6600;
-$darkOrange: #7f2b19;
+$dark-orange: #7f2b19;
 
 // Typography Colors
-$header-font-color: $darkBlue !default;
+$header-font-color: $dark-blue !default;
 $header-link-color: $orange !default;
-$header-link-hover-color: $darkOrange !default;
-$body-font-color: $darkBlue !default;
+$header-link-hover-color: $dark-orange !default;
+$body-font-color: $dark-blue !default;
 $body-link-color: $orange !default;
-$body-link-hover-color: $darkOrange !default;
+$body-link-hover-color: $dark-orange !default;
 
 // User Interface Colors
-$global-bg-color: $lightBlue;
-$navbar-color: $darkBlue;
+$global-bg-color: $light-blue;
+$navbar-color: $dark-blue;
 $navbar-link-color: #fff;
 
 $primary-color: #3085d6;
