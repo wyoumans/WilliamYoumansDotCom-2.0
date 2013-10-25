@@ -1,0 +1,22 @@
+{
+  "name": "WilliamYoumans",
+  "version": "2.0.0",
+  "homepage": "http://www.williamyoumans.com",
+  "authors": [
+    "William Youmans <will@williamyoumans.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gumby": "git://github.com/GumbyFramework/Gumby.git#~2.5.14",
+    "gumby-parallax": "~1.1.5"
+  }
+}
