@@ -1,31 +1,60 @@
+'use strict';
+
 (function() {
-  var animationSpeed = 1000
-    , easing = 'easeOutBack';
+  var animationSpeed = 1000,
+    beginPosition = '-2000px',
+    endPosition = 0,
+    easing = 'easeOutBack',
+    $leftText = $('h1 span.top'),
+    $rightText = $('h1 span.bottom');
+
+  var animation = {
+    inLeft: function(cb) {
+      cb = cb || function() {};
+
+      $leftText.animate({
+        left: endPosition
+      }, animationSpeed, easing, cb);
+    },
+
+    outLeft: function(cb) {
+      cb = cb || function() {};
+
+      setTimeout(function() {
+
+        $leftText.animate({
+          left: beginPosition
+        }, animationSpeed, easing, cb);
+      }, 1000);
+    },
+
+    inRight: function(cb) {
+      cb = cb || function() {};
+
+      $rightText.stop(true, true).animate({
+        right: endPosition
+      }, animationSpeed, easing, cb);
+    },
+
+    outRight: function(cb) {
+      cb = cb || function() {};
+
+      setTimeout(function() {
+
+        $rightText.stop(true, true).animate({
+          right: beginPosition
+        }, animationSpeed, easing, cb);
+      }, 1000);
+    }
+  };
 
   if ($('.masthead')) {
-    $('h1 span.top').animate({
-      left: 0
-    }, animationSpeed, easing, function() {
-      $('h1 span.bottom').animate({
-        right: 0
-      }, animationSpeed, easing);
-    });
+    animation.inLeft(
+      animation.inRight(
+        animation.outLeft(
+          animation.outRight
+        )
+      )
+    );
   }
 })();
-
-function inLeft() {
-
-}
-
-function outLeft() {
-
-}
-
-function inRight() {
-
-}
-
-function outRight() {
-
-}
-
