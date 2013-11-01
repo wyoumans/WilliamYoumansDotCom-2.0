@@ -26,27 +26,31 @@
 
 .masthead {
   position: relative;
-  height: 500px;
   width: 100%;
+  overflow: hidden;
   background: #266F9D url(/images/header/mountains.jpg) no-repeat center 0;
 
-  h1 {
-    position: relative;
+  .row {
+    height: 500px;
 
-    span {
-      background-color: rgba(255, 255, 255, 0.4);
-      display: inline-block;
-      position: absolute;
-      top: 60px;
-      padding: 0 10px 10px 10px;
+    h1 {
+      position: relative;
 
-      &.top {
-        left: -2000px;
-      }
+      span {
+        background-color: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+        position: absolute;
+        top: 60px;
+        padding: 0 10px 10px 10px;
 
-      &.bottom {
-        top: 173px;
-        right: -2000px;
+        &.top {
+          left: -2000px;
+        }
+
+        &.bottom {
+          top: 173px;
+          right: -2000px;
+        }
       }
     }
   }
