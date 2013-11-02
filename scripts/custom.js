@@ -5,8 +5,9 @@
       beginPosition  = '-2000px',
       endPosition    = 0,
       easing         = 'easeOutBack',
-      $leftText      = $('h1 span.top'),
-      $rightText     = $('h1 span.bottom');
+      $leftText      = $('.masthead h1 span.top'),
+      $rightText     = $('.masthead h1 span.bottom'),
+      $fullLogo      = $('.masthead .full-logo');
 
   var animation = {
     inLeft: function(cb) {
@@ -44,12 +45,16 @@
       $rightText.stop(true, false).animate({
         right: beginPosition
       }, animationSpeed, easing, cb);
-    },
-
-    bottomUp: function() {
-      cb = cb || function() {};
 
       cb();
+    },
+
+    bottomUp: function(cb) {
+      cb = cb || function() {};
+
+      $fullLogo.stop(true, false).animate({
+        bottom: endPosition
+      }, animationSpeed, easing, cb);
     }
   };
 
