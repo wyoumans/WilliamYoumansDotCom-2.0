@@ -10,10 +10,6 @@
   z-index: 999;
 }
 
-.navcontain {
-  height: auto;
-}
-
 .gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a {
   background: transparent;
 }
@@ -91,7 +87,7 @@
   background: #266F9D url(/images/header/mountains.jpg) no-repeat center 0;
 
   .row {
-    height: 500px;
+    height: 300px;
     position: relative;
 
     .btn.cta {
