@@ -14,6 +14,10 @@
   height: auto;
 }
 
+.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a {
+  background: transparent;
+}
+
 .navbar {
   z-index: 1000;
 
@@ -25,26 +29,34 @@
     }
 
     &:hover > a {
-      color: $white;
+      color: $orange;
+      border-bottom: 3px solid $orange;
     }
   }
 
-  .logo img {
+  .logo {
+    width: 373px;
     margin: 57px 0;
-    max-height: 100%;
+    display: block;
+  }
+
+  ul li, ul li > a {
+    height: 260px;
+    line-height: 258px;
   }
 
   ul li, ul li > a, .logo {
-    height: 260px;
-    line-height: 258px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   &.fixed {
     border-bottom: 1px solid $light-blue;
 
-    .logo img {
-      margin:   3px 0 0 0;
-      height: 90%;
+    .logo {
+      width: 150px;
+      margin: 0;
     }
 
     ul li {
@@ -82,7 +94,7 @@
       position: fixed;
       top: 0;
       left: 50%;
-      margin-left: 367px;
+      margin-left: 445px;
       z-index: 999;
     }
 
