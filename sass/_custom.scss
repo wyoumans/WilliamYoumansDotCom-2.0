@@ -10,13 +10,14 @@
   z-index: 999;
 }
 
+.navcontain {
+  height: auto;
+}
 
 .navbar {
   z-index: 1000;
 
   ul li {
-    height: 260px;
-    line-height: 258px;
 
     & > a {
       text-shadow: none;
@@ -28,18 +29,25 @@
     }
   }
 
-  &.unfixed {
-    ul li {
+  .logo img {
+    margin: 57px 0;
+    max-height: 100%;
+  }
 
-    }
+  ul li, ul li > a, .logo {
+    height: 260px;
+    line-height: 258px;
   }
 
   &.fixed {
     border-bottom: 1px solid $light-blue;
 
+    .logo img {
+      margin:   3px 0 0 0;
+      height: 90%;
+    }
+
     ul li {
-      height: 60px;
-      line-height: 58px;
 
       &.cta {
         background-color: $primary-color;
@@ -52,6 +60,11 @@
           background-color: $primary-hover-color;
         }
       }
+    }
+
+    ul li, ul li > a, .logo {
+      height: 60px;
+      line-height: 58px;
     }
   }
 }
