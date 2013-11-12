@@ -12,8 +12,12 @@
 
 
 .navbar {
+  z-index: 1000;
 
   ul li {
+    height: 260px;
+    line-height: 258px;
+
     & > a {
       text-shadow: none;
       font-weight: bold;
@@ -24,11 +28,20 @@
     }
   }
 
+  &.unfixed {
+    ul li {
+
+    }
+  }
+
   &.fixed {
+    border-bottom: 1px solid $light-blue;
 
-    ul {
+    ul li {
+      height: 60px;
+      line-height: 58px;
 
-      li.cta {
+      &.cta {
         background-color: $primary-color;
 
         & > a {
@@ -48,17 +61,17 @@
   overflow: hidden;
   background: #266F9D url(/images/header/mountains.jpg) no-repeat center 0;
 
-  .full-logo {
-    position: absolute;
-    width: 100%;
-    bottom: -500px;
-    left: 0;
-    text-align: center;
-  }
-
   .row {
     height: 500px;
     position: relative;
+
+    .btn.cta {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      margin-left: 367px;
+      z-index: 999;
+    }
 
     h1 {
       position: relative;
