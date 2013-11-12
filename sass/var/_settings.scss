@@ -94,7 +94,7 @@ $danger-color: #ca3838;
 $warning-color: #f6b83f;
 $success-color: #58c026;
 
-$primary-hover-color: $dark-orange;
+$primary-hover-color: #FF8000;
 $secondary-hover-color: $dark-blue;
 $default-hover-color: #ffffff;
 $info-hover-color: $secondary-hover-color;
@@ -134,7 +134,7 @@ $form-select-color: #555;
 $tab-height: 42px;
 
 // Navigation
-$navcontain-height: 120px; // makes space at the top of a document for when using a fixed nav
+$navcontain-height: 250px; // makes space at the top of a document for when using a fixed nav
 
 // Drawers & Modals
 $modal-overlay-color: rgba(0, 0, 0, 0.8);
