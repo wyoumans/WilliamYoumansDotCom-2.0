@@ -10,15 +10,34 @@
   z-index: 999;
 }
 
-.navbar.fixed {
 
-  ul {
+.navbar {
 
-    li.cta {
-      background-color: $primary-color;
+  ul li {
+    & > a {
+      text-shadow: none;
+      font-weight: bold;
+    }
 
-      &:hover {
-        background-color: $primary-hover-color;
+    &:hover > a {
+      color: $white;
+    }
+  }
+
+  &.fixed {
+
+    ul {
+
+      li.cta {
+        background-color: $primary-color;
+
+        & > a {
+          color: $white;
+        }
+
+        &:hover {
+          background-color: $primary-hover-color;
+        }
       }
     }
   }
