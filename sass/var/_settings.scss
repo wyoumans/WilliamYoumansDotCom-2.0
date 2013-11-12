@@ -82,9 +82,9 @@ $body-link-color: $orange !default;
 $body-link-hover-color: $dark-orange !default;
 
 // User Interface Colors
-$global-bg-color: $light-blue;
-$navbar-color: $dark-blue;
-$navbar-link-color: #fff;
+$global-bg-color: $white;
+$navbar-color: $white;
+$navbar-link-color: $dark-blue;
 
 $primary-color: $orange;
 $secondary-color: #689CD0;
@@ -95,7 +95,7 @@ $warning-color: #f6b83f;
 $success-color: #58c026;
 
 $primary-hover-color: $dark-orange;
-$secondary-hover-color: #486C90;
+$secondary-hover-color: $dark-blue;
 $default-hover-color: #ffffff;
 $info-hover-color: $secondary-hover-color;
 $danger-hover-color: #f14f4f;
@@ -134,7 +134,7 @@ $form-select-color: #555;
 $tab-height: 42px;
 
 // Navigation
-$navcontain-height: 80px; // makes space at the top of a document for when using a fixed nav
+$navcontain-height: 120px; // makes space at the top of a document for when using a fixed nav
 
 // Drawers & Modals
 $modal-overlay-color: rgba(0, 0, 0, 0.8);
