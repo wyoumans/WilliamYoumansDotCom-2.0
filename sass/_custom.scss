@@ -31,9 +31,15 @@
   }
 
   .logo {
-    width: 373px;
-    margin: 27px 0;
+    width: 100%;
+    line-height: 198px;
     display: block;
+    height: auto;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   ul li, ul li > a {
@@ -53,10 +59,6 @@
     .logo {
       width: 150px;
       margin: 0;
-
-      img {
-        margin: 3px 0 0 0;
-      }
     }
 
     ul li {
