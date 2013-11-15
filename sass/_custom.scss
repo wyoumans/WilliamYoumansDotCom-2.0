@@ -17,6 +17,17 @@
 .navbar {
   z-index: 1000;
 
+  @include respond(all-phones) {
+    z-index: 1;
+  }
+
+  ul.active {
+
+    @include respond(all-phones) {
+      margin-top: 10px;
+    }
+  }
+
   ul li {
 
     & > a {
@@ -27,6 +38,10 @@
     &:hover > a {
       color: $orange;
       border-bottom: 3px solid $orange;
+
+      @include respond(all-phones) {
+        border: 0;
+      }
     }
   }
 
@@ -35,6 +50,17 @@
     line-height: 198px;
     display: block;
     height: auto;
+
+    @include respond(all-phones) {
+      text-align: center;
+      padding-top: 10px;
+      height: auto;
+      line-height: 58px;
+
+      img {
+        max-width: 40%;
+      }
+    }
 
     img {
       display: inline-block;
@@ -45,6 +71,11 @@
   ul li, ul li > a {
     height: 200px;
     line-height: 198px;
+
+    @include respond(all-phones) {
+      height: 60px;
+      line-height: 58px;
+    }
   }
 
   ul li, ul li > a, .logo {
@@ -54,32 +85,35 @@
   }
 
   &.fixed {
-    border-bottom: 1px solid $light-blue;
 
-    .logo {
-      width: 150px;
-      margin: 0;
-    }
+    @include respond(desktop) {
+      border-bottom: 1px solid $light-blue;
 
-    ul li {
+      .logo {
+        width: 150px;
+        margin: 0;
+      }
 
-      &.cta {
-        background-color: $primary-color;
+      ul li {
 
-        & > a {
-          color: $white;
-          border: 0;
-        }
+        &.cta {
+          background-color: $primary-color;
 
-        &:hover {
-          background-color: $primary-hover-color;
+          & > a {
+            color: $white;
+            border: 0;
+          }
+
+          &:hover {
+            background-color: $primary-hover-color;
+          }
         }
       }
-    }
 
-    ul li, ul li > a, .logo {
-      height: 60px;
-      line-height: 58px;
+      ul li, ul li > a, .logo {
+        height: 60px;
+        line-height: 58px;
+      }
     }
   }
 }
@@ -93,11 +127,15 @@
     height: 300px;
     position: relative;
 
+    @include respond(all-phones) {
+      height: 192px;
+    }
+
     .btn.cta {
-      position: fixed;
+      position: absolute;
       top: 0;
-      left: 50%;
-      margin-left: 445px;
+      right: 0;
+      margin-right: 10px;
       z-index: 999;
     }
 
@@ -120,8 +158,23 @@
         &.bottom {
           top: 173px;
           right: -2000px;
+
+          @include respond(all-phones) {
+            top: 126px;
+          }
         }
       }
     }
+  }
+}
+
+h1 {
+
+  @include respond(tablets) {
+    @include font-size(42px);
+  }
+
+  @include respond(all-phones) {
+    @include font-size(28px);
   }
 }
