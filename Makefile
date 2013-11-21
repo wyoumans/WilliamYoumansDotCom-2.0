@@ -1,5 +1,5 @@
-BROWSERIFY_IN  := ./scripts/custom.js
-BROWSERIFY_OUT := ./scripts/custom-compiled.js
+BROWSERIFY_IN  := ./public/scripts/custom.js
+BROWSERIFY_OUT := ./public/scripts/custom-compiled.js
 
 browserify := ./node_modules/.bin/browserify
 
