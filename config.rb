@@ -12,7 +12,7 @@ Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{exten
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "styles"
+css_dir = "public/styles"
 sass_dir = "sass"
 images_dir = "images"
 

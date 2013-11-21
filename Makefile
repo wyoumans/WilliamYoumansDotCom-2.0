@@ -7,11 +7,6 @@ default: watch
 run:
 	@node app
 
-watch:
-	@echo
-	@echo Watching Assets
-	@./bin/watch.sh
-
 browserify:
 	@echo
 	@echo Browserifying...
@@ -26,4 +21,4 @@ compass:
 build:
 	@./bin/build.sh
 
-.PHONY: browserify compass watch build run
+.PHONY: browserify compass build run

@@ -40,8 +40,8 @@ function minifyJS(done) {
 function minifyCSS(done) {
     new compressor.minify({
         type: 'yui-css',
-        fileIn: 'styles/styles.css',
-        fileOut: 'styles/styles.min.css',
+        fileIn: 'public/styles/styles.css',
+        fileOut: 'public/styles/styles.min.css',
         callback: function(err) {
             console.log('Screen styles minified');
             return done(err);
