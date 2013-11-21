@@ -3,19 +3,19 @@
 @import "modular-scale";
 
 @import "var/settings";
-@import "../bower_components/gumby/sass/var/lists";
-@import "../bower_components/gumby/sass/var/icons/entypo";
+@import "../public/bower_components/gumby/sass/var/lists";
+@import "../public/bower_components/gumby/sass/var/icons/entypo";
 
 @import "compass";
 @import "compass/reset";
 
-@import "../bower_components/gumby/sass/functions/all";
+@import "../public/bower_components/gumby/sass/functions/all";
 
-@import "../bower_components/gumby/sass/base";
+@import "../public/bower_components/gumby/sass/base";
 @import "fonts";
-@import "../bower_components/gumby/sass/typography";
-@import "../bower_components/gumby/sass/grid";
-@import "../bower_components/gumby/sass/ui/all";
-@import "../bower_components/gumby/sass/shame";
+@import "../public/bower_components/gumby/sass/typography";
+@import "../public/bower_components/gumby/sass/grid";
+@import "../public/bower_components/gumby/sass/ui/all";
+@import "../public/bower_components/gumby/sass/shame";
 
 @import "custom";
