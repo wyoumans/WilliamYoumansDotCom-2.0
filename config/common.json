@@ -1,0 +1,8 @@
+{
+  "port": 3000,
+  "mongoConnectionString": "mongodb://localhost/williamyoumans",
+  "lastfm": {
+    "key": "ea1203191fb91dbaa0077e73aaef7d70",
+    "secret": "f00e2bfb9cdf8f5ffc75d42674f4844c"
+  }
+}
