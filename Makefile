@@ -4,6 +4,8 @@ BROWSERIFY_OUT := ./scripts/custom-compiled.js
 browserify := ./node_modules/.bin/browserify
 
 default: watch
+run:
+	@node app
 
 watch:
 	@echo
@@ -24,4 +26,4 @@ compass:
 build:
 	@./bin/build.sh
 
-.PHONY: browserify compass watch build
+.PHONY: browserify compass watch build run
