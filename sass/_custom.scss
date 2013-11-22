@@ -173,3 +173,7 @@ h1 {
     @include font-size(28px);
   }
 }
+
+.main-content {
+  min-height: 500px;
+}
