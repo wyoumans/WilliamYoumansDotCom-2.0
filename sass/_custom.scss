@@ -31,17 +31,12 @@
   ul li {
 
     & > a {
-      text-shadow: none;
+      @include text-shadow(none);
       font-weight: bold;
     }
 
     &:hover > a {
       color: $orange;
-      border-bottom: 3px solid $orange;
-
-      @include respond(all-phones) {
-        border: 0;
-      }
     }
   }
 
