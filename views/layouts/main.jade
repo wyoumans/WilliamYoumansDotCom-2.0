@@ -48,9 +48,14 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     meta(name='msapplication-square70x70logo', content='/mstile-70x70.png')
     meta(name='msapplication-square150x150logo', content='/mstile-150x150.png')
     meta(name='msapplication-square310x310logo', content='/mstile-310x310.png')
+
+    //- Viewport
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
+
+    //- Styles
     link(rel='stylesheet', href='/styles/styles.css')
     script(src='/bower_components/gumby/js/libs/modernizr-2.6.2.min.js')
+
   body
     .row
       .fixed-stripe
@@ -93,7 +98,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
                   i.icon-phone
 
     //- Content
-    section#main
+    section#main.main-content
       block content
 
     footer
