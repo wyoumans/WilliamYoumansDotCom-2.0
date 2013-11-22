@@ -1,7 +1,6 @@
 'use strict';
 
-var getHistory = require('lastfm-history')
-  , config = require('../config')
+var config = require('../config')
   ;
 
 module.exports.init = function(app) {
@@ -11,8 +10,6 @@ module.exports.init = function(app) {
   app.get('/blog', blog);
   app.get('/about', about);
   app.get('/contact', contact);
-
-  // app.get('/last', last);
 };
 
 function index(req, res) {
@@ -48,30 +45,5 @@ function about(req, res) {
 function contact(req, res) {
   res.render('generic', {
     title: 'Request a Quote'
-  });
-}
-
-function last(req, res) {
-
-  var worker = getHistory('gotwilly', config.lastfm.key);
-
-  worker.on('page', function(tracks, meta) {
-    console.log(tracks.length + ' scrobbles just pulled');
-    console.log('meta:', meta);
-    console.log(tracks);
-    // store into database or file etc.
-  });
-
-  worker.on('complete', function() {
-    console.log('complete');
-    // start processing knowing you've got the whole dataset
-  });
-
-  worker.on('error', function(err) {
-    console.log('err:', err);
-  });
-
-  res.render('generic', {
-    title: 'Last FM'
   });
 }
