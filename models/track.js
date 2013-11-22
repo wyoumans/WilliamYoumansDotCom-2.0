@@ -3,9 +3,13 @@
 var Schema = require('mongoose').Schema;
 
 var TrackSchema = new Schema({
-  mbid: String, //last.fm identifier
+  mbid: { // last.fm identifier
+    type: String,
+    required: true,
+    unique: true,
+    index: true
+  },
   href: String,
-  slug: String,
   name: String,
   artist: String,
   album: String,
