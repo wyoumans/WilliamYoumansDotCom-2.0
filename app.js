@@ -4,7 +4,6 @@ var express   = require('express')
   , conductor = require('express-conductor')
   , http      = require('http')
   , path      = require('path')
-  , middleware= require('./middleware')
   , config    = require('./config')
   , models    = require('./models') // register models
   , app       = express()
@@ -24,7 +23,6 @@ app.configure(function() {
   app.use(express.methodOverride());
   app.use(express.cookieParser('mkn4xtk8xen9fixn0m9m'));
   app.use(express.session());
-  app.use(middleware.footerContent());
 
   app.use(express.static(path.join(__dirname, 'public'), {
     redirect: false

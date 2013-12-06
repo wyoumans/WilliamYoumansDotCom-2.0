@@ -2,7 +2,7 @@
 
 var getHistory = require('lastfm-history')
   , config     = require('../config')
- , worker     = getHistory('gotwilly', config.lastfm.key)
+  , worker     = getHistory('gotwilly', config.lastfm.key)
   , Track      = require('../models').Track
   , async      = require('async')
   , _          = require('lodash')
@@ -33,7 +33,7 @@ var getHistory = require('lastfm-history')
         name: trackData.name,
         artist: trackData.artist['#text'],
         album: trackData.album['#text'],
-        imageHref: _.last(trackData.image)['#text'], // largest image we can get
+        imageSrc: _.last(trackData.image)['#text'], // largest image we can get
         scrobbleDate: scrobbleDate
       }
 

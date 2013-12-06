@@ -1,15 +1,16 @@
 'use strict';
 
 var config = require('../config')
+  , globals = require('../middleware').globals
   ;
 
 module.exports.init = function(app) {
-  app.get('/', index);
-  app.get('/portfolio', portfolio);
-  app.get('/services', services);
-  app.get('/blog', blog);
-  app.get('/about', about);
-  app.get('/contact', contact);
+  app.get('/', globals, index);
+  app.get('/portfolio', globals, portfolio);
+  app.get('/services', globals, services);
+  app.get('/blog', globals, blog);
+  app.get('/about', globals, about);
+  app.get('/contact', globals, contact);
 };
 
 function index(req, res) {
