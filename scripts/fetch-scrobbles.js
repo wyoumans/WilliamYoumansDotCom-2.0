@@ -16,21 +16,25 @@ var getHistory = require('lastfm-history')
   worker.on('page', function(tracks, meta) {
 
     async.each(tracks, function(trackData, done) {
-      var scrobbleDate = undefined;
+      var scrobbleDate = undefined,
+          lastid       = undefined;
+
       if (trackData.date) {
         scrobbleDate = new Date(trackData.date['#text']);
+        lastid = trackData.date.uts;
       } else {
         scrobbleDate = new Date();
+        lastid = scrobbleDate.toTime();
       }
 
       var track = {
-        mbid: trackData.mbid,
+        lastid: lastid,
         href: trackData.url,
         name: trackData.name,
         artist: trackData.artist['#text'],
         album: trackData.album['#text'],
         imageHref: _.last(trackData.image)['#text'], // largest image we can get
-        strobbleDate: scrobbleDate
+        scrobbleDate: scrobbleDate
       }
 
       new Track(track).save(done);
