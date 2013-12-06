@@ -101,10 +101,42 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     section#main.main-content
       block content
 
-    footer
+    footer.main-footer
       .row
-        .twelve.columns
-          p &copy; 2013 William Youmans
+        .four.columns
+          h3 Currently Seeing
+            i.icon-camera
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra.
+
+        .four.columns
+          h3 Currently Watching
+            i.icon-play
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra.
+
+        .four.columns
+          h3 Currently Listening
+            i.icon-note-beamed
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra.
+
+      .extra-footer
+        .row
+          .four.columns
+            p &copy; #{new Date().getFullYear()} William Youmans
+
+          .four.columns.text-center
+            p
+              a(href='https://github.com/wyoumans', target='_blank'): i.icon-github
+              a(href='https://www.facebook.com/wyoumans', target='_blank'): i.icon-facebook
+              a(href='https://twitter.com/wyoumansdev', target='_blank'): i.icon-twitter
+              a(href='http://instagram.com/cwyouman', target='_blank'): i.icon-instagram
+              a(href='http://www.last.fm/user/gotwilly', target='_blank'): i.icon-lastfm
+              a(href='/', target='_blank'): i.icon-rss
+
+
+          .four.columns
+            p
+              i.icon-mail
+              a(href="mailto:hello@williamyoumans.com") hello@williamyoumans.com
 
     script.
       var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\\soldie\s/g));
