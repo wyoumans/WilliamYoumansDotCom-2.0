@@ -7,7 +7,7 @@ var TrackSchema = new Schema({
   name: String,
   artist: String,
   album: String,
-  imageHref: String,
+  imageSrc: String,
   scrobbleDate: Date,
   lastid: {
     type: String,

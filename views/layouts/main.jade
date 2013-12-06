@@ -106,9 +106,9 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
         .four.columns
           h3 Currently Seeing
             i.icon-camera
-          .row
-            a.columns.centered.eight.image.photo(href=locals.footerContent.photo.href, target='_blank')
-              img(src=locals.footerContent.photo.src, alt='Latest from Instagram', title='Latest from Instagram')
+          .row.image-row
+            a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.photo.href, target='_blank', data-tooltip='Latest from Instagram')
+              img(src=locals.footerContent.photo.src, alt='Latest from Instagram')
 
         .four.columns
           h3 Currently Watching
@@ -118,7 +118,9 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
         .four.columns
           h3 Currently Listening
             i.icon-note-beamed
-          .text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra.
+          .row.image-row
+            a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.track.href, target='_blank', data-tooltip=locals.footerContent.track.date_formatted)
+              img(src=locals.footerContent.track.imageSrc, alt=locals.footerContent.track.name)
 
       .extra-footer
         .row
