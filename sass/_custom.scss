@@ -1,5 +1,4 @@
 // Custom SASS
-
 .fixed-stripe {
   height: 4px;
   position: fixed;
@@ -176,4 +175,26 @@ h1 {
 
 .main-content {
   min-height: 500px;
+}
+
+.main-footer {
+  background-color: $footer-gray;
+  color: $footer-font-color;
+
+  a {
+    @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
+  }
+
+  .extra-footer {
+    background-color: #1C1C1C;
+    padding-top: 5px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+
+  h3 i {
+    margin-left: 20px;
+  }
 }

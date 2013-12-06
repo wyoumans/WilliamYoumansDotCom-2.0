@@ -72,6 +72,8 @@ $light-blue: #AAC8E0;
 $dark-blue: #223344;
 $orange: #CC6600;
 $dark-orange: #8C4600;
+$footer-gray: #292727;
+$light-gray: #CCCCCC;
 
 // Typography Colors
 $header-font-color: $dark-blue !default;
@@ -80,6 +82,9 @@ $header-link-hover-color: $dark-orange !default;
 $body-font-color: $dark-blue !default;
 $body-link-color: $orange !default;
 $body-link-hover-color: $dark-orange !default;
+$footer-font-color: $white !default;
+$footer-link-color: $light-gray !default;
+$footer-link-hover-color: $white !default;
 
 // User Interface Colors
 $global-bg-color: $white;
