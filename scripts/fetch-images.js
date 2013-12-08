@@ -1,10 +1,10 @@
 'use strict';
 
-var ig     = require('instagram-node').instagram()
-  , config = require('../config')
-  , Image  = require('../models').Image
-  , async  = require('async')
-  , _      = require('lodash')
+var Instagram = require('instagram-node-ib')
+  , config    = require('../config')
+  , Image     = require('../models').Image
+  , async     = require('async')
+  , _         = require('lodash')
   ;
 
 (function() {
@@ -12,7 +12,9 @@ var ig     = require('instagram-node').instagram()
   console.log();
   console.log('============ Beginning Instagram Import ============');
 
-  ig.use({ client_id: config.instagram.key, client_secret: config.instagram.secret });
+  Instagram.set('client_id', config.instagram.key);
+  Instagram.set('client_secret', config.instagram.secret);
+  Instagram.set('access_token', config.instagram.token);
 
   ig.user('cwyouman', function(err, result, limit) {
 
