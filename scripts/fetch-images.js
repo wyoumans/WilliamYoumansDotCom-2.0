@@ -16,15 +16,11 @@ var Instagram = require('instagram-node-ib')
   Instagram.set('client_secret', config.instagram.secret);
   Instagram.set('access_token', config.instagram.token);
 
-  ig.user('cwyouman', function(err, result, limit) {
+  console.log(Instagram.users.recent({
+    user_id: config.instagram.userid
+  }));
 
-    console.log('err', err);
-    console.log('result', result);
-    console.log('limit', limit);
-
-    console.log();
-    console.log('============ Instagram Import Complete ============');
-    process.exit();
-  });
-
+  console.log();
+  console.log('============ Instagram Import Complete ============');
+  process.exit();
 })();
