@@ -9,20 +9,25 @@ module.exports = function(req, res, next) {
       scrobbleDate: -1
     }
   }, function(err, track) {
-    res.locals.footerContent = {
-      photo: {
-        src: 'http://distilleryimage2.s3.amazonaws.com/d8c6fbcc5ddc11e39703123fed77b305_6.jpg',
-        href: 'http://instagram.com/p/hjOTaDMslK/'
-      },
-      movie: {},
-      track: {}
-    };
+    models.Image.findOne({}, 'postDate href src', {
+      sort: {
+        postDate: -1
+      }
+    }, function(err, image) {
 
-    if (track) {
-      track.date_formatted = moment(track.scrobbleDate).fromNow();
-      res.locals.footerContent.track = track;
-    }
+      res.locals.footerContent = {};
 
-    return next();
+      if (track) {
+        track.date_formatted = moment(track.scrobbleDate).fromNow();
+        res.locals.footerContent.track = track;
+      }
+
+      if (image) {
+        image.date_formatted = moment(image.postDate).fromNow();
+        res.locals.footerContent.image = image;
+      }
+
+      return next();
+    });
   });
 }

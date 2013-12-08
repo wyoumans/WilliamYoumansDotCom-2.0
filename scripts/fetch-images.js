@@ -1,10 +1,10 @@
 'use strict';
 
-var Instagram = require('instagram-node-ib')
-  , config    = require('../config')
-  , Image     = require('../models').Image
-  , async     = require('async')
-  , _         = require('lodash')
+var ig     = require('instagram-node').instagram()
+  , config = require('../config')
+  , Image  = require('../models').Image
+  , async  = require('async')
+  , _      = require('lodash')
   ;
 
 (function() {
@@ -12,15 +12,39 @@ var Instagram = require('instagram-node-ib')
   console.log();
   console.log('============ Beginning Instagram Import ============');
 
-  Instagram.set('client_id', config.instagram.key);
-  Instagram.set('client_secret', config.instagram.secret);
-  Instagram.set('access_token', config.instagram.token);
+  ig.use({
+    // client_id: config.instagram.key,
+    // client_secret: config.instagram.secret,
+    access_token: config.instagram.token
+  });
 
-  console.log(Instagram.users.recent({
-    user_id: config.instagram.userid
-  }));
+  ig.user_media_recent(config.instagram.userid, function(err, medias, pagination, limit) {
+    if (medias && medias.length > 0) {
 
-  console.log();
-  console.log('============ Instagram Import Complete ============');
-  process.exit();
+      console
+
+      async.each(medias, function(media, done) {
+        var image = {
+          instid: media.id,
+          href: media.link,
+          src: media.images.low_resolution.url,
+          postDate: new Date(0).setUTCSeconds(media.created_time)
+        }
+
+        new Image(image).save(function(err) {
+
+          // prevent db errors from stopping the script
+          done(null);
+        });
+      }, function(err) {
+        if (err) {
+          console.error(err);
+        }
+
+        console.log();
+        console.log('============ Instagram Import Complete ============');
+        process.exit();
+      });
+    }
+  });
 })();
