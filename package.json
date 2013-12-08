@@ -21,6 +21,7 @@
     "confrodo": "0.0.5",
     "express": "~3.4.4",
     "express-conductor": "~1.0.1",
+    "instagram-node": "~0.1.13",
     "jade": "~0.35.0",
     "lastfm-history": "~0.1.2",
     "lodash": "~2.3.0",
@@ -29,7 +30,5 @@
     "mongoose-createdmodified": "0.0.2",
     "string-capitalize": "~1.0.1"
   },
-  "devDependencies": {
-    "node-minify": "0.7.4"
-  }
+  "devDependencies": {}
 }
