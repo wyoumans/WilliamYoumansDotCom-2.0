@@ -49,7 +49,7 @@ var getHistory = require('lastfm-history')
 
   worker.on('complete', function() {
     console.log();
-    console.log('============ Last FM Import  Complete ============');
+    console.log('============ Last FM Import Complete ============');
     process.exit();
   });
 
