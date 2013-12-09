@@ -3,12 +3,21 @@
 var Schema = require('mongoose').Schema;
 
 var TrackSchema = new Schema({
-  href: String,
+  href: {
+    type: String,
+    required: true
+  },
   name: String,
   artist: String,
   album: String,
-  imageSrc: String,
-  scrobbleDate: Date,
+  imageSrc: {
+    type: String,
+    required: true
+  },
+  scrobbleDate: {
+    type: Date,
+    required: true
+  },
   lastid: {
     type: String,
     required: true,
