@@ -27,6 +27,12 @@ module.exports = function(req, res, next) {
         res.locals.footerContent.image = image;
       }
 
+      // temporary hard coded movie
+      res.locals.footerContent.movie = {
+        href: 'http://www.amazon.com/Love-actually-Craig-Armstrong/dp/B0000DZ3IG/',
+        src: 'http://ecx.images-amazon.com/images/I/51pXi2GBEML._SX300_.jpg'
+      };
+
       return next();
     });
   });
