@@ -1,0 +1,15 @@
+{
+  "mongoConnectionString": "mongodb://localhost/williamyoumans",
+  "port": 3000,
+  "env": "",
+  "lastfm": {
+    "key": "",
+    "secret": ""
+  },
+  "instagram": {
+    "key": "",
+    "secret": "",
+    "token": "",
+    "userid": 12345
+  }
+}

@@ -37,13 +37,19 @@ var getHistory = require('lastfm-history')
         scrobbleDate: scrobbleDate
       }
 
-      new Track(track).save(done);
+      new Track(track).save(function(err) {
+          // prevent db errors from stopping the script
+          done(null);
+        });
     }, function(err) {
       if (err) {
         console.error(err);
       }
 
-      console.log('Completed page', meta.page + ' of ' + meta.totalPages);
+      // only care about one page
+      console.log();
+      console.log('============ Last FM Import Complete ============');
+      process.exit();
     });
   });
 
