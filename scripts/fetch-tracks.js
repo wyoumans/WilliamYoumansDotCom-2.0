@@ -21,10 +21,10 @@ var getHistory = require('lastfm-history')
 
       if (trackData.date) {
         scrobbleDate = new Date(trackData.date['#text']);
+        scrobbleDate.setHours(scrobbleDate.getHours() - 7);
         lastid = trackData.date.uts;
       } else {
-        scrobbleDate = new Date();
-        lastid = scrobbleDate.toTime();
+        return done();
       }
 
       var track = {
