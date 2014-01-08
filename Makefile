@@ -21,4 +21,8 @@ compass:
 build:
 	@./bin/build.sh
 
-.PHONY: browserify compass build run
+update:
+	@node scripts/fetch-images.js
+	@node scripts/fetch-tracks.js
+
+.PHONY: browserify compass build update run
