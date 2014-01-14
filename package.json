@@ -30,5 +30,7 @@
     "mongoose-createdmodified": "0.0.2",
     "string-capitalize": "~1.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-minify": "~0.8.2"
+  }
 }
