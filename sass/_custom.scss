@@ -81,7 +81,7 @@
   &.fixed {
 
     @include respond(desktop) {
-      border-bottom: 1px solid $light-blue;
+      border-bottom: 1px solid $light-gray;
 
       .logo {
         width: 150px;
@@ -180,6 +180,7 @@ h1 {
 .main-footer {
   background-color: $footer-gray;
   color: $footer-font-color;
+  margin-top: 50px;
 
   a {
     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
