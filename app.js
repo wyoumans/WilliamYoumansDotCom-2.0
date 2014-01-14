@@ -26,7 +26,7 @@ app.configure(function() {
   app.use(express.urlencoded());
   app.use(express.methodOverride());
   app.use(express.cookieParser('mkn4xtk8xen9fixn0m9m'));
-  app.use(express.session());
+  // app.use(express.session());
 
   app.use(express.static(path.join(__dirname, 'public'), {
     redirect: false
