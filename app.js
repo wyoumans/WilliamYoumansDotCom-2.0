@@ -11,6 +11,10 @@ var express   = require('express')
 
 app.enable('trust proxy');
 
+app.locals({
+  NODE_ENV: process.env.NODE_ENV
+});
+
 app.configure(function() {
   app.set('port', config.port);
 
