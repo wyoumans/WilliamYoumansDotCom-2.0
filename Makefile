@@ -8,7 +8,7 @@ default: watch
 run:
 	@node app
 
-run-production:
+run-forever:
 	@$(forever) start --minUptime 1000 --spinSleepTime 1000 app.js
 
 browserify:
@@ -25,4 +25,4 @@ compass:
 build:
 	@./bin/build.sh
 
-.PHONY: browserify compass build run
+.PHONY: browserify compass build run run-forever
