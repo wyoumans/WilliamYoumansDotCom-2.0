@@ -2,6 +2,7 @@
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
   "port": 3000,
   "env": "",
+  "logToFile": true,
   "lastfm": {
     "key": "",
     "secret": ""
