@@ -19,6 +19,7 @@
     "browserify": "~2.35.4",
     "compass": "~0.1.0",
     "confrodo": "0.0.5",
+    "cron": "~1.0.1",
     "express": "~3.4.4",
     "express-conductor": "~1.0.1",
     "instagram-node": "~0.1.13",
