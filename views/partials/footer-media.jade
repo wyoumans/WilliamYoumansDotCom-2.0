@@ -1,0 +1,30 @@
+.row
+  .four.columns
+    h3 Currently Seeing
+      i.icon-camera
+    if locals.footerContent.image
+      .row.image-row
+        a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.image.href, target='_blank', data-tooltip=locals.footerContent.image.date_formatted)
+          img(src=locals.footerContent.image.src, alt='Latest from Instagram')
+    else
+      p Nothing to report
+
+  .four.columns
+    h3 Currently Watching
+      i.icon-play
+    if locals.footerContent.movie
+      .row.image-row
+        a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.movie.href, target='_blank', data-tooltip='Latest from Netflix')
+          img(src=locals.footerContent.movie.src, alt='Latest from Netflix')
+    else
+      p Nothing to report
+
+  .four.columns
+    h3 Currently Listening
+      i.icon-note-beamed
+    if locals.footerContent.track
+      .row.image-row
+        a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.track.href, target='_blank', data-tooltip=locals.footerContent.track.date_formatted)
+          img(src=locals.footerContent.track.imageSrc, alt=locals.footerContent.track.name)
+    else
+      p Nothing to report
