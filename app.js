@@ -70,7 +70,7 @@ conductor.init(app, {
 }, function(err, app) {
 
   app.get('*', function(req, res) {
-    logger.error('404: ' + req.url);
+    logger.warn('404: ' + req.url);
     return res.status(404).render('errors/404');
   });
 
