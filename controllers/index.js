@@ -15,7 +15,8 @@ module.exports.init = function(app) {
 
 function index(req, res) {
   render(res, 'home', {
-    showMastHead: true
+    showMastHead: true,
+    showFooterMedia: true
   });
 }
 

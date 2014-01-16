@@ -29,8 +29,8 @@ module.exports = function(req, res, next) {
 
       // temporary hard coded movie
       res.locals.footerContent.movie = {
-        href: 'http://www.amazon.com/Love-actually-Craig-Armstrong/dp/B0000DZ3IG/',
-        src: 'http://ecx.images-amazon.com/images/I/51pXi2GBEML._SX300_.jpg'
+        href: 'http://www.amazon.com/Star-Trek-VI-Undiscovered-Theatrical/dp/B000I3P3EM',
+        src: 'http://ecx.images-amazon.com/images/I/51yLQ9m7EcL._SX215_.jpg'
       };
 
       return next();
