@@ -17,8 +17,14 @@ var express    = require('express')
 
 app.enable('trust proxy');
 
+// default locals
 app.locals({
-  NODE_ENV: config.env
+  NODE_ENV: config.env,
+  bodyClass: '',
+  metaDescription: 'William Youmans is a software developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
+  metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
+  browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
+  showMastHead: false
 });
 
 app.configure('local', function() {
