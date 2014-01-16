@@ -11,7 +11,7 @@ var getHistory = require('lastfm-history')
 
 (function() {
 
-  logger.info('============ Beginning Last FM Import ============');
+  logger.info('Beginning Last FM Import');
 
   worker.on('page', function(tracks, meta) {
 
@@ -47,13 +47,13 @@ var getHistory = require('lastfm-history')
       }
 
       // only care about one page
-      logger.info('============ Last FM Import Complete ============');
+      logger.info('Last FM Import Complete');
       process.exit();
     });
   });
 
   worker.on('complete', function() {
-    logger.info('============ Last FM Import Complete ============');
+    logger.info('Last FM Import Complete');
     process.exit();
   });
 

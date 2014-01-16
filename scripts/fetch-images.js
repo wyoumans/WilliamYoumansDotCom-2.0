@@ -10,7 +10,7 @@ var ig     = require('instagram-node').instagram()
 
 (function() {
 
-  logger.info('============ Beginning Instagram Import ============');
+  logger.info('Beginning Instagram Import');
 
   ig.use({
     // client_id: config.instagram.key,
@@ -39,7 +39,7 @@ var ig     = require('instagram-node').instagram()
           logger.error(err);
         }
 
-        logger.info('============ Instagram Import Complete ============');
+        logger.info('Instagram Import Complete');
         process.exit();
       });
     }
