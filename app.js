@@ -8,6 +8,7 @@ var express    = require('express')
   , middleware = require('./middleware')
   , config     = require('./config')
   , models     = require('./models') // register models
+  , cronJobs   = require('./lib').cronJobs
   , app        = express()
   ;
 
@@ -24,7 +25,8 @@ app.locals({
   metaDescription: 'William Youmans is a software developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
   metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
   browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
-  showMastHead: false
+  showMastHead: false,
+  showFooterMedia: false,
 });
 
 app.configure('local', function() {
@@ -55,10 +57,12 @@ app.configure(function() {
 });
 
 app.configure('staging', function() {
+  cronJobs.start();
   app.use(middleware.errorHandler());
 });
 
 app.configure('production', function() {
+  cronJobs.start();
   app.use(middleware.errorHandler());
 });
 
@@ -67,7 +71,7 @@ conductor.init(app, {
 }, function(err, app) {
 
   app.get('*', function(req, res) {
-    logger.error('404: ' + req.url);
+    logger.warn('404: ' + req.url);
     return res.status(404).render('errors/404');
   });
 

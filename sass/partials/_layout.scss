@@ -1,5 +1,5 @@
 .fixed-stripe {
-  height: 4px;
+  height: 5px;
   position: fixed;
   top: 0;
   left: 0;
@@ -111,54 +111,8 @@
   }
 }
 
-.masthead {
-  width: 100%;
-  overflow: hidden;
-  background: $dark-blue url(/images/header/mountains.jpg) no-repeat center 0;
-
-  .row {
-    height: 300px;
-    position: relative;
-
-    @include respond(all-phones) {
-      height: 192px;
-    }
-
-    .btn.cta {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-right: 10px;
-      z-index: 999;
-    }
-
-    h1 {
-      position: relative;
-
-      span {
-        display: inline-block;
-        top: 60px;
-        padding: 0 10px 10px 10px;
-        white-space: nowrap;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.4);
-        @include text-shadow(rgba($white, 0.4) 2px 2px 3px);
-
-        &.top {
-          left: -2000px;
-        }
-
-        &.bottom {
-          top: 173px;
-          right: -2000px;
-
-          @include respond(all-phones) {
-            top: 126px;
-          }
-        }
-      }
-    }
-  }
+.header-spacer {
+  height: 5px;
 }
 
 .main-content {
@@ -181,17 +135,5 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: $white;
-  }
-
-  h3 i {
-    margin-left: 20px;
-  }
-
-  .image-row {
-    margin-top: 10px;
-
-    a {
-      display: block;
-    }
   }
 }

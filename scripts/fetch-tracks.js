@@ -2,6 +2,7 @@
 
 var getHistory = require('lastfm-history')
   , config     = require('../config')
+  , logger     = require('../lib').logger
   , worker     = getHistory('gotwilly', config.lastfm.key)
   , Track      = require('../models').Track
   , async      = require('async')
@@ -10,8 +11,7 @@ var getHistory = require('lastfm-history')
 
 (function() {
 
-  console.log();
-  console.log('============ Beginning Last FM Import ============');
+  logger.info('Beginning Last FM Import');
 
   worker.on('page', function(tracks, meta) {
 
@@ -43,24 +43,22 @@ var getHistory = require('lastfm-history')
         });
     }, function(err) {
       if (err) {
-        console.error(err);
+        logger.error(err);
       }
 
       // only care about one page
-      console.log();
-      console.log('============ Last FM Import Complete ============');
+      logger.info('Last FM Import Complete');
       process.exit();
     });
   });
 
   worker.on('complete', function() {
-    console.log();
-    console.log('============ Last FM Import Complete ============');
+    logger.info('Last FM Import Complete');
     process.exit();
   });
 
   worker.on('error', function(err) {
-    console.log('err:', err);
+    logger.error(err);
     process.exit();
   });
 })();
