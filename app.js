@@ -8,6 +8,7 @@ var express    = require('express')
   , middleware = require('./middleware')
   , config     = require('./config')
   , models     = require('./models') // register models
+  , cronJobs   = require('./lib').cronJobs
   , app        = express()
   ;
 
@@ -55,10 +56,12 @@ app.configure(function() {
 });
 
 app.configure('staging', function() {
+  cronJobs.start();
   app.use(middleware.errorHandler());
 });
 
 app.configure('production', function() {
+  cronJobs.start();
   app.use(middleware.errorHandler());
 });
 
