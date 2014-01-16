@@ -106,7 +106,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
       block content
 
     footer.main-footer.text-center
-      if locals.footerContent
+      if locals.footerContent && locals.showFooterMedia
         .row
           .four.columns
             h3 Currently Seeing
