@@ -4,16 +4,29 @@ var express    = require('express')
   , conductor  = require('express-conductor')
   , http       = require('http')
   , path       = require('path')
+  , logger     = require('./lib').logger
   , middleware = require('./middleware')
   , config     = require('./config')
   , models     = require('./models') // register models
   , app        = express()
   ;
 
+/*
+  PLEASE NOTE: The order of the following calls matters! Adjust at your own risk.
+ */
+
 app.enable('trust proxy');
 
 app.locals({
   NODE_ENV: config.env
+});
+
+app.configure('local', function() {
+  app.use(express.logger('dev'));
+});
+
+app.configure('testing', function() {
+  app.use(express.logger('dev'));
 });
 
 app.configure(function() {
@@ -35,9 +48,12 @@ app.configure(function() {
   app.use(app.router);
 });
 
-app.configure('local', function() {
-  app.use(express.logger('dev'));
-  app.use(express.errorHandler());
+app.configure('staging', function() {
+  app.use(middleware.errorHandler());
+});
+
+app.configure('production', function() {
+  app.use(middleware.errorHandler());
 });
 
 conductor.init(app, {
@@ -45,10 +61,11 @@ conductor.init(app, {
 }, function(err, app) {
 
   app.get('*', function(req, res) {
+    logger.error('404: ' + req.url);
     return res.status(404).render('errors/404');
   });
 
   http.createServer(app).listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + app.get('port'));
+    logger.info('Express server listening on port ' + app.get('port'));
   });
 });
