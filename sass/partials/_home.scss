@@ -49,4 +49,23 @@ body.home {
       }
     }
   }
+
+  .footer-media {
+
+    h3 i {
+      margin-left: 20px;
+    }
+
+    .image-row {
+      margin-top: 10px;
+
+      a {
+        display: inline-block;
+
+        img {
+          height: 268px;
+        }
+      }
+    }
+  }
 }
