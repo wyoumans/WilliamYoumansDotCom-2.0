@@ -25,7 +25,8 @@ app.locals({
   metaDescription: 'William Youmans is a software developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
   metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
   browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
-  showMastHead: false
+  showMastHead: false,
+  showFooterMedia: false,
 });
 
 app.configure('local', function() {
