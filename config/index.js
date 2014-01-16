@@ -4,6 +4,8 @@ var defaults = {
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
   "port": 3000,
   "logToFile": true,
+  "serverEmail": "no-reply@williamyoumans.com",
+  "adminEmail": process.env.ADMIN_EMAIL,
   "lastfm": {
     "key": process.env.LASTFM_KEY,
     "secret": process.env.LASTFM_SECRET
