@@ -1,6 +1,7 @@
 'use strict';
 
 var config = require('../config')
+  , render = require('../lib').render
   ;
 
 module.exports.init = function(app) {
@@ -13,37 +14,37 @@ module.exports.init = function(app) {
 };
 
 function index(req, res) {
-  res.render('home', {
+  render(res, 'home', {
     showMastHead: true
   });
 }
 
 function portfolio(req, res) {
-  res.render('generic', {
+  render(res, 'generic', {
     pageTitle: 'Portfolio'
   });
 }
 
 function services(req, res) {
-  res.render('generic', {
+  render(res, 'generic', {
     pageTitle: 'Services'
   });
 }
 
 function blog(req, res) {
-  res.render('generic', {
+  render(res, 'generic', {
     pageTitle: 'Blog'
   });
 }
 
 function about(req, res) {
-  res.render('generic', {
+  render(res, 'generic', {
     pageTitle: 'About William'
   });
 }
 
 function contact(req, res) {
-  res.render('generic', {
+  render(res, 'generic', {
     pageTitle: 'Request a Quote'
   });
 }
