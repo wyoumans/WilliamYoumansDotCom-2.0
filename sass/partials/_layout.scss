@@ -1,4 +1,3 @@
-// Custom SASS
 .fixed-stripe {
   height: 4px;
   position: fixed;
@@ -159,17 +158,6 @@
         }
       }
     }
-  }
-}
-
-h1 {
-
-  @include respond(tablets) {
-    @include font-size(42px);
-  }
-
-  @include respond(all-phones) {
-    @include font-size(28px);
   }
 }
 
