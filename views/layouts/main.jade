@@ -61,17 +61,10 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     .row
       .fixed-stripe
 
-    //- Masthead
     header
       if locals.showMastHead
-        .masthead.parallax(gumby-parallax='-0.5')
-          .row
-            .medium.primary.btn.cta
-              a(href='/contact') Get a Quote!
-                i.icon-quote
-            h1
-              span.top I'm a freelance web developer
-              span.bottom based in Salt Lake City, Utah.
+        include ../partials/masthead
+
       else
         .header-spacer
 
@@ -107,36 +100,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
 
     footer.main-footer.text-center
       if locals.footerContent && locals.showFooterMedia
-        .row
-          .four.columns
-            h3 Currently Seeing
-              i.icon-camera
-            if locals.footerContent.image
-              .row.image-row
-                a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.image.href, target='_blank', data-tooltip=locals.footerContent.image.date_formatted)
-                  img(src=locals.footerContent.image.src, alt='Latest from Instagram')
-            else
-              p Nothing to report
-
-          .four.columns
-            h3 Currently Watching
-              i.icon-play
-            if locals.footerContent.movie
-              .row.image-row
-                a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.movie.href, target='_blank', data-tooltip='Latest from Netflix')
-                  img(src=locals.footerContent.movie.src, alt='Latest from Netflix')
-            else
-              p Nothing to report
-
-          .four.columns
-            h3 Currently Listening
-              i.icon-note-beamed
-            if locals.footerContent.track
-              .row.image-row
-                a.ttip.columns.centered.nine.image.photo(href=locals.footerContent.track.href, target='_blank', data-tooltip=locals.footerContent.track.date_formatted)
-                  img(src=locals.footerContent.track.imageSrc, alt=locals.footerContent.track.name)
-            else
-              p Nothing to report
+        include ../partials/footer-media
 
       .extra-footer
         .row
