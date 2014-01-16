@@ -1,12 +1,13 @@
 'use strict';
 
-var express   = require('express')
-  , conductor = require('express-conductor')
-  , http      = require('http')
-  , path      = require('path')
-  , config    = require('./config')
-  , models    = require('./models') // register models
-  , app       = express()
+var express    = require('express')
+  , conductor  = require('express-conductor')
+  , http       = require('http')
+  , path       = require('path')
+  , middleware = require('./middleware')
+  , config     = require('./config')
+  , models     = require('./models') // register models
+  , app        = express()
   ;
 
 app.enable('trust proxy');
@@ -30,6 +31,7 @@ app.configure(function() {
     redirect: false
   }));
 
+  app.use(middleware.globals);
   app.use(app.router);
 });
 
