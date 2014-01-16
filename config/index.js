@@ -13,6 +13,10 @@ var defaults = {
     "secret": process.env.INSTAGRAM_SECRET,
     "token": process.env.INSTAGRAM_TOKEN,
     "userid": process.env.INSTAGRAM_USERID
+  },
+  "sendgrid": {
+    "user": process.env.SENDGRID_USER,
+    "key": process.env.SENDGRID_KEY
   }
 };
 
