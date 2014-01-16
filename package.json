@@ -31,7 +31,8 @@
     "mongoose-createdmodified": "0.0.2",
     "string-capitalize": "~1.0.1",
     "forever": "~0.10.11",
-    "winston": "~0.7.2"
+    "winston": "~0.7.2",
+    "time": "~0.10.0"
   },
   "devDependencies": {
     "node-minify": "~0.8.2"
