@@ -22,6 +22,7 @@
     "cron": "~1.0.1",
     "express": "~3.4.4",
     "express-conductor": "~1.0.1",
+    "forever": "~0.10.11",
     "instagram-node": "~0.1.13",
     "jade": "~0.35.0",
     "lastfm-history": "~0.1.2",
@@ -30,9 +31,8 @@
     "mongoose": "~3.8.1",
     "mongoose-createdmodified": "0.0.2",
     "string-capitalize": "~1.0.1",
-    "forever": "~0.10.11",
-    "winston": "~0.7.2",
-    "time": "~0.10.0"
+    "time": "~0.10.0",
+    "winston": "~0.7.2"
   },
   "devDependencies": {
     "node-minify": "~0.8.2"
