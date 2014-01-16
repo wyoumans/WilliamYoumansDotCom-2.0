@@ -13,37 +13,37 @@ module.exports.init = function(app) {
 };
 
 function index(req, res) {
-  res.render('index', {
-    title: 'Home'
+  res.render('home', {
+    showMastHead: true
   });
 }
 
 function portfolio(req, res) {
   res.render('generic', {
-    title: 'Portfolio'
+    pageTitle: 'Portfolio'
   });
 }
 
 function services(req, res) {
   res.render('generic', {
-    title: 'Services'
+    pageTitle: 'Services'
   });
 }
 
 function blog(req, res) {
   res.render('generic', {
-    title: 'Blog'
+    pageTitle: 'Blog'
   });
 }
 
 function about(req, res) {
   res.render('generic', {
-    title: 'About William'
+    pageTitle: 'About William'
   });
 }
 
 function contact(req, res) {
   res.render('generic', {
-    title: 'Request a Quote'
+    pageTitle: 'Request a Quote'
   });
 }
