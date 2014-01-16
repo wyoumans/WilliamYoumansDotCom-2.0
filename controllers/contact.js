@@ -16,7 +16,5 @@ function getContact(req, res) {
 }
 
 function postContact(req, res) {
-  render(res, 'generic', {
-    pageTitle: 'Request a Quote'
-  });
+  return res.redirect('/about/contact?' + new Date().getTime()); // prevent serving a cached version of this page
 }
