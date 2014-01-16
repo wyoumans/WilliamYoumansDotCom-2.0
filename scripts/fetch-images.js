@@ -2,6 +2,7 @@
 
 var ig     = require('instagram-node').instagram()
   , config = require('../config')
+  , logger     = require('../lib').logger
   , Image  = require('../models').Image
   , async  = require('async')
   , _      = require('lodash')
@@ -9,8 +10,7 @@ var ig     = require('instagram-node').instagram()
 
 (function() {
 
-  console.log();
-  console.log('============ Beginning Instagram Import ============');
+  logger.info('============ Beginning Instagram Import ============');
 
   ig.use({
     // client_id: config.instagram.key,
@@ -20,8 +20,6 @@ var ig     = require('instagram-node').instagram()
 
   ig.user_media_recent(config.instagram.userid, function(err, medias, pagination, limit) {
     if (medias && medias.length > 0) {
-
-      console
 
       async.each(medias, function(media, done) {
         var image = {
@@ -38,11 +36,10 @@ var ig     = require('instagram-node').instagram()
         });
       }, function(err) {
         if (err) {
-          console.error(err);
+          logger.error(err);
         }
 
-        console.log();
-        console.log('============ Instagram Import Complete ============');
+        logger.info('============ Instagram Import Complete ============');
         process.exit();
       });
     }
