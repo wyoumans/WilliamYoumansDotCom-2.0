@@ -11,19 +11,23 @@ block content
           form.form(method='POST', action='/contact')
 
             ul
+              li.row.error-message.hide
+                .ten.columns.push_two
+                  .danger.alert Please correct the following errors
+
               li.field.row
                 label.two.columns.inline(for='contact_name') Name
-                input.ten.columns.omega.input.name(id='contact_name', name='contact[name]', type='text', required)
+                input.ten.columns.omega.input.name(id='contact_name', name='contact[name]', type='text')
 
               li.field.row
                 label.two.columns.inline(for='contact_email') Email
-                input.ten.columns.omega.input(id='contact_email', name='contact[email]', type='email', required)
+                input.ten.columns.omega.input(id='contact_email', name='contact[email]', type='email')
 
               li.field.row
                 label.two.columns.inline(for='contact_message') Message
-                textarea.ten.columns.omega.input.textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5, required)
+                textarea.ten.columns.omega.input.textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5)
 
             .row
               .push_eight.two.columns.omega
-                .medium.info.btn.icon-left.entypo.icon-mail.pull-right
-                  a(href='#') Send
+                .medium.rounded.info.btn.icon-left.entypo.icon-mail.pull-right
+                  input(type='submit', value='Send')

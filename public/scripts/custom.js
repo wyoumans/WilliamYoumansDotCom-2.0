@@ -1,12 +1,12 @@
 'use strict';
 
 (function() {
-  var animationSpeed = 1000,
-      beginPosition  = '-2000px',
-      endPosition    = 0,
-      easing         = 'easeOutBack',
-      $leftText      = $('.masthead h1 span.top'),
-      $rightText     = $('.masthead h1 span.bottom');
+  var animationSpeed = 1000
+    , beginPosition  = '-2000px'
+    , endPosition    = 0
+    , easing         = 'easeOutBack'
+    , $leftText      = $('.masthead h1 span.top')
+    , $rightText     = $('.masthead h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {
@@ -30,4 +30,23 @@
       animation.inRight
     );
   }
+
+  // initialize plugin
+  $('form').validation({
+    // pass an array of required field objects
+    required: [{
+      name: 'contact[name]',
+    }, {
+      name: 'contact[email]',
+      validate: function($el) {
+        return $el.val().match('@') !== null;
+      }
+    }, {
+      name: 'contact[message]',
+    }],
+    fail: function() {
+      console.log('blah');
+      $(this).find('.error-message').fadeIn();
+    },
+  });
 })();
