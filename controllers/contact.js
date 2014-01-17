@@ -31,28 +31,21 @@ function postContact(req, res) {
   var lead = new models.Lead({
     name: values.name,
     email: values.email,
-    message: values.message
+    message: values.message,
+    host: req.get('host')
   });
 
-  lead.save(function(err) {
+  lead.save(function(err, lead) {
     if (err) {
       return res.redirect('/contact'); // prevent serving a cached version of this page
     } else {
-      var locals = {
-        name: 'William Youmans',
-        email: 'will@williamyoumans.com',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.'
-      };
-
-      locals.host = req.get('host');
-
       sendgrid.send({
         from: config.serverEmail,
         to: config.adminEmail,
         replyto: locals.email,
         subject: 'Contact request from: ' + locals.name,
-        html: getEmailHTML('contact', locals),
-        text: getEmailText('contact', locals)
+        html: getEmailHTML('contact', lead),
+        text: getEmailText('contact', lead)
       }, function(err, response) {
         if (err) {
           logger.err(err);

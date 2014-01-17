@@ -15,7 +15,8 @@ var ContactSchema = new Schema({
   message: {
     type: String,
     required: true
-  }
+  },
+  host: String
 });
 
 // validate email address
