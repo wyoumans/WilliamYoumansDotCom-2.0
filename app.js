@@ -21,6 +21,8 @@ app.enable('trust proxy');
 // default locals
 app.locals({
   NODE_ENV: config.env,
+  useMinifiedAssets: config.useMinifiedAssets,
+  analytics: config.analytics,
   bodyClass: '',
   metaDescription: 'William Youmans is a software developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
   metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
