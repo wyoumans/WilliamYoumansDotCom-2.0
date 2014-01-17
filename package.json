@@ -16,8 +16,6 @@
   },
   "dependencies": {
     "async": "~0.2.9",
-    "browserify": "~2.35.4",
-    "compass": "~0.1.0",
     "confrodo": "0.0.5",
     "cron": "~1.0.1",
     "express": "~3.4.4",
@@ -36,6 +34,7 @@
     "winston": "~0.7.2"
   },
   "devDependencies": {
+    "compass": "~0.1.0",
     "node-minify": "~0.8.2"
   }
 }
