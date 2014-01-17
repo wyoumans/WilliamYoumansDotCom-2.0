@@ -4,6 +4,8 @@ var defaults = {
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
   "port": 3000,
   "logToFile": true,
+  "useMinifiedAssets": true,
+  "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
     "key": process.env.LASTFM_KEY,
     "secret": process.env.LASTFM_SECRET

@@ -6,29 +6,13 @@ var compressor = require('node-minify')
 console.log();
 console.log('Beginning minification');
 
-async.parallel([minifyJS, minifyCSS], function(err, results) {
+async.parallel([minifyCSS], function(err, results) {
   if (err) {
     console.log(err);
   }
   console.log();
   console.log('Minification complete! Deploy at will.');
 });
-
-/**
- * Minifies the Javascript
- * @param  Function done   Async callback
- */
-function minifyJS(done) {
-  new compressor.minify({
-    type: 'gcc',
-    fileIn: 'public/scripts/custom.js',
-    fileOut: 'public/scripts/custom.min.js',
-    callback: function(err) {
-      console.log('Scripts minified');
-      return done(err);
-    }
-  });
-}
 
 /**
  * Minifies the CSS
