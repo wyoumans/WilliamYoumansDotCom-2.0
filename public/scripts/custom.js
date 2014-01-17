@@ -45,8 +45,11 @@
       name: 'contact[message]',
     }],
     fail: function() {
-      console.log('blah');
-      $(this).find('.error-message').fadeIn();
+      console.log('failure');
     },
+    submit: function(data) {
+      console.log('success');
+      console.log(data);
+    }
   });
 })();
