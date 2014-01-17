@@ -1,0 +1,24 @@
+.navcontain
+  #main-nav.navbar(gumby-fixed='top')
+    .row
+      a.toggle(gumby-trigger='#main-nav > .row > ul', href='#')
+        i.icon-menu
+      .four.columns
+        a.logo(href='/')
+          img(src='/images/branding/logo-full.jpg', alt='William Youmans', gumby-retina='gumby-retina')
+      ul.eight.columns
+        li
+          a(href='/portfolio') Portfolio
+            i.icon-picture
+        li
+          a(href='/services') Services
+            i.icon-lamp
+        li
+          a(href='/blog') Blog
+            i.icon-feather
+        li
+          a(href='/about') About
+            i.icon-user
+        li.cta
+          a(href='/contact') Hire Me
+            i.icon-phone

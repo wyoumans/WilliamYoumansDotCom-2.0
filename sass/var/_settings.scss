@@ -67,6 +67,7 @@ $tremendous: ms(9);
 $absurd: ms(10);
 
 $black: #000000;
+$almost-black: #1C1C1C;
 $white: #FFFFFF;
 $light-blue: #AAC8E0;
 $dark-blue: #223344;
@@ -88,9 +89,10 @@ $footer-link-color: $light-gray !default;
 $footer-link-hover-color: $white !default;
 
 // User Interface Colors
-$global-bg-color: $white;
+$global-bg-color: $almost-black;
 $navbar-color: $white;
 $navbar-link-color: $dark-blue;
+$main-content-bg-color: $white;
 
 $primary-color: $orange;
 $secondary-color: #689CD0;

@@ -1,3 +1,7 @@
+.main-header, .main-footer, .main-content {
+  background-color: $main-content-bg-color;
+}
+
 .fixed-stripe {
   height: 5px;
   position: fixed;
@@ -117,19 +121,20 @@
 
 .main-content {
   min-height: 500px;
+  padding-bottom: 50px;
 }
 
 .main-footer {
   background-color: $footer-gray;
   color: $footer-font-color;
-  margin-top: 50px;
 
   a {
     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
   }
 
   .extra-footer {
-    background-color: #1C1C1C;
+    background-color: $almost-black;
+    color: $footer-font-color;
     padding-top: 10px;
   }
 

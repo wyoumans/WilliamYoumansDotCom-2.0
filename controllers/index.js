@@ -73,7 +73,7 @@ function getBlog(req, res) {
 }
 
 function getAbout(req, res) {
-  render(res, 'generic', {
-    pageTitle: 'About William'
+  render(res, 'about', {
+    pageTitle: 'About William Youmans'
   });
 }
