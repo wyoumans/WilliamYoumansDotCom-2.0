@@ -61,7 +61,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     .row
       .fixed-stripe
 
-    header
+    header#main-header.main-header
       if locals.showMastHead
         include ../partials/masthead
 
@@ -74,7 +74,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     section#main.main-content
       block content
 
-    footer.main-footer.text-center
+    footer#main-footer.main-footer.text-center
       if locals.footerContent && locals.showFooterMedia
         include ../partials/footer-media
 
