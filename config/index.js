@@ -6,6 +6,8 @@ var defaults = {
   "logToFile": true,
   "serverEmail": "no-reply@williamyoumans.com",
   "adminEmail": process.env.ADMIN_EMAIL,
+  "useMinifiedAssets": true,
+  "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
     "key": process.env.LASTFM_KEY,
     "secret": process.env.LASTFM_SECRET
