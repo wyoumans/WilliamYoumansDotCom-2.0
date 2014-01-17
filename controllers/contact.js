@@ -29,9 +29,9 @@ function postContact(req, res) {
     ;
 
   var lead = new models.Lead({
-    name: values.name,
-    email: values.email,
-    message: values.message,
+    name: formValues.name,
+    email: formValues.email,
+    message: formValues.message,
     host: req.get('host')
   });
 
@@ -42,8 +42,8 @@ function postContact(req, res) {
       sendgrid.send({
         from: config.serverEmail,
         to: config.adminEmail,
-        replyto: locals.email,
-        subject: 'Contact request from: ' + locals.name,
+        replyto: lead.email,
+        subject: 'Contact request from: ' + lead.name,
         html: getEmailHTML('contact', lead),
         text: getEmailText('contact', lead)
       }, function(err, response) {
@@ -58,7 +58,7 @@ function postContact(req, res) {
 }
 
 function getThankYou(req, res) {
-  render(res, 'generic', {
+  render(res, 'thanks', {
     pageTitle: 'Thank You'
   });
 }
