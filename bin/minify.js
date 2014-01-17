@@ -15,22 +15,6 @@ async.parallel([minifyJS, minifyCSS], function(err, results) {
 });
 
 /**
- * Minifies the Javascript
- * @param  Function done   Async callback
- */
-function minifyJS(done) {
-  new compressor.minify({
-    type: 'gcc',
-    fileIn: 'public/scripts/custom.js',
-    fileOut: 'public/scripts/custom.min.js',
-    callback: function(err) {
-      console.log('Scripts minified');
-      return done(err);
-    }
-  });
-}
-
-/**
  * Minifies the CSS
  * @param  Function done   Async callback
  */
