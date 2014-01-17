@@ -32,7 +32,7 @@
   }
 
   // initialize plugin
-  $('form').validation({
+  $('form#contact').validation({
     required: [{
       name: 'contact[name]',
     }, {
