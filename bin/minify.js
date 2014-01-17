@@ -6,7 +6,7 @@ var compressor = require('node-minify')
 console.log();
 console.log('Beginning minification');
 
-async.parallel([minifyJS, minifyCSS], function(err, results) {
+async.parallel([minifyCSS], function(err, results) {
   if (err) {
     console.log(err);
   }
