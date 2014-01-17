@@ -54,7 +54,6 @@ app.configure(function() {
     redirect: false
   }));
 
-  app.use(middleware.globals);
   app.use(app.router);
 });
 
