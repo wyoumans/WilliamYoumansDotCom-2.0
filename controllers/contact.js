@@ -59,6 +59,6 @@ function postContact(req, res) {
 
 function getThankYou(req, res) {
   render(res, 'thanks', {
-    pageTitle: 'Thank You'
+    pageTitle: 'Your message has been received, loud and clear!'
   });
 }

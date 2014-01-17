@@ -4,4 +4,6 @@ block content
   .row
     .twelve.columns
       h1.main-page-title= pageTitle
-      p Coming Soon
+
+      if locals.content
+        != locals.content
