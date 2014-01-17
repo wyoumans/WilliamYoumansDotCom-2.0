@@ -1,0 +1,8 @@
+Howdy,
+
+The contact form has been submitted with the following details:
+
+Name: <%= name %>
+Email: <%= email %>
+Host: <%= host %>
+Message: <%= message %>

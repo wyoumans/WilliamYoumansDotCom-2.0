@@ -7,15 +7,14 @@ var config = require('../config')
   ;
 
 module.exports.init = function(app) {
-  app.get('/', index);
-  app.get('/portfolio', portfolio);
-  app.get('/services', services);
-  app.get('/blog', blog);
-  app.get('/about', about);
-  app.get('/contact', contact);
+  app.get('/', getHome);
+  app.get('/portfolio', getPortfolio);
+  app.get('/services', getServices);
+  app.get('/blog', getBlog);
+  app.get('/about', getAbout);
 };
 
-function index(req, res) {
+function getHome(req, res) {
   var locals = {};
 
   models.Track.findOne({}, 'scrobbleDate href imageSrc', {
@@ -55,32 +54,26 @@ function index(req, res) {
   });
 }
 
-function portfolio(req, res) {
+function getPortfolio(req, res) {
   render(res, 'generic', {
     pageTitle: 'Portfolio'
   });
 }
 
-function services(req, res) {
+function getServices(req, res) {
   render(res, 'generic', {
     pageTitle: 'Services'
   });
 }
 
-function blog(req, res) {
+function getBlog(req, res) {
   render(res, 'generic', {
     pageTitle: 'Blog'
   });
 }
 
-function about(req, res) {
+function getAbout(req, res) {
   render(res, 'about', {
     pageTitle: 'About William Youmans'
-  });
-}
-
-function contact(req, res) {
-  render(res, 'generic', {
-    pageTitle: 'Request a Quote'
   });
 }

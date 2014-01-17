@@ -4,6 +4,8 @@ var defaults = {
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
   "port": 3000,
   "logToFile": true,
+  "serverEmail": "no-reply@williamyoumans.com",
+  "adminEmail": process.env.ADMIN_EMAIL,
   "useMinifiedAssets": true,
   "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
@@ -15,6 +17,10 @@ var defaults = {
     "secret": process.env.INSTAGRAM_SECRET,
     "token": process.env.INSTAGRAM_TOKEN,
     "userid": process.env.INSTAGRAM_USERID
+  },
+  "sendgrid": {
+    "user": process.env.SENDGRID_USER,
+    "key": process.env.SENDGRID_KEY
   }
 };
 
