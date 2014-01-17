@@ -61,65 +61,25 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
     .row
       .fixed-stripe
 
-    header
+    header#main-header.main-header
       if locals.showMastHead
         include ../partials/masthead
 
       else
         .header-spacer
 
-      //- Navigation
-      .navcontain
-        #main-nav.navbar(gumby-fixed='top')
-          .row
-            a.toggle(gumby-trigger='#main-nav > .row > ul', href='#')
-              i.icon-menu
-            .four.columns
-              a.logo(href='/')
-                img(src='/images/branding/logo-full.jpg', alt='William Youmans', gumby-retina='gumby-retina')
-            ul.eight.columns
-              li
-                a(href='/portfolio') Portfolio
-                  i.icon-picture
-              li
-                a(href='/services') Services
-                  i.icon-lamp
-              li
-                a(href='/blog') Blog
-                  i.icon-feather
-              li
-                a(href='/about') About
-                  i.icon-user
-              li.cta
-                a(href='/contact') Hire Me
-                  i.icon-phone
+      include ../partials/header-navigation
 
     //- Content
     section#main.main-content
       block content
 
-    footer.main-footer.text-center
+    footer#main-footer.main-footer.text-center
       if locals.footerContent && locals.showFooterMedia
         include ../partials/footer-media
 
       .extra-footer
-        .row
-          .four.columns
-            p &copy; #{new Date().getFullYear()} William Youmans
-
-          .four.columns.text-center
-            p
-              a.ttip(href='https://github.com/wyoumans', target='_blank', data-tooltip='Github'): i.icon-github
-              a.ttip(href='https://www.facebook.com/wyoumans', target='_blank', data-tooltip='Facebook'): i.icon-facebook
-              a.ttip(href='https://twitter.com/wyoumansdev', target='_blank', data-tooltip='Twitter'): i.icon-twitter
-              a.ttip(href='http://instagram.com/cwyouman', target='_blank', data-tooltip='Instagram'): i.icon-instagram
-              a.ttip(href='http://www.last.fm/user/gotwilly', target='_blank', data-tooltip='Last.fm'): i.icon-lastfm
-              a.ttip(href='/', target='_blank', data-tooltip='RSS'): i.icon-rss
-
-          .four.columns
-            p
-              i.icon-mail
-              a(href="mailto:hello@williamyoumans.com") hello@williamyoumans.com
+        include ../partials/footer-navigation
 
     script.
       var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\\soldie\s/g));
