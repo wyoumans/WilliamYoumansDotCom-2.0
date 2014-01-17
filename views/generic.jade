@@ -3,5 +3,7 @@ extends layouts/main
 block content
   .row
     .twelve.columns
-      h1= pageTitle
-      p Coming Soon
+      h1.main-page-title= pageTitle
+
+      if locals.content
+        != locals.content

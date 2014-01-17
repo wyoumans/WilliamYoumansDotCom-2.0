@@ -12,6 +12,10 @@
   z-index: 999;
 }
 
+.header-spacer {
+  height: 5px;
+}
+
 .gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a {
   background: transparent;
 }
@@ -113,10 +117,6 @@
       }
     }
   }
-}
-
-.header-spacer {
-  height: 5px;
 }
 
 .main-content {

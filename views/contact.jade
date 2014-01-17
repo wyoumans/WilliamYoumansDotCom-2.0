@@ -1,0 +1,33 @@
+extends layouts/main
+
+block content
+  .row
+    .twelve.columns
+      h1.main-page-title= pageTitle
+
+      .row
+        .ten.columns
+
+          form#contact.form(method='POST', action='/contact')
+
+            ul
+
+              li.field.row
+                label.two.columns.inline(for='contact_name') Name
+                input.ten.columns.omega.input.name(id='contact_name', name='contact[name]', type='text', placeholder='What should I call you?')
+                .error-message.text-right Please enter your name.
+
+              li.field.row
+                label.two.columns.inline(for='contact_email') Email
+                input.ten.columns.omega.input(id='contact_email', name='contact[email]', type='email', placeholder='How should I you?')
+                .error-message.text-right Please enter a valid email address.
+
+              li.field.row
+                label.two.columns.inline(for='contact_message') Message
+                textarea.ten.columns.omega.input.textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5)
+                .error-message.text-right Please enter your message.
+
+            .row
+              .push_eight.two.columns.omega
+                .medium.rounded.info.btn.icon-left.entypo.icon-mail.pull-right
+                  input(type='submit', value='Send')
