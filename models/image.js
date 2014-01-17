@@ -1,6 +1,7 @@
 'use strict';
 
-var Schema = require('mongoose').Schema;
+var Schema = require('mongoose').Schema
+    ;
 
 var ImageSchema = new Schema({
   href: {
