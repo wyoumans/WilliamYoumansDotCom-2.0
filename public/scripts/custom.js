@@ -33,23 +33,15 @@
 
   // initialize plugin
   $('form').validation({
-    // pass an array of required field objects
     required: [{
       name: 'contact[name]',
     }, {
       name: 'contact[email]',
       validate: function($el) {
-        return $el.val().match('@') !== null;
+        return $el.val().match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/) !== null;
       }
     }, {
       name: 'contact[message]',
-    }],
-    fail: function() {
-      console.log('failure');
-    },
-    submit: function(data) {
-      console.log('success');
-      console.log(data);
-    }
+    }]
   });
 })();
