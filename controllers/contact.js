@@ -17,7 +17,7 @@ module.exports.init = function(app) {
 };
 
 function getContact(req, res) {
-  render(res, 'generic', {
+  render(res, 'contact', {
     pageTitle: 'Request a Quote'
   });
 }

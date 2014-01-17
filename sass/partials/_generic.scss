@@ -1,5 +1,9 @@
 h1 {
 
+  &.main-page-title {
+    margin-bottom: 30px;
+  }
+
   @include respond(tablets) {
     @include font-size(42px);
   }
@@ -7,4 +11,12 @@ h1 {
   @include respond(all-phones) {
     @include font-size(28px);
   }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
