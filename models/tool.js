@@ -13,14 +13,9 @@ var ToolSchema = new Schema({
     required: true
   },
   category: String,
-  x: {
-    type: Number,
-    required: true
-  },
-  y: {
-    type: Number,
-    required: true
-  }
+  x: Number,
+  y: Number,
+  sort: Number
 });
 
 module.exports = ToolSchema;
