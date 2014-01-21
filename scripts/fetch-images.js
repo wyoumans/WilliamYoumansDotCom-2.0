@@ -2,7 +2,7 @@
 
 var ig     = require('instagram-node').instagram()
   , config = require('../config')
-  , logger     = require('../lib').logger
+  , logger = require('../lib').logger
   , Image  = require('../models').Image
   , async  = require('async')
   , _      = require('lodash')
