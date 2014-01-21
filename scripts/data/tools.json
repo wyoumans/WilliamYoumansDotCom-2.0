@@ -1,0 +1,46 @@
+{
+  "operating systems": [
+    { "name": "Mac OS X", "href": "", "x": 0, "y": 0 },
+    { "name": "Linux", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "hardware": [
+    { "name": "Macbook Pro", "href": "", "x": 0, "y": 0 },
+    { "name": "Dell Display", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "languages": [
+    { "name": "Javascript", "href": "", "x": 0, "y": 0 },
+    { "name": "Ruby", "href": "", "x": 0, "y": 0 },
+    { "name": "PHP", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "databases": [
+    { "name": "MongoDB", "href": "", "x": 0, "y": 0 },
+    { "name": "MySQL", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "servers": [
+    { "name": "Apache", "href": "", "x": 0, "y": 0 },
+    { "name": "Nginx", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "productivity/collaboration": [
+    { "name": "Git", "href": "", "x": 0, "y": 0 },
+    { "name": "Sublime Text", "href": "", "x": 0, "y": 0 },
+    { "name": "Transmit", "href": "", "x": 0, "y": 0 },
+    { "name": "Alfred", "href": "", "x": 0, "y": 0 },
+    { "name": "Chrome", "href": "", "x": 0, "y": 0 },
+    { "name": "Omnifocus", "href": "", "x": 0, "y": 0 },
+    { "name": "iTerm", "href": "", "x": 0, "y": 0 },
+    { "name": "Photoshop", "href": "", "x": 0, "y": 0 },
+    { "name": "Text Expander", "href": "", "x": 0, "y": 0 }
+  ],
+
+  "libraries/frameworks": [
+    { "name": "Node.js", "href": "http://nodejs.org/", "x": 0, "y": 0 },
+    { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "x": 0, "y": 0 },
+    { "name": "Yii", "href": "http://www.yiiframework.com/", "x": 0, "y": 0 },
+    { "name": "jQuery", "href": "http://jquery.com/", "x": 0, "y": 0 }
+  ]
+}
