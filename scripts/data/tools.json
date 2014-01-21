@@ -1,40 +1,40 @@
 {
   "operating systems": [
-    { "name": "Mac OS X", "href": "", "x": 0, "y": 0 },
-    { "name": "Linux", "href": "", "x": 0, "y": 0 }
+    { "name": "Mac OS X", "href": "http://www.apple.com/osx/", "x": 0, "y": 0 },
+    { "name": "Linux", "href": "http://www.linux.org/", "x": 0, "y": 0 }
   ],
 
   "hardware": [
-    { "name": "Macbook Pro", "href": "", "x": 0, "y": 0 },
-    { "name": "Dell Display", "href": "", "x": 0, "y": 0 }
+    { "name": "Macbook Pro", "href": "http://www.apple.com/macbook-pro/", "x": 0, "y": 0 },
+    { "name": "Dell Display", "href": "http://www.dell.com/learn/us/en/19/campaigns/dell-ultrasharpmonitors", "x": 0, "y": 0 }
   ],
 
   "languages": [
-    { "name": "Javascript", "href": "", "x": 0, "y": 0 },
-    { "name": "Ruby", "href": "", "x": 0, "y": 0 },
-    { "name": "PHP", "href": "", "x": 0, "y": 0 }
+    { "name": "Javascript", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "x": 0, "y": 0 },
+    { "name": "Ruby", "href": "https://www.ruby-lang.org/en/", "x": 0, "y": 0 },
+    { "name": "PHP", "href": "http://php.net/", "x": 0, "y": 0 }
   ],
 
   "databases": [
-    { "name": "MongoDB", "href": "", "x": 0, "y": 0 },
-    { "name": "MySQL", "href": "", "x": 0, "y": 0 }
+    { "name": "MongoDB", "href": "http://www.mongodb.org/", "x": 0, "y": 0 },
+    { "name": "MySQL", "href": "http://www.mysql.com/", "x": 0, "y": 0 }
   ],
 
   "servers": [
-    { "name": "Apache", "href": "", "x": 0, "y": 0 },
-    { "name": "Nginx", "href": "", "x": 0, "y": 0 }
+    { "name": "Apache", "href": "http://httpd.apache.org/", "x": 0, "y": 0 },
+    { "name": "Nginx", "href": "http://nginx.org/", "x": 0, "y": 0 }
   ],
 
   "productivity/collaboration": [
-    { "name": "Git", "href": "", "x": 0, "y": 0 },
-    { "name": "Sublime Text", "href": "", "x": 0, "y": 0 },
-    { "name": "Transmit", "href": "", "x": 0, "y": 0 },
-    { "name": "Alfred", "href": "", "x": 0, "y": 0 },
-    { "name": "Chrome", "href": "", "x": 0, "y": 0 },
-    { "name": "Omnifocus", "href": "", "x": 0, "y": 0 },
-    { "name": "iTerm", "href": "", "x": 0, "y": 0 },
-    { "name": "Photoshop", "href": "", "x": 0, "y": 0 },
-    { "name": "Text Expander", "href": "", "x": 0, "y": 0 }
+    { "name": "Git", "href": "http://git-scm.com/", "x": 0, "y": 0 },
+    { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "x": 0, "y": 0 },
+    { "name": "Transmit", "href": "http://panic.com/transmit/", "x": 0, "y": 0 },
+    { "name": "Alfred", "href": "http://www.alfredapp.com/", "x": 0, "y": 0 },
+    { "name": "Chrome", "href": "www.google.com/chrome", "x": 0, "y": 0 },
+    { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "x": 0, "y": 0 },
+    { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0 },
+    { "name": "Photoshop", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0 },
+    { "name": "Text Expander", "href": "http://smilesoftware.com/TextExpander/index.html", "x": 0, "y": 0 }
   ],
 
   "libraries/frameworks": [
