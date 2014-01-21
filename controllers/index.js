@@ -28,28 +28,37 @@ function getHome(req, res) {
       }
     }, function(err, image) {
 
-      locals.footerContent = {};
+      models.Tool.find({}, 'name href x y', {
+        sort: {
+          category: 1,
+          sort: 1
+        }
+      }, function(err, tools) {
 
-      if (track) {
-        track.date_formatted = moment(track.scrobbleDate).fromNow();
-        locals.footerContent.track = track;
-      }
+        locals.tools = tools;
+        locals.footerContent = {};
 
-      if (image) {
-        image.date_formatted = moment(image.postDate).fromNow();
-        locals.footerContent.image = image;
-      }
+        if (track) {
+          track.date_formatted = moment(track.scrobbleDate).fromNow();
+          locals.footerContent.track = track;
+        }
 
-      // temporary hard coded movie
-      locals.footerContent.movie = {
-        href: 'http://www.amazon.com/Star-Trek-VI-Undiscovered-Theatrical/dp/B000I3P3EM',
-        src: 'http://ecx.images-amazon.com/images/I/51yLQ9m7EcL._SX215_.jpg'
-      };
+        if (image) {
+          image.date_formatted = moment(image.postDate).fromNow();
+          locals.footerContent.image = image;
+        }
 
-      locals.showMastHead = true;
-      locals.showFooterMedia = true;
+        // temporary hard coded movie
+        locals.footerContent.movie = {
+          href: 'http://www.amazon.com/Star-Trek-VI-Undiscovered-Theatrical/dp/B000I3P3EM',
+          src: 'http://ecx.images-amazon.com/images/I/51yLQ9m7EcL._SX215_.jpg'
+        };
 
-      render(res, 'home', locals);
+        locals.showMastHead = true;
+        locals.showFooterMedia = true;
+
+        render(res, 'home', locals);
+      });
     });
   });
 }
