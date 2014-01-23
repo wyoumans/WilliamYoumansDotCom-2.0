@@ -51,11 +51,16 @@ body.home {
   }
 
   .tools {
+    overflow: visible; // override a stupid gumby rule for tiles that prevents tooltips from showing
 
     .tool {
-      background-color: #CCCCCC;
-      height: 50px;
-      margin-bottom: 10px;
+      margin-bottom: 2%;
+      line-height: 0;
+
+      a {
+        display: block;
+        text-align: center;
+      }
     }
   }
 

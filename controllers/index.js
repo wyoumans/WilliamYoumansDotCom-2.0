@@ -28,7 +28,7 @@ function getHome(req, res) {
       }
     }, function(err, image) {
 
-      models.Tool.find({}, 'name href x y', {
+      models.Tool.find({}, 'name slug href x y', {
         sort: {
           category: 1,
           sort: 1
