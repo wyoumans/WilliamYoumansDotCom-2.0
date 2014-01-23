@@ -15,6 +15,13 @@
     { "name": "PHP", "href": "http://php.net/", "x": 0, "y": 0, "sort": 3 }
   ],
 
+  "libraries/frameworks": [
+    { "name": "Node.js", "href": "http://nodejs.org/", "x": 0, "y": 0, "sort": 1 },
+    { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "x": 0, "y": 0, "sort": 2 },
+    { "name": "Yii", "href": "http://www.yiiframework.com/", "x": 0, "y": 0, "sort": 3 },
+    { "name": "jQuery", "href": "http://jquery.com/", "x": 0, "y": 0, "sort": 4 }
+  ],
+
   "databases": [
     { "name": "MongoDB", "href": "http://www.mongodb.org/", "x": 0, "y": 0, "sort": 1 },
     { "name": "MySQL", "href": "http://www.mysql.com/", "x": 0, "y": 0, "sort": 2 }
@@ -35,12 +42,5 @@
     { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 7 },
     { "name": "Photoshop", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 8 },
     { "name": "Text Expander", "href": "http://smilesoftware.com/TextExpander/index.html", "x": 0, "y": 0, "sort": 9 }
-  ],
-
-  "libraries/frameworks": [
-    { "name": "Node.js", "href": "http://nodejs.org/", "x": 0, "y": 0, "sort": 1 },
-    { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "x": 0, "y": 0, "sort": 2 },
-    { "name": "Yii", "href": "http://www.yiiframework.com/", "x": 0, "y": 0, "sort": 3 },
-    { "name": "jQuery", "href": "http://jquery.com/", "x": 0, "y": 0, "sort": 4 }
   ]
 }
