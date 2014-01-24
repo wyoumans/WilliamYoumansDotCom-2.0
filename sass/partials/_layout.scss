@@ -141,6 +141,13 @@
     background-color: $almost-black;
     color: $footer-font-color;
     padding-top: 10px;
+
+    @include respond(all-phones) {
+
+      p {
+        text-align: center !important;
+      }
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
