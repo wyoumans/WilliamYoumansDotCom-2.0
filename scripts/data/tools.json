@@ -1,38 +1,28 @@
 {
-  "operating systems": [
+  "1operating systems": [
     { "name": "Mac OS X", "href": "http://www.apple.com/osx/", "x": 0, "y": 0, "sort": 1 },
     { "name": "Linux", "href": "http://www.linux.org/", "x": 0, "y": 0, "sort": 2 }
   ],
 
-  "hardware": [
-    { "name": "Macbook Pro", "href": "http://www.apple.com/macbook-pro/", "x": 0, "y": 0, "sort": 1 },
-    { "name": "Dell Display", "href": "http://www.dell.com/learn/us/en/19/campaigns/dell-ultrasharpmonitors", "x": 0, "y": 0, "sort": 2 }
-  ],
-
-  "languages": [
+  "2languages": [
     { "name": "Javascript", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "x": 0, "y": 0, "sort": 1 },
     { "name": "Ruby", "href": "https://www.ruby-lang.org/en/", "x": 0, "y": 0, "sort": 2 },
     { "name": "PHP", "href": "http://php.net/", "x": 0, "y": 0, "sort": 3 }
   ],
 
-  "libraries/frameworks": [
+  "4libraries/frameworks": [
     { "name": "Node.js", "href": "http://nodejs.org/", "x": 0, "y": 0, "sort": 1 },
     { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "x": 0, "y": 0, "sort": 2 },
     { "name": "Yii", "href": "http://www.yiiframework.com/", "x": 0, "y": 0, "sort": 3 },
     { "name": "jQuery", "href": "http://jquery.com/", "x": 0, "y": 0, "sort": 4 }
   ],
 
-  "databases": [
+  "3databases": [
     { "name": "MongoDB", "href": "http://www.mongodb.org/", "x": 0, "y": 0, "sort": 1 },
     { "name": "MySQL", "href": "http://www.mysql.com/", "x": 0, "y": 0, "sort": 2 }
   ],
 
-  "servers": [
-    { "name": "Apache", "href": "http://httpd.apache.org/", "x": 0, "y": 0, "sort": 1 },
-    { "name": "Nginx", "href": "http://nginx.org/", "x": 0, "y": 0, "sort": 2 }
-  ],
-
-  "productivity/collaboration": [
+  "5productivity/collaboration": [
     { "name": "Git", "href": "http://git-scm.com/", "x": 0, "y": 0, "sort": 1 },
     { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "x": 0, "y": 0, "sort": 2 },
     { "name": "Transmit", "href": "http://panic.com/transmit/", "x": 0, "y": 0, "sort": 3 },
