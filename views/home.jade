@@ -34,5 +34,4 @@ block content
       ul.tools.four_up.tiles
         each tool in locals.tools
           li.tool.ttip(data-tooltip=tool.name)
-            a(href=tool.href, target='_blank')
-              img(src=tool.getImagePath(), alt=tool.name, gumby-retina='gumby-retina')
+            a(href=tool.href, target='_blank', style='background-image: url(' + tool.getImagePath() +');', class=tool.slug)
