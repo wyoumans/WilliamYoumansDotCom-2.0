@@ -28,7 +28,7 @@ ToolSchema.pre('save', function(next) {
 });
 
 ToolSchema.methods.getImagePath = function() {
-  return '/images/content/tools/' + this.slug + '.png';
+  return '/images/content/tools/' + this.slug + '.jpg';
 }
 
 module.exports = ToolSchema;
