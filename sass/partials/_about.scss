@@ -1,0 +1,14 @@
+body.about {
+
+  .avatar {
+    margin: 0 0 2% 2%;
+  }
+
+  @include respond(all-phones) {
+
+    .avatar {
+      text-align: center;
+      float: none;
+    }
+  }
+}
