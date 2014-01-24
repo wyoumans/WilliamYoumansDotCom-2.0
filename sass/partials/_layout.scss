@@ -25,30 +25,35 @@
 
   @include respond(all-phones) {
     z-index: 1;
+    margin-bottom: 0;
   }
 
   ul.active {
 
     @include respond(all-phones) {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 
-  ul li {
+  ul {
+    float: right;
 
-    & > a {
-      @include text-shadow(none);
-      font-weight: bold;
-    }
+    li {
 
-    &:hover > a {
-      color: $orange;
+      & > a {
+        @include text-shadow(none);
+        font-weight: bold;
+      }
+
+      &:hover > a {
+        color: $orange;
+      }
     }
   }
 
   .logo {
     width: 100%;
-    line-height: 198px;
+    line-height: 148px;
     display: block;
     height: auto;
 
@@ -70,8 +75,8 @@
   }
 
   ul li, ul li > a {
-    height: 200px;
-    line-height: 198px;
+    height: 150px;
+    line-height: 148px;
 
     @include respond(all-phones) {
       height: 60px;
