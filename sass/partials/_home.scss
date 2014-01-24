@@ -55,11 +55,18 @@ body.home {
 
     .tool {
       margin-bottom: 2%;
-      line-height: 0;
+      text-align: center;
 
       a {
+        height: 88px;
+        width: 88px;
         display: block;
-        text-align: center;
+        background-repeat: no-repeat;
+        background-position: -88px 0;
+
+        &:hover {
+          background-position: 0 0;
+        }
       }
     }
   }
