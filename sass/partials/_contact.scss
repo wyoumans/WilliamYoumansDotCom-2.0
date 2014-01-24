@@ -14,4 +14,43 @@ body.contact {
       padding-right: 300px;
     }
   }
+
+  @include respond(all-phones) {
+
+    li.field {
+
+      label.inline {
+       display: block;
+      }
+
+      .input {
+        width: 100% !important;
+        float: none;
+      }
+
+      .error-message {
+        position: relative;
+        top: auto;
+        right: auto;
+      }
+
+      &.danger, &.warning, &.success {
+
+        &:after {
+          right: 0;
+        }
+      }
+
+      &.danger {
+
+        .input {
+          padding-right: 0;
+        }
+
+        textarea.input {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
