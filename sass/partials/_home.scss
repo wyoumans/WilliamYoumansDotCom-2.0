@@ -52,9 +52,10 @@ body.home {
 
   .tools {
     overflow: visible; // override a stupid gumby rule for tiles that prevents tooltips from showing
+    @include clearfix();
 
     .tool {
-      margin-bottom: 2%;
+      margin: 0 0 4% 8%;
       text-align: center;
 
       a {

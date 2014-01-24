@@ -24,13 +24,11 @@
 
   "5 productivity and collaboration": [
     { "name": "Git", "href": "http://git-scm.com/", "x": 0, "y": 0, "sort": 1 },
-    { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "x": 0, "y": 0, "sort": 2 },
-    { "name": "Transmit", "href": "http://panic.com/transmit/", "x": 0, "y": 0, "sort": 3 },
-    { "name": "Alfred", "href": "http://www.alfredapp.com/", "x": 0, "y": 0, "sort": 4 },
-    { "name": "Chrome", "href": "www.google.com/chrome", "x": 0, "y": 0, "sort": 5 },
-    { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "x": 0, "y": 0, "sort": 6 },
-    { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 7 },
-    { "name": "Photoshop", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 8 },
-    { "name": "Text Expander", "href": "http://smilesoftware.com/TextExpander/index.html", "x": 0, "y": 0, "sort": 9 }
+    { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 2 },
+    { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "x": 0, "y": 0, "sort": 3 },
+    { "name": "Transmit", "href": "http://panic.com/transmit/", "x": 0, "y": 0, "sort": 4 },
+    { "name": "Alfred", "href": "http://www.alfredapp.com/", "x": 0, "y": 0, "sort": 5 },
+    { "name": "Chrome", "href": "www.google.com/chrome", "x": 0, "y": 0, "sort": 6 },
+    { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "x": 0, "y": 0, "sort": 7 }
   ]
 }
