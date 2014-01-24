@@ -10,7 +10,7 @@ module.exports.init = function(app) {
   app.get('/', getHome);
   app.get('/portfolio', getPortfolio);
   app.get('/services', getServices);
-  app.get('/blog', getBlog);
+  // app.get('/blog', getBlog);
   app.get('/about', getAbout);
 };
 
