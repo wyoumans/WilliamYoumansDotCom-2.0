@@ -26,9 +26,11 @@
   };
 
   if ($('.masthead')) {
-    animation.inLeft(
-      animation.inRight
-    );
+    setTimeout(function() {
+      animation.inLeft(
+        animation.inRight
+      );
+    }, 1000);
   }
 
   // initialize plugin
