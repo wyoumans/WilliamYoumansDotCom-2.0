@@ -1,0 +1,34 @@
+{
+  "1 operating systems": [
+    { "name": "Mac OS X", "href": "http://www.apple.com/osx/", "x": 0, "y": 0, "sort": 1 },
+    { "name": "Linux", "href": "http://www.linux.org/", "x": 0, "y": 0, "sort": 2 }
+  ],
+
+  "2 languages": [
+    { "name": "Javascript", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "x": 0, "y": 0, "sort": 1 },
+    { "name": "Ruby", "href": "https://www.ruby-lang.org/en/", "x": 0, "y": 0, "sort": 2 },
+    { "name": "PHP", "href": "http://php.net/", "x": 0, "y": 0, "sort": 3 }
+  ],
+
+  "3 databases": [
+    { "name": "MongoDB", "href": "http://www.mongodb.org/", "x": 0, "y": 0, "sort": 1 },
+    { "name": "MySQL", "href": "http://www.mysql.com/", "x": 0, "y": 0, "sort": 2 }
+  ],
+
+  "4 libraries and frameworks": [
+    { "name": "Node.js", "href": "http://nodejs.org/", "x": 0, "y": 0, "sort": 1 },
+    { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "x": 0, "y": 0, "sort": 2 },
+    { "name": "Yii", "href": "http://www.yiiframework.com/", "x": 0, "y": 0, "sort": 3 },
+    { "name": "jQuery", "href": "http://jquery.com/", "x": 0, "y": 0, "sort": 4 }
+  ],
+
+  "5 productivity and collaboration": [
+    { "name": "Git", "href": "http://git-scm.com/", "x": 0, "y": 0, "sort": 1 },
+    { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "x": 0, "y": 0, "sort": 2 },
+    { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "x": 0, "y": 0, "sort": 3 },
+    { "name": "Transmit", "href": "http://panic.com/transmit/", "x": 0, "y": 0, "sort": 4 },
+    { "name": "Alfred", "href": "http://www.alfredapp.com/", "x": 0, "y": 0, "sort": 5 },
+    { "name": "Chrome", "href": "www.google.com/chrome", "x": 0, "y": 0, "sort": 6 },
+    { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "x": 0, "y": 0, "sort": 7 }
+  ]
+}

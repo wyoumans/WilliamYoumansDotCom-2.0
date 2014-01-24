@@ -4,9 +4,21 @@ block content
   .row
     .four.columns
       h2 My Services
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
+      p I am a full stack web developer with more than five years of experience providing cutting edge <strong>web solutions</strong> to meet the unique needs of <strong>small businesses</strong> like yours.
+
+      p Lately I have been providing:
+
+      ul.circle
+        li <strong>E-Commerce</strong> integration with Authorize.net or Stripe
+        li <strong>Image processing</strong> with imagemagick or aviary
+        li Custom <strong>content management systems</strong>
+        li User membership systems
+        li Custom <strong>blogging platforms</strong>
+        li Linux <strong>server administration</strong>
+        li <strong>Search Engine Optomization</strong> (SEO) services
+
+      p What can I do for <a href="/contact"><strong>YOU?</strong></a>
+
 
     .four.columns
       h2 My Projects
@@ -18,6 +30,8 @@ block content
 
     .four.columns
       h2 My Tools
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consequat sapien, at cursus elit aliquam ut. Praesent ullamcorper felis nec lorem gravida, ullamcorper sagittis ante viverra. Maecenas magna justo, facilisis vitae diam varius, porta gravida dui. Ut euismod nisl vel purus feugiat ornare. Proin augue orci, aliquet sed vestibulum vel, pretium sit amet sapien. Curabitur iaculis elit sed lorem consectetur, eget congue nisl tempor. Pellentesque sed justo euismod, convallis orci ac, gravida turpis. Vivamus in est nec mi rhoncus aliquam. Sed congue feugiat elit non ultricies.
+
+      ul.tools.tiles
+        each tool in locals.tools
+          li.tool.ttip(data-tooltip=tool.name)
+            a(href=tool.href, target='_blank', style='background-image: url(' + tool.getImagePath() +');', class=tool.slug)
