@@ -24,7 +24,7 @@ app.locals({
   useMinifiedAssets: config.useMinifiedAssets,
   analytics: config.analytics,
   bodyClass: '',
-  metaDescription: 'William Youmans is a software developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
+  metaDescription: 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
   metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
   browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
   showMastHead: false,
