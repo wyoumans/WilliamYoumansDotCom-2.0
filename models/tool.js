@@ -21,7 +21,7 @@ var ToolSchema = new Schema({
 
 ToolSchema.pre('save', function(next) {
   if (!this.slug) {
-    this.slug = this.name.toLowerCase().replace(/\s+/g, '-');
+    this.slug = this.name.toLowerCase().replace(/\W+/g, '-');
   }
 
   next();
