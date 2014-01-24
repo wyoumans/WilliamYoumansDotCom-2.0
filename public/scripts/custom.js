@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+$(function() {
   var animationSpeed = 1000
     , beginPosition  = '-2000px'
     , endPosition    = 0
@@ -46,4 +46,4 @@
       name: 'contact[message]',
     }]
   });
-})();
+});

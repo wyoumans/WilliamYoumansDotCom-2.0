@@ -98,7 +98,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
       }
 
     if locals.useMinifiedAssets
-      script(src='/scripts/gumby.min.js')
+      script(gumby-touch='/scripts/vendor', src='/scripts/gumby.min.js')
     else
       script(gumby-touch='/scripts/vendor', src='/bower_components/gumby/js/libs/gumby.js')
       script(src='/bower_components/gumby/js/libs/ui/gumby.retina.js')
