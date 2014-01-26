@@ -24,10 +24,7 @@
 
   "5 productivity and collaboration": [
     { "name": "Git", "href": "http://git-scm.com/", "sort": 1 },
-    { "name": "iTerm", "href": "http://www.adobe.com/products/photoshopfamily.html", "sort": 2 },
     { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "sort": 3 },
-    { "name": "Transmit", "href": "http://panic.com/transmit/", "sort": 4 },
-    { "name": "Alfred", "href": "http://www.alfredapp.com/", "sort": 5 },
     { "name": "Chrome", "href": "www.google.com/chrome", "sort": 6 },
     { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "sort": 7 }
   ]
