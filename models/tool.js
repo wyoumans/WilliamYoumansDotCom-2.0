@@ -14,8 +14,6 @@ var ToolSchema = new Schema({
   },
   slug: String,
   category: String,
-  x: Number,
-  y: Number,
   sort: Number
 });
 
