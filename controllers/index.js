@@ -9,7 +9,6 @@ var config = require('../config')
 module.exports.init = function(app) {
   app.get('/', getHome);
   app.get('/portfolio', getPortfolio);
-  // app.get('/services', getServices);
   app.get('/about', getAbout);
 };
 
@@ -66,12 +65,6 @@ function getPortfolio(req, res) {
   render(res, 'generic', {
     pageTitle: 'Portfolio',
     content: '<p>I am in the process of migrating my personal portfolio to this page. Until then, you can see examples of my work on <a target="_blank" href="https://github.com/wyoumans?tab=repositories">my Github profile</a></p>'
-  });
-}
-
-function getServices(req, res) {
-  render(res, 'generic', {
-    pageTitle: 'Services'
   });
 }
 
