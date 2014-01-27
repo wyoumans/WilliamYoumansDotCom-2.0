@@ -158,11 +158,29 @@
     text-align: center;
     font-size: 25px;
     color: #501111;
-    text-shadow: #d65c5c 0 1px 0;
+    text-shadow: #D65C5C 0 1px 0;
     margin: 0px;
     padding: 2px 10px 5px 10px;
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
+  }
+}
+
+@include respond(all-phones) {
+
+  .hire-ribbon {
+    background-image: none;
+    background-color: #A94135;
+    width: 100%;
+    height: auto;
+    border: 2px solid #501111;
+
+    p {
+
+      a {
+        display: block;
+      }
+    }
   }
 }
 
