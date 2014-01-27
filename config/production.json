@@ -1,4 +1,5 @@
 {
   "env": "production",
-  "supportsCaching": true
+  "supportsCaching": true,
+  "port": 4321
 }
