@@ -2,6 +2,7 @@
 
 var defaults = {
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
+  "supportsCaching": false,
   "port": 3000,
   "logToFile": true,
   "serverEmail": "no-reply@williamyoumans.com",
