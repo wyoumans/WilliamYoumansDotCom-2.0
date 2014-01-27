@@ -8,6 +8,7 @@ var defaults = {
   "serverEmail": "no-reply@williamyoumans.com",
   "adminEmail": process.env.ADMIN_EMAIL,
   "useMinifiedAssets": true,
+  "showAnalytics": false,
   "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
     "key": process.env.LASTFM_KEY,
