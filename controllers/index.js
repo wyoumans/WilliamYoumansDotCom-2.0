@@ -9,6 +9,7 @@ var config = require('../config')
 module.exports.init = function(app) {
   app.get('/', getHome);
   app.get('/portfolio', getPortfolio);
+  app.get('/projects', getProjects);
   app.get('/about', getAbout);
 };
 
@@ -62,9 +63,12 @@ function getHome(req, res) {
 }
 
 function getPortfolio(req, res) {
-  render(res, 'generic', {
-    pageTitle: 'Portfolio',
-    content: '<p>I am in the process of migrating my personal portfolio to this page. Until then, you can see examples of my work on <a target="_blank" href="https://github.com/wyoumans?tab=repositories">my Github profile</a></p>'
+  res.redirect(301, '/projects');
+}
+
+function getProjects(req, res) {
+  render(res, 'projects', {
+    pageTitle: 'Projects'
   });
 }
 
