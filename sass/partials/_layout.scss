@@ -146,7 +146,7 @@
 
     &, &:visited, &:active, &:hover {
       text-decoration: none;
-      color: #501111;
+      color: #FFFFFF;
     }
 
     &:hover {
@@ -157,12 +157,12 @@
   p {
     text-align: center;
     font-size: 25px;
-    color: #501111;
-    text-shadow: #D65C5C 0 1px 0;
+    color: #FFFFFF;
+    text-shadow: #501111 0 2px 0;
     margin: 0px;
     padding: 2px 10px 5px 10px;
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: normal;
   }
 }
 
