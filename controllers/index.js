@@ -49,8 +49,8 @@ function getHome(req, res) {
 
         // temporary hard coded movie
         locals.footerContent.movie = {
-          href: 'http://www.amazon.com/Star-Trek-VI-Undiscovered-Theatrical/dp/B000I3P3EM',
-          src: 'http://ecx.images-amazon.com/images/I/51yLQ9m7EcL._SX215_.jpg'
+          href: 'http://www.amazon.com/The-Andy-Griffith-Show-Complete/dp/B000NA21YA',
+          src: 'http://ecx.images-amazon.com/images/I/5112Ga9dG%2BL.jpg'
         };
 
         locals.showMastHead = true;
