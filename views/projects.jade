@@ -5,11 +5,43 @@ block content
     .twelve.columns
       h1.main-page-title= pageTitle
 
-      h3 Currently working on
-      p
-        | <a href="http://www.nodelove.com/" target="_blank">Node Love</a> is a nifty little MongoDB driven Node.js
-        | starter template. <a href="http://camelize.com/" target="_blank">Camelize Me</a> is an online tool that
-        | converts arbitrary text to camel case. I also occasionally contribute to various open source
-        | <a href="https://github.com/wyoumans" target="_blank">projects</a>.
+  .row
+    section.twelve.columns
+      article.row.portfolio-item
+        .six.columns
+          .image.photo
+            img(src='/images/content/projects/logodesign.jpg')
+        .description.six.columns
+          h2 Logo Design
+          p I was contracted by an entrepreneur to develop a membership based portfolio system for logo designers. It includes integration with the Stripe payment gateway API, the SendGrid API, and the Google DoubleClick advertisement library as well as a user administration panel and custom integration with the wordpres blogging platform. This project is currently in the beta testing phase.
+          p
+            strong Website: &nbsp;
+            a(href='https://beta.logodesign.com/', target='_blank') https://beta.logodesign.com/
 
-      p I am in the process of migrating my personal portfolio to this page. Until then, you can see examples of my work on <a target="_blank" href="https://github.com/wyoumans?tab=repositories">my Github profile</a>
+      article.row.portfolio-item
+        .six.columns
+          .image.photo
+            img(src='/images/content/projects/nodelove.jpg')
+        .description.six.columns
+          h2 Node Love
+          p A nifty little MongoDB driven Node.js starter template that is jam packed with cool buzzwords like Express, Less, Jade, Browserify, Templatizer, Skeleton, and responsive.
+          p
+            strong Website: &nbsp;
+            a(href='http://www.nodelove.com/', target='_blank') http://www.nodelove.com/
+          p
+            strong Source: &nbsp;
+            a(href='http://www.nodelove.com/', target='_blank') http://www.nodelove.com/
+
+      article.row.portfolio-item
+        .six.columns
+          .image.photo
+            img(src='/images/content/projects/camelize.jpg')
+        .description.six.columns
+          h2 Camelize Me
+          p A free online tool for programmers that converts arbitrary text to camel case.
+          p
+            strong Website: &nbsp;
+            a(href='http://camelize.com/', target='_blank') http://camelize.com/
+          p
+            strong Source: &nbsp;
+            a(href='https://github.com/wyoumans/camelize', target='_blank') https://github.com/wyoumans/camelize
