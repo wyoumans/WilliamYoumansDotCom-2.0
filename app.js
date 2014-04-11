@@ -7,7 +7,7 @@ var express    = require('express')
   , logger     = require('./lib').logger
   , middleware = require('./middleware')
   , config     = require('./config')
-  , models     = require('./models') // register models
+  , models     = require('./models') // register models (don't remove even if not used in this file!)
   , cronJobs   = require('./lib').cronJobs
   , app        = express()
   ;
@@ -49,6 +49,11 @@ app.configure(function() {
   app.use(express.json());
   app.use(express.urlencoded());
   app.use(express.methodOverride());
+
+  // check for 301 redirects
+  app.use(middleware.redirects());
+
+  // set cache headers
   app.use(middleware.cacheControl());
 
   app.use(express.static(path.join(__dirname, 'public'), {
@@ -73,16 +78,8 @@ conductor.init(app, {
 }, function(err, app) {
 
   app.get('*', function(req, res) {
-    models.Redirect({
-      before: req.href
-    }, function(err, redirect) {
-      if (redirect) {
-        return res.redirect(301, redirect.after);
-      } else {
-        logger.warn('404: ' + req.url);
-        return res.status(404).render('errors/404');
-      }
-    });
+    logger.warn('404: ' + req.url);
+    return res.status(404).render('errors/404');
   });
 
   http.createServer(app).listen(app.get('port'), function() {
