@@ -18,4 +18,7 @@ build:
 empty:
 	@./bin/empty.sh
 
-.PHONY: browserify compass build run run-forever empty
+populate:
+	@./bin/populate.sh
+
+.PHONY: browserify compass build run run-forever empty populate
