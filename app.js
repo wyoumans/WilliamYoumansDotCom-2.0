@@ -1,15 +1,19 @@
 'use strict';
 
-var express    = require('express')
-  , conductor  = require('express-conductor')
-  , http       = require('http')
-  , path       = require('path')
-  , logger     = require('./lib').logger
-  , middleware = require('./middleware')
-  , config     = require('./config')
-  , models     = require('./models') // register models (don't remove even if not used in this file!)
-  , cronJobs   = require('./lib').cronJobs
-  , app        = express()
+var express        = require('express')
+  , conductor      = require('express-conductor')
+  , http           = require('http')
+  , path           = require('path')
+  , favicon        = require('static-favicon')
+  , bodyParser     = require('body-parser')
+  , methodOverride = require('method-override')
+  , morgan         = require('morgan')  // for logging to the console
+  , logger         = require('./lib').logger
+  , middleware     = require('./middleware')
+  , config         = require('./config')
+  , models         = require('./models') // register models (don't remove even if not used in this file!)
+  , cronJobs       = require('./lib').cronJobs
+  , app            = express()
   ;
 
 /*
@@ -19,59 +23,43 @@ var express    = require('express')
 app.enable('trust proxy');
 
 // default locals
-app.locals({
-  NODE_ENV: config.env,
-  useMinifiedAssets: config.useMinifiedAssets,
-  analytics: config.analytics,
-  bodyClass: '',
-  metaDescription: 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
-  metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
-  browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
-  showMastHead: false,
-  showFooterMedia: false,
-});
+app.locals.NODE_ENV = config.env;
+app.locals.useMinifiedAssets = config.useMinifiedAssets;
+app.locals.analytics = config.analytics;
+app.locals.bodyClass = '';
+app.locals.metaDescription = 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.';
+app.locals.metaKeywords = 'Freelance Developer, Software Development, Salt Lake City, Utah, professional';
+app.locals.browserTitle = 'William Youmans | Freelance Web Development, Salt Lake City, Utah';
+app.locals.showMastHead = false;
+app.locals.showFooterMedia = false;
 
-app.configure('local', function() {
-  app.use(express.logger('dev'));
-});
+if (['local', 'testing'].indexOf(config.env) !== -1) {
+  app.use(morgan('dev'));
+}
 
-app.configure('testing', function() {
-  app.use(express.logger('dev'));
-});
+app.set('port', config.port);
 
-app.configure(function() {
-  app.set('port', config.port);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
-  app.set('views', path.join(__dirname, 'views'));
-  app.set('view engine', 'jade');
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(bodyParser());
+app.use(methodOverride());
 
-  app.use(express.favicon(__dirname + '/public/favicon.ico'));
-  app.use(express.json());
-  app.use(express.urlencoded());
-  app.use(express.methodOverride());
+// check for 301 redirects
+app.use(middleware.redirects());
 
-  // check for 301 redirects
-  app.use(middleware.redirects());
+// set cache headers
+app.use(middleware.cacheControl());
 
-  // set cache headers
-  app.use(middleware.cacheControl());
+app.use(express.static(path.join(__dirname, 'public'), {
+  redirect: false
+}));
 
-  app.use(express.static(path.join(__dirname, 'public'), {
-    redirect: false
-  }));
-
-  app.use(app.router);
-});
-
-app.configure('staging', function() {
+if (['staging', 'production'].indexOf(config.env) !== -1) {
   cronJobs.start();
   app.use(middleware.errorHandler());
-});
-
-app.configure('production', function() {
-  cronJobs.start();
-  app.use(middleware.errorHandler());
-});
+}
 
 conductor.init(app, {
   controllers: __dirname + '/controllers'

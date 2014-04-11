@@ -15,26 +15,30 @@
     "test": "make test"
   },
   "dependencies": {
-    "async": "~0.2.9",
+    "async": "~0.7.0",
+    "body-parser": "~1.0.1",
     "confrodo": "0.0.5",
-    "cron": "~1.0.1",
-    "express": "~3.4.4",
+    "cron": "~1.0.4",
+    "express": "~4.0.0",
     "express-conductor": "~1.0.1",
-    "forever": "~0.10.11",
-    "instagram-node": "~0.1.13",
-    "jade": "~0.35.0",
-    "lastfm-history": "~0.1.2",
-    "lodash": "~2.3.0",
-    "moment": "~2.4.0",
-    "mongoose": "~3.8.1",
+    "forever": "~0.11.0",
+    "instagram-node": "~0.2.3",
+    "jade": "~1.3.1",
+    "lastfm-history": "~1.0.0",
+    "lodash": "~2.4.1",
+    "method-override": "~1.0.0",
+    "moment": "~2.5.1",
+    "mongoose": "~3.8.8",
     "mongoose-createdmodified": "0.0.2",
     "sendgrid": "~1.0.2",
+    "static-favicon": "~1.0.2",
     "string-capitalize": "~1.0.1",
     "time": "~0.10.0",
-    "winston": "~0.7.2"
+    "winston": "~0.7.3"
   },
   "devDependencies": {
     "compass": "~0.1.0",
-    "node-minify": "~0.8.2"
+    "morgan": "~1.0.0",
+    "node-minify": "~0.10.2"
   }
 }

@@ -15,4 +15,10 @@ compass:
 build:
 	@./bin/build.sh
 
-.PHONY: browserify compass build run run-forever
+empty:
+	@./bin/empty.sh
+
+populate:
+	@./bin/populate.sh
+
+.PHONY: browserify compass build run run-forever empty populate
