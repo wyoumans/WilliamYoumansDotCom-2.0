@@ -38,9 +38,8 @@ var getHistory = require('lastfm-history')
       }
 
       new Track(track).save(function(err) {
-          // prevent db errors from stopping the script
-          done(null);
-        });
+        done(null);
+      });
     }, function(err) {
       if (err) {
         logger.error(err);
@@ -58,7 +57,8 @@ var getHistory = require('lastfm-history')
   });
 
   worker.on('error', function(err) {
-    logger.error(err);
+    console.log('Error communicating with lastFM');
+    logger.error(err.toString());
     process.exit();
   });
 })();
