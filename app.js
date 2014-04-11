@@ -5,6 +5,7 @@ var express        = require('express')
   , http           = require('http')
   , path           = require('path')
   , favicon        = require('static-favicon')
+  , bodyParser     = require('body-parser')
   , methodOverride = require('method-override')
   , morgan         = require('morgan')  // for logging to the console
   , logger         = require('./lib').logger
@@ -42,6 +43,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(bodyParser());
 app.use(methodOverride());
 
 // check for 301 redirects

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "async": "~0.7.0",
+    "body-parser": "~1.0.1",
     "confrodo": "0.0.5",
     "cron": "~1.0.4",
     "express": "~4.0.0",
