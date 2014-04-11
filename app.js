@@ -31,47 +31,36 @@ app.locals({
   showFooterMedia: false,
 });
 
-app.configure('local', function() {
+if (['local', 'testing'].indexOf(config.env) !== -1) {
   app.use(express.logger('dev'));
-});
+}
 
-app.configure('testing', function() {
-  app.use(express.logger('dev'));
-});
+app.set('port', config.port);
 
-app.configure(function() {
-  app.set('port', config.port);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
-  app.set('views', path.join(__dirname, 'views'));
-  app.set('view engine', 'jade');
+app.use(express.favicon(__dirname + '/public/favicon.ico'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
 
-  app.use(express.favicon(__dirname + '/public/favicon.ico'));
-  app.use(express.json());
-  app.use(express.urlencoded());
-  app.use(express.methodOverride());
+// check for 301 redirects
+app.use(middleware.redirects());
 
-  // check for 301 redirects
-  app.use(middleware.redirects());
+// set cache headers
+app.use(middleware.cacheControl());
 
-  // set cache headers
-  app.use(middleware.cacheControl());
+app.use(express.static(path.join(__dirname, 'public'), {
+  redirect: false
+}));
 
-  app.use(express.static(path.join(__dirname, 'public'), {
-    redirect: false
-  }));
+app.use(app.router);
 
-  app.use(app.router);
-});
-
-app.configure('staging', function() {
+if (['staging', 'production'].indexOf(config.env) !== -1) {
   cronJobs.start();
   app.use(middleware.errorHandler());
-});
-
-app.configure('production', function() {
-  cronJobs.start();
-  app.use(middleware.errorHandler());
-});
+}
 
 conductor.init(app, {
   controllers: __dirname + '/controllers'
