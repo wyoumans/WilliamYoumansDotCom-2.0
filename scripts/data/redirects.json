@@ -1,4 +1,73 @@
 [{
-  "before": "/portfolio",
-  "after": "/projects"
+	"before": "/portfolio",
+	"after": "/projects"
+}, {
+	"before": "/photos",
+	"after": "http://pics.williamyoumans.com/"
+}, {
+	"before": "/blog",
+	"after": "/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael"
+}, {
+	"before": "/blog?page=1",
+	"after": "/blog"
+}, {
+	"before": "/blog?page=2",
+	"after": "/blog"
+}, {
+	"before": "/blog?page=3",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/wodw-esoteric",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/wodw-umlaut",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/wodw-vacuous",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/vocabulary",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/vocabulary?page=1",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/vocabulary?page=2",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/vocabulary?page=3",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/programming",
+	"after": "/blog"
+}, {
+	"before": "/blog/category/miscellaneous",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/wodw-nepotism",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-syllogism",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/welcome-to-the-new-blog",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-amalgamation",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-parapraxis",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-defenestration",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-kibosh",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-force-majeure",
+	"after": "/blog"
+}, {
+	"before": "/blog/detail/word-of-the-day-wednesday-kerning",
+	"after": "/blog"
 }]
