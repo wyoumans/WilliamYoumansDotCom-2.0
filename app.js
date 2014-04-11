@@ -1,15 +1,18 @@
 'use strict';
 
-var express    = require('express')
-  , conductor  = require('express-conductor')
-  , http       = require('http')
-  , path       = require('path')
-  , logger     = require('./lib').logger
-  , middleware = require('./middleware')
-  , config     = require('./config')
-  , models     = require('./models') // register models (don't remove even if not used in this file!)
-  , cronJobs   = require('./lib').cronJobs
-  , app        = express()
+var express        = require('express')
+  , conductor      = require('express-conductor')
+  , http           = require('http')
+  , path           = require('path')
+  , favicon        = require('static-favicon'),
+  , methodOverride = require('method-override'),
+  , morgan         = require('morgan'),  // for logging to the console
+  , logger         = require('./lib').logger
+  , middleware     = require('./middleware')
+  , config         = require('./config')
+  , models         = require('./models') // register models (don't remove even if not used in this file!)
+  , cronJobs       = require('./lib').cronJobs
+  , app            = express()
   ;
 
 /*
@@ -32,7 +35,7 @@ app.locals({
 });
 
 if (['local', 'testing'].indexOf(config.env) !== -1) {
-  app.use(express.logger('dev'));
+  app.use(morgan('dev'));
 }
 
 app.set('port', config.port);
@@ -40,10 +43,10 @@ app.set('port', config.port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(express.favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.methodOverride());
+app.use(methodOverride());
 
 // check for 301 redirects
 app.use(middleware.redirects());
