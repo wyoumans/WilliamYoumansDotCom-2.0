@@ -28,6 +28,6 @@
       .row.image-row
         .columns.centered.nine
           a.ttip(href=locals.footerContent.track.href, target='_blank', data-tooltip=locals.footerContent.track.date_formatted)
-            img.image.photo(src=locals.footerContent.track.imageSrc, alt=locals.footerContent.track.name)
+            img.image.photo(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
     else
       p Nothing to report
