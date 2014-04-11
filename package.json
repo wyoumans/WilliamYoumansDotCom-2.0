@@ -24,7 +24,7 @@
     "forever": "~0.11.0",
     "instagram-node": "~0.2.3",
     "jade": "~1.3.1",
-    "lastfm-history": "~1.0.0",
+    "lastfm-history": "~0.1.2",
     "lodash": "~2.4.1",
     "method-override": "~1.0.0",
     "moment": "~2.5.1",
