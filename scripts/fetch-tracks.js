@@ -3,7 +3,7 @@
 var getHistory = require('lastfm-history')
   , config     = require('../config')
   , logger     = require('../lib').logger
-  , worker     = getHistory('gotwilly', config.lastfm.key)
+  , worker     = getHistory(config.lastfm.username, config.lastfm.key)
   , Track      = require('../models').Track
   , async      = require('async')
   , _          = require('lodash')

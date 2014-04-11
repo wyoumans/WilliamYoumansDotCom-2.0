@@ -11,6 +11,7 @@ var defaults = {
   "showAnalytics": false,
   "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
+    "username": "gotwilly"
     "key": process.env.LASTFM_KEY,
     "secret": process.env.LASTFM_SECRET
   },
