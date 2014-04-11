@@ -4,9 +4,9 @@ var express        = require('express')
   , conductor      = require('express-conductor')
   , http           = require('http')
   , path           = require('path')
-  , favicon        = require('static-favicon'),
-  , methodOverride = require('method-override'),
-  , morgan         = require('morgan'),  // for logging to the console
+  , favicon        = require('static-favicon')
+  , methodOverride = require('method-override')
+  , morgan         = require('morgan')  // for logging to the console
   , logger         = require('./lib').logger
   , middleware     = require('./middleware')
   , config         = require('./config')
@@ -22,17 +22,15 @@ var express        = require('express')
 app.enable('trust proxy');
 
 // default locals
-app.locals({
-  NODE_ENV: config.env,
-  useMinifiedAssets: config.useMinifiedAssets,
-  analytics: config.analytics,
-  bodyClass: '',
-  metaDescription: 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.',
-  metaKeywords: 'Freelance Developer, Software Development, Salt Lake City, Utah, professional',
-  browserTitle: 'William Youmans | Freelance Web Development, Salt Lake City, Utah',
-  showMastHead: false,
-  showFooterMedia: false,
-});
+app.locals.NODE_ENV = config.env;
+app.locals.useMinifiedAssets = config.useMinifiedAssets;
+app.locals.analytics = config.analytics;
+app.locals.bodyClass = '';
+app.locals.metaDescription = 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.';
+app.locals.metaKeywords = 'Freelance Developer, Software Development, Salt Lake City, Utah, professional';
+app.locals.browserTitle = 'William Youmans | Freelance Web Development, Salt Lake City, Utah';
+app.locals.showMastHead = false;
+app.locals.showFooterMedia = false;
 
 if (['local', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
@@ -44,8 +42,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(express.json());
-app.use(express.urlencoded());
 app.use(methodOverride());
 
 // check for 301 redirects
@@ -57,8 +53,6 @@ app.use(middleware.cacheControl());
 app.use(express.static(path.join(__dirname, 'public'), {
   redirect: false
 }));
-
-app.use(app.router);
 
 if (['staging', 'production'].indexOf(config.env) !== -1) {
   cronJobs.start();
