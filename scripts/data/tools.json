@@ -14,6 +14,6 @@
   "3 libraries and frameworks": [
     { "name": "Node.js", "href": "http://nodejs.org/", "sort": 1 },
     { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "sort": 2 },
-    { "name": "Yii Framework", "href": "http://www.yiiframework.com/", "sort": 3 }
+    { "name": "Yii", "href": "http://www.yiiframework.com/", "sort": 3 }
   ]
 }
