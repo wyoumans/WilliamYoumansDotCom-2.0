@@ -1,31 +1,19 @@
 {
-  "1 operating systems": [
-    { "name": "Mac OS X", "href": "http://www.apple.com/osx/", "sort": 1 },
-    { "name": "Linux", "href": "http://www.linux.org/", "sort": 2 }
-  ],
-
-  "2 languages": [
+  "1 languages": [
     { "name": "Javascript", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "sort": 1 },
     { "name": "Ruby", "href": "https://www.ruby-lang.org/en/", "sort": 2 },
     { "name": "PHP", "href": "http://php.net/", "sort": 3 }
   ],
 
-  "3 databases": [
+  "2 databases and productivity": [
     { "name": "MongoDB", "href": "http://www.mongodb.org/", "sort": 1 },
-    { "name": "MySQL", "href": "http://www.mysql.com/", "sort": 2 }
+    { "name": "MySQL", "href": "http://www.mysql.com/", "sort": 2 },
+    { "name": "Git", "href": "http://git-scm.com/", "sort": 3 }
   ],
 
-  "4 libraries and frameworks": [
+  "3 libraries and frameworks": [
     { "name": "Node.js", "href": "http://nodejs.org/", "sort": 1 },
     { "name": "Ruby on Rails", "href": "http://rubyonrails.org/", "sort": 2 },
-    { "name": "Yii", "href": "http://www.yiiframework.com/", "sort": 3 },
-    { "name": "jQuery", "href": "http://jquery.com/", "sort": 4 }
-  ],
-
-  "5 productivity and collaboration": [
-    { "name": "Git", "href": "http://git-scm.com/", "sort": 1 },
-    { "name": "Sublime Text", "href": "http://www.sublimetext.com/", "sort": 3 },
-    { "name": "Chrome", "href": "www.google.com/chrome", "sort": 6 },
-    { "name": "Omnifocus", "href": "https://www.omnigroup.com/omnifocus", "sort": 7 }
+    { "name": "Yii Framework", "href": "http://www.yiiframework.com/", "sort": 3 }
   ]
 }
