@@ -49,8 +49,8 @@ function getHome(req, res) {
 
         // temporary hard coded movie
         locals.footerContent.movie = {
-          href: 'http://www.amazon.com/The-Andy-Griffith-Show-Complete/dp/B000NA21YA',
-          src: 'http://ecx.images-amazon.com/images/I/5112Ga9dG%2BL.jpg'
+          href: 'http://www.amazon.com/Entourage-Complete-Eighth-Final-Season/dp/B0058YPQ0C',
+          src: 'http://ecx.images-amazon.com/images/I/41wejPs307L._SY300_.jpg'
         };
 
         locals.showMastHead = true;
