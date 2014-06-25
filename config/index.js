@@ -1,6 +1,7 @@
 'use strict';
 
 var defaults = {
+  "env": "local",
   "mongoConnectionString": "mongodb://localhost/williamyoumans",
   "supportsCaching": false,
   "port": 3000,
