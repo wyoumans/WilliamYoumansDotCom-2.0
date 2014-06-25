@@ -2,32 +2,60 @@ extends layouts/main
 
 block content
   .row
-    .eight.columns
-      h2 What can I do for you?
+    .seven.columns
+      h2 Howdy, friend!
+
+      p I'm a freelance software developer and software consultant based in Salt Lake City, Utah. I develop apps, create new technologies, and implement web design.
+
+      p Technology: I can inorporate both front-end and back-end technologies, using whichever platforms you need from both the widely adopted and the cutteing edge.
+
+      p Strategy: I consult with you and your team to cover best practices, discuss available options, or even plan for the addition of a software engineer to your staff.
+
+      p Let's get in touch
+
       p
-       | I am a full stack web developer and software consultant with more than five years of experience providing cutting
-       | edge <strong>web solutions</strong> to meet the unique needs of <strong>small businesses</strong> like yours.
+        .large.rounded.info.btn.icon-left.entypo.icon-mail
+          a(href='/contact') Get a free quote today!
 
-      p Lately I have been:
-
-      ul.circle
-        li integrating <strong>E-Commerce</strong> through Authorize.net and Stripe
-        li processing <strong>dynamic images</strong> with imagemagick and aviary
-        li creating custom <strong>content management</strong> systems
-        li designing <strong>subscription membership</strong> systems
-        li developing custom <strong>blogging platforms</strong>
-        li providing secure Linux <strong>server administration</strong>
-        li performing <strong>Search Engine Optomization</strong> (SEO)
-        li setting up marketing <strong>email campaigns</strong>
-        li optimizing <strong>multilingual websites</strong>
-        li architecting <strong>highly scalable</strong> javascript applications
-
-      p What can I do for <a href="/contact"><strong>YOU?</strong></a>
-
-    .four.columns
+    .four.columns.push_one
       h2 My Tools
 
       ul.tools.tiles
         each tool in locals.tools
           li.tool.ttip(data-tooltip=tool.name)
             a(href=tool.href, target='_blank', style='background-image: url(' + tool.getImagePath() +');', class=tool.slug)
+
+  .row
+    .twelve.columns
+      h2 Software Development, Whenever and However You Need It
+
+      p
+        | With more than 7 years of agency and freelance experience, I've gained in-depth knowledge of most web programming
+        | frameworks, including Node.js/Express, Yii, Zend, Laravel, and Ruby on Rails. I offer versatile full-stack development,
+        | project management, and software know-how that meets the needs of small businesses like yours, whether you know what
+        | those needs are or not.
+
+      p
+        | My services provide technologies that get you results -- <strong>real results</strong> -- with greater accessibility
+        | and less expense than you'll get from a traditional agency. There's no hand-holding on your part, and I'll get you what
+        | you need, on time, ready to go, every time.
+
+      p Specific development services include:
+
+      ul.circle
+        li integrating <strong>E-Commerce</strong> through Authorize.net and Stripe
+        li creating custom <strong>content management</strong> systems
+        li designing <strong>subscription membership</strong> systems
+        li developing custom <strong>blogging platforms</strong>
+        li providing secure Linux <strong>server administration</strong>
+        li performing <strong>Search Engine Optimization</strong> (SEO)
+        li setting up marketing <strong>email campaigns</strong>
+        li optimizing <strong>multilingual websites</strong>
+        li architecting <strong>highly scalable</strong> javascript applications
+        li <strong>managing the whole project</strong>, from determining the scope to managing contractors
+
+      p
+        | As a consultant, I can help you figure out what you’re looking for and how best to get it -- whether it's a new system
+        | or a new staffer, best practices or best options, designing an app or developing a membership site.
+
+      p Whatever you need, I can deliver.
