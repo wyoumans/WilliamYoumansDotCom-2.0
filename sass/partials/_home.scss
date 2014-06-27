@@ -50,28 +50,6 @@ body.home {
     }
   }
 
-  .tools {
-    overflow: visible; // override a stupid gumby rule for tiles that prevents tooltips from showing
-    @include clearfix();
-
-    .tool {
-      margin: 0 8% 4% 0;
-      text-align: center;
-
-      a {
-        height: 88px;
-        width: 88px;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: -88px 0;
-
-        &:hover {
-          background-position: 0 0;
-        }
-      }
-    }
-  }
-
   .footer-media {
 
     h3 i {
@@ -88,6 +66,14 @@ body.home {
           height: 268px;
         }
       }
+    }
+  }
+
+  @include respond(all-phones) {
+
+    .avatar {
+      text-align: center;
+      float: none;
     }
   }
 }

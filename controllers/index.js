@@ -26,15 +26,6 @@ function getHome(req, res) {
         postDate: -1
       }
     }, function(err, image) {
-
-      models.Tool.find({}, 'name slug href', {
-        sort: {
-          category: 1,
-          sort: 1
-        }
-      }, function(err, tools) {
-
-        locals.tools = tools;
         locals.footerContent = {};
 
         if (track) {
@@ -58,7 +49,6 @@ function getHome(req, res) {
 
         render(res, 'home', locals);
       });
-    });
   });
 }
 
