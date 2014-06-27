@@ -30,6 +30,7 @@
     "moment": "~2.5.1",
     "mongoose": "~3.8.8",
     "mongoose-createdmodified": "0.0.2",
+    "morgan": "~1.0.0",
     "sendgrid": "~1.0.2",
     "static-favicon": "~1.0.2",
     "string-capitalize": "~1.0.1",
@@ -38,7 +39,6 @@
   },
   "devDependencies": {
     "compass": "~0.1.0",
-    "morgan": "~1.0.0",
     "node-minify": "~0.10.2"
   }
 }
