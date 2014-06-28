@@ -27,9 +27,9 @@ app.locals.NODE_ENV = config.env;
 app.locals.useMinifiedAssets = config.useMinifiedAssets;
 app.locals.analytics = config.analytics;
 app.locals.bodyClass = '';
-app.locals.metaDescription = 'William Youmans is a freelance web developer, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.';
-app.locals.metaKeywords = 'Freelance Developer, Software Development, Salt Lake City, Utah, professional';
-app.locals.browserTitle = 'William Youmans | Freelance Web Development, Salt Lake City, Utah';
+app.locals.metaDescription = 'William Youmans is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.';
+app.locals.metaKeywords = 'Freelance Developer, Software Development, Software Consulting, Project Management, Salt Lake City, Utah, professional';
+app.locals.browserTitle = 'William Youmans | Web Software Developer & Consultant, Salt Lake City, Utah';
 app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
 
