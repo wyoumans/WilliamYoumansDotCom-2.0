@@ -64,6 +64,6 @@ function getProjects(req, res) {
 
 function getAbout(req, res) {
   render(res, 'about', {
-    pageTitle: 'About William Youmans'
+    pageTitle: 'About'
   });
 }
