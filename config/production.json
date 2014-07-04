@@ -1,5 +1,6 @@
 {
   "env": "production",
+  "mongoConnectionString": "mongodb://localhost/williamyoumans_production",
   "supportsCaching": true,
   "port": 4321,
   "showAnalytics": true

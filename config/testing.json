@@ -1,4 +1,5 @@
 {
   "env": "testing",
+  "mongoConnectionString": "mongodb://localhost/williamyoumans_testing",
   "port": 3333
 }
