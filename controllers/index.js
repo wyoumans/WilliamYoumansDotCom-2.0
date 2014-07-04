@@ -8,7 +8,6 @@ var config = require('../config')
 
 module.exports.init = function(app) {
   app.get('/', getHome);
-  app.get('/portfolio', getPortfolio);
   app.get('/projects', getProjects);
   app.get('/about', getAbout);
 };
@@ -50,10 +49,6 @@ function getHome(req, res) {
         render(res, 'home', locals);
       });
   });
-}
-
-function getPortfolio(req, res) {
-  res.redirect(301, '/projects');
 }
 
 function getProjects(req, res) {
