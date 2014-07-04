@@ -2,5 +2,5 @@
   "env": "production",
   "supportsCaching": true,
   "port": 4321,
-  "showAnalytics": false
+  "showAnalytics": true
 }
