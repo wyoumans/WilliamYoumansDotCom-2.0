@@ -25,29 +25,29 @@ function getHome(req, res) {
         postDate: -1
       }
     }, function(err, image) {
-        locals.footerContent = {};
+      locals.footerContent = {};
 
-        if (track) {
-          track.date_formatted = moment(track.scrobbleDate).fromNow();
-          locals.footerContent.track = track;
-        }
+      if (track) {
+        track.date_formatted = moment(track.scrobbleDate).fromNow();
+        locals.footerContent.track = track;
+      }
 
-        if (image) {
-          image.date_formatted = moment(image.postDate).fromNow();
-          locals.footerContent.image = image;
-        }
+      if (image) {
+        image.date_formatted = moment(image.postDate).fromNow();
+        locals.footerContent.image = image;
+      }
 
-        // temporary hard coded movie
-        locals.footerContent.movie = {
-          href: 'http://www.amazon.com/Entourage-Complete-Eighth-Final-Season/dp/B0058YPQ0C',
-          src: 'http://ecx.images-amazon.com/images/I/41wejPs307L._SY300_.jpg'
-        };
+      // temporary hard coded movie
+      locals.footerContent.movie = {
+        href: 'http://www.amazon.com/Entourage-Complete-Eighth-Final-Season/dp/B0058YPQ0C',
+        src: 'http://ecx.images-amazon.com/images/I/41wejPs307L._SY300_.jpg'
+      };
 
-        locals.showMastHead = true;
-        locals.showFooterMedia = true;
+      locals.showMastHead = true;
+      locals.showFooterMedia = true;
 
-        render(res, 'home', locals);
-      });
+      render(res, 'home', locals);
+    });
   });
 }
 
