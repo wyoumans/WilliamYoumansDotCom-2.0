@@ -8,6 +8,7 @@ server {
   access_log /var/log/nginx/www.williamyoumans.access.log;
   error_log  /var/log/nginx/www.williamyoumans.error.log debug;   log_subrequest on;
   server_name williamyoumans.com www.williamyoumans.com;
+  add_header "X-UA-Compatible" "IE=Edge,chrome=1";
 
   if ($host = 'williamyoumans.com' ) {
     rewrite  ^/(.*)$  http://www.williamyoumans.com/$1  permanent;
