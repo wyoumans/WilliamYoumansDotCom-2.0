@@ -26,6 +26,8 @@ app.enable('trust proxy');
 app.locals.NODE_ENV = config.env;
 app.locals.useMinifiedAssets = config.useMinifiedAssets;
 app.locals.analytics = config.analytics;
+app.locals.showAnalytics = config.showAnalytics;
+app.locals.supportsCaching = config.supportsCaching;
 app.locals.bodyClass = '';
 app.locals.metaDescription = 'William Youmans is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Salt Lake City, Utah.';
 app.locals.metaKeywords = 'Freelance Developer, Software Development, Software Consulting, Project Management, Salt Lake City, Utah, professional';
