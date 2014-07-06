@@ -1,4 +1,4 @@
 {
   "env": "staging",
-  "mongoConnectionString": "mongodb://localhost/williamyoumans_staging",
+  "mongoConnectionString": "mongodb://localhost/williamyoumans_staging"
 }
