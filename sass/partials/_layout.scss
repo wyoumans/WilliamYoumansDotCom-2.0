@@ -22,10 +22,10 @@
 
 .navbar {
   z-index: 1000;
+  margin-bottom: 0;
 
   @include respond(all-phones) {
     z-index: 1;
-    margin-bottom: 0;
   }
 
   ul.active {
