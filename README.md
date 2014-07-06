@@ -6,14 +6,24 @@ Make sure you have `claymate` and `bower` installed globally from NPM
 
 ## Helpful Scripts
 
-Fetch latest last.fm and instagram data
+Empty the database
 ```
-make update
+make empty
+```
+
+Seed the database or fetch latest last.fm and instagram data
+```
+make populate
 ```
 
 Start the server
 ```
 make run
+```
+
+Start the server (forever)
+```
+make run-forever
 ```
 
 Compiles CSS
@@ -25,3 +35,7 @@ Compiles CSS and JS assets and minifies them for deployment
 ```
 make build
 ```
+
+## License
+
+[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2014 William Youmans
