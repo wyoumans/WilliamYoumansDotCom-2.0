@@ -64,6 +64,10 @@ body.home {
 
         img {
           height: 268px;
+
+          @include respond(tablets) {
+            height: 200px;
+          }
         }
       }
     }
