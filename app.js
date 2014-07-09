@@ -34,6 +34,7 @@ app.locals.metaKeywords = 'Freelance Developer, Software Development, Software C
 app.locals.browserTitle = 'William Youmans | Web Software Developer & Consultant, Salt Lake City, Utah';
 app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
+app.locals.showFooterCTA = true;
 
 if (['local', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));

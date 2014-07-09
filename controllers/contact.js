@@ -19,7 +19,8 @@ module.exports.init = function(app) {
 
 function getContact(req, res) {
   render(res, 'contact', {
-    pageTitle: 'Request a Quote'
+    pageTitle: 'Request a Quote',
+    showFooterCTA: false
   });
 }
 
@@ -59,6 +60,7 @@ function postContact(req, res) {
 
 function getThankYou(req, res) {
   render(res, 'thanks', {
-    pageTitle: 'Thank You'
+    pageTitle: 'Thank You',
+    showFooterCTA: false
   });
 }
