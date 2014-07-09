@@ -125,8 +125,12 @@
 }
 
 .main-content {
-  min-height: 500px;
+  min-height: 800px;
   padding-bottom: 50px;
+
+  @include respond(all-phones) {
+    min-height: 0;
+  }
 }
 
 .hire-ribbon {
