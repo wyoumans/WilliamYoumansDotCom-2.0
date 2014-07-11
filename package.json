@@ -34,7 +34,6 @@
     "sendgrid": "~1.0.2",
     "static-favicon": "~1.0.2",
     "string-capitalize": "~1.0.1",
-    "time": "~0.10.0",
     "winston": "~0.7.3"
   },
   "devDependencies": {
