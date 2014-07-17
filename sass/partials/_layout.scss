@@ -51,26 +51,29 @@
     }
   }
 
-  .logo {
-    width: 100%;
-    line-height: 148px;
-    display: block;
-    height: auto;
+  .logo-wrapper {
+    margin-left: 0;
 
-    @include respond(all-phones) {
-      text-align: center;
-      padding-top: 10px;
+    .logo {
+      width: 100%;
+      line-height: 148px;
+      display: block;
       height: auto;
-      line-height: 58px;
+
+      @include respond(all-phones) {
+        padding-top: 10px;
+        height: auto;
+        line-height: 58px;
+
+        img {
+          max-width: 40%;
+        }
+      }
 
       img {
-        max-width: 40%;
+        display: inline-block;
+        vertical-align: middle;
       }
-    }
-
-    img {
-      display: inline-block;
-      vertical-align: middle;
     }
   }
 
