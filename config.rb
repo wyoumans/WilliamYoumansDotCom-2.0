@@ -16,11 +16,12 @@ css_dir = "public/styles"
 sass_dir = "sass"
 images_dir = "images"
 
-# You can select your preferred output style here (can be overridden via the command line) :nested or :expanded or :compact or :compressed:
+# You can select your preferred output style here (can be overridden via the command line)
+# :nested or :expanded or :compact or :compressed:
 output_style = :compact
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+line_comments = true
