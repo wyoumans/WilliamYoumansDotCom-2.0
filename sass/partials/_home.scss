@@ -24,6 +24,10 @@ body.home {
       h1 {
         position: relative;
 
+        @include respond(all-phones) {
+          @include font-size(25px);
+        }
+
         span {
           display: inline-block;
           top: 60px;
