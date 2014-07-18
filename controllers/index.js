@@ -39,8 +39,8 @@ function getHome(req, res) {
 
       // temporary hard coded movie
       locals.footerContent.movie = {
-        href: 'http://www.amazon.com/Entourage-Complete-Eighth-Final-Season/dp/B0058YPQ0C',
-        src: 'http://ecx.images-amazon.com/images/I/41wejPs307L._SY300_.jpg'
+        href: 'http://www.amazon.com/Twin-Peaks-Season-Special-Edition/dp/B00005JKES',
+        src: 'http://ecx.images-amazon.com/images/I/512YRZGA2TL._SY300_.jpg'
       };
 
       locals.showMastHead = true;
