@@ -136,61 +136,6 @@
   }
 }
 
-.hire-ribbon {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background: transparent url('/images/content/home/ribbon.png') no-repeat 0 0;
-  position: relative;
-  width: 450px;
-  height: 70px;
-  margin: 20px auto 0 auto;
-
-  a {
-
-    &, &:visited, &:active, &:hover {
-      text-decoration: none;
-      color: #FFFFFF;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  p {
-    text-align: center;
-    font-size: 25px;
-    color: #FFFFFF;
-    text-shadow: #501111 0 2px 0;
-    margin: 0px;
-    padding: 2px 10px 5px 10px;
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: normal;
-  }
-}
-
-@include respond(all-phones) {
-
-  .hire-ribbon {
-    background-image: none;
-    background-color: #A94135;
-    width: 100%;
-    height: auto;
-    border: 2px solid #501111;
-
-    p {
-
-      a {
-        display: block;
-      }
-    }
-  }
-}
-
 .main-footer {
   background-color: $footer-gray;
   color: $footer-font-color;

@@ -76,12 +76,9 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Product')
 
       if locals.showFooterCTA
         .row
-          .six.columns.centered
-            .hire-ribbon-wrapper
-              .hire-ribbon
-                p
-                  strong.ribbon-content
-                    a(href='/contact') Get a free quote today!
+          .twelve.columns.text-center
+            .large.primary.btn
+              a(href='/contact') Get a free quote today!
 
     footer#main-footer.main-footer.text-center
       if locals.footerContent && locals.showFooterMedia
