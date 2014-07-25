@@ -1,6 +1,6 @@
 forever := ./node_modules/.bin/forever
 
-default: watch
+default: run
 run:
 	@node app
 
