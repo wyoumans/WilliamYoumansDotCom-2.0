@@ -36,7 +36,7 @@ app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
 app.locals.showFooterCTA = true;
 
-if (['local', 'testing'].indexOf(config.env) !== -1) {
+if (['development', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
 }
 
