@@ -35,6 +35,7 @@ app.locals.browserTitle = 'William Youmans | Boston Freelance Web Software Devel
 app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
 app.locals.showFooterCTA = true;
+app.locals.headerJS = false;
 
 if (['development', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
