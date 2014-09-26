@@ -39,8 +39,8 @@ function getHome(req, res) {
 
       // temporary hard coded movie
       locals.footerContent.movie = {
-        href: 'http://www.amazon.com/Twin-Peaks-Season-Special-Edition/dp/B00005JKES',
-        src: 'http://ecx.images-amazon.com/images/I/512YRZGA2TL._SY300_.jpg'
+        href: 'http://www.amazon.com/Parenthood-Season-5-Monica-Potter/dp/B00GUOJJUW',
+        src: 'http://ecx.images-amazon.com/images/I/81uXsVl7ObL._SL1500_.jpg'
       };
 
       locals.showMastHead = true;
