@@ -3,7 +3,7 @@ body.home {
   .masthead {
     width: 100%;
     overflow: hidden;
-    background: $dark-blue url(/images/header/mountains.jpg) no-repeat center 0;
+    background: $dark-blue url(/images/header/city.jpg) no-repeat center 0;
 
     .row {
       height: 300px;
@@ -35,7 +35,7 @@ body.home {
           white-space: nowrap;
           position: absolute;
           background-color: rgba(255, 255, 255, 0.4);
-          @include text-shadow(rgba($white, 0.4) 2px 2px 3px);
+          @include text-shadow($white 1px 1px 1px);
 
           &.top {
             left: -2000px;
