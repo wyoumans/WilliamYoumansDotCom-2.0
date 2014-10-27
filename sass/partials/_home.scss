@@ -54,6 +54,18 @@ body.home {
     }
   }
 
+  ul.labels {
+
+    li.label {
+      @include font-size(16px);
+      padding: 10px;
+      margin: 0 5px 5px 0;
+      height: auto;
+      line-height: normal;
+      font-weight: normal;
+    }
+  }
+
   .footer-media {
 
     h3 i {
