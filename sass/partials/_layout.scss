@@ -20,7 +20,8 @@ a {
   height: 5px;
 }
 
-.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a {
+.gumby-no-touch .navbar ul li:hover > a,
+.gumby-touch .navbar ul li.active > a {
   background: transparent;
 }
 
@@ -163,5 +164,19 @@ a {
 
   h1, h2, h3, h4, h5, h6 {
     color: $white;
+  }
+}
+
+.footer-cta {
+  position: fixed;
+  background-color: $orange;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+
+  p {
+    margin-bottom: 0;
   }
 }
