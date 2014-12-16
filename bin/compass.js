@@ -1,12 +1,13 @@
-var compass = require('compass'),
-    cwd     = __dirname + '/../';
+var compass = require('compass')
+  , cwd = __dirname + '/../'
+  ;
 
 compass.compile({
-    cwd: cwd
+  cwd: cwd
 }, function(err, stdout, stderr) {
-    if (err) {
-        console.log(err);
-    }
+  if (err) {
+    console.log(err);
+  }
 
-    console.log('Finished Compiling SASS');
+  console.log('Finished Compiling SASS');
 });
