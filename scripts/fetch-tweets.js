@@ -18,34 +18,37 @@ var twitterRestClient = new Twitter.RestClient(
 
   logger.info('Beginning Twitter Import');
 
-  twitterRestClient.statusesHomeTimeline({}, function(err, results) {
+  twitterRestClient.statusesUserTimeline({
+    // must be more than 1 because retweets are included in this number, but
+    // I am excluding retweets so the system could falsly return no results
+    count: 5,
+    include_rts: false,
+    exclude_replies: true,
+    trim_user: true
+  }, function(err, results) {
     if (err) {
       logger.error('Error: ' + (err.code ? err.code + ' ' + err.message : err.message));
       return finished();
     }
 
     if (results) {
-
-      console.log(_.first(results));
-      console.log();
-      console.log(results.length);
-      console.log();
+      var result = _.first(results);
 
       var tweet = {
-        content: 'content',
-        tweetDate: new Date(),
-        tweetid: 'blah',
-        href: 'http://www.google.com'
+        content: result.text,
+        tweetDate: new Date(result.created_at),
+
+        // using id_str instead of id because they can be different. sometimes th id
+        // is interpreted incorrectly because it is a veryv large integer
+        tweetid: result.id_str,
+        href: 'http://www.twitter.com/' + config.twitter.username + '/status/' + result.id_str
       };
 
-      return finished();
-/*
       new Tweet(tweet).save(function(err) {
 
         // prevent db errors from stopping the script
         finished();
       });
-*/
     }
   });
 })();
