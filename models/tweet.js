@@ -4,7 +4,7 @@ var Schema = require('mongoose').Schema
     ;
 
 var TweetSchema = new Schema({
-  twitterid: {
+  tweetid: {
     type: String,
     required: true,
     unique: true,
