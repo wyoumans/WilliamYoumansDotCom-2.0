@@ -25,6 +25,11 @@ function getHome(req, res) {
         postDate: -1
       }
     }, function(err, image) {
+    models.Tweet.findOne({}, 'tweetDate href content', {
+      sort: {
+        tweetDate: -1
+      }
+    }, function(err, tweet) {
       locals.footerContent = {};
 
       if (track) {
@@ -37,18 +42,17 @@ function getHome(req, res) {
         locals.footerContent.image = image;
       }
 
-      // temporary hard coded movie
-      locals.footerContent.movie = {
-        href: 'http://www.amazon.com/Parenthood-Season-5-Monica-Potter/dp/B00GUOJJUW',
-        src: 'http://ecx.images-amazon.com/images/I/81uXsVl7ObL._SL1500_.jpg'
-      };
+      if (tweet) {
+        tweet.date_formatted = moment(tweet.tweetDate).fromNow();
+        locals.footerContent.tweet = tweet;
+      }
 
       locals.showMastHead = true;
       locals.showFooterMedia = true;
 
       render(res, 'home', locals);
     });
-  });
+  });});
 }
 
 function getProjects(req, res) {

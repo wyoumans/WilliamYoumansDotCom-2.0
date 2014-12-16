@@ -11,13 +11,13 @@
       p Nothing to report
 
   .four.columns
-    h3 Currently Watching
-      i.icon-play
-    if locals.footerContent.movie
+    h3 Currently Saying
+      i.icon-twitter
+    if locals.footerContent.tweet
       .row.image-row
         .columns.centered.nine
-          a.ttip(href=locals.footerContent.movie.href, target='_blank', data-tooltip='Recently')
-            img.image.photo(src=locals.footerContent.movie.src, alt='Recently')
+          a.ttip(href=locals.footerContent.tweet.href, target='_blank', data-tooltip=locals.footerContent.tweet.date_formatted)
+            =locals.footerContent.tweet.content
     else
       p Nothing to report
 

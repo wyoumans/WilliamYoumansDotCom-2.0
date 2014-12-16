@@ -10,6 +10,10 @@ var TweetSchema = new Schema({
     unique: true,
     index: true
   },
+  tweetDate: {
+    type: Date,
+    required: true
+  },
   href: {
     type: String,
     required: true
