@@ -22,6 +22,14 @@ var defaults = {
     "token": process.env.INSTAGRAM_TOKEN,
     "userid": process.env.INSTAGRAM_USERID
   },
+  "twitter": {
+    "consumer_key": process.env.TWITTER_CONSUMER_KEY,
+    "consumer_secret": process.env.TWITTER_CONSUMER_SECRET,
+    "token": process.env.TWITTER_TOKEN,
+    "token_secret": process.env.TWITTER_TOKEN_SECRET,
+    "username": "wyoumansdev",
+    "id": process.env.TWITTER_ID
+  },
   "sendgrid": {
     "user": process.env.SENDGRID_USER,
     "key": process.env.SENDGRID_KEY

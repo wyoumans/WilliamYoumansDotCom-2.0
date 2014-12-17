@@ -4,7 +4,7 @@ var express        = require('express')
   , conductor      = require('express-conductor')
   , http           = require('http')
   , path           = require('path')
-  , favicon        = require('static-favicon')
+  , favicon        = require('serve-favicon')
   , bodyParser     = require('body-parser')
   , methodOverride = require('method-override')
   , morgan         = require('morgan')  // for logging to the console
@@ -47,7 +47,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 app.use(methodOverride());
 
 // check for 301 redirects
