@@ -7,24 +7,32 @@ var defaults = {
   "port": 3000,
   "logToFile": true,
   "serverEmail": "no-reply@williamyoumans.com",
-  "adminEmail": process.env.ADMIN_EMAIL,
+  "adminEmail": export ADMIN_EMAIL,
   "useMinifiedAssets": true,
   "showAnalytics": false,
-  "analytics": process.env.GOOGLE_ANALYTICS,
+  "analytics": export GOOGLE_ANALYTICS,
   "lastfm": {
     "username": "gotwilly",
-    "key": process.env.LASTFM_KEY,
-    "secret": process.env.LASTFM_SECRET
+    "key": export LASTFM_KEY,
+    "secret": export LASTFM_SECRET
   },
   "instagram": {
-    "key": process.env.INSTAGRAM_KEY,
-    "secret": process.env.INSTAGRAM_SECRET,
-    "token": process.env.INSTAGRAM_TOKEN,
-    "userid": process.env.INSTAGRAM_USERID
+    "key": export INSTAGRAM_KEY,
+    "secret": export INSTAGRAM_SECRET,
+    "token": export INSTAGRAM_TOKEN,
+    "userid": export INSTAGRAM_USERID
+  },
+  "twitter": {
+    "consumer_key": export TWITTER_CONSUMER,
+    "consumer_secret": export TWITTER_CONSUMER_SECRET,
+    "token": export TWITTER_TOKEN,
+    "token_secret": export TWITTER_TOKEN_SECRET,
+    "username": "wyoumansdev",
+    "id": export TWITTER_ID
   },
   "sendgrid": {
-    "user": process.env.SENDGRID_USER,
-    "key": process.env.SENDGRID_KEY
+    "user": export SENDGRID_USER,
+    "key": export SENDGRID_KEY
   }
 };
 

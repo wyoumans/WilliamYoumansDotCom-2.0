@@ -25,34 +25,41 @@ function getHome(req, res) {
         postDate: -1
       }
     }, function(err, image) {
-    models.Tweet.findOne({}, 'tweetDate href content', {
-      sort: {
-        tweetDate: -1
-      }
-    }, function(err, tweet) {
-      locals.footerContent = {};
+      models.Tweet.find({}, 'tweetDate href content', {
+        sort: {
+          tweetDate: -1
+        },
+        limit: 2
+      }, function(err, tweets) {
+        locals.footerContent = {};
 
-      if (track) {
-        track.date_formatted = moment(track.scrobbleDate).fromNow();
-        locals.footerContent.track = track;
-      }
+        if (track) {
+          track.date_formatted = moment(track.scrobbleDate).fromNow();
+          locals.footerContent.track = track;
+        }
 
-      if (image) {
-        image.date_formatted = moment(image.postDate).fromNow();
-        locals.footerContent.image = image;
-      }
+        if (image) {
+          image.date_formatted = moment(image.postDate).fromNow();
+          locals.footerContent.image = image;
+        }
 
-      if (tweet) {
-        tweet.date_formatted = moment(tweet.tweetDate).fromNow();
-        locals.footerContent.tweet = tweet;
-      }
+        if (tweets) {
+          locals.footerContent.tweets = [];
 
-      locals.showMastHead = true;
-      locals.showFooterMedia = true;
+          tweets.forEach(function(tweet) {
+            tweet.date_formatted = moment(tweet.tweetDate).fromNow();
+            tweet.username = config.twitter.username;
+            locals.footerContent.tweets.push(tweet);
+          });
+        }
 
-      render(res, 'home', locals);
+        locals.showMastHead = true;
+        locals.showFooterMedia = true;
+
+        render(res, 'home', locals);
+      });
     });
-  });});
+  });
 }
 
 function getProjects(req, res) {
