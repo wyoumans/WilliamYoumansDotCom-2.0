@@ -7,32 +7,32 @@ var defaults = {
   "port": 3000,
   "logToFile": true,
   "serverEmail": "no-reply@williamyoumans.com",
-  "adminEmail": export ADMIN_EMAIL,
+  "adminEmail": process.env.ADMIN_EMAIL,
   "useMinifiedAssets": true,
   "showAnalytics": false,
-  "analytics": export GOOGLE_ANALYTICS,
+  "analytics": process.env.GOOGLE_ANALYTICS,
   "lastfm": {
     "username": "gotwilly",
-    "key": export LASTFM_KEY,
-    "secret": export LASTFM_SECRET
+    "key": process.env.LASTFM_KEY,
+    "secret": process.env.LASTFM_SECRET
   },
   "instagram": {
-    "key": export INSTAGRAM_KEY,
-    "secret": export INSTAGRAM_SECRET,
-    "token": export INSTAGRAM_TOKEN,
-    "userid": export INSTAGRAM_USERID
+    "key": process.env.INSTAGRAM_KEY,
+    "secret": process.env.INSTAGRAM_SECRET,
+    "token": process.env.INSTAGRAM_TOKEN,
+    "userid": process.env.INSTAGRAM_USERID
   },
   "twitter": {
-    "consumer_key": export TWITTER_CONSUMER,
-    "consumer_secret": export TWITTER_CONSUMER_SECRET,
-    "token": export TWITTER_TOKEN,
-    "token_secret": export TWITTER_TOKEN_SECRET,
+    "consumer_key": process.env.TWITTER_CONSUMER,
+    "consumer_secret": process.env.TWITTER_CONSUMER_SECRET,
+    "token": process.env.TWITTER_TOKEN,
+    "token_secret": process.env.TWITTER_TOKEN_SECRET,
     "username": "wyoumansdev",
-    "id": export TWITTER_ID
+    "id": process.env.TWITTER_ID
   },
   "sendgrid": {
-    "user": export SENDGRID_USER,
-    "key": export SENDGRID_KEY
+    "user": process.env.SENDGRID_USER,
+    "key": process.env.SENDGRID_KEY
   }
 };
 
