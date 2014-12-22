@@ -12,6 +12,9 @@ node scripts/fetch-images.js
 echo ""
 echo "fetching tracks from last.fm..."
 node scripts/fetch-tracks.js
+echo ""
+echo "fetching tweets from twitter..."
+node scripts/fetch-tweets.js
 
 echo ""
 echo "finishing database population"

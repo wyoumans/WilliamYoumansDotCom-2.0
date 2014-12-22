@@ -1,5 +1,5 @@
 .row.footer-media
-  .four.columns
+  .four.columns.seeing
     h3 Currently Seeing
       i.icon-camera
     if locals.footerContent.image
@@ -10,18 +10,23 @@
     else
       p Nothing to report
 
-  .four.columns
-    h3 Currently Watching
-      i.icon-play
-    if locals.footerContent.movie
+  .four.columns.tweeting
+    h3 Currently Saying
+      i.icon-twitter
+    if locals.footerContent.tweets
       .row.image-row
-        .columns.centered.nine
-          a.ttip(href=locals.footerContent.movie.href, target='_blank', data-tooltip='Recently')
-            img.image.photo(src=locals.footerContent.movie.src, alt='Recently')
+        .columns.centered.nine.text-left
+
+          each tweet in locals.footerContent.tweets
+            .tweet
+              a(href=tweet.href, target='_blank')
+                i.icon.icon-quote
+                span.content= tweet.content
+              .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
     else
       p Nothing to report
 
-  .four.columns
+  .four.columns.listening
     h3 Currently Listening
       i.icon-note-beamed
     if locals.footerContent.track
