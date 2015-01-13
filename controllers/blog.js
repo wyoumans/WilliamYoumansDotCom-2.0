@@ -11,12 +11,14 @@ module.exports.init = function(app) {
 
 function getBlog(req, res) {
   render(res, 'generic', {
-    pageTitle: 'Blog'
+    pageTitle: 'Blog',
+    metaDescription: 'William Youmans Blog: a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Boston.'
   });
 }
 
 function getPost(req, res) {
   render(res, 'post', {
-    pageTitle: 'Part 1: Interactive Javascript map of Canada with Raphaël'
+    pageTitle: 'Part 1: Interactive Javascript map of Canada with Raphaël',
+    metaDescription: 'How to build an interactive map of Canada in pure Javacscript using Raphaël.js'
   });
 }

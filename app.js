@@ -22,7 +22,7 @@ var express        = require('express')
 
 app.enable('trust proxy');
 
-// default locals
+// default locals (can be overwritten in the controller)
 app.locals.NODE_ENV = config.env;
 app.locals.useMinifiedAssets = config.useMinifiedAssets;
 app.locals.analytics = config.analytics;
@@ -36,6 +36,7 @@ app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
 app.locals.showFooterCTA = true;
 app.locals.headerJS = false;
+app.locals.twitterId = config.twitter.id;
 
 if (['development', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
