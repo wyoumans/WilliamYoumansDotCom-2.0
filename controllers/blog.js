@@ -18,7 +18,7 @@ function getBlog(req, res) {
 
 function getPost(req, res) {
   render(res, 'post', {
-    pageTitle: 'Part 1: Interactive Javascript map of Canada with Raphaël',
+    pageTitle: 'Interactive Javascript map of Canada with Raphaël',
     metaDescription: 'How to build an interactive map of Canada in pure Javacscript using Raphaël.js'
   });
 }
