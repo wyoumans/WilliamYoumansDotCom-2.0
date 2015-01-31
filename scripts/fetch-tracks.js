@@ -13,9 +13,9 @@ var getHistory = require('lastfm-history')
 
   logger.info('Beginning Last FM Import');
 
-  worker.on('page', function(tracks, meta) {
+  worker.on('page', function(results, meta) {
 
-    async.each(tracks, function(trackData, done) {
+    async.each(results.tracks, function(trackData, done) {
       var scrobbleDate = undefined,
           lastid       = undefined;
 
