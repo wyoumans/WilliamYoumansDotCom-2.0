@@ -22,20 +22,21 @@ var express        = require('express')
 
 app.enable('trust proxy');
 
-// default locals
+// default locals (can be overwritten in the controller)
 app.locals.NODE_ENV = config.env;
 app.locals.useMinifiedAssets = config.useMinifiedAssets;
 app.locals.analytics = config.analytics;
 app.locals.showAnalytics = config.showAnalytics;
 app.locals.supportsCaching = config.supportsCaching;
 app.locals.bodyClass = '';
-app.locals.metaDescription = 'William Youmans is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Boston.';
+app.locals.metaDescription = 'William Youmans is a Boston based freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast.';
 app.locals.metaKeywords = 'Boston, Freelance Developer, Software Development, Software Consulting, Project Management, professional';
-app.locals.browserTitle = 'William Youmans | Boston Freelance Web Software Developer and Consultant';
+app.locals.browserTitle = 'Boston Freelance Web Software Developer and Consultant | William Youmans';
 app.locals.showMastHead = false;
 app.locals.showFooterMedia = false;
 app.locals.showFooterCTA = true;
 app.locals.headerJS = false;
+app.locals.twitterId = config.twitter.id;
 
 if (['development', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
