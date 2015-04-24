@@ -1,12 +1,13 @@
 'use strict';
 
 $(function() {
-  var animationSpeed = 1000
-    , beginPosition  = '-2000px'
-    , endPosition    = 0
-    , easing         = 'easeOutBack'
-    , $leftText      = $('.masthead h1 span.top')
-    , $rightText     = $('.masthead h1 span.bottom');
+
+  var animationSpeed = 1000,
+      beginPosition  = '-2000px',
+      endPosition    = 0,
+      easing         = 'easeOutBack',
+      $leftText      = $('.masthead h1 span.top'),
+      $rightText     = $('.masthead h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {

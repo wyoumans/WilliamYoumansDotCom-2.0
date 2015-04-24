@@ -7,7 +7,7 @@ make compass
 claymate build \
   --addons public/bower_components/gumby-parallax/gumby.parallax.js \
   --modules retina,fixed,navbar,validation,toggleswitch \
-  --files public/bower_components/gumby/js/plugins.js,public/bower_components/gumby/js/main.js,public/scripts/vendor/jquery.easing.1.3.js,public/scripts/custom.js
+  --files public/bower_components/gumby/js/plugins.js,public/bower_components/gumby/js/main.js,public/bower_components/jquery.easing/js/jquery.easing.js,public/scripts/custom.js
 
 # Minify the assets
 node ./bin/minify
