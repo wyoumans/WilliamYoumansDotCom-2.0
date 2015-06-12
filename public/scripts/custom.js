@@ -1,12 +1,13 @@
 'use strict';
 
 $(function() {
-  var animationSpeed = 1000
-    , beginPosition  = '-2000px'
-    , endPosition    = 0
-    , easing         = 'easeOutBack'
-    , $leftText      = $('.masthead h1 span.top')
-    , $rightText     = $('.masthead h1 span.bottom');
+
+  var animationSpeed = 1000,
+      beginPosition  = '-2000px',
+      endPosition    = 0,
+      easing         = 'easeOutBack',
+      $leftText      = $('.masthead h1 span.top'),
+      $rightText     = $('.masthead h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {
@@ -46,4 +47,13 @@ $(function() {
       name: 'contact[message]',
     }]
   });
+
+  var jiggle = setInterval(function() {
+    snabbt($('#main-nav li.cta i'), "attention", {
+      rotation: [0, 0, Math.PI / 2],
+      easing: 'spring',
+      springConstant: 1.9,
+      springDeacceleration: .9
+    });
+  }, 4000);
 });
