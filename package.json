@@ -1,14 +1,14 @@
 {
   "name": "William-Youmans",
-  "version": "2.0.2",
+  "version": "2.1.2",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com:wyoumans/WilliamYoumansDotCom-2.0.git"
   },
   "engines": {
-    "node": "~0.10.36",
-    "npm": "~1.4.28"
+    "node": "~4.0.0",
+    "npm": "~2.14.2"
   },
   "scripts": {
     "start": "make run",
@@ -40,7 +40,7 @@
     "winston": "^0.8.3"
   },
   "devDependencies": {
-    "compass": "^0.1.0",
-    "node-minify": "^0.12.1"
+    "compass": "^0.1.1",
+    "node-minify": "^1.2.1"
   }
 }
