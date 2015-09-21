@@ -1,8 +1,7 @@
 # WilliamYoumans.com 2.0
 
-## Built with Zrub Fundation
+Built with Node.JS, Jade, Zurb Fundation, and Compass
 
-Make sure you have `bower` installed globally from NPM
 
 ## Helpful Scripts
 

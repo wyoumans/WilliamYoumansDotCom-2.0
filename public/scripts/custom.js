@@ -1,5 +1,7 @@
 'use strict';
 
+$(document).foundation();
+
 $(function() {
 
   var animationSpeed = 1000,
@@ -35,18 +37,18 @@ $(function() {
   }
 
   // initialize plugin
-  $('form#contact').validation({
-    required: [{
-      name: 'contact[name]',
-    }, {
-      name: 'contact[email]',
-      validate: function($el) {
-        return $el.val().match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/) !== null;
-      }
-    }, {
-      name: 'contact[message]',
-    }]
-  });
+  // $('form#contact').validation({
+  //   required: [{
+  //     name: 'contact[name]',
+  //   }, {
+  //     name: 'contact[email]',
+  //     validate: function($el) {
+  //       return $el.val().match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/) !== null;
+  //     }
+  //   }, {
+  //     name: 'contact[message]',
+  //   }]
+  // });
 
   var jiggle = setInterval(function() {
     snabbt($('#main-nav li.cta i'), "attention", {
