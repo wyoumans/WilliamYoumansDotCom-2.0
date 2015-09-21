@@ -1,15 +1,3 @@
-# Require any additional compass plugins here.
-
-# Tell compass where to find local extensions
-# If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
-extensions_dir = "public/bower_components/gumby/sass/extensions"
-
-Compass::Frameworks.register('modular-scale', :path => File.expand_path("#{extensions_dir}/modular-scale"))
-
-# Uncomment these to use regular Ruby gems.
-# require 'modular-scale'
-# require 'sassy-math'
-
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "public/styles"
@@ -18,7 +6,7 @@ images_dir = "images"
 
 # You can select your preferred output style here (can be overridden via the command line)
 # :nested or :expanded or :compact or :compressed:
-output_style = :compact
+output_style = :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
