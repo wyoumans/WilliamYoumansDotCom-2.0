@@ -1,8 +1,8 @@
 # WilliamYoumans.com 2.0
 
-## Built with gumby
+## Built with Zrub Fundation
 
-Make sure you have `claymate` and `bower` installed globally from NPM
+Make sure you have `bower` installed globally from NPM
 
 ## Helpful Scripts
 
@@ -38,4 +38,4 @@ make build
 
 ## License
 
-[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2014 William Youmans
+[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2015 William Youmans

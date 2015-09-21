@@ -20,10 +20,6 @@ a {
   height: 5px;
 }
 
-.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a {
-  background: transparent;
-}
-
 .navbar {
   z-index: 1000;
   margin-bottom: 0;
