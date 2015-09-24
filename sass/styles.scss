@@ -4,7 +4,6 @@
 @import "compass/reset";
 
 @import "var/settings";
-@import "var/mixins";
 
 // Foundation Core (only include what is used)
 // @import "foundation/components/accordion";
@@ -19,7 +18,7 @@
 // @import "foundation/components/flex-video";
 @import "foundation/components/forms";
 @import "foundation/components/grid";
-// @import "foundation/components/inline-lists";
+@import "foundation/components/inline-lists";
 // @import "foundation/components/joyride";
 // @import "foundation/components/keystrokes";
 @import "foundation/components/labels";
@@ -37,7 +36,7 @@
 // @import "foundation/components/tables";
 // @import "foundation/components/tabs";
 @import "foundation/components/thumbs";
-@import "foundation/components/tooltips";
+// @import "foundation/components/tooltips";
 @import "foundation/components/top-bar";
 @import "foundation/components/type";
 @import "foundation/components/offcanvas";
