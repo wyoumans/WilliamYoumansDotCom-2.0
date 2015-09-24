@@ -53,79 +53,6 @@
 //       }
 //     }
 //   }
-
-//   ul.labels {
-
-//     li.label {
-//       font-size: 16px;
-//       padding: 10px;
-//       margin: 0 5px 5px 0;
-//       height: auto;
-//       line-height: normal;
-//       font-weight: normal;
-//     }
-//   }
-
-//   .footer-media {
-
-//     h3 i {
-//       margin-left: 20px;
-//     }
-
-//     .smaller {
-//       font-size: 11px;
-//       line-height: normal;
-//     }
-
-//     .tweeting {
-
-//       .tweet {
-//         border-top: 1px solid lighten($footer-gray, 10%);
-//         margin-top: 20px;
-//         padding-top: 20px;
-
-//         &:first-child {
-//           border: 0;
-//           margin: 0;
-//           padding: 0;
-//         }
-
-//         .icon {
-//           @include transform(rotate(180deg));
-//           font-size: 25px;
-//           margin-right: 10px;
-//           display: inline-block;
-//           vertical-align: baseline;
-//           position: relative;
-//           top: -0.2em;
-//         }
-//       }
-//     }
-
-//     .image-row {
-//       margin-top: 10px;
-
-//       a {
-//         display: inline-block;
-
-//         img {
-//           height: 268px;
-
-//           @include respond(tablets) {
-//             height: 200px;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   @include respond(all-phones) {
-
-//     .avatar {
-//       text-align: center;
-//       float: none;
-//     }
-//   }
 // }
 
 body.home {
@@ -138,6 +65,18 @@ body.home {
 
     .main-header {
       color: #666;
+    }
+  }
+
+  ul.labels {
+
+    li.label {
+      font-size: 16px;
+      padding: 10px;
+      margin: 0 5px 5px 0;
+      height: auto;
+      line-height: normal;
+      font-weight: normal;
     }
   }
 }

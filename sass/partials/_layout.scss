@@ -1,7 +1,3 @@
-// .main-header, .main-footer, .main-content {
-//   background-color: $white;
-// }
-
 // .navbar {
 //   z-index: 1000;
 //   margin-bottom: 0;
@@ -109,37 +105,79 @@
 //   }
 // }
 
-// .main-content {
-//   min-height: 800px;
-//   padding-bottom: 50px;
+.main-content {
+  min-height: rem-calc(800);
+  padding-bottom: rem-calc(50);
+}
 
-//   @include respond(all-phones) {
-//     min-height: 0;
-//   }
-// }
+.main-footer {
+  background-color: $footer-gray;
+  color: $footer-font-color;
 
-// .main-footer {
-//   background-color: $footer-gray;
-//   color: $footer-font-color;
+  a {
+    @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
+  }
 
-//   a {
-//     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
-//   }
+  .extra-footer {
+    background-color: $almost-black;
+    color: $footer-font-color;
 
-//   .extra-footer {
-//     background-color: $almost-black;
-//     color: $footer-font-color;
-//     padding-top: 10px;
+    p {
+      line-height: rem-calc(25);
+      margin: rem-calc(10 0);
+    }
 
-//     @include respond(all-phones) {
+    i {
+      display: inline-block;
+      margin: 0 3%;
+      font-size: rem-calc(25);
+      vertical-align: middle;
+    }
+  }
 
-//       p {
-//         text-align: center !important;
-//       }
-//     }
-//   }
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
 
-//   h1, h2, h3, h4, h5, h6 {
-//     color: $white;
-//   }
-// }
+  .footer-media {
+    padding: rem-calc(5 0 20 0);
+
+    h3 i {
+      display: inline-block;
+      margin-left: rem-calc(20);
+    }
+
+    .smaller {
+      font-size: rem-calc(11);
+      line-height: normal;
+    }
+
+    .tweeting {
+
+      .tweet {
+        border-top: 1px solid lighten($footer-gray, 10%);
+        margin: rem-calc(20) auto 0 auto;
+        padding-top: rem-calc(20);
+        max-width: 90%;
+
+        &:first-child {
+          border: 0;
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+
+    .image-row {
+
+      a.image {
+        display: inline-block;
+        max-width: 90%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
