@@ -1,113 +1,45 @@
-// .navbar {
-//   z-index: 1000;
-//   margin-bottom: 0;
+.top-bar-wrapper {
 
-//   @include respond(all-phones) {
-//     z-index: 1;
-//   }
+  .title-area li h1 a {
+    padding: rem-calc(0 0 0 20)
+  }
 
-//   ul.active {
+  ul li {
 
-//     @include respond(all-phones) {
-//       margin-top: 20px;
-//     }
-//   }
+    a {
 
-//   ul {
-//     float: right;
+      i {
+        display: inline-block;
+        margin-left: rem-calc(10);
+      }
+    }
+  }
 
-//     li {
+  &.fixed {
+    border-bottom: 1px solid $light-gray;
 
-//       & > a {
-//         @include text-shadow(none);
-//         font-weight: bold;
-//       }
+    ul li {
 
-//       &:hover > a {
-//         color: $orange;
-//       }
-//     }
-//   }
+      &.cta a {
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+  }
+}
 
-//   .logo-wrapper {
-//     margin-left: 0;
-
-//     .logo {
-//       width: 100%;
-//       line-height: 148px;
-//       display: block;
-//       height: auto;
-
-//       @include respond(all-phones) {
-//         padding-top: 10px;
-//         height: auto;
-//         line-height: 58px;
-
-//         img {
-//           max-width: 40%;
-//         }
-//       }
-
-//       img {
-//         display: inline-block;
-//         vertical-align: middle;
-//       }
-//     }
-//   }
-
-//   ul li, ul li > a {
-//     height: 150px;
-//     line-height: 148px;
-
-//     @include respond(all-phones) {
-//       height: 60px;
-//       line-height: 58px;
-//     }
-//   }
-
-//   ul li, ul li > a, .logo {
-//     -webkit-transition: all 0.5s;
-//     -moz-transition: all 0.5s;
-//     transition: all 0.5s;
-//   }
-
-//   &.fixed {
-
-//     @include respond(desktop) {
-//       border-bottom: 1px solid $light-gray;
-
-//       .logo {
-//         width: 150px;
-//         margin: 0;
-//       }
-
-//       ul li {
-
-//         &.cta {
-//           background-color: $primary-color;
-
-//           & > a {
-//             color: $white;
-//             border: 0;
-//           }
-
-//           &:hover {
-//             background-color: $primary-hover-color;
-//           }
-//         }
-//       }
-
-//       ul li, ul li > a, .logo {
-//         height: 60px;
-//         line-height: 58px;
-//       }
-//     }
-//   }
-// }
+.fixed-stripe {
+  height: rem-calc(5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $orange;
+  z-index: 999;
+}
 
 .main-content {
-  min-height: rem-calc(800);
-  padding-bottom: rem-calc(50);
+  padding-bottom: rem-calc(40);
 }
 
 .main-footer {
@@ -142,9 +74,12 @@
   .footer-media {
     padding: rem-calc(5 0 20 0);
 
-    h3 i {
-      display: inline-block;
-      margin-left: rem-calc(20);
+    h3 {
+
+      i {
+        display: inline-block;
+        margin-left: rem-calc(20);
+      }
     }
 
     .smaller {

@@ -1,28 +1,33 @@
-nav#main-nav.top-bar(data-topbar='')
-  ul.title-area
-    li.name
-      h1
-        a(href='/')
-          img(src='/images/branding/logo-full.jpg', alt='William Youmans')
-    li.toggle-topbar.menu-icon
-      a(href='#')
-        span &nbsp;
+.top-bar-wrapper.contain-to-grid.sticky
+  nav#main-nav.top-bar(data-topbar='')
+    ul.title-area
+      li.name
+        h1
+          a(href='/')
+            img(src='/images/branding/logo-full.jpg', alt='William Youmans')
 
-  section.top-bar-section
-    ul.right
-      li
-        a(href='/projects')
-          span Projects
-          i.fi-laptop
-      li
-        a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael')
-          span Blog
-          i.fi-pencil
-      li
-        a(href='/about')
-          span About
-          i.fi-male
-      li
-        a(href='/contact')
-          span Hire Me
-          i.fi-telephone
+      li.toggle-topbar.menu-icon
+        a(href='#')
+          span &nbsp;
+
+    section.top-bar-section
+      ul.right
+        li
+          a(href='/projects')
+            span Projects
+            i.fi-laptop
+
+        li
+          a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael')
+            span Blog
+            i.fi-pencil
+
+        li
+          a(href='/about')
+            span About
+            i.fi-torso-business
+
+        li.cta
+          a(href='/contact')
+            span Hire Me
+            i.fi-telephone

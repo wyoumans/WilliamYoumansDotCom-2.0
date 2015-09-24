@@ -75,11 +75,14 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
       != locals.headerJS
 
   body(class=locals.bodyClass)
-    include ../partials/header-navigation
+    .row
+      .fixed-stripe
 
     header.header
       if locals.showMastHead
         include ../partials/masthead
+
+    include ../partials/header-navigation
 
     //- Content
     section#main.main-content.row
