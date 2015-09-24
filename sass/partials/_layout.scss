@@ -1,163 +1,163 @@
-a {
-  word-wrap: break-word;
-}
+// a {
+//   word-wrap: break-word;
+// }
 
-.main-header, .main-footer, .main-content {
-  background-color: $white;
-}
+// .main-header, .main-footer, .main-content {
+//   background-color: $white;
+// }
 
-.fixed-stripe {
-  height: 5px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $orange;
-  z-index: 999;
-}
+// .fixed-stripe {
+//   height: 5px;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   background-color: $orange;
+//   z-index: 999;
+// }
 
-.header-spacer {
-  height: 5px;
-}
+// .header-spacer {
+//   height: 5px;
+// }
 
-.navbar {
-  z-index: 1000;
-  margin-bottom: 0;
+// .navbar {
+//   z-index: 1000;
+//   margin-bottom: 0;
 
-  @include respond(all-phones) {
-    z-index: 1;
-  }
+//   @include respond(all-phones) {
+//     z-index: 1;
+//   }
 
-  ul.active {
+//   ul.active {
 
-    @include respond(all-phones) {
-      margin-top: 20px;
-    }
-  }
+//     @include respond(all-phones) {
+//       margin-top: 20px;
+//     }
+//   }
 
-  ul {
-    float: right;
+//   ul {
+//     float: right;
 
-    li {
+//     li {
 
-      & > a {
-        @include text-shadow(none);
-        font-weight: bold;
-      }
+//       & > a {
+//         @include text-shadow(none);
+//         font-weight: bold;
+//       }
 
-      &:hover > a {
-        color: $orange;
-      }
-    }
-  }
+//       &:hover > a {
+//         color: $orange;
+//       }
+//     }
+//   }
 
-  .logo-wrapper {
-    margin-left: 0;
+//   .logo-wrapper {
+//     margin-left: 0;
 
-    .logo {
-      width: 100%;
-      line-height: 148px;
-      display: block;
-      height: auto;
+//     .logo {
+//       width: 100%;
+//       line-height: 148px;
+//       display: block;
+//       height: auto;
 
-      @include respond(all-phones) {
-        padding-top: 10px;
-        height: auto;
-        line-height: 58px;
+//       @include respond(all-phones) {
+//         padding-top: 10px;
+//         height: auto;
+//         line-height: 58px;
 
-        img {
-          max-width: 40%;
-        }
-      }
+//         img {
+//           max-width: 40%;
+//         }
+//       }
 
-      img {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-  }
+//       img {
+//         display: inline-block;
+//         vertical-align: middle;
+//       }
+//     }
+//   }
 
-  ul li, ul li > a {
-    height: 150px;
-    line-height: 148px;
+//   ul li, ul li > a {
+//     height: 150px;
+//     line-height: 148px;
 
-    @include respond(all-phones) {
-      height: 60px;
-      line-height: 58px;
-    }
-  }
+//     @include respond(all-phones) {
+//       height: 60px;
+//       line-height: 58px;
+//     }
+//   }
 
-  ul li, ul li > a, .logo {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+//   ul li, ul li > a, .logo {
+//     -webkit-transition: all 0.5s;
+//     -moz-transition: all 0.5s;
+//     transition: all 0.5s;
+//   }
 
-  &.fixed {
+//   &.fixed {
 
-    @include respond(desktop) {
-      border-bottom: 1px solid $light-gray;
+//     @include respond(desktop) {
+//       border-bottom: 1px solid $light-gray;
 
-      .logo {
-        width: 150px;
-        margin: 0;
-      }
+//       .logo {
+//         width: 150px;
+//         margin: 0;
+//       }
 
-      ul li {
+//       ul li {
 
-        &.cta {
-          background-color: $primary-color;
+//         &.cta {
+//           background-color: $primary-color;
 
-          & > a {
-            color: $white;
-            border: 0;
-          }
+//           & > a {
+//             color: $white;
+//             border: 0;
+//           }
 
-          &:hover {
-            background-color: $primary-hover-color;
-          }
-        }
-      }
+//           &:hover {
+//             background-color: $primary-hover-color;
+//           }
+//         }
+//       }
 
-      ul li, ul li > a, .logo {
-        height: 60px;
-        line-height: 58px;
-      }
-    }
-  }
-}
+//       ul li, ul li > a, .logo {
+//         height: 60px;
+//         line-height: 58px;
+//       }
+//     }
+//   }
+// }
 
-.main-content {
-  min-height: 800px;
-  padding-bottom: 50px;
+// .main-content {
+//   min-height: 800px;
+//   padding-bottom: 50px;
 
-  @include respond(all-phones) {
-    min-height: 0;
-  }
-}
+//   @include respond(all-phones) {
+//     min-height: 0;
+//   }
+// }
 
-.main-footer {
-  background-color: $footer-gray;
-  color: $footer-font-color;
+// .main-footer {
+//   background-color: $footer-gray;
+//   color: $footer-font-color;
 
-  a {
-    @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
-  }
+//   a {
+//     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
+//   }
 
-  .extra-footer {
-    background-color: $almost-black;
-    color: $footer-font-color;
-    padding-top: 10px;
+//   .extra-footer {
+//     background-color: $almost-black;
+//     color: $footer-font-color;
+//     padding-top: 10px;
 
-    @include respond(all-phones) {
+//     @include respond(all-phones) {
 
-      p {
-        text-align: center !important;
-      }
-    }
-  }
+//       p {
+//         text-align: center !important;
+//       }
+//     }
+//   }
 
-  h1, h2, h3, h4, h5, h6 {
-    color: $white;
-  }
-}
+//   h1, h2, h3, h4, h5, h6 {
+//     color: $white;
+//   }
+// }

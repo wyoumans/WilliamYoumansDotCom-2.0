@@ -1,63 +1,63 @@
-body.contact {
+// body.contact {
 
-  .input {
-    padding-right: 40px;
-  }
+//   .input {
+//     padding-right: 40px;
+//   }
 
-  label.checkbox {
+//   label.checkbox {
 
-    span {
-      margin-left: 10px;
-    }
-  }
+//     span {
+//       margin-left: 10px;
+//     }
+//   }
 
-  .danger {
+//   .danger {
 
-    .input {
-      padding-right: 320px;
-    }
+//     .input {
+//       padding-right: 320px;
+//     }
 
-    textarea.input {
-      padding-right: 300px;
-    }
-  }
+//     textarea.input {
+//       padding-right: 300px;
+//     }
+//   }
 
-  @include respond(all-phones) {
+//   @include respond(all-phones) {
 
-    li.field {
+//     li.field {
 
-      label.inline {
-       display: block;
-      }
+//       label.inline {
+//        display: block;
+//       }
 
-      .input {
-        width: 100% !important;
-        float: none;
-      }
+//       .input {
+//         width: 100% !important;
+//         float: none;
+//       }
 
-      .error-message {
-        position: relative;
-        top: auto;
-        right: auto;
-      }
+//       .error-message {
+//         position: relative;
+//         top: auto;
+//         right: auto;
+//       }
 
-      &.danger, &.warning, &.success {
+//       &.danger, &.warning, &.success {
 
-        &:after {
-          right: 0;
-        }
-      }
+//         &:after {
+//           right: 0;
+//         }
+//       }
 
-      &.danger {
+//       &.danger {
 
-        .input {
-          padding-right: 0;
-        }
+//         .input {
+//           padding-right: 0;
+//         }
 
-        textarea.input {
-          padding-right: 0;
-        }
-      }
-    }
-  }
-}
+//         textarea.input {
+//           padding-right: 0;
+//         }
+//       }
+//     }
+//   }
+// }

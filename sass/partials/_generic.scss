@@ -1,59 +1,59 @@
-h1 {
+// h1 {
 
-  &.main-page-title {
-    margin-bottom: 30px;
-  }
+//   &.main-page-title {
+//     margin-bottom: 30px;
+//   }
 
-  @include respond(all-phones) {
-    font-size: 40px;
-  }
-}
+//   @include respond(all-phones) {
+//     font-size: 40px;
+//   }
+// }
 
-.pull-left {
-  float: left;
-}
+// .pull-left {
+//   float: left;
+// }
 
-.pull-right {
-  float: right;
-}
+// .pull-right {
+//   float: right;
+// }
 
-.danger {
-  color: $danger-color;
-}
+// .danger {
+//   color: $danger-color;
+// }
 
-form {
+// form {
 
-  li.field {
-    position: relative;
+//   li.field {
+//     position: relative;
 
-    .error-message {
-      position: absolute;
-      right: 40px;
-      top: 5px;
-      z-index: 20;
-      display: none;
-    }
+//     .error-message {
+//       position: absolute;
+//       right: 40px;
+//       top: 5px;
+//       z-index: 20;
+//       display: none;
+//     }
 
-    &.danger, &.warning, &.success {
+//     &.danger, &.warning, &.success {
 
-      &:after {
-        top: 5px;
-      }
-    }
+//       &:after {
+//         top: 5px;
+//       }
+//     }
 
-    &.danger .error-message {
-      display: block;
-    }
-  }
-}
+//     &.danger .error-message {
+//       display: block;
+//     }
+//   }
+// }
 
-ul.labels {
+// ul.labels {
 
-  li {
-    margin-right: 3px;
-  }
-}
+//   li {
+//     margin-right: 3px;
+//   }
+// }
 
-.hidden {
-  display: none;
-}
+// .hidden {
+//   display: none;
+// }

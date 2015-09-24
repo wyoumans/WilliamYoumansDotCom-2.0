@@ -28,13 +28,13 @@ $(function() {
     }
   };
 
-  if ($('.masthead')) {
-    setTimeout(function() {
-      animation.inLeft(
-        animation.inRight
-      );
-    }, 1000);
-  }
+  // if ($('.masthead').length) {
+  //   setTimeout(function() {
+  //     animation.inLeft(
+  //       animation.inRight
+  //     );
+  //   }, 1000);
+  // }
 
   // initialize plugin
   // $('form#contact').validation({
@@ -50,12 +50,12 @@ $(function() {
   //   }]
   // });
 
-  var jiggle = setInterval(function() {
-    snabbt($('#main-nav li.cta i'), "attention", {
-      rotation: [0, 0, Math.PI / 2],
-      easing: 'spring',
-      springConstant: 1.9,
-      springDeacceleration: .9
-    });
-  }, 4000);
+  // var jiggle = setInterval(function() {
+  //   snabbt($('#main-nav li.cta i'), "attention", {
+  //     rotation: [0, 0, Math.PI / 2],
+  //     easing: 'spring',
+  //     springConstant: 1.9,
+  //     springDeacceleration: .9
+  //   });
+  // }, 4000);
 });
