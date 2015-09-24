@@ -8,8 +8,8 @@ $(function() {
       beginPosition  = '-2000px',
       endPosition    = 0,
       easing         = 'easeOutBack',
-      $leftText      = $('.masthead h1 span.top'),
-      $rightText     = $('.masthead h1 span.bottom');
+      $leftText      = $('.animated-heading h1 span.top'),
+      $rightText     = $('.animated-heading h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {
@@ -28,13 +28,13 @@ $(function() {
     }
   };
 
-  // if ($('.masthead').length) {
-  //   setTimeout(function() {
-  //     animation.inLeft(
-  //       animation.inRight
-  //     );
-  //   }, 1000);
-  // }
+  if ($('.animated-heading').length) {
+    setTimeout(function() {
+      animation.inLeft(
+        animation.inRight
+      );
+    }, 1000);
+  }
 
   // initialize plugin
   // $('form#contact').validation({
