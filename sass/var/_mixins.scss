@@ -38,15 +38,3 @@ $max-device-width: 2880px;                 // Max Document Size
     @media only screen and ('#{$media}') { @content; }
   }
 }
-
-@mixin font-size($size, $is-important: false) {
-  $size: if(unitless($size), $size, $size / 1px);
-
-  @if $is-important {
-    font-size: $size + px !important;
-    font-size: ($size / strip-units($base-font-size)) + rem !important;
-  } @else {
-    font-size: $size + px;
-    font-size: ($size / strip-units($base-font-size)) + rem;
-  }
-}

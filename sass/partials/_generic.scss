@@ -5,7 +5,7 @@ h1 {
   }
 
   @include respond(all-phones) {
-    @include font-size(40px);
+    font-size: 40px;
   }
 }
 

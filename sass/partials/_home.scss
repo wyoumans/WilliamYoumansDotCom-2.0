@@ -25,7 +25,7 @@ body.home {
         position: relative;
 
         @include respond(portrait-phones) {
-          @include font-size(25px);
+          font-size: 25px;
         }
 
         span {
@@ -57,7 +57,7 @@ body.home {
   ul.labels {
 
     li.label {
-      @include font-size(16px);
+      font-size: 16px;
       padding: 10px;
       margin: 0 5px 5px 0;
       height: auto;
@@ -73,7 +73,7 @@ body.home {
     }
 
     .smaller {
-      @include font-size(11px);
+      font-size: 11px;
       line-height: normal;
     }
 
@@ -92,7 +92,7 @@ body.home {
 
         .icon {
           @include transform(rotate(180deg));
-          @include font-size(25px);
+          font-size: 25px;
           margin-right: 10px;
           display: inline-block;
           vertical-align: baseline;
