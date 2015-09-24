@@ -10,16 +10,24 @@ a {
   float: right;
 }
 
-// h1 {
+ul.labels {
+  margin-left: rem-calc(0);
 
-//   &.main-page-title {
-//     margin-bottom: 30px;
-//   }
+  li {
+    margin-right: 3px;
+  }
+}
 
-//   @include respond(all-phones) {
-//     font-size: 40px;
-//   }
-// }
+.hidden {
+  display: none;
+}
+
+h1 {
+
+  &.main-page-title {
+    margin-bottom: rem-calc(30);
+  }
+}
 
 // .danger {
 //   color: $danger-color;
@@ -49,15 +57,4 @@ a {
 //       display: block;
 //     }
 //   }
-// }
-
-// ul.labels {
-
-//   li {
-//     margin-right: 3px;
-//   }
-// }
-
-// .hidden {
-//   display: none;
 // }
