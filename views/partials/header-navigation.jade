@@ -2,7 +2,8 @@ nav#main-nav.top-bar(data-topbar='')
   ul.title-area
     li.name
       h1
-        a(href='#') William Youmans LLC
+        a(href='/')
+          img(src='/images/branding/logo-full.jpg', alt='William Youmans')
     li.toggle-topbar.menu-icon
       a(href='#')
         span &nbsp;
@@ -10,38 +11,18 @@ nav#main-nav.top-bar(data-topbar='')
   section.top-bar-section
     ul.right
       li
-        a(href='/projects') Projects
+        a(href='/projects')
+          span Projects
+          i.fi-laptop
       li
-        a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael') Blog
+        a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael')
+          span Blog
+          i.fi-pencil
       li
-        a(href='/about') About
+        a(href='/about')
+          span About
+          i.fi-male
       li
-        a(href='/contact') Hire Me
-
-//-
-  .navcontain
-    #main-nav.navbar(data-fixed='top')
-      .row
-        a.toggle(data-trigger='#main-nav > .row > ul', href='#')
-          i.icon-menu
-
-        .logo-wrapper.three.columns
-          a.logo(href='/')
-            img(src='/images/branding/logo-full.jpg', alt='William Youmans', data-retina)
-
-        ul.five.columns
-          li
-            a(href='/projects') Projects
-              i.icon-picture
-
-          li
-            a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael') Blog
-              i.icon-feather
-
-          li
-            a(href='/about') About
-              i.icon-user
-
-          li.cta
-            a(href='/contact') Hire Me
-              i.icon-phone
+        a(href='/contact')
+          span Hire Me
+          i.fi-telephone

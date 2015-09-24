@@ -1,7 +1,7 @@
 .row.footer-media
   .large-4.small-12.columns.seeing
     h3 Currently Seeing
-      i.icon-camera
+      i.fi-camera
     if locals.footerContent.image
       a.th(href=locals.footerContent.image.href, target='_blank')
         img(src=locals.footerContent.image.src, alt='Latest from Instagram')
@@ -10,13 +10,13 @@
 
   .large-4.small-12.columns.tweeting
     h3 Currently Saying
-      i.icon-twitter
+      i.fi-social-twitter
     if locals.footerContent.tweets
       .text-left
         each tweet in locals.footerContent.tweets
           .tweet
             a(href=tweet.href, target='_blank')
-              i.icon.icon-quote
+              i.icon.fi-comment-quotes
               span.content= tweet.content
             .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
     else
@@ -24,7 +24,7 @@
 
   .large-4.small-12.columns.listening
     h3 Currently Listening
-      i.icon-note-beamed
+      i.fi-music
     if locals.footerContent.track
       a.th(href=locals.footerContent.track.href, target='_blank')
         img(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
