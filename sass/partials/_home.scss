@@ -60,12 +60,8 @@ body.home {
   .header {
     text-align: center;
     background: url(/images/header/city.jpg) no-repeat center center;
-    background-size: cover;
-    padding: rem-calc(150);
-
-    .main-header {
-      color: #666;
-    }
+    @include background-size(cover);
+    height: rem-calc(500);
   }
 
   ul.labels {
