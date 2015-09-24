@@ -1,4 +1,4 @@
-# WilliamYoumans.com 2.0
+# WilliamYoumans.com
 
 Built with Node.JS, Jade, Zurb Fundation, and Compass
 

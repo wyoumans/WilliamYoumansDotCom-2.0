@@ -2,9 +2,9 @@ body.home {
 
   .header {
     text-align: center;
-    background: url(/images/header/city.jpg) no-repeat center center;
+    background: url(/images/header/clt-night.jpg) no-repeat center center;
     @include background-size(cover);
-    height: rem-calc(500);
+    height: rem-calc(600);
 
     .animated-heading {
 
