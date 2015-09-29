@@ -2,42 +2,47 @@ extends layouts/main
 
 block content
   .row
-    .twelve.columns
+    .small-12.columns
       h1.main-page-title= pageTitle
 
-      .row
-        .twelve.columns
-          p
-           | I'd love to hear more about your project. Tell me a little about it by using the form below, or by sending me an
-           |  <a href="mailto:hello@williamyoumans.com">email</a>. I look forward to it!
+      p
+       | I'd love to hear more about your project. Tell me a little about it by using the form below, or by sending me an
+       |  <a href="mailto:hello@williamyoumans.com">email</a>. I look forward to it!
 
-      form#contact.form(method='POST', action='/contact', novalidate)
+      form#contact.form(method='POST', action='/contact', novalidate, data-abide="")
 
         .row
-          .ten.columns
-            ul
-              li.field.row
-                label.two.columns.inline(for='contact_name') Name
-                input.ten.columns.omega.input.name(id='contact_name', name='contact[name]', type='text', placeholder='What should I call you?')
-                .error-message.text-right Please enter your name.
-
-              li.field.row
-                label.two.columns.inline(for='contact_email') Email
-                input.ten.columns.omega.input(id='contact_email', name='contact[email]', type='email', placeholder='How should I contact you?')
-                .error-message.text-right Please enter a valid email address.
-
-              li.field.row
-                label.two.columns.inline(for='contact_message') Message
-                textarea.ten.columns.omega.input.textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5)
-                .error-message.text-right Please enter your message.
-
-              li.field.row.text-right
-                label.checkbox.checked(for='optin')
-                  input#optin(name='optin', value='1', type='checkbox', checked='checked')
-                  |  Opt-in to the mailing list for infrequent company updates and discounts
-                  span
+          .small-12.medium-12.large-10.end.columns
+            .row
+              .small-12.medium-2.large-2.columns
+                label.small-only-text-left.right.inline Name
+              .small-12.medium-10.large-10.columns
+                input(id='contact_name', name='contact[name]', type='text', placeholder='What should I call you?', required)
+                small.error Please enter your name.
 
         .row
-          .ten.columns.text-right
-            .medium.primary.btn
-              input(type='submit', value='I\'m finished! Get a Quote.')
+          .small-12.medium-12.large-10.end.columns
+            .row
+              .small-12.medium-2.large-2.columns
+                label.small-only-text-left.right.inline Email
+              .small-12.medium-10.large-10.columns
+                input(id='contact_email', name='contact[email]', type='email', placeholder='How should I contact you?', required)
+                small.error Please enter a valid email address.
+
+        .row
+          .small-12.medium-12.large-10.end.columns
+            .row
+              .small-12.medium-2.large-2.columns
+                label.small-only-text-left.right.inline Message
+              .small-12.medium-10.large-10.columns
+                textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5, required)
+                small.error Please enter your message.
+
+        .row
+          .small-12.medium-12.large-10.end.columns.text-right
+            input#optin(name='optin', value='1', type='checkbox', checked='checked')
+            label(for='optin') Opt-in to the mailing list for infrequent company updates and discounts
+
+        .row
+          .small-12.medium-12.large-10.end.columns.text-right
+            input.primary.radius.button(type='submit', value='I\'m finished! Get a Quote.')

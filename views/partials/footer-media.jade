@@ -1,38 +1,31 @@
-.row.footer-media
-  .four.columns.seeing
+.row.footer-media.show-for-large-up
+  .large-4.small-12.columns.seeing.image-row
     h3 Currently Seeing
-      i.icon-camera
+      i.fi-camera
     if locals.footerContent.image
-      .row.image-row
-        .columns.centered.nine
-          a.ttip(href=locals.footerContent.image.href, target='_blank', data-tooltip=locals.footerContent.image.date_formatted)
-            img.image.photo(src=locals.footerContent.image.src, alt='Latest from Instagram')
+      a.image.th(href=locals.footerContent.image.href, target='_blank')
+        img(src=locals.footerContent.image.src, alt='Latest from Instagram')
     else
       p Nothing to report
 
-  .four.columns.tweeting
+  .large-4.small-12.columns.tweeting.image-row
     h3 Currently Saying
-      i.icon-twitter
+      i.fi-social-twitter
     if locals.footerContent.tweets
-      .row.image-row
-        .columns.centered.nine.text-left
-
-          each tweet in locals.footerContent.tweets
-            .tweet
-              a(href=tweet.href, target='_blank')
-                i.icon.icon-quote
-                span.content= tweet.content
-              .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
+      each tweet in locals.footerContent.tweets
+        .tweet
+          .text-left
+            a(href=tweet.href, target='_blank')
+              span.content= tweet.content
+            .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
     else
       p Nothing to report
 
-  .four.columns.listening
+  .large-4.small-12.columns.listening.image-row
     h3 Currently Listening
-      i.icon-note-beamed
+      i.fi-music
     if locals.footerContent.track
-      .row.image-row
-        .columns.centered.nine
-          a.ttip(href=locals.footerContent.track.href, target='_blank', data-tooltip=locals.footerContent.track.date_formatted)
-            img.image.photo(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
+      a.image.th(href=locals.footerContent.track.href, target='_blank')
+        img(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
     else
       p Nothing to report

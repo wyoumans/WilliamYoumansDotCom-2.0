@@ -1,26 +1,53 @@
 @charset "UTF-8";
 
-@import "modular-scale";
-
-@import "var/settings";
-@import "../public/bower_components/gumby/sass/var/lists";
-@import "../public/bower_components/gumby/sass/var/icons/entypo";
-
 @import "compass";
 @import "compass/reset";
 
-@import "../public/bower_components/gumby/sass/functions/all";
-@import "../public/bower_components/gumby/sass/base";
+@import "var/settings";
+
+// Foundation Core (only include what is used)
+// @import "foundation/components/accordion";
+@import "foundation/components/alert-boxes";
+@import "foundation/components/block-grid";
+// @import "foundation/components/breadcrumbs";
+@import "foundation/components/button-groups";
+@import "foundation/components/buttons";
+// @import "foundation/components/clearing";
+// @import "foundation/components/dropdown";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/flex-video";
+@import "foundation/components/forms";
+@import "foundation/components/grid";
+@import "foundation/components/inline-lists";
+// @import "foundation/components/joyride";
+// @import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+@import "foundation/components/magellan";
+// @import "foundation/components/orbit";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/reveal";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switches";
+// @import "foundation/components/tables";
+// @import "foundation/components/tabs";
+@import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+@import "foundation/components/top-bar";
+@import "foundation/components/type";
+@import "foundation/components/offcanvas";
+@import "foundation/components/visibility";
 
 @import "partials/fonts";
-
-@import "../public/bower_components/gumby/sass/typography";
-@import "../public/bower_components/gumby/sass/grid";
-@import "../public/bower_components/gumby/sass/ui/all";
-@import "../public/bower_components/gumby/sass/shame";
+@import "partials/foundation-icons";
 
 @import "partials/layout";
 @import "partials/generic";
 @import "partials/home";
 @import "partials/contact";
 @import "partials/about";
+@import "partials/projects";
