@@ -9,7 +9,7 @@ block content
        | I'd love to hear more about your project. Tell me a little about it by using the form below, or by sending me an
        |  <a href="mailto:hello@williamyoumans.com">email</a>. I look forward to it!
 
-      form#contact.form(method='POST', action='/contact', novalidate)
+      form#contact.form(method='POST', action='/contact', novalidate, data-abide="")
 
         .row
           .small-12.medium-12.large-10.end.columns
@@ -17,7 +17,7 @@ block content
               .small-12.medium-2.large-2.columns
                 label.small-only-text-left.right.inline Name
               .small-12.medium-10.large-10.columns
-                input(id='contact_name', name='contact[name]', type='text', placeholder='What should I call you?')
+                input(id='contact_name', name='contact[name]', type='text', placeholder='What should I call you?', required)
                 small.error Please enter your name.
 
         .row
@@ -26,7 +26,7 @@ block content
               .small-12.medium-2.large-2.columns
                 label.small-only-text-left.right.inline Email
               .small-12.medium-10.large-10.columns
-                input(id='contact_email', name='contact[email]', type='email', placeholder='How should I contact you?')
+                input(id='contact_email', name='contact[email]', type='email', placeholder='How should I contact you?', required)
                 small.error Please enter a valid email address.
 
         .row
@@ -35,7 +35,7 @@ block content
               .small-12.medium-2.large-2.columns
                 label.small-only-text-left.right.inline Message
               .small-12.medium-10.large-10.columns
-                textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5)
+                textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=5, required)
                 small.error Please enter your message.
 
         .row
