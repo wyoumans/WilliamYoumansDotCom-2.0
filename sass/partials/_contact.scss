@@ -1,63 +1,30 @@
-// body.contact {
+body.contact {
 
-//   .input {
-//     padding-right: 40px;
-//   }
+  .columns {
 
-//   label.checkbox {
+    small.error {
+      display: none;
+    }
 
-//     span {
-//       margin-left: 10px;
-//     }
-//   }
+    &.error {
 
-//   .danger {
+      small.error {
+        display: block;
+      }
+    }
+  }
+  input[type="checkbox"] + label {
+    margin-right: 0;
+  }
 
-//     .input {
-//       padding-right: 320px;
-//     }
+  // .danger {
 
-//     textarea.input {
-//       padding-right: 300px;
-//     }
-//   }
+  //   .input {
+  //     padding-right: 320px;
+  //   }
 
-//   @include respond(all-phones) {
-
-//     li.field {
-
-//       label.inline {
-//        display: block;
-//       }
-
-//       .input {
-//         width: 100% !important;
-//         float: none;
-//       }
-
-//       .error-message {
-//         position: relative;
-//         top: auto;
-//         right: auto;
-//       }
-
-//       &.danger, &.warning, &.success {
-
-//         &:after {
-//           right: 0;
-//         }
-//       }
-
-//       &.danger {
-
-//         .input {
-//           padding-right: 0;
-//         }
-
-//         textarea.input {
-//           padding-right: 0;
-//         }
-//       }
-//     }
-//   }
-// }
+  //   textarea.input {
+  //     padding-right: 300px;
+  //   }
+  // }
+}
