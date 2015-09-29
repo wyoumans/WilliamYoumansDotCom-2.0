@@ -22,7 +22,7 @@ function minifyCSS(done) {
   new compressor.minify({
     type: 'yui-css',
     fileIn: 'public/styles/styles.css',
-    fileOut: 'public/styles/styles-2015-09-29.min.css',
+    fileOut: 'public/styles/styles-20150929.min.css',
     callback: function(err) {
       console.log('Screen styles minified');
       return done(err);
@@ -64,7 +64,7 @@ function minifyJS(done) {
       // Custom Scripts
       'public/scripts/custom.js'
     ],
-    fileOut: 'public/scripts/scripts-2015-09-29.min.js',
+    fileOut: 'public/scripts/scripts-20150929.min.js',
     callback: function(err, min) {
       console.log('Javascript minified');
       return done(err);
