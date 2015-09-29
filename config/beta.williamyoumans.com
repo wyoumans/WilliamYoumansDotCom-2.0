@@ -8,7 +8,6 @@ server {
   access_log /var/log/nginx/beta.williamyoumans.access.log;
   error_log  /var/log/nginx/beta.williamyoumans.error.log debug;   log_subrequest on;
   server_name beta.williamyoumans.com;
-  add_header "X-UA-Compatible" "IE=Edge,chrome=1";
 
   location ~ ^/(fonts/|images/|scripts/|styles/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
     root /home/william/app/beta/public;
