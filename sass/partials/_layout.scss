@@ -32,6 +32,12 @@
   }
 }
 
+.top-bar .name a {
+  line-height: $topbar-height;
+  margin: 0;
+  display: block;
+}
+
 .fixed-stripe {
   height: rem-calc(5);
   position: fixed;
