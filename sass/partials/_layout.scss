@@ -32,10 +32,21 @@
   }
 }
 
-.top-bar .name a {
-  line-height: $topbar-height;
-  margin: 0;
-  display: block;
+.top-bar {
+
+  .name {
+    margin-left: rem-calc(15);
+
+    @media #{$small-only} {
+      max-width: rem-calc(230);
+    }
+
+    a {
+      line-height: $topbar-height;
+      margin: 0;
+      display: block;
+    }
+  }
 }
 
 .fixed-stripe {
