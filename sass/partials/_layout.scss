@@ -9,7 +9,7 @@
     a {
 
       i {
-        display: inline-block;
+        @include inline-block;
         margin-left: rem-calc(10);
       }
     }
@@ -70,7 +70,7 @@
     }
 
     i {
-      display: inline-block;
+      @include inline-block;
       margin: 0 3%;
       font-size: rem-calc(25);
       vertical-align: middle;
@@ -87,7 +87,7 @@
     h3 {
 
       i {
-        display: inline-block;
+        @include inline-block;
         margin-left: rem-calc(20);
       }
     }
@@ -116,7 +116,7 @@
     .image-row {
 
       a.image {
-        display: inline-block;
+        @include inline-block;
         max-width: 90%;
 
         img {

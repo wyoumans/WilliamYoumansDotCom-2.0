@@ -13,7 +13,7 @@ body.home {
 
         span {
           color: $tertiary-color;
-          display: inline-block;
+          @include inline-block;
           top: 50px;
           padding: 0 10px 10px 10px;
           white-space: nowrap;
