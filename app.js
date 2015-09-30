@@ -8,11 +8,10 @@ var express        = require('express')
   , bodyParser     = require('body-parser')
   , methodOverride = require('method-override')
   , morgan         = require('morgan')  // for logging to the console
-  , logger         = require('./lib').logger
+  , lib            = require('./lib')
   , middleware     = require('./middleware')
   , config         = require('./config')
   , models         = require('./models') // register models (don't remove even if not used in this file!)
-  , cronJobs       = require('./lib').cronJobs
   , app            = express()
   ;
 
@@ -27,6 +26,7 @@ app.locals.NODE_ENV = config.env;
 app.locals.useMinifiedAssets = config.useMinifiedAssets;
 app.locals.analytics = config.analytics;
 app.locals.showAnalytics = config.showAnalytics;
+app.locals.assetsVersion = lib.assetsVersion;
 app.locals.supportsCaching = config.supportsCaching;
 app.locals.bodyClass = '';
 app.locals.metaDescription = 'William Youmans is a Charlotte, North Carolina based freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast.';
@@ -65,7 +65,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }));
 
 if (['staging', 'production'].indexOf(config.env) !== -1) {
-  cronJobs.start();
+  lib.cronJobs.start();
   app.use(middleware.errorHandler());
 }
 
@@ -74,11 +74,11 @@ conductor.init(app, {
 }, function(err, app) {
 
   app.get('*', function(req, res) {
-    logger.warn('404: ' + req.url);
+    lib.logger.warn('404: ' + req.url);
     return res.status(404).render('errors/404');
   });
 
   http.createServer(app).listen(app.get('port'), function() {
-    logger.info('Express server listening on port ' + app.get('port'));
+    lib.logger.info('Express server listening on port ' + app.get('port'));
   });
 });
