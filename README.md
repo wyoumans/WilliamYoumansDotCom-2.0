@@ -1,8 +1,7 @@
-# WilliamYoumans.com 2.0
+# WilliamYoumans.com
 
-## Built with gumby
+Built with Node.JS, Jade, Zurb Fundation, and Compass
 
-Make sure you have `claymate` and `bower` installed globally from NPM
 
 ## Helpful Scripts
 
@@ -38,4 +37,4 @@ make build
 
 ## License
 
-[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2014 William Youmans
+[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2015 William Youmans
