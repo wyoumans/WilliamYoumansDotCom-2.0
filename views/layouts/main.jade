@@ -77,12 +77,13 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
     include ../partials/header-navigation
 
     //- Content
-    section#main.main-content.row
-      .small-12.columns
-        block content
+    section#main.main-content
+      .row
+        .small-12.columns
+          block content
 
-        if locals.showFooterCTA
-          include ../partials/footer-cta
+          if locals.showFooterCTA
+            include ../partials/footer-cta
 
     footer#main-footer.main-footer.text-center
       if locals.footerContent && locals.showFooterMedia

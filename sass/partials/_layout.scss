@@ -1,3 +1,7 @@
+body {
+  background-color: $almost-black;
+}
+
 .top-bar-wrapper {
 
   .title-area li h1 a {
@@ -61,6 +65,11 @@
 
 .main-content {
   padding: rem-calc(50 0);
+  background-color: $white;
+
+  @media #{$medium-up} {
+    min-height: rem-calc(850);
+  }
 }
 
 .main-footer {
