@@ -4,12 +4,16 @@ body.home {
     text-align: center;
     background: url(/images/header/clt-night.jpg) no-repeat center center;
     @include background-size(cover);
-    height: rem-calc(600);
+    height: rem-calc(550);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
     .animated-heading {
 
       h1 {
         position: relative;
+        margin-top: rem-calc(25);
 
         span {
           color: $white;
