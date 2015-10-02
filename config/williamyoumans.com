@@ -43,6 +43,6 @@ server {
     proxy_cache_key "$host$request_uri$query_string";
 
     proxy_http_version 1.1;
-    proxy_pass https://williamyoumans;
+    proxy_pass http://williamyoumans;
   }
 }
