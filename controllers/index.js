@@ -36,8 +36,6 @@ function getHome(req, res) {
       if (tweets) {
         locals.footerContent.tweets = [];
 
-        console.log(tweets);
-
         tweets.forEach(function(tweet) {
           tweet.date_formatted = moment(tweet.tweetDate).fromNow();
           tweet.username = config.twitter.username;
