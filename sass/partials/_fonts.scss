@@ -1,18 +1,17 @@
-/* Fonts */
+// Fonts
 
 // Import Google Web Fonts
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,700,300);
 
-
-// Set local icon font
+$foundation-icons: 'foundation-icons';
 @font-face {
-  font-family: '#{$icons}';
+  font-family: '#{$foundation-icons}';
   font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/icons/#{$icons}.eot);
-  src: url('../fonts/icons/#{$icons}.eot?#iefix') format('ie9-skip-eot'),
-       url('../fonts/icons/#{$icons}.woff') format('woff'),
-       url('../fonts/icons/#{$icons}.ttf')  format('truetype');
+  font-weight: normal;
+  src: url(../fonts/icons/#{$foundation-icons}.eot);
+  src: url('../fonts/icons/#{$foundation-icons}.eot?#iefix') format('ie9-skip-eot'),
+       url('../fonts/icons/#{$foundation-icons}.woff') format('woff'),
+       url('../fonts/icons/#{$foundation-icons}.ttf')  format('truetype');
 }
 
 // To include your own, local copies of fonts, use the following template

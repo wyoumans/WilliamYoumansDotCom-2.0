@@ -1,26 +1,32 @@
-.navcontain
-  #main-nav.navbar(data-fixed='top')
-    .row
-      a.toggle(data-trigger='#main-nav > .row > ul', href='#')
-        i.icon-menu
+.top-bar-wrapper.contain-to-grid.sticky
+  nav#main-nav.top-bar(data-topbar='')
+    ul.title-area
+      li.name
+        a(href='/')
+          img(src='/images/branding/logo-full.jpg', alt='William Youmans')
 
-      .logo-wrapper.three.columns
-        a.logo(href='/')
-          img(src='/images/branding/logo-full.jpg', alt='William Youmans', data-retina)
+      li.toggle-topbar.menu-icon
+        a(href='#')
+          span &nbsp;
 
-      ul.five.columns
+    .top-bar-section.small-text-center.medium-text-center
+      ul.right
         li
-          a(href='/projects') Projects
-            i.icon-picture
+          a(href='/projects')
+            span Projects
+            i.fi-laptop
 
         li
-          a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael') Blog
-            i.icon-feather
+          a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael')
+            span Blog
+            i.fi-pencil
 
         li
-          a(href='/about') About
-            i.icon-user
+          a(href='/about')
+            span About
+            i.fi-torso-business
 
         li.cta
-          a(href='/contact') Hire Me
-            i.icon-phone
+          a(href='/contact')
+            span Hire Me
+            i.fi-telephone

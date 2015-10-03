@@ -4,8 +4,7 @@ var Twitter = require('node-twitter')
   , config  = require('../config')
   , logger  = require('../lib').logger
   , Tweet   = require('../models').Tweet
-  , async  = require('async')
-  , _       = require('lodash')
+  , async   = require('async')
   ;
 
 var twitterRestClient = new Twitter.RestClient(

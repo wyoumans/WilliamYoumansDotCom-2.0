@@ -1,13 +1,60 @@
-a {
-  word-wrap: break-word;
+body {
+  background-color: $almost-black;
 }
 
-.main-header, .main-footer, .main-content {
-  background-color: $main-content-bg-color;
+.top-bar-wrapper {
+
+  .title-area li h1 a {
+    padding: rem-calc(0 0 0 20)
+  }
+
+  ul li {
+
+    a {
+
+      i {
+        @include inline-block;
+        margin-left: rem-calc(10);
+      }
+    }
+  }
+
+  &.fixed {
+    border-bottom: 1px solid $light-gray;
+
+    ul li {
+
+      &.cta a {
+        background-color: $primary-color;
+        color: $white;
+
+        &:hover {
+          background-color: $button-bg-hover;
+        }
+      }
+    }
+  }
+}
+
+.top-bar {
+
+  .name {
+    margin-left: rem-calc(15);
+
+    @media #{$small-only} {
+      max-width: rem-calc(230);
+    }
+
+    a {
+      line-height: $topbar-height;
+      margin: 0;
+      display: block;
+    }
+  }
 }
 
 .fixed-stripe {
-  height: 5px;
+  height: rem-calc(5);
   position: fixed;
   top: 0;
   left: 0;
@@ -16,128 +63,12 @@ a {
   z-index: 999;
 }
 
-.header-spacer {
-  height: 5px;
-}
-
-.gumby-no-touch .navbar ul li:hover > a,
-.gumby-touch .navbar ul li.active > a {
-  background: transparent;
-}
-
-.navbar {
-  z-index: 1000;
-  margin-bottom: 0;
-
-  @include respond(all-phones) {
-    z-index: 1;
-  }
-
-  ul.active {
-
-    @include respond(all-phones) {
-      margin-top: 20px;
-    }
-  }
-
-  ul {
-    float: right;
-
-    li {
-
-      & > a {
-        @include text-shadow(none);
-        font-weight: bold;
-      }
-
-      &:hover > a {
-        color: $orange;
-      }
-    }
-  }
-
-  .logo-wrapper {
-    margin-left: 0;
-
-    .logo {
-      width: 100%;
-      line-height: 148px;
-      display: block;
-      height: auto;
-
-      @include respond(all-phones) {
-        padding-top: 10px;
-        height: auto;
-        line-height: 58px;
-
-        img {
-          max-width: 40%;
-        }
-      }
-
-      img {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-  }
-
-  ul li, ul li > a {
-    height: 150px;
-    line-height: 148px;
-
-    @include respond(all-phones) {
-      height: 60px;
-      line-height: 58px;
-    }
-  }
-
-  ul li, ul li > a, .logo {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-  &.fixed {
-
-    @include respond(desktop) {
-      border-bottom: 1px solid $light-gray;
-
-      .logo {
-        width: 150px;
-        margin: 0;
-      }
-
-      ul li {
-
-        &.cta {
-          background-color: $primary-color;
-
-          & > a {
-            color: $white;
-            border: 0;
-          }
-
-          &:hover {
-            background-color: $primary-hover-color;
-          }
-        }
-      }
-
-      ul li, ul li > a, .logo {
-        height: 60px;
-        line-height: 58px;
-      }
-    }
-  }
-}
-
 .main-content {
-  min-height: 800px;
-  padding-bottom: 50px;
+  padding: rem-calc(50 0);
+  background-color: $white;
 
-  @include respond(all-phones) {
-    min-height: 0;
+  @media #{$medium-up} {
+    min-height: rem-calc(850);
   }
 }
 
@@ -152,18 +83,67 @@ a {
   .extra-footer {
     background-color: $almost-black;
     color: $footer-font-color;
-    padding-top: 10px;
 
-    @include respond(all-phones) {
+    p {
+      line-height: rem-calc(25);
+      margin: rem-calc(10 0);
+    }
 
-      p {
-        text-align: center !important;
-      }
+    i {
+      @include inline-block;
+      margin: 0 3%;
+      font-size: rem-calc(25);
+      vertical-align: middle;
     }
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: $white;
+  }
+
+  .footer-media {
+    padding: rem-calc(5 0 20 0);
+
+    h3 {
+
+      i {
+        @include inline-block;
+        margin-left: rem-calc(20);
+      }
+    }
+
+    .smaller {
+      font-size: rem-calc(11);
+      line-height: normal;
+    }
+
+    .tweeting {
+
+      .tweet {
+        border-bottom: 1px solid lighten($footer-gray, 10%);
+        margin: 0 auto rem-calc(20) auto;
+        padding-bottom: rem-calc(20);
+        max-width: 90%;
+
+        &:last-child {
+          border: 0;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .image-row {
+
+      a.image {
+        @include inline-block;
+        max-width: 90%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
   }
 }
 

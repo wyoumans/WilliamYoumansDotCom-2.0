@@ -2,16 +2,16 @@ extends layouts/main
 
 block content
   .row
-    .twelve.columns
+    .large-12.columns
       h1.main-page-title= pageTitle
 
-      .avatar.pull-right
-        img(src='/images/content/about/william-youmans.jpg', alt='William Youmans')
+  .row
+    .large-7.medium-7.small-12.columns
 
       p
         | My name is <strong itemprop="name">William Youmans</strong>. I'm a full-time <span itemprop="jobtitle">freelance software
         | developer and consultant</span> based in <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        | <span itemprop="addressLocality">Boston</span><span class="hidden">, <span itemprop="addressRegion">Massachusetts</span>
+        | <span itemprop="addressLocality">Charlotte, North Carolina</span><span class="hidden">, <span itemprop="addressRegion">Massachusetts</span>
         | </span></span>. I have a driving passion for <strong>creating greatness</strong> on the web by leveraging the right
         | technology for each unique client project.
 
@@ -30,8 +30,11 @@ block content
         | what you need, and I'll take it from there.
 
       p
-        | On a more personal note, I recently relocated from Salt Lake City, Utah to Boston.
+        | On a more personal note, I recently relocated from Boston to Charlotte, North Carolina.
         | In my free time, I enjoy skiing, backpacking, drinking tea, and getting lost in
         | <a href="https://www.youtube.com/watch?v=aiBt44rrslw" target="_blank">IKEA</a>.
 
       p But that's enough about me. I want to hear more about you.
+
+    .large-5.medium-5.small-12.columns.small-only-text-center
+      img.avatar(src='/images/content/about/vermont.jpg', alt='William Youmans')

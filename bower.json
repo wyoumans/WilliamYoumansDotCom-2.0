@@ -1,7 +1,7 @@
 {
   "name": "WilliamYoumans",
-  "version": "2.0.0",
-  "homepage": "http://www.williamyoumans.com",
+  "version": "2.3.0",
+  "homepage": "https://www.williamyoumans.com",
   "authors": [
     "William Youmans <will@williamyoumans.com>"
   ],
@@ -16,10 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "gumby": "git://github.com/GumbyFramework/Gumby.git#~2.5.14",
-    "gumby-parallax": "~1.1.5",
-    "snabbt.js": "~0.5.1",
     "easing": "*",
-    "jquery.easing": "~1.3.1"
+    "jquery.easing": "~1.3.1",
+    "modernizr": "~3.0.0",
+    "snabbt.js": "~0.5.1",
+    "foundation": "zurb/bower-foundation"
   }
 }
