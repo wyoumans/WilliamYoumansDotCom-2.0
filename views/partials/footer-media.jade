@@ -1,5 +1,5 @@
 .row.footer-media.show-for-large-up
-  .large-4.small-12.columns.seeing.image-row
+  .large-6.small-12.columns.seeing.image-row
     h3 Currently Seeing
       i.fi-camera
     if locals.footerContent.image
@@ -8,7 +8,7 @@
     else
       p Nothing to report
 
-  .large-4.small-12.columns.tweeting.image-row
+  .large-6.small-12.columns.tweeting.image-row
     h3 Currently Saying
       i.fi-social-twitter
     if locals.footerContent.tweets
@@ -21,11 +21,12 @@
     else
       p Nothing to report
 
-  .large-4.small-12.columns.listening.image-row
-    h3 Currently Listening
-      i.fi-music
-    if locals.footerContent.track
-      a.image.th(href=locals.footerContent.track.href, target='_blank')
-        img(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
-    else
-      p Nothing to report
+  //-
+    .large-4.small-12.columns.listening.image-row
+      h3 Currently Listening
+        i.fi-music
+      if locals.footerContent.track
+        a.image.th(href=locals.footerContent.track.href, target='_blank')
+          img(src=locals.footerContent.track.imageSrc, alt='Track ' + locals.footerContent.track.name)
+      else
+        p Nothing to report

@@ -13,18 +13,27 @@ body.contact {
       }
     }
   }
-  input[type="checkbox"] + label {
-    margin-right: 0;
+
+  .checkbox-wrapper {
+    @media #{$small-only} {
+      margin-bottom: rem-calc(15);
+    }
+
+    input[type="checkbox"] + label {
+      margin-right: 0;
+
+      @media #{$small-only} {
+        display: inline;
+        line-height: normal;
+      }
+    }
+
+    input[type="checkbox"] {
+
+      @media #{$small-only} {
+        margin-bottom: 0;
+        display: inline;
+      }
+    }
   }
-
-  // .danger {
-
-  //   .input {
-  //     padding-right: 320px;
-  //   }
-
-  //   textarea.input {
-  //     padding-right: 300px;
-  //   }
-  // }
 }

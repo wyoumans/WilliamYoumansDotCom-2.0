@@ -15,49 +15,38 @@ module.exports.init = function(app) {
 function getHome(req, res) {
   var locals = {};
 
-  models.Track.findOne({}, 'scrobbleDate href imageSrc', {
+  models.Image.findOne({}, 'postDate href src', {
     sort: {
-      scrobbleDate: -1
+      postDate: -1
     }
-  }, function(err, track) {
-    models.Image.findOne({}, 'postDate href src', {
+  }, function(err, image) {
+    models.Tweet.find({}, 'tweetDate href content', {
       sort: {
-        postDate: -1
+        tweetDate: -1
+      },
+      limit: 3
+    }, function(err, tweets) {
+      locals.footerContent = {};
+
+      if (image) {
+        image.date_formatted = moment(image.postDate).fromNow();
+        locals.footerContent.image = image;
       }
-    }, function(err, image) {
-      models.Tweet.find({}, 'tweetDate href content', {
-        sort: {
-          tweetDate: -1
-        },
-        limit: 2
-      }, function(err, tweets) {
-        locals.footerContent = {};
 
-        if (track) {
-          track.date_formatted = moment(track.scrobbleDate).fromNow();
-          locals.footerContent.track = track;
-        }
+      if (tweets) {
+        locals.footerContent.tweets = [];
 
-        if (image) {
-          image.date_formatted = moment(image.postDate).fromNow();
-          locals.footerContent.image = image;
-        }
+        tweets.forEach(function(tweet) {
+          tweet.date_formatted = moment(tweet.tweetDate).fromNow();
+          tweet.username = config.twitter.username;
+          locals.footerContent.tweets.push(tweet);
+        });
+      }
 
-        if (tweets) {
-          locals.footerContent.tweets = [];
+      locals.showMastHead = true;
+      locals.showFooterMedia = true;
 
-          tweets.forEach(function(tweet) {
-            tweet.date_formatted = moment(tweet.tweetDate).fromNow();
-            tweet.username = config.twitter.username;
-            locals.footerContent.tweets.push(tweet);
-          });
-        }
-
-        locals.showMastHead = true;
-        locals.showFooterMedia = true;
-
-        render(res, 'home', locals);
-      });
+      render(res, 'home', locals);
     });
   });
 }

@@ -1,3 +1,7 @@
+body {
+  background-color: $almost-black;
+}
+
 .top-bar-wrapper {
 
   .title-area li h1 a {
@@ -9,7 +13,7 @@
     a {
 
       i {
-        display: inline-block;
+        @include inline-block;
         margin-left: rem-calc(10);
       }
     }
@@ -32,10 +36,21 @@
   }
 }
 
-.top-bar .name a {
-  line-height: $topbar-height;
-  margin: 0;
-  display: block;
+.top-bar {
+
+  .name {
+    margin-left: rem-calc(15);
+
+    @media #{$small-only} {
+      max-width: rem-calc(230);
+    }
+
+    a {
+      line-height: $topbar-height;
+      margin: 0;
+      display: block;
+    }
+  }
 }
 
 .fixed-stripe {
@@ -49,7 +64,12 @@
 }
 
 .main-content {
-  padding-bottom: rem-calc(40);
+  padding: rem-calc(50 0);
+  background-color: $white;
+
+  @media #{$medium-up} {
+    min-height: rem-calc(850);
+  }
 }
 
 .main-footer {
@@ -70,7 +90,7 @@
     }
 
     i {
-      display: inline-block;
+      @include inline-block;
       margin: 0 3%;
       font-size: rem-calc(25);
       vertical-align: middle;
@@ -87,7 +107,7 @@
     h3 {
 
       i {
-        display: inline-block;
+        @include inline-block;
         margin-left: rem-calc(20);
       }
     }
@@ -116,7 +136,7 @@
     .image-row {
 
       a.image {
-        display: inline-block;
+        @include inline-block;
         max-width: 90%;
 
         img {

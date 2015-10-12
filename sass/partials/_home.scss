@@ -4,31 +4,35 @@ body.home {
     text-align: center;
     background: url(/images/header/clt-night.jpg) no-repeat center center;
     @include background-size(cover);
-    height: rem-calc(600);
+    height: rem-calc(550);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
     .animated-heading {
 
       h1 {
         position: relative;
+        margin-top: rem-calc(25);
 
         span {
-          color: $tertiary-color;
-          display: inline-block;
-          top: 50px;
-          padding: 0 10px 10px 10px;
+          color: $white;
+          @include inline-block;
+          top: rem-calc(50);
+          padding: rem-calc(0 10 10 10);
           white-space: nowrap;
           position: absolute;
-          background-color: rgba(255, 255, 255, 0.4);
-          @include text-shadow($white 1px 1px 1px);
+          // background-color: rgba(255, 255, 255, 0.4);
+          @include text-shadow($primary-color 1px 1px 1px);
           font-size: rem-calc(70);
 
           &.top {
-            left: -2000px;
+            left: rem-calc(-2000);
           }
 
           &.bottom {
-            top: 195px;
-            right: -2000px;
+            top: rem-calc(195);
+            right: rem-calc(-2000);
           }
         }
       }
@@ -38,9 +42,9 @@ body.home {
   ul.labels {
 
     li.label {
-      font-size: 16px;
-      padding: 10px;
-      margin: 0 5px 5px 0;
+      font-size: rem-calc(16);
+      padding: rem-calc(10);
+      margin: rem-calc(0 5 5 0);
       height: auto;
       line-height: normal;
       font-weight: normal;
