@@ -24,12 +24,14 @@ function getSitemap(req, res) {
     '/charlotte-north-carolina-web-development-services',
     '/custom-web-applications',
     '/php-laravel-development',
+    '/content-management-systems',
     '/custom-wordpress-themes',
     '/node-js-custom-web-application-development',
-    '/php-laravel-development',
+    '/woocommerce-store-development',
     '/custom-ecommerce-solutions',
     '/north-carolina-website-consulting',
-    '/small-business-marketing-websites'
+    '/small-business-marketing-websites',
+    '/subscription-membership-systems'
   ];
 
   res.setHeader('Content-Type', 'application/xhtml+xml');
