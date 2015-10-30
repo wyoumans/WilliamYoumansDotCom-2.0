@@ -1,5 +1,12 @@
 .row
-  .large-4.small-12.columns
+  .large-6.medium-6.small-12.columns
+    include seo-navigation-left
+
+  .large-6.medium-6.small-12.columns
+    include seo-navigation-right
+
+.row
+  .large-4.small-12.columns.small-text-center.large-text-left
     p &copy; #{new Date().getFullYear()} William Youmans LLC
 
   .large-4.small-12.columns.text-center
@@ -10,7 +17,7 @@
       a(href='http://instagram.com/cwyouman', target='_blank', title='Instagram'): i.fi-social-instagram
       a(href='http://www.last.fm/user/gotwilly', target='_blank', title='Last.fm'): i.fi-social-lastfm
 
-  .large-4.small-12.columns
+  .large-4.small-12.columns.small-text-center.large-text-right
     p
       i.fi-mail
-      a(href="mailto:hello@williamyoumans.com", itemprop='email') hello@williamyoumans.com
+      a(href='mailto:hello@williamyoumans.com', itemprop='email') hello@williamyoumans.com

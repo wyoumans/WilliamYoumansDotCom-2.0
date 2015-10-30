@@ -84,15 +84,21 @@ body {
     background-color: $almost-black;
     color: $footer-font-color;
 
+    .seo-navigation {
+      margin: rem-calc(20) 0;
+      font-size: rem-calc(14);
+    }
+
     p {
       line-height: rem-calc(25);
       margin: rem-calc(10 0);
+      font-size: rem-calc(14);
     }
 
     i {
       @include inline-block;
       margin: 0 3%;
-      font-size: rem-calc(25);
+      font-size: rem-calc(30);
       vertical-align: middle;
     }
   }
