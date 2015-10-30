@@ -120,9 +120,11 @@ $light-blue: #AAC8E0;
 $dark-blue: #223344;
 $orange: #CC6600;
 $dark-orange: #8C4600;
-$footer-gray: #292727;
 $medium-gray: #343434;
 $light-gray: $iron;
+$footer-blue-tier1: $dark-blue;
+$footer-blue-tier2: tint($dark-blue, 10);
+$footer-blue-tier3: tint($dark-blue, 20);
 
 // We use these as default colors throughout
 $primary-color: $orange;
