@@ -2,21 +2,26 @@ a {
   word-wrap: break-word;
 }
 
-ul.labels {
-  margin-left: rem-calc(0);
-
-  li {
-    margin-right: rem-calc(3);
-  }
-}
-
 .hidden {
   display: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
 }
 
 h1 {
 
   &.main-page-title {
     margin-bottom: rem-calc(30);
+  }
+}
+
+ul.labels {
+  margin-left: rem-calc(0);
+
+  li {
+    margin-right: rem-calc(3);
   }
 }

@@ -12,7 +12,7 @@ body {
 
     a {
 
-      i {
+      span, i {
         @include inline-block;
         margin-left: rem-calc(10);
       }
