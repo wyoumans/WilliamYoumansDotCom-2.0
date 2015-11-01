@@ -1,8 +1,4 @@
 // Fonts
-
-// Import Google Web Fonts
-@import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
-
 $foundation-icons: 'foundation-icons';
 @font-face {
   font-family: '#{$foundation-icons}';
@@ -14,14 +10,35 @@ $foundation-icons: 'foundation-icons';
        url('../fonts/icons/#{$foundation-icons}.ttf')  format('truetype');
 }
 
-// To include your own, local copies of fonts, use the following template
-//
-//@font-face {
-//  font-family: '#{$some-font-variable}';
-//  font-style: normal;
-//  font-weight: 400;
-//  src: url(../fonts/icons/#{$some-font-variable}.eot);
-//  src: url('../fonts/icons/#{$some-font-variable}.eot?#iefix') format('ie9-skip-eot'),
-//       url('../fonts/icons/#{$some-font-variable}.woff') format('woff'),
-//       url('../fonts/icons/#{$some-font-variable}.ttf')  format('truetype');
-//}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/roboto/Roboto-Light-webfont.eot);
+  src: url('../fonts/roboto/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/roboto/Roboto-Light-webfont.woff') format('woff'),
+       url('../fonts/roboto/Roboto-Light-webfont.ttf')  format('truetype'),
+       url('../fonts/roboto/Roboto-Light-webfont.svg#robotolight') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/roboto/Roboto-Bold-webfont.eot);
+  src: url('../fonts/roboto/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/roboto/Roboto-Bold-webfont.woff') format('woff'),
+       url('../fonts/roboto/Roboto-Bold-webfont.ttf')  format('truetype'),
+       url('../fonts/roboto/Roboto-Bold-webfont.svg#robotolight') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/roboto/Roboto-Regular-webfont.eot);
+  src: url('../fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+       url('../fonts/roboto/Roboto-Regular-webfont.ttf')  format('truetype'),
+       url('../fonts/roboto/Roboto-Regular-webfont.svg#robotolight') format('svg');
+}
