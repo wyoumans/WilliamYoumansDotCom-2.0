@@ -70,6 +70,7 @@ function postContact(req, res) {
               }
             }, function(error, data) {
               if (error) {
+                error.note = 'Mailchimp';
                 logger.error(error);
               } else {
                 logger.info(data);
