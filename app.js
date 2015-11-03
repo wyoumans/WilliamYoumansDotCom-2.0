@@ -15,9 +15,9 @@ var express        = require('express')
   , app            = express()
   ;
 
-/*
-  PLEASE NOTE: The order of the following calls matters! Adjust at your own risk.
- */
+//
+// PLEASE NOTE: The order of the following calls matters! Adjust at your own risk.
+//
 
 app.enable('trust proxy');
 
