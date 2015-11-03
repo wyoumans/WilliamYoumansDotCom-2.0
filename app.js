@@ -65,10 +65,7 @@ conductor.init(app, {
   controllers: __dirname + '/controllers'
 }, function(err, app) {
 
-  app.get('*', function(req, res) {
-    lib.logger.warn('404: ' + req.url);
-    return res.status(404).render('errors/404');
-  });
+  app.get('*', middleware.throw404);
 
   http.createServer(app).listen(app.get('port'), function() {
     lib.logger.info('Express server listening on port ' + app.get('port'));

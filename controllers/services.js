@@ -2,6 +2,7 @@
 
 var config = require('../config')
   , render = require('../lib').render
+  , throw404 = require('../middleware').throw404
   , Service = require('../models').Service
   ;
 
@@ -21,7 +22,7 @@ function getServices(req, res) {
         service: service
       });
     } else {
-      return res.status(404).render('errors/404');
+      return throw404(req, res);
     }
   });
 }

@@ -6,5 +6,6 @@ module.exports = {
   cleanUrl         : require('./clean-url'),
   cacheControl     : require('./cache-control'),
   footerNavigation : require('./footer-navigation'),
-  locals           : require('./locals')
+  locals           : require('./locals'),
+  throw404         : require('./throw-404'),
 };
