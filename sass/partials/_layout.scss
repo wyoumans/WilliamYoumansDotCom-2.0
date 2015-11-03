@@ -1,5 +1,5 @@
 body {
-  background-color: $almost-black;
+  background-color: $footer-blue-tier1;
 }
 
 .top-bar-wrapper {
@@ -12,8 +12,11 @@ body {
 
     a {
 
-      i {
+      span, i {
         @include inline-block;
+      }
+
+      i {
         margin-left: rem-calc(10);
       }
     }
@@ -99,11 +102,26 @@ body {
       font-size: rem-calc(14);
     }
 
-    i {
+    span, a, i {
       @include inline-block;
-      margin: 0 3%;
-      font-size: rem-calc(30);
-      vertical-align: middle;
+    }
+
+    i {
+      font-size: rem-calc(25);
+    }
+
+    .email {
+
+      i {
+        margin-right: rem-calc(10);
+      }
+    }
+
+    .social-links {
+
+      a {
+        width: rem-calc(40);
+      }
     }
   }
 

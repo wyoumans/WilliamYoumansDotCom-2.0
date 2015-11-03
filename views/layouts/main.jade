@@ -61,7 +61,9 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
     else
       link(rel='stylesheet', href='/styles/styles.css')
 
-    script(src='/scripts/vendor/modernizr.js')
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
 
     if locals.headerJS
       != locals.headerJS
@@ -95,6 +97,8 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
 
       .extra-footer
         include ../partials/footer-bottom
+
+    script(src='/scripts/vendor/modernizr-custom.js')
 
     if locals.useMinifiedAssets
       script(src='/cache/scripts-#{locals.assetsVersion}.min.js')
