@@ -1,8 +1,3 @@
 ul.services-navigation
-  li: a(href='/services/charlotte-startup-consulting') Charlotte Startup Consulting
-  li: a(href='/services/responsive-website-development') Responsive Website Development
-  li: a(href='/services/hand-crafted-website-development') Hand-crafted Website Development
-  li: a(href='/services/charlotte-north-carolina-web-development-services') Charlotte, North Carolina Web Development Services
-  li: a(href='/services/custom-web-applications') Custom Web Applications
-  li: a(href='/services/php-laravel-development') PHP Laravel Development
-  li: a(href='/services/content-management-systems') Content Management Systems
+  each item in locals.footerNavigation.right
+    li: a(href=item.href)= item.title
