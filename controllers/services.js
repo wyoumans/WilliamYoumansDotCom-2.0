@@ -14,7 +14,7 @@ function getServices(req, res) {
 
   Service.findOne({
     slug: req.params.slug
-  }, 'title slug', function(err, service) {
+  }, 'title image copy', function(err, service) {
     if (service) {
       render(res, 'services', {
         pageTitle: service.title,

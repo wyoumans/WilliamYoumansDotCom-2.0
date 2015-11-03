@@ -1,7 +1,7 @@
 'use strict';
 
 var Schema = require('mongoose').Schema
-    ;
+  ;
 
 var ServiceSchema = new Schema({
   column: {
@@ -20,8 +20,9 @@ var ServiceSchema = new Schema({
     type: String,
     required: false
   },
-  content: {
-    type: String,
+  copy: {
+    type: Array,
+    default: [],
     required: false
   }
 });

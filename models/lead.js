@@ -1,7 +1,7 @@
 'use strict';
 
 var Schema = require('mongoose').Schema
-    ;
+  ;
 
 var ContactSchema = new Schema({
   name: {
