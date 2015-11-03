@@ -79,4 +79,25 @@
 }, {
   "before": "/blog/detail/word-of-the-day-wednesday",
   "after": "/blog"
+}, {
+  "before": "/blog/rss",
+  "after": "/blog"
+}, {
+  "before": "/blog/detail",
+  "after": "/blog"
+}, {
+  "before": "/news",
+  "after": "/blog"
+}, {
+  "before": "/thanks",
+  "after": "/thank-you"
+}, {
+  "before": "/blog/robots.txt",
+  "after": "/robots.txt"
+}, {
+  "before": "/muieblackcat",
+  "after": "/"
+}, {
+  "before": "/testproxy.php",
+  "after": "/"
 }]
