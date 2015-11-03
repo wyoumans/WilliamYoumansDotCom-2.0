@@ -57,6 +57,8 @@ app.use(methodOverride());
 // check for 301 redirects
 app.use(middleware.redirects());
 
+app.use(middleware.cleanUrl());
+
 // set cache headers
 app.use(middleware.cacheControl());
 
