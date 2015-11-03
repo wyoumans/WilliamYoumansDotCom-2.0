@@ -5,7 +5,6 @@ var Service = require('../models').Service;
 module.exports = function() {
   return function(req, res, next) {
 
-
     Service.find({}, 'slug title column', {
       sort: {
         column: -1
