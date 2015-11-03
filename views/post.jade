@@ -5,8 +5,9 @@ block content
     .large-12.columns
       h1.main-page-title= pageTitle
 
-      p.text-center
-        img(src="/images/content/blog/part-1-interactive-javascript-map-of-canada-with-raphael.jpg", alt="Part 1: Interactive Javascript map of Canada with Raphaël", itemprop="image")
+  .row
+    .large-12.columns
+      p: img(src="/images/content/blog/part-1-interactive-javascript-map-of-canada-with-raphael.jpg", alt="Part 1: Interactive Javascript map of Canada with Raphaël", itemprop="image")
 
       p
         | It seems like there is a plethora of examples of interactive maps of the United States, but the internet is, rather
@@ -28,9 +29,10 @@ block content
         | of paths in an effort to simplify the script. As you are going through it, for your sanity, I recommend that you
         | assign all of the paths to variables with meaningful names.
 
-      p Now, you have completed the most difficult part. Next, include the Raphaël library, create place to draw the map, and draw the map.
+      p
+        | Now, you have completed the most difficult part. Next, include the Raphaël library, create place to draw the map,
+        | and draw the map.
 
       script(src="https://gist.github.com/wyoumans/3803346.js")
 
-      p <a href="http://demos.williamyoumans.com/canada-interactive-map.php">See the full demo with the code.</a>
-
+      p: a(href="http://demos.williamyoumans.com/canada-interactive-map.php") See the full demo with the code.
