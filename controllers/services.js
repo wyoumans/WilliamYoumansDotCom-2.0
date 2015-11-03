@@ -7,7 +7,7 @@ var config = require('../config')
   ;
 
 module.exports.init = function(app) {
-  app.get('/services/:slug', getServices);
+  app.get('/' + config.servicesBase + '/:slug', getServices);
 };
 
 function getServices(req, res) {

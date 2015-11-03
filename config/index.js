@@ -37,7 +37,8 @@ var defaults = {
   "mailchimp": {
     "listid": process.env.MAILCHIMP_LIST,
     "apikey": process.env.MAILCHIMP_KEY
-  }
+  },
+  "servicesBase": "services"
 };
 
 var confrodo = require('confrodo')

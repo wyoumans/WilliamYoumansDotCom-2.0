@@ -1,6 +1,8 @@
 'use strict';
 
-var Service = require('../models').Service;
+var Service = require('../models').Service
+  , config = require('../config')
+  ;
 
 module.exports = function() {
   return function(req, res, next) {
@@ -18,7 +20,7 @@ module.exports = function() {
 
       if (services && services.length) {
         services.forEach(function(service) {
-          service.href = '/services/' + service.slug;
+          service.href = '/' + config.servicesBase + '/' + service.slug;
           footerNavigation[service.column].push(service);
         });
       }
