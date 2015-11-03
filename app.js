@@ -37,11 +37,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-// handle static assets
-app.use(express.static(path.join(__dirname, 'public'), {
-  redirect: false
-}));
-
 // check for 301 redirects
 app.use(middleware.redirects());
 
@@ -50,6 +45,11 @@ app.use(middleware.cleanUrl());
 
 // set cache headers
 app.use(middleware.cacheControl());
+
+// handle static assets
+app.use(express.static(path.join(__dirname, 'public'), {
+  redirect: false
+}));
 
 // default locals (can be overwritten in the controller)
 app.use(middleware.locals());
