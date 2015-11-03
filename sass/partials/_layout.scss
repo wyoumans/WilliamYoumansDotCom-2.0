@@ -130,9 +130,7 @@ body {
     .tweeting {
 
       .tweet {
-        // border-bottom: 1px solid $footer-blue-tier2;
-        margin: 0 auto rem-calc(20) auto;
-        padding-bottom: rem-calc(20);
+        margin-bottom: rem-calc(40);
         max-width: 90%;
 
         &:last-child {

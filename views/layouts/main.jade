@@ -87,7 +87,8 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
 
     footer#main-footer.main-footer
       if locals.footerContent && locals.showFooterMedia
-        include ../partials/footer-media
+        .footer-media.show-for-large-up
+          include ../partials/footer-media
 
       .footer-navigation
         include ../partials/footer-navigation
