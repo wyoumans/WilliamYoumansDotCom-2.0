@@ -2,84 +2,84 @@
   "column": "left",
   "slug": "custom-wordpress-themes",
   "title": "Custom Wordpress Themes",
-  "image": "default.jpg",
+  "image": "1.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "node-js-custom-web-application-development",
   "title": "Node.js Custom Web Application Development",
-  "image": "default.jpg",
+  "image": "2.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "woocommerce-store-development",
   "title": "Woocommerce Store Development",
-  "image": "default.jpg",
+  "image": "7.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "custom-ecommerce-solutions",
   "title": "Custom Ecommerce Solutions",
-  "image": "default.jpg",
+  "image": "4.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "north-carolina-website-consulting",
   "title": "North Carolina Website Consulting",
-  "image": "default.jpg",
+  "image": "5.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "small-business-marketing-websites",
   "title": "Small Business Marketing Websites",
-  "image": "default.jpg",
+  "image": "6.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "left",
   "slug": "subscription-membership-systems",
   "title": "Subscription Membership Systems",
-  "image": "default.jpg",
+  "image": "8.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "charlotte-startup-consulting",
   "title": "Charlotte Startup Consulting",
-  "image": "default.jpg",
+  "image": "11.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "responsive-website-development",
   "title": "Responsive Website Development",
-  "image": "default.jpg",
+  "image": "9.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "hand-crafted-website-development",
   "title": "Hand-crafted Website Development",
-  "image": "default.jpg",
+  "image": "10.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "charlotte-north-carolina-web-development-services",
   "title": "Charlotte, North Carolina Web Development Services",
-  "image": "default.jpg",
+  "image": "charlotte.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
-  "image": "default.jpg",
+  "image": "3.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "php-laravel-development",
   "title": "PHP Laravel Development",
-  "image": "default.jpg",
+  "image": "12.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }, {
   "column": "right",
   "slug": "content-management-systems",
   "title": "Content Management Systems",
-  "image": "default.jpg",
+  "image": "13.jpg",
   "copy" : ["p1", "p2", "p3", "p4"]
 }]
