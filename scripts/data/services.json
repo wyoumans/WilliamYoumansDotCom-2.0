@@ -57,10 +57,21 @@
   "title": "Small Business Marketing Websites",
   "image": "6.jpg",
   "copy": [
-    "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optomize your website for search engine rankings to drive high quality traffic to your little home on the web.",
+    "p1",
     "p2",
     "p3",
     "p4"
+  ]
+}, {
+  "column": "left",
+  "slug": "search-engine-optimization",
+  "title": "Search Engine Optimization (SEO)",
+  "image": "6.jpg",
+  "copy": [
+    "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optomize your website for search engine rankings to drive high quality traffic to your little home on the web.",
+    "First, I'll clean up your website. I'll make it as fast as possible by minifying assets, removing unused libraries, and updating the HTML structure to enhance the experience of your users and to make it easier for search engines to parse and index the content.",
+    "Then, I'll review your site content to identify important key words, and optimize the content to highlight those keywords.",
+    "Finally, iterate on the above steps until you are happy with your search engine rankings and increased web traffic."
   ]
 }, {
   "column": "left",
@@ -68,7 +79,7 @@
   "title": "Subscription Membership Systems",
   "image": "8.jpg",
   "copy": [
-    "p1",
+    "Have a great idea for an online membership platform? Want monthly recurring passive income?",
     "p2",
     "p3",
     "p4"
