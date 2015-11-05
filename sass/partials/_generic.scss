@@ -1,5 +1,17 @@
+body {
+  font-size: rem-calc(18)
+}
+
 a {
   word-wrap: break-word;
+}
+
+p, li {
+  font-size: rem-calc(18);
+
+  &.lead {
+    font-size: rem-calc(23);
+  }
 }
 
 .hidden {
@@ -35,4 +47,8 @@ ul.labels {
 
 input, textarea {
   font-weight: 300;
+}
+
+.label {
+  font-size: rem-calc(16);
 }

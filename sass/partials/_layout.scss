@@ -83,12 +83,15 @@ body {
     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
   }
 
+  &, p, li {
+    font-size: rem-calc(14);
+  }
+
   .footer-navigation {
     background-color: $footer-blue-tier2;
 
     .services-navigation {
-      margin: rem-calc(20) 0;
-      font-size: rem-calc(14);
+      margin: rem-calc(20 0);
     }
   }
 
@@ -99,7 +102,6 @@ body {
     p {
       line-height: rem-calc(25);
       margin: rem-calc(10 0);
-      font-size: rem-calc(14);
     }
 
     span, a, i {
@@ -150,6 +152,7 @@ body {
       .tweet {
         margin-bottom: rem-calc(40);
         max-width: 90%;
+        font-size: rem-calc(16);
 
         &:last-child {
           border: 0;
