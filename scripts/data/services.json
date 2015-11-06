@@ -4,10 +4,11 @@
   "title": "Custom Wordpress Themes",
   "image": "1.jpg",
   "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
+    "Wordpress is very popular. However, it seems like most of the time, Wordpress projects end up being a collection of poorly hacked together plugins that make the system hard to use as an administrator and hard to navigate as an end-user. I know wordpress inside and out. I know how to optimize the Wordpress theme and plugins to work together for you, not against you; to get out of your way so you can focus on more important things like blogging and adding valuable content for your visiters to consume."
+  ],
+  "cases": [
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/logomaker.jpg' alt='Logo Maker' title='Logo Maker'></a> <strong>Logo Maker</strong>: I was contracted by a technology entrepreneur to build the newest version of his marketing website and blog with a focus on usability and search engine optimization. The result is a fully custom Wordpress theme, built utilizing the power of Zurb Foundation, Yoast SEO plugin, and Advanced Custom Fields.",
+    "<a class='image th left' href='/projects'><img src='/images/content/projects/thumbs/roamingfree.jpg' alt='Roaming Free' title='Roaming Free'></a> <strong>Roaming Free</strong>: I was contracted to develop the travel blog for a full-time travelling entrepreneur. The project is a fully custom, responsive Wordpress theme providing the ability to easily share travel stories and track his travels all over the world."
   ]
 }, {
   "column": "left",
@@ -15,32 +16,19 @@
   "title": "Node.js Custom Web Application Development",
   "image": "2.jpg",
   "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+    "Javascript is here to stay.",
+    "While it has always been a cross-browser compatible language for creating fancy client-side elements, recently Javascript has been leveraged for server-side logic with Node.js. This means your project can be faster and more unified than ever before."
+  ],
+  "cases" : [
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: One Review is a platform for collecting and analysing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsible user experience."
+    ]
 }, {
   "column": "left",
   "slug": "woocommerce-store-development",
   "title": "Woocommerce Store Development",
   "image": "7.jpg",
   "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
-}, {
-  "column": "left",
-  "slug": "custom-ecommerce-solutions",
-  "title": "Custom Ecommerce Solutions",
-  "image": "4.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
+    "Have something you want to sell online but don't know where to begin? Let me introduce you to WooCommerce. WooCommerce is a Wordpress plugin that provides a secure, easy to manage ecommerce solution for your website. I can provide custom WooCommerce integration into any Wordpress theme. You'll be selling your wares online right away."
   ]
 }, {
   "column": "left",
@@ -49,19 +37,14 @@
   "image": "5.jpg",
   "copy": [
     "Need a North Carolina website consultant? I have more than seven years experience developing web applications and marketing websites for small businesses and entrepreneurs.",
-    "If you are seeking advice on creating a new website or need input on ways to improve your established website, I can help. I'll leverage my experience and my network of top-notch developers and web designers to come up with a solution that is perfect for your small business.",
+    "If you are seeking advice on creating a new website or need input on ways to improve your established website, I can help. I'll leverage my experience and my network of top-notch developers and web designers to come up with a solution that is perfect for your small business."
   ]
 }, {
   "column": "left",
   "slug": "small-business-marketing-websites",
   "title": "Small Business Marketing Websites",
-  "image": "6.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "image": "14.jpg",
+  "copy": ["Coming soon."]
 }, {
   "column": "left",
   "slug": "search-engine-optimization",
@@ -80,85 +63,52 @@
   "image": "8.jpg",
   "copy": [
     "Have a great idea for an online membership platform? Want monthly recurring passive income?",
-    "p2",
-    "p3",
-    "p4"
+    "I have more than seven years of experience building user-friendly platforms for your custom membership systems. Do you need to offer free trials or coupon codes? Need to offer monthly, bi-monthly, or annual subscriptions on different payment tiers? Anything is possible with a custom platform that perfectly aligns with your business logic."
+  ],
+  "cases": [
+    "<a class='image th left' href='/projects'><img src='/images/content/projects/thumbs/logodesign.jpg' alt='Logo Design' title='Logo Design'></a> <strong>Logo Design</strong>: I was contracted to develop a platform for logo designers to showcase their work. The platform features a tiered membership system with recurring monthly billing using the fast and secure Stripe API. I hand-coded the entire back-end using the Yii PHP framework and front-end using Compass/Sass, Browserify, and Mustache templates. The project includes custom integration with Wordpress allowing subscribed members to contribute to the Logo Design blog.",
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: I was contracted to develop a platform for collecting unbiased hotel reviews. Hotels can subscribe to the system to gain access to a wealth of meaningful analytics about their hotel and other comparable hotels in the same market. I developed the back-end using the Sails real-time Node.js framework and the front-end using Bootstrap, Less, Grunt, AngularJS, and Chart.js."
   ]
 }, {
   "column": "right",
-  "slug": "charlotte-startup-consulting",
-  "title": "Charlotte Startup Consulting",
+  "slug": "tech-startup-consulting",
+  "title": "Tech Startup Consulting",
   "image": "11.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "responsive-website-development",
   "title": "Responsive Website Development",
   "image": "9.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "hand-crafted-website-development",
   "title": "Hand-crafted Website Development",
   "image": "10.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "charlotte-north-carolina-web-development-services",
   "title": "Charlotte, North Carolina Web Development Services",
   "image": "charlotte.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
   "image": "3.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "php-laravel-development",
   "title": "PHP Laravel Development",
   "image": "12.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "copy": ["Coming soon."]
 }, {
   "column": "right",
   "slug": "content-management-systems",
   "title": "Content Management Systems",
-  "image": "13.jpg",
-  "copy": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ]
+  "image": "4.jpg",
+  "copy": ["Coming soon."]
 }]
