@@ -4,11 +4,11 @@
   "title": "Custom Wordpress Themes",
   "image": "1.jpg",
   "copy": [
-    "Wordpress is very popular. However, it seems like most of the time, Wordpress projects end up being a collection of poorly hacked together plugins that make the system hard to use as an administrator and hard to navigate as an end-user. I know wordpress inside and out. I know how to optimize the Wordpress theme and plugins to work together for you, not against you; to get out of your way so you can focus on more important things like blogging and adding valuable content for your visiters to consume."
+    "Wordpress is very popular. However, it seems like most of the time, Wordpress projects end up being a collection of poorly hacked together plugins that make the system hard to use as an administrator and hard to navigate as an end-user. I know Wordpress inside and out. I know how to optimize the Wordpress theme and plugins to work together for you, not against you; to get out of your way so you can focus on more important things like blogging and adding valuable content for your visitors to consume."
   ],
   "cases": [
     "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/logomaker.jpg' alt='Logo Maker' title='Logo Maker'></a> <strong>Logo Maker</strong>: I was contracted by a technology entrepreneur to build the newest version of his marketing website and blog with a focus on usability and search engine optimization. The result is a fully custom Wordpress theme, built utilizing the power of Zurb Foundation, Yoast SEO plugin, and Advanced Custom Fields.",
-    "<a class='image th left' href='/projects'><img src='/images/content/projects/thumbs/roamingfree.jpg' alt='Roaming Free' title='Roaming Free'></a> <strong>Roaming Free</strong>: I was contracted to develop the travel blog for a full-time travelling entrepreneur. The project is a fully custom, responsive Wordpress theme providing the ability to easily share travel stories and track his travels all over the world."
+    "<a class='image th left' href='/projects'><img src='/images/content/projects/thumbs/roamingfree.jpg' alt='Roaming Free' title='Roaming Free'></a> <strong>Roaming Free</strong>: I was contracted to develop the travel blog for a full-time traveling entrepreneur. The project is a fully custom, responsive Wordpress theme providing the ability to easily share travel stories and track his travels all over the world."
   ]
 }, {
   "column": "left",
@@ -20,7 +20,7 @@
     "While it has always been a cross-browser compatible language for creating fancy client-side elements, recently Javascript has been leveraged for server-side logic with Node.js. This means your project can be faster and more unified than ever before."
   ],
   "cases" : [
-    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: One Review is a platform for collecting and analysing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsible user experience."
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: One Review is a platform for collecting and analyzing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsible user experience."
     ]
 }, {
   "column": "left",
@@ -28,7 +28,7 @@
   "title": "Woocommerce Store Development",
   "image": "7.jpg",
   "copy": [
-    "Have something you want to sell online but don't know where to begin? Let me introduce you to WooCommerce. WooCommerce is a Wordpress plugin that provides a secure, easy to manage ecommerce solution for your website. I can provide custom WooCommerce integration into any Wordpress theme. You'll be selling your wares online right away."
+    "Have something you want to sell online but don't know where to begin? Let me introduce you to WooCommerce. WooCommerce is a Wordpress plugin that provides a secure, easy to manage e-commerce solution for your website. I can provide custom WooCommerce integration into any Wordpress theme. You'll be selling your wares online right away."
   ]
 }, {
   "column": "left",
@@ -44,14 +44,16 @@
   "slug": "small-business-marketing-websites",
   "title": "Small Business Marketing Websites",
   "image": "14.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "Every business needs a website. Your customers need a way of learning more about your products and services and conveniently contacting you. A website that is fast, responsive, and easy to find and navigate could be the edge your business has over the competition. Let me take care of it for you."
+  ]
 }, {
   "column": "left",
   "slug": "search-engine-optimization",
   "title": "Search Engine Optimization (SEO)",
   "image": "6.jpg",
   "copy": [
-    "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optomize your website for search engine rankings to drive high quality traffic to your little home on the web.",
+    "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optimize your website for search engine rankings to drive high quality traffic to your little home on the web.",
     "First, I'll clean up your website. I'll make it as fast as possible by minifying assets, removing unused libraries, and updating the HTML structure to enhance the experience of your users and to make it easier for search engines to parse and index the content.",
     "Then, I'll review your site content to identify important key words, and optimize the content to highlight those keywords.",
     "Finally, iterate on the above steps until you are happy with your search engine rankings and increased web traffic."
@@ -73,42 +75,62 @@
   "column": "right",
   "slug": "tech-startup-consulting",
   "title": "Tech Startup Consulting",
-  "image": "11.jpg",
-  "copy": ["Coming soon."]
+  "image": "3.jpg",
+  "copy": [
+    "Every startup begins with a great idea. That is the easy part. Turning that great idea into a business is the hard part. I have more than seven years of experience working with early-stage startups. I can provide the technical know-how to bring your idea to life.",
+    "I begin by sitting down with you, the entrepreneur, and really getting an understanding of the problem you are trying to solve. Then, I come up with the software requirements and business logic that will be used to make your product or service provide value in the best, most cost-effective way possible. Next, I help your decide which technology stack to use that will minimize cost, but also be maintainable long-term. Finally, I take care of developing the software according to the requirements we established. In the end, you get a solution that meets the needs of you and your customer and allows you to grow your business and change the world."
+  ]
 }, {
   "column": "right",
   "slug": "responsive-website-development",
   "title": "Responsive Website Development",
   "image": "9.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "A website is responsive if the same interface is built to optimize the user experience for all devices. This means your website looks great and is easy to use for desktop computer users, tablet users, and mobile phone users. Responsive web design is built by leveraging CSS3 media queries and defining breakpoints so the content changes as the user's device width gets smaller.",
+    "What does this mean for you? It means I can develop your website once for all users instead of once for desktop users and another separate website for your mobile visitors. Now that's real savings."
+  ]
 }, {
   "column": "right",
   "slug": "hand-crafted-website-development",
-  "title": "Hand-crafted Website Development",
+  "title": "Hand-crafted Front-end Website Development",
   "image": "10.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "The way your website looks to the end-user is of utmost importance. I provide PSD to HTML services that allow you to quickly move from design concept to a working website."
+  ]
 }, {
   "column": "right",
   "slug": "charlotte-north-carolina-web-development-services",
   "title": "Charlotte, North Carolina Web Development Services",
   "image": "charlotte.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "Looking for a web developer in Charlotte, North Carolina? Look no further. I provide web development and consulting services to entrepreneurs and businesses in the queen city. Let's meet for coffee to discuss your project today!"
+  ]
 }, {
   "column": "right",
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
-  "image": "3.jpg",
-  "copy": ["Coming soon."]
+  "image": "11.jpg",
+  "copy": [
+    "What is the difference between a website and a web application? A website is purely informational. It usually provides information about a company's products and services, and is used primarily as a marketing tool. A web application provides a dynamic experience for it's visitors. Web applications usually allow users to register an account and store data and preferences as they interact with the website. Facebook and Twitter are good examples of web applications.",
+    "I provide custom, hand-crafted web application development services."
+  ]
 }, {
   "column": "right",
   "slug": "php-laravel-development",
   "title": "PHP Laravel Development",
   "image": "12.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "Laravel is &ldquo;The PHP Framework For Web Artisans.&rdquo; It is the perfect platform for rapidly building secure small or large web applications that are maintainable long-term.",
+    "Laravel was initially released as an open-source project in June 2011, and has steadily gained popularity ever since. Today, Laravel is unanimously the most popular PHP framework in the world.",
+    "I have experience taking over maintenance for existing Laravel applications and starting from scratch by building a solution that is perfectly tailored for your online business."
+  ]
 }, {
   "column": "right",
   "slug": "content-management-systems",
   "title": "Content Management Systems",
   "image": "4.jpg",
-  "copy": ["Coming soon."]
+  "copy": [
+    "The internet is constantly evolving and changing. Your website should too. You should be able to manage every aspect of your website content without having to call a web developer or marketing professional. A content management system (CMS) can provide you the flexibility of managing your content and publishing the results instantly.",
+    "I can provide a solution that leverages an established open source content management system like Wordpress or I can build a custom content management system that is perfectly aligned with your business logic and content management needs."
+  ]
 }]
