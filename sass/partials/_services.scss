@@ -1,6 +1,24 @@
 body.services {
 
   .section-wrapper {
-    margin: rem-calc(0 0 50 0);
+    margin: rem-calc(25 0 30 0);
+  }
+
+  .cases {
+
+    .image {
+
+      img {
+        max-width: 250px;
+      }
+
+      &.left {
+        margin-right: rem-calc(15);
+      }
+
+      &.right {
+        margin-left: rem-calc(15);
+      }
+    }
   }
 }

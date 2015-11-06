@@ -13,8 +13,16 @@ block content
           img(src="/images/content/services/#{service.image}", alt= pageTitle, itemprop="image")
 
       .section-wrapper.copy
-        each paragraph in service.copy
-          p!= paragraph
+        if service.copy && service.copy.length
+          each paragraph in service.copy
+            p!= paragraph
+
+      .section-wrapper.cases
+        h2 Case Studies
+
+        if service.cases && service.cases.length
+          each paragraph in service.cases
+            p!= paragraph
 
       .section-wrapper.bottom-copy
         h2 Questions?
