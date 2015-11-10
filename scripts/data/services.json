@@ -17,11 +17,12 @@
   "image": "2.jpg",
   "copy": [
     "Javascript is here to stay.",
-    "While it has always been a cross-browser compatible language for creating fancy client-side elements, recently Javascript has been leveraged for server-side logic with Node.js. This means your project can be faster and more unified than ever before."
+    "While it has always been a cross-browser compatible language for creating fancy client-side elements, recently Javascript has been leveraged for server-side logic with Node.js. This means your project can be faster and more unified than ever before.",
+    "Most recently, React.js with Redux and Webpack has become the go to environment for new Javascript applications. Let me help you develop an application on the bleeding edge of today's modern web development."
   ],
   "cases" : [
-    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: One Review is a platform for collecting and analyzing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsible user experience."
-    ]
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: a platform for collecting and analyzing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsive user experience."
+  ]
 }, {
   "column": "left",
   "slug": "woocommerce-store-development",
@@ -46,6 +47,10 @@
   "image": "14.jpg",
   "copy": [
     "Every business needs a website. Your customers need a way of learning more about your products and services and conveniently contacting you. A website that is fast, responsive, and easy to find and navigate could be the edge your business has over the competition. Let me take care of it for you."
+  ],
+  "cases": [
+    "<a class='image th right' href='/projects'><img src='/images/content/projects/thumbs/logomaker.jpg' alt='Logo Maker' title='Logo Maker'></a> <strong>Logo Maker</strong> is a free tool for creating logos online. I developed the marketing website and blog that is used to drive traffic to the logo creation tool. The project is developed as a custom Wordpress theme with particular emphasis on search engine optimization.",
+    "<a class='image th left' href='/projects'><img src='/images/content/projects/thumbs/bobbeharris.jpg' alt='Bobbe Harris' title='Bobbe Harris'></a> <strong>Bobbe Harris</strong> is an author who needed to get the word out about her latest book. The marketing website features information about the author and the book as well as a clear call to action on every page driving visitors to purchase her products."
   ]
 }, {
   "column": "left",
@@ -54,9 +59,9 @@
   "image": "6.jpg",
   "copy": [
     "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optimize your website for search engine rankings to drive high quality traffic to your little home on the web.",
-    "First, I'll clean up your website. I'll make it as fast as possible by minifying assets, removing unused libraries, and updating the HTML structure to enhance the experience of your users and to make it easier for search engines to parse and index the content.",
+    "First, I'll clean up your website. I'll make it as fast as possible by minifying assets, removing unused libraries, and updating the HTML structure to enhance the experience for your users and to make it easier for search engines to parse and index the content.",
     "Then, I'll review your site content to identify important key words, and optimize the content to highlight those keywords.",
-    "Finally, iterate on the above steps until you are happy with your search engine rankings and increased web traffic."
+    "Finally, I'll iterate on the above steps until you are happy with your search engine rankings and increased web traffic."
   ]
 }, {
   "column": "left",
@@ -91,14 +96,6 @@
   ]
 }, {
   "column": "right",
-  "slug": "hand-crafted-website-development",
-  "title": "Hand-crafted Front-end Website Development",
-  "image": "10.jpg",
-  "copy": [
-    "The way your website looks to the end-user is of utmost importance. I provide PSD to HTML services that allow you to quickly move from design concept to a working website."
-  ]
-}, {
-  "column": "right",
   "slug": "charlotte-north-carolina-web-development-services",
   "title": "Charlotte, North Carolina Web Development Services",
   "image": "charlotte.jpg",
@@ -109,10 +106,10 @@
   "column": "right",
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
-  "image": "11.jpg",
+  "image": "10.jpg",
   "copy": [
     "What is the difference between a website and a web application? A website is purely informational. It usually provides information about a company's products and services, and is used primarily as a marketing tool. A web application provides a dynamic experience for it's visitors. Web applications usually allow users to register an account and store data and preferences as they interact with the website. Facebook and Twitter are good examples of web applications.",
-    "I provide custom, hand-crafted web application development services."
+    "I provide custom, hand-crafted web application development services. Let's bring your idea to life today!"
   ]
 }, {
   "column": "right",
