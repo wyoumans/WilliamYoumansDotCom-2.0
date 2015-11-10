@@ -15,28 +15,11 @@ var express        = require('express')
   , app            = express()
   ;
 
-/*
-  PLEASE NOTE: The order of the following calls matters! Adjust at your own risk.
- */
+//
+// PLEASE NOTE: The order of the following calls matters! Adjust at your own risk.
+//
 
 app.enable('trust proxy');
-
-// default locals (can be overwritten in the controller)
-app.locals.NODE_ENV = config.env;
-app.locals.useMinifiedAssets = config.useMinifiedAssets;
-app.locals.analytics = config.analytics;
-app.locals.showAnalytics = config.showAnalytics;
-app.locals.assetsVersion = lib.assetsVersion;
-app.locals.supportsCaching = config.supportsCaching;
-app.locals.bodyClass = '';
-app.locals.metaDescription = 'William Youmans is a Charlotte, North Carolina based freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast.';
-app.locals.metaKeywords = 'Charlotte, North Carolina, Freelance Developer, Software Development, Software Consulting, Project Management, professional';
-app.locals.browserTitle = 'Charlotte, North Carolina Freelance Web Software Developer and Consultant | William Youmans';
-app.locals.showMastHead = false;
-app.locals.showFooterMedia = false;
-app.locals.showFooterCTA = true;
-app.locals.headerJS = false;
-app.locals.twitterId = config.twitter.id;
 
 if (['development', 'testing'].indexOf(config.env) !== -1) {
   app.use(morgan('dev'));
@@ -57,13 +40,22 @@ app.use(methodOverride());
 // check for 301 redirects
 app.use(middleware.redirects());
 
+// remove trailing slash
+app.use(middleware.cleanUrl());
+
 // set cache headers
 app.use(middleware.cacheControl());
 
+// handle static assets
 app.use(express.static(path.join(__dirname, 'public'), {
   redirect: false
 }));
 
+// default locals (can be overwritten in the controller)
+app.use(middleware.locals());
+
+// build footer navigation
+app.use(middleware.footerNavigation());
 if (['staging', 'production'].indexOf(config.env) !== -1) {
   lib.cronJobs.start();
   app.use(middleware.errorHandler());
@@ -73,10 +65,7 @@ conductor.init(app, {
   controllers: __dirname + '/controllers'
 }, function(err, app) {
 
-  app.get('*', function(req, res) {
-    lib.logger.warn('404: ' + req.url);
-    return res.status(404).render('errors/404');
-  });
+  app.get('*', middleware.throw404);
 
   http.createServer(app).listen(app.get('port'), function() {
     lib.logger.info('Express server listening on port ' + app.get('port'));

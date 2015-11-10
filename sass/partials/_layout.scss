@@ -1,5 +1,5 @@
 body {
-  background-color: $almost-black;
+  background-color: $footer-blue-tier1;
 }
 
 .top-bar-wrapper {
@@ -12,8 +12,11 @@ body {
 
     a {
 
-      i {
+      span, i {
         @include inline-block;
+      }
+
+      i {
         margin-left: rem-calc(10);
       }
     }
@@ -73,15 +76,27 @@ body {
 }
 
 .main-footer {
-  background-color: $footer-gray;
+  background-color: $footer-blue-tier3;
   color: $footer-font-color;
 
   a {
     @include link-colors($footer-link-color, $footer-link-hover-color, $footer-link-hover-color, $footer-link-color, $footer-link-hover-color);
   }
 
+  &, p, li {
+    font-size: rem-calc(14);
+  }
+
+  .footer-navigation {
+    background-color: $footer-blue-tier2;
+
+    .services-navigation {
+      margin: rem-calc(20 0);
+    }
+  }
+
   .extra-footer {
-    background-color: $almost-black;
+    background-color: $dark-blue;
     color: $footer-font-color;
 
     p {
@@ -89,11 +104,26 @@ body {
       margin: rem-calc(10 0);
     }
 
-    i {
+    span, a, i {
       @include inline-block;
-      margin: 0 3%;
+    }
+
+    i {
       font-size: rem-calc(25);
-      vertical-align: middle;
+    }
+
+    .email {
+
+      i {
+        margin-right: rem-calc(10);
+      }
+    }
+
+    .social-links {
+
+      a {
+        width: rem-calc(40);
+      }
     }
   }
 
@@ -120,10 +150,9 @@ body {
     .tweeting {
 
       .tweet {
-        border-bottom: 1px solid lighten($footer-gray, 10%);
-        margin: 0 auto rem-calc(20) auto;
-        padding-bottom: rem-calc(20);
+        margin-bottom: rem-calc(40);
         max-width: 90%;
+        font-size: rem-calc(16);
 
         &:last-child {
           border: 0;

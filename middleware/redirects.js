@@ -1,11 +1,11 @@
 'use strict';
 
-var models = require('../models');
+var Redirect = require('../models').Redirect;
 
 module.exports = function() {
   return function(req, res, next) {
 
-    models.Redirect.findOne({
+    Redirect.findOne({
       before: req.path
     }, function(err, redirect) {
       if (redirect) {

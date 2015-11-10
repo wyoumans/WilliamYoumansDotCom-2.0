@@ -1,5 +1,40 @@
+body {
+  font-size: rem-calc(18)
+}
+
 a {
   word-wrap: break-word;
+}
+
+p, li {
+  font-size: rem-calc(18);
+
+  &.lead {
+    font-size: rem-calc(23);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h1 {
+
+  &.main-page-title {
+    margin-bottom: rem-calc(30);
+  }
+}
+
+.four-oh-four {
+  margin-bottom: rem-calc(60);
+
+  ul.services-navigation {
+    margin-left: 0;
+  }
 }
 
 ul.labels {
@@ -10,13 +45,10 @@ ul.labels {
   }
 }
 
-.hidden {
-  display: none;
+input, textarea {
+  font-weight: 300;
 }
 
-h1 {
-
-  &.main-page-title {
-    margin-bottom: rem-calc(30);
-  }
+.label {
+  font-size: rem-calc(16);
 }

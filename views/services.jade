@@ -1,0 +1,38 @@
+extends layouts/main
+
+block content
+  .row
+    .large-12.columns
+      h1.main-page-title= pageTitle
+
+  .row
+    .large-12.columns
+
+      if service.image
+        .section-wrapper.image.th
+          img(src="/images/content/services/#{service.image}", alt= pageTitle, itemprop="image")
+
+      if service.copy && service.copy.length
+        .section-wrapper.copy.clearfix
+          each paragraph in service.copy
+            p.clearfix!= paragraph
+
+      if service.cases && service.cases.length
+        .section-wrapper.cases.clearfix
+          h2 Case Studies
+          each paragraph in service.cases
+            p.clearfix!= paragraph
+
+      .section-wrapper.bottom-copy.clearfix
+        h2 Questions?
+
+        if service.cases && service.cases.length
+          p
+            | If you'd like more information about these case studies or services, don't hesitate to get
+            | in <a href="/contact">touch</a>. I'd love to discuss what I can do for <a href="/contact">you</a>.
+
+        else
+          p
+            | If you have any questions or comments about these services, don't hesitate to get
+            | in <a href="/contact">touch</a>. I'd love to discuss what I can do for <a href="/contact">you</a>.
+            | Also, please have a look at some of my recent <a href="/projects">projects.</a>

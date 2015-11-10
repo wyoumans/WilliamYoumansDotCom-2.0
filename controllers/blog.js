@@ -19,6 +19,6 @@ function getBlog(req, res) {
 function getPost(req, res) {
   render(res, 'post', {
     pageTitle: 'Interactive Javascript map of Canada with Raphaël',
-    metaDescription: 'How to build an interactive map of Canada in pure Javacscript using Raphaël.js'
+    metaDescription: 'How to build an interactive map of Canada in pure Javacscript using Raphaël.js by William Youmans, a freelance web developer'
   });
 }

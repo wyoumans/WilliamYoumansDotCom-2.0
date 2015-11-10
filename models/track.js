@@ -1,7 +1,7 @@
 'use strict';
 
 var Schema = require('mongoose').Schema
-    ;
+  ;
 
 var TrackSchema = new Schema({
   href: {

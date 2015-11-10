@@ -1,4 +1,4 @@
-.row.footer-media.show-for-large-up
+.row
   .large-6.small-12.columns.seeing.image-row
     h3 Currently Seeing
       i.fi-camera
@@ -14,10 +14,9 @@
     if locals.footerContent.tweets
       each tweet in locals.footerContent.tweets
         .tweet
-          .text-left
-            a(href=tweet.href, target='_blank')
-              span.content= tweet.content
-            .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
+          a(href=tweet.href, target='_blank')
+            span.content= tweet.content
+          .smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
     else
       p Nothing to report
 
