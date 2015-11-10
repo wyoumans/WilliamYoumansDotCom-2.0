@@ -14,11 +14,11 @@ function getServices(req, res) {
 
   Service.findOne({
     slug: req.params.slug
-  }, 'title image copy', function(err, service) {
+  }, 'title image copy cases', function(err, service) {
     if (service) {
       render(res, 'services', {
         pageTitle: service.title,
-        metaDescription: service.title,
+        metaDescription: service.title + ' by William Youmans freelance web developer in Charlotte, North Carolina',
         service: service
       });
     } else {

@@ -24,6 +24,11 @@ var ServiceSchema = new Schema({
     type: Array,
     default: [],
     required: false
+  },
+  cases: {
+    type: Array,
+    default: [],
+    required: false
   }
 });
 
