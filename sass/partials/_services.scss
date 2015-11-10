@@ -12,12 +12,30 @@ body.services {
         max-width: 250px;
       }
 
-      &.left {
-        margin-right: rem-calc(15);
+      @media #{$small-only} {
+        display: block;
+        width: 258px;
+        margin: 0 auto rem-calc(20) auto;
       }
 
-      &.right {
+      &.left-not-important {
+        margin-right: rem-calc(15);
+        float: left;
+
+        @media #{$small-only} {
+          float: none;
+          margin-right: auto;
+        }
+      }
+
+      &.right-not-important {
         margin-left: rem-calc(15);
+        float: right;
+
+        @media #{$small-only} {
+          float: none;
+          margin-left: auto;
+        }
       }
     }
   }
