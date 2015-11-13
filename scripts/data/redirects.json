@@ -103,4 +103,7 @@
 }, {
   "before": "/testproxy.php",
   "after": "/"
+}, {
+  "before": "/wp-login.php",
+  "after": "/"
 }]
