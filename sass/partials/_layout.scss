@@ -45,13 +45,30 @@ body {
     margin-left: rem-calc(15);
 
     @media #{$small-only} {
-      max-width: rem-calc(230);
+      max-width: rem-calc(200);
     }
 
     a {
       line-height: $topbar-height;
       margin: 0;
       display: block;
+    }
+  }
+}
+
+.top-bar-section ul li {
+
+  & > a {
+    padding: rem-calc(8 0);
+  }
+
+  &:hover:not(.has-form) > a {
+    background-color: $orange;
+    color: $white;
+
+    @media #{$large-up} {
+      background-color: $white;
+      color: $orange;
     }
   }
 }
