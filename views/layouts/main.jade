@@ -75,20 +75,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
       if locals.showMastHead
         include ../partials/masthead
 
-    .top-bar-wrapper.contain-to-grid.sticky
-      nav#main-nav.top-bar(data-topbar='')
-        ul.title-area
-          li.name
-            a(href='/')
-              img(src='/images/branding/logo-full.jpg', alt='William Youmans')
-
-          li.toggle-topbar.menu-icon
-            a(href='#')
-              span &nbsp;
-
-        .top-bar-section.small-text-center.medium-text-center
-          ul.right
-            include ../partials/header-navigation
+    include ../partials/header-navigation
 
     //- Content
     section#main.main-content
