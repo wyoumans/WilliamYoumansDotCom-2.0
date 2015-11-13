@@ -171,10 +171,10 @@ $footer-link-hover-color: $white;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-breakpoint:  em-calc(640);
-// $medium-breakpoint: em-calc(1024);
-// $large-breakpoint:  em-calc(1440);
-// $xlarge-breakpoint: em-calc(1920);
+$small-breakpoint:  em-calc(551);
+$medium-breakpoint: em-calc(870);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
 
 // $small-range:   (0, $small-breakpoint);
 // $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
@@ -1482,7 +1482,7 @@ $topbar-menu-icon-color-toggled: $tertiary-color;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: rem-calc(955); // Change to 9999px for always mobile layout
+$topbar-breakpoint: rem-calc(870); // Change to 9999px for always mobile layout
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
 
 // Top-bar input styles
