@@ -44,4 +44,32 @@ $(function() {
       springDeacceleration: .9
     });
   }, 4000);
+
+  var ctaTimeout = setTimeout(function() {
+    var $cta = $('#sliding-cta');
+
+    $cta.animate({
+      bottom: 0
+    }, 2000, function() {
+
+      // set cookie here
+
+    });
+  }, 3000);
+
+  $(document).on('click', '#sliding-cta .nope', function(e) {
+
+    // set cookie here
+
+    e.preventDefault();
+    $('#sliding-cta').fadeOut();
+  });
+
+  $(document).on('click', '#sliding-cta .yep', function(e) {
+
+    // set cookie here
+
+    e.preventDefault();
+    $('#sliding-cta').fadeOut();
+  });
 });

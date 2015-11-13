@@ -196,13 +196,50 @@ body {
 .sliding-cta {
   position: fixed;
   background-color: $orange;
+  color: $white;
   z-index: 1000;
-  bottom: 0;
+  bottom: remc-calc(-55);
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: rem-calc(8 0);
+
+  a {
+    color: $white;
+  }
 
   p {
-    margin-bottom: 0;
+    margin: 0;
+    line-height: normal;
+    font-size: rem-calc(16);
+    padding: 0;
+
+    @media #{$large-up} {
+      line-height: rem-calc(55);
+    }
+  }
+
+  .button {
+    margin: 0;
+
+    @media #{$small-only} {
+      padding: rem-calc(5);
+    }
+  }
+
+  .actions {
+    margin: 0;
+    padding: 0;
+    float: right;
+
+    @media #{$small-only} {
+      float: none;
+      text-align: right;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: rem-calc(0 0 0 20);
+    }
   }
 }
