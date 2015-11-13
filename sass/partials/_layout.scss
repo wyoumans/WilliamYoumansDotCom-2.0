@@ -43,6 +43,7 @@ body {
 
   .name {
     margin-left: rem-calc(15);
+    // padding-top: rem-calc(10);
 
     @media #{$small-only} {
       max-width: rem-calc(230);
