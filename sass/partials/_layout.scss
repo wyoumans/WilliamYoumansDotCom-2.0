@@ -120,13 +120,29 @@ body {
 
   &, p, li {
     font-size: rem-calc(14);
+
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
   }
 
   .footer-navigation {
     background-color: $footer-blue-tier2;
 
+    @media #{$small-only} {
+      padding-bottom: rem-calc(15);
+    }
+
     .services-navigation {
       margin: rem-calc(20 0);
+
+      @media #{$small-only} {
+        margin: 0;
+
+        li{
+          margin: rem-calc(15 0 0 0);
+        }
+      }
     }
   }
 
