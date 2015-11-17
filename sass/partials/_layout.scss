@@ -47,7 +47,7 @@ body {
 
     a.logo {
       margin: 0;
-      display: inline-block;
+      @include inline-block;
       vertical-align: middle;
       background-image: url(/images/branding/logo-full.jpg);
       background-position: 0 0;
