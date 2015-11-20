@@ -35,12 +35,12 @@ body.home {
         }
 
         .top {
-          left: rem-calc(-2000);
+          right: rem-calc(-2000);
         }
 
         .bottom {
           top: rem-calc(195);
-          right: rem-calc(-2000);
+          left: rem-calc(-2000);
         }
 
         @media #{$medium-only} {

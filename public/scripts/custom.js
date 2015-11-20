@@ -6,18 +6,18 @@ $(function() {
 
   var animationSpeed = 1000,
       beginPosition  = '-2000px',
-      endPosition    = 0,
+      endPosition    = 300,
       easing         = 'easeOutBack',
-      $leftText      = $('.animated-heading h1 span.top'),
-      $rightText     = $('.animated-heading h1 span.bottom');
+      $topText      = $('.animated-heading h1 span.top'),
+      $bottomText     = $('.animated-heading h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {
       return function() {
         cb = cb || function() {};
 
-        $leftText.animate({
-          left: endPosition
+        $topText.animate({
+          right: endPosition
         }, animationSpeed, easing, cb);
       }
     },
@@ -25,8 +25,8 @@ $(function() {
       return function() {
         cb = cb || function() {};
 
-        $rightText.stop(true, false).animate({
-          right: endPosition
+        $bottomText.stop(true, false).animate({
+          left: endPosition
         }, animationSpeed, easing, cb);
       }
     },
