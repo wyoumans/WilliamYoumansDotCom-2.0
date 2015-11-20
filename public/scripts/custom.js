@@ -5,11 +5,10 @@ $(document).foundation();
 $(function() {
 
   var animationSpeed = 1000,
-      beginPosition  = '-2000px',
       endPosition    = 300,
       easing         = 'easeOutBack',
-      $topText      = $('.animated-heading h1 span.top'),
-      $bottomText     = $('.animated-heading h1 span.bottom');
+      $topText       = $('.animated-heading h1 span.top'),
+      $bottomText    = $('.animated-heading h1 span.bottom');
 
   var animation = {
     inLeft: function(cb) {
@@ -34,11 +33,12 @@ $(function() {
       cb = cb || function() {};
 
       $("#typed-text").typed({
-        strings: ['small business.', 'startup.', 'agency.'],
+        strings: ['small business.', 'startup.', 'online store.', 'agency.', 'big idea!'],
         typeSpeed: 50,
         startDelay: 50,
         backSpeed: 0,
-        backDelay: 1000
+        backDelay: 1000,
+        callback: animation.showArrow
       });
     },
     phoneJiggle: function() {
@@ -50,11 +50,23 @@ $(function() {
           springDeacceleration: .9
         });
       }, 4000);
+    },
+    showArrow: function() {
+      $('.scroll-arrow').fadeIn(500, function() {
+
+        console.log('START JIGGLE');
+      });
     }
   };
 
   if ($('.animated-heading').length) {
     setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
+
+    $('a.scroll-arrow').click(function(e) {
+      e.preventDefault();
+
+      console.log('SCROLL DOWN!!!');
+    });
   }
 
   animation.phoneJiggle();
