@@ -52,3 +52,22 @@ input, textarea {
 .label {
   font-size: rem-calc(16);
 }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@include keyframes(blink) {
+  0% {
+    @include opacity(1);
+  }
+  50% {
+    @include opacity(0);
+  }
+  100% {
+    @include opacity(1);
+  }
+}

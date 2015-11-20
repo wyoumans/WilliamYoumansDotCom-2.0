@@ -13,35 +13,49 @@ $(function() {
 
   var animation = {
     inLeft: function(cb) {
-      cb = cb || function() {};
+      return function() {
+        cb = cb || function() {};
 
-      $leftText.animate({
-        left: endPosition
-      }, animationSpeed, easing, cb);
+        $leftText.animate({
+          left: endPosition
+        }, animationSpeed, easing, cb);
+      }
     },
     inRight: function(cb) {
+      return function() {
+        cb = cb || function() {};
+
+        $rightText.stop(true, false).animate({
+          right: endPosition
+        }, animationSpeed, easing, cb);
+      }
+    },
+    typing: function(cb) {
       cb = cb || function() {};
 
-      $rightText.stop(true, false).animate({
-        right: endPosition
-      }, animationSpeed, easing, cb);
+      $("#typed-text").typed({
+        strings: ['small business.', 'startup.', 'agency.'],
+        typeSpeed: 50,
+        startDelay: 50,
+        backSpeed: 0,
+        backDelay: 1000
+      });
+    },
+    phoneJiggle: function() {
+      setInterval(function() {
+        return snabbt($('#main-nav li.cta i'), "attention", {
+          rotation: [0, 0, Math.PI / 2],
+          easing: 'spring',
+          springConstant: 1.9,
+          springDeacceleration: .9
+        });
+      }, 4000);
     }
   };
 
   if ($('.animated-heading').length) {
-    setTimeout(function() {
-      animation.inLeft(
-        animation.inRight
-      );
-    }, 1000);
+    setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
   }
 
-  var jiggle = setInterval(function() {
-    snabbt($('#main-nav li.cta i'), "attention", {
-      rotation: [0, 0, Math.PI / 2],
-      easing: 'spring',
-      springConstant: 1.9,
-      springDeacceleration: .9
-    });
-  }, 4000);
+  animation.phoneJiggle();
 });

@@ -23,7 +23,7 @@ body.home {
         position: relative;
         margin-top: rem-calc(25);
 
-        span {
+        .top, .bottom {
           color: $white;
           @include inline-block;
           top: rem-calc(50);
@@ -32,27 +32,27 @@ body.home {
           position: absolute;
           @include text-shadow($primary-color 1px 1px 1px);
           font-size: rem-calc(70);
+        }
 
-          &.top {
-            left: rem-calc(-2000);
-          }
+        .top {
+          left: rem-calc(-2000);
+        }
 
-          &.bottom {
-            top: rem-calc(195);
-            right: rem-calc(-2000);
-          }
+        .bottom {
+          top: rem-calc(195);
+          right: rem-calc(-2000);
         }
 
         @media #{$medium-only} {
           margin-top: 0;
 
-          span {
+          .top, .bottom {
             top: 0;
             font-size: rem-calc(50);
+          }
 
-            &.bottom {
-              top: rem-calc(85);
-            }
+          &.bottom {
+            top: rem-calc(85);
           }
         }
 
