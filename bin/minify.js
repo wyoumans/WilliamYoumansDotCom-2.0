@@ -55,11 +55,11 @@ function minifyJS(done) {
     fileIn: [
       // Libraries
       'public/bower_components/jquery/dist/jquery.js',
-      'public/bower_components/jquery.easing/js/jquery.easing.js',
+      //- 'public/bower_components/jquery.easing/js/jquery.easing.js',
       'public/bower_components/snabbt.js/snabbt.js',
       'public/bower_components/jquery-placeholder/jquery.placeholder.js',
-      'public/bower_components/jquery.cookie/jquery.cookie.js',
-      'public/bower_components/fastclick/lib/fastclick.js',
+      //- 'public/bower_components/jquery.cookie/jquery.cookie.js',
+      //- 'public/bower_components/fastclick/lib/fastclick.js',
 
       // Foundation Core (only include those that are used)
       'public/bower_components/foundation/js/foundation/foundation.js',
