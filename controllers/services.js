@@ -18,7 +18,7 @@ function getServices(req, res) {
     if (service) {
       render(res, 'services', {
         pageTitle: service.title,
-        metaDescription: service.title + ', a service provided by freelance web developer, William Youmans',
+        metaDescription: 'Learn about ' + service.title + ', a service provided by freelance web developer, William Youmans',
         service: service
       });
     } else {
