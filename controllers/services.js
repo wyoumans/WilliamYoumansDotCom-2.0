@@ -18,7 +18,7 @@ function getServices(req, res) {
     if (service) {
       render(res, 'services', {
         pageTitle: service.title,
-        metaDescription: service.title + ' by William Youmans freelance web developer in Charlotte, North Carolina',
+        metaDescription: service.title + ', a service provided by freelance web developer, William Youmans',
         service: service
       });
     } else {
