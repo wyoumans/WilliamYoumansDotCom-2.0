@@ -8,7 +8,6 @@ var config       = require('../config')
   , getEmailHTML = lib.getEmailHTML
   , getEmailText = lib.getEmailText
   , sendgrid     = require('sendgrid')(config.sendgrid.user, config.sendgrid.key)
-  , MailChimpAPI = require('mailchimp').MailChimpAPI
   ;
 
 module.exports.init = function(app) {
@@ -22,7 +21,7 @@ function getContact(req, res) {
   render(res, 'contact', {
     pageTitle: 'Request a Quote',
     showFooterCTA: false,
-    metaDescription: 'Contact William Youmans for a free quote. He is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Charlotte, North Carolina.'
+    metaDescription: 'Contact the freelance developer for a free quote and website consultation.'
   });
 }
 
@@ -54,37 +53,7 @@ function postContact(req, res) {
           logger.error(err);
         }
 
-        if (req.body.optin && req.body.optin == '1') {
-          try {
-            var api = new MailChimpAPI(config.mailchimp.apikey, {
-              version: '2.0'
-            });
-
-            api.call('lists', 'subscribe', {
-              id: config.mailchimp.listid,
-              email: {
-                email: lead.email
-              },
-              merge_vars: {
-                FNAME: lead.name
-              }
-            }, function(error, data) {
-              if (error) {
-                error.note = 'Mailchimp';
-                logger.error(error);
-              } else {
-                logger.info(data);
-              }
-
-              return res.redirect('/thank-you');
-            });
-          } catch (error) {
-            logger.error(error);
-            return res.redirect('/thank-you');
-          }
-        } else {
-          return res.redirect('/thank-you');
-        }
+        return res.redirect('/thank-you');
       });
     }
   });

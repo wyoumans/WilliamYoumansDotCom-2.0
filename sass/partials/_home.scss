@@ -9,6 +9,14 @@ body.home {
     width: 100%;
     overflow: hidden;
 
+    @media #{$medium-only} {
+      height: rem-calc(300);
+    }
+
+    @media #{$small-only} {
+      height: rem-calc(200);
+    }
+
     .animated-heading {
 
       h1 {
@@ -32,6 +40,32 @@ body.home {
           &.bottom {
             top: rem-calc(195);
             right: rem-calc(-2000);
+          }
+        }
+
+        @media #{$medium-only} {
+          margin-top: 0;
+
+          span {
+            top: 0;
+            font-size: rem-calc(50);
+
+            &.bottom {
+              top: rem-calc(85);
+            }
+          }
+        }
+
+        @media #{$small-only} {
+          margin-top: 0;
+
+          span {
+            top: 0;
+            font-size: rem-calc(30);
+
+            &.bottom {
+              top: rem-calc(45);
+            }
           }
         }
       }

@@ -3,8 +3,20 @@ extends layouts/main
 block content
   .row
     .large-12.columns
-      h1.text-center.main-page-title Your message has been received, loud and clear!
+      h1.text-center.main-page-title Thanks! Your message has been received, loud and clear!
 
       p.text-center
         a(href='/')
           img(src='/images/branding/huge-logo.jpg', alt='William Youmans', title='The best freelance developer around.', data-retina)
+
+  if locals.showAnalytics
+    //- Google Code for Website Contact Submitted Conversion Page
+    script.
+      var google_conversion_id = 976062022;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "VxmPCIXXrmEQxoy20QM";
+      var google_remarketing_only = false;
+
+    script(type="text/javascript", src="//www.googleadservices.com/pagead/conversion.js")

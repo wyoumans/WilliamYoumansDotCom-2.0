@@ -43,15 +43,33 @@ body {
 
   .name {
     margin-left: rem-calc(15);
+    line-height: $topbar-height;
 
-    @media #{$small-only} {
-      max-width: rem-calc(200);
-    }
-
-    a {
-      line-height: $topbar-height;
+    a.logo {
       margin: 0;
-      display: block;
+      @include inline-block;
+      vertical-align: middle;
+      background-image: url(/images/branding/logo-full.jpg);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 247px 88px;
+      width: 247px;
+      height: 88px;
+      text-indent: -9999px;
+
+      @media #{$retina} {
+        background-image: url(/images/branding/logo-full@2x.jpg);
+      }
+
+      @media #{$small-only} {
+        width: 82px;
+        background-image: url(/images/branding/small-logo.jpg);
+        background-size: 82px 88px;
+
+        @media #{$retina} {
+          background-image: url(/images/branding/small-logo@2x.jpg);
+        }
+      }
     }
   }
 }
@@ -102,13 +120,29 @@ body {
 
   &, p, li {
     font-size: rem-calc(14);
+
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
   }
 
   .footer-navigation {
     background-color: $footer-blue-tier2;
 
+    @media #{$small-only} {
+      padding-bottom: rem-calc(15);
+    }
+
     .services-navigation {
       margin: rem-calc(20 0);
+
+      @media #{$small-only} {
+        margin: 0;
+
+        li{
+          margin: rem-calc(15 0 0 0);
+        }
+      }
     }
   }
 

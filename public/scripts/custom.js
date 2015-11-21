@@ -7,7 +7,7 @@ $(function() {
   var animationSpeed = 1000,
       beginPosition  = '-2000px',
       endPosition    = 0,
-      easing         = 'easeOutBack',
+      easing         = 'swing',
       $leftText      = $('.animated-heading h1 span.top'),
       $rightText     = $('.animated-heading h1 span.bottom');
 
