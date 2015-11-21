@@ -54,13 +54,13 @@ function getHome(req, res) {
 function getProjects(req, res) {
   render(res, 'projects', {
     pageTitle: 'Projects',
-    metaDescription: 'William Youmans\' freelance development portfolio. He is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Charlotte, North Carolina.'
+    metaDescription: 'See a showcase of recent projects completed by William Youmans, freelance website developer in Charlotte, North Carolina.'
   });
 }
 
 function getAbout(req, res) {
   render(res, 'about', {
     pageTitle: 'About',
-    metaDescription: 'About William Youmans: a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Charlotte, North Carolina.'
+    metaDescription: 'Learn about the services of freelance website developer and consultant, William Youmans.'
   });
 }

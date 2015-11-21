@@ -5,11 +5,11 @@ $(document).foundation();
 $(function() {
 
   var animationSpeed = 1000,
-    endPosition = 0,
-    easing = 'easeOutBack',
-    $topText = $('.animated-heading .top'),
-    $bottomText = $('.animated-heading .bottom'),
-    $fadeInText = $('.animated-heading .fade-in-heading');
+    endPosition      = 0,
+    easing           = 'swing',
+    $topText         = $('.animated-heading .top'),
+    $bottomText      = $('.animated-heading .bottom'),
+    $fadeInText      = $('.animated-heading .fade-in-heading');
 
   var animation = {
     inLeft: function(cb) {

@@ -22,7 +22,7 @@ function getContact(req, res) {
   render(res, 'contact', {
     pageTitle: 'Request a Quote',
     showFooterCTA: false,
-    metaDescription: 'Contact William Youmans for a free quote. He is a freelance web developer, technical project manager, software consultant, avid oudoorsman, and tea enthusiast living in Charlotte, North Carolina.'
+    metaDescription: 'Contact the freelance developer for a free quote and website consultation.'
   });
 }
 
