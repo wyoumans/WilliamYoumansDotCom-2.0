@@ -5,10 +5,11 @@ $(document).foundation();
 $(function() {
 
   var animationSpeed = 1000,
-      endPosition    = 0,
-      easing         = 'easeOutBack',
-      $topText       = $('.animated-heading h1 span.top'),
-      $bottomText    = $('.animated-heading h1 span.bottom');
+    endPosition = 0,
+    easing = 'easeOutBack',
+    $topText = $('.animated-heading .top'),
+    $bottomText = $('.animated-heading .bottom'),
+    $fadeInText = $('.animated-heading .fade-in-heading');
 
   var animation = {
     inLeft: function(cb) {
@@ -39,7 +40,8 @@ $(function() {
         typeSpeed: 50,
         startDelay: 50,
         backSpeed: 0,
-        backDelay: 1000
+        backDelay: 1000,
+        callback: animation.fadeInText
       });
     },
     phoneJiggle: function() {
@@ -57,6 +59,15 @@ $(function() {
 
         console.log('START JIGGLE');
       });
+    },
+    fadeInText: function() {
+      setTimeout(function() {
+        $fadeInText.fadeIn('slow');
+
+        setTimeout(function() {
+          scrollToDiv('#main-nav', true);
+        }, 4000);
+      }, 500);
     }
   };
 
