@@ -34,10 +34,6 @@ var defaults = {
     "user": process.env.SENDGRID_USER,
     "key": process.env.SENDGRID_KEY
   },
-  "mailchimp": {
-    "listid": process.env.MAILCHIMP_LIST,
-    "apikey": process.env.MAILCHIMP_KEY
-  },
   "servicesBase": "services"
 };
 
