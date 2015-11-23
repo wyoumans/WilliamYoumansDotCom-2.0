@@ -11,7 +11,9 @@ $(function() {
     $bottomText      = $('.animated-heading .bottom'),
     $fadeInText      = $('.animated-heading .fade-in-heading');
 
+  // object for all animation functions
   var animation = {
+
     inLeft: function(cb) {
       return function() {
         cb = cb || function() {};
@@ -21,6 +23,7 @@ $(function() {
         }, animationSpeed, easing, cb);
       }
     },
+
     inRight: function(cb) {
       return function() {
         cb = cb || function() {};
@@ -30,6 +33,7 @@ $(function() {
         }, animationSpeed, easing, cb);
       }
     },
+
     typing: function(cb) {
       cb = cb || function() {};
 
@@ -44,6 +48,7 @@ $(function() {
         callback: animation.fadeInText
       });
     },
+
     phoneJiggle: function() {
       setInterval(function() {
         return snabbt($('#main-nav li.cta i'), "attention", {
@@ -54,19 +59,19 @@ $(function() {
         });
       }, 4000);
     },
-    showArrow: function() {
-      $('.scroll-arrow').fadeIn(500, function() {
 
-        console.log('START JIGGLE');
-      });
+    showArrow: function() {
+      $('.scroll-arrow').fadeIn(500);
     },
+
     fadeInText: function() {
       setTimeout(function() {
         $fadeInText.fadeIn('slow');
 
+        // automatically scroll down after pause
         setTimeout(function() {
           scrollToDiv('#main-nav', true);
-        }, 4000);
+        }, 5000);
       }, 500);
     }
   };
@@ -77,7 +82,7 @@ $(function() {
 
     setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
 
-    $('a.scroll-arrow').click(function(e) {
+    $('a.scroll-down').click(function(e) {
       e.preventDefault();
 
       scrollToDiv('#main-nav', true);

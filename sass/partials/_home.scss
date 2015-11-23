@@ -43,9 +43,10 @@ body.home {
         display: none;
       }
 
-      .orange-text {
+      .go-to-contact {
         @include text-shadow($black 2px 2px 2px);
         @include inline-block;
+        text-decoration: none;
         vertical-align: baseline;
         line-height: normal;
         border-bottom: 4px solid $primary-color;
@@ -121,5 +122,13 @@ body.home {
       line-height: normal;
       font-weight: 300;
     }
+  }
+
+  .section-heading {
+    margin-top: rem-calc(50);
+  }
+
+  .projects {
+
   }
 }
