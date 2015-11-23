@@ -9,6 +9,14 @@ body.home {
     .animation-wrapper {
       min-height: rem-calc(630);
       position: relative;
+
+      @media #{$medium-only} {
+        min-height: rem-calc(480);
+      }
+
+      @media #{$small-only} {
+        min-height: rem-calc(400);
+      }
     }
 
     .animated-heading {
@@ -18,15 +26,18 @@ body.home {
 
       .top, .bottom, .fade-in-heading {
         color: $white;
-        @include inline-block;
         top: rem-calc(50);
         padding: rem-calc(0 16);
-        white-space: nowrap;
         position: absolute;
+        @include inline-block;
         @include text-shadow($primary-color 2px 2px 2px);
-        font-size: rem-calc(60);
+        font-size: rem-calc(55);
         width: 100%;
         line-height: normal;
+      }
+
+      .top, .bottom {
+        white-space: nowrap;
       }
 
       .top {
@@ -34,7 +45,7 @@ body.home {
       }
 
       .bottom {
-        top: rem-calc(150);
+        top: rem-calc(128);
         left: rem-calc(-2000);
       }
 
@@ -49,7 +60,7 @@ body.home {
         text-decoration: none;
         vertical-align: baseline;
         line-height: normal;
-        border-bottom: 4px solid $primary-color;
+        border-bottom: 3px solid $primary-color;
       }
 
       i.typing {
@@ -62,26 +73,38 @@ body.home {
       @media #{$medium-only} {
         margin-top: 0;
 
-        .top, .bottom {
-          top: 0;
-          font-size: rem-calc(50);
+        .top, .bottom, .fade-in-heading {
+          top: rem-calc(16);
+          font-size: rem-calc(40);
         }
 
         .bottom {
-          top: rem-calc(85);
+          top: rem-calc(60);
+        }
+
+        .fade-in-heading {
+          top: rem-calc(150);
         }
       }
 
       @media #{$small-only} {
         margin-top: 0;
 
-        .top, .bottom {
-          top: 0;
-          font-size: rem-calc(30);
+        .top, .bottom, .fade-in-heading {
+          top: rem-calc(28);
+          font-size: rem-calc(24);
         }
 
         .bottom {
-          top: rem-calc(45);
+          top: rem-calc(60);
+        }
+
+        .fade-in-heading {
+          top: rem-calc(130);
+        }
+
+        .go-to-contact {
+          border-bottom: 2px solid $primary-color;
         }
       }
     }
@@ -109,6 +132,10 @@ body.home {
         background-color: $primary-color;
         border-radius: 50%;
       }
+
+      @media #{$small-only} {
+        padding: rem-calc(0 0 16 0);
+      }
     }
   }
 
@@ -125,10 +152,27 @@ body.home {
   }
 
   .section-heading {
-    margin-top: rem-calc(50);
+    margin-top: rem-calc(80);
+
+    @media #{$medium-only} {
+      margin-top: rem-calc(50);
+    }
+
+    @media #{$small-only} {
+      margin-top: rem-calc(50);
+    }
   }
 
   .projects {
 
+    .image {
+      @media #{$medium-only} {
+        margin-bottom: rem-calc(30);
+      }
+
+      @media #{$small-only} {
+        margin-bottom: rem-calc(20);
+      }
+    }
   }
 }
