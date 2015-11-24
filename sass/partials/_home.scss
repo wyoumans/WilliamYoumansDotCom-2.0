@@ -60,6 +60,7 @@ body.home {
         vertical-align: baseline;
         line-height: normal;
         border-bottom: 3px solid $primary-color;
+        @include text-shadow($black 2px 2px 2px);
       }
 
       i.typing {
@@ -67,6 +68,10 @@ body.home {
         @include inline-block;
         vertical-align: baseline;
         line-height: normal;
+
+        @media #{$small-only} {
+          padding-right: rem-calc(3);
+        }
       }
 
       @media #{$medium-only} {
