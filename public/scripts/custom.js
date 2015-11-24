@@ -31,6 +31,8 @@ $(function() {
       return function() {
         cb = cb || function() {};
 
+        animation.showArrow();
+
         $bottomText.fadeIn({
           queue: false,
           duration: 1500
@@ -42,8 +44,6 @@ $(function() {
 
     typing: function(cb) {
       cb = cb || function() {};
-
-      animation.showArrow();
 
       $("#typed-text").typed({
         strings: ['small business.', 'startup.', 'online store.', 'design agency.', 'big idea!'],
@@ -67,7 +67,10 @@ $(function() {
     },
 
     showArrow: function() {
-      $('.scroll-arrow').fadeIn(500);
+      $('.scroll-arrow').fadeIn({
+        queue: false,
+        duration: 1000
+      });
     },
 
     fadeInText: function() {

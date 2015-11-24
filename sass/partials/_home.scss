@@ -30,7 +30,6 @@ body.home {
         padding: rem-calc(0 16);
         position: absolute;
         @include inline-block;
-        // @include text-shadow($primary-color 2px 2px 2px);
         font-size: rem-calc(55);
         width: 100%;
         line-height: normal;
@@ -42,21 +41,20 @@ body.home {
       }
 
       .top {
-        right: rem-calc(-300);
+        right: rem-calc(-200);
       }
 
       .bottom {
-        top: rem-calc(128);
-        left: rem-calc(-500);
+        top: rem-calc(140);
+        left: rem-calc(-200);
       }
 
       .fade-in-heading {
-        top: rem-calc(206);
+        top: rem-calc(227);
         display: none;
       }
 
       .go-to-contact {
-        // @include text-shadow($black 2px 2px 2px);
         @include inline-block;
         text-decoration: none;
         vertical-align: baseline;
@@ -119,19 +117,9 @@ body.home {
       font-size: rem-calc(60);
       padding: rem-calc(40 0);
       display: none;
-      @include opacity(0);
-      -webkit-animation: pulse 3s infinite;
-      -moz-animation: pulse 3s infinite;
-      animation: pulse 3s infinite;
-
-      i {
-        height: rem-calc(72);
-        width: rem-calc(72);
-        line-height: rem-calc(64);
-        @include inline-block;
-        background-color: $primary-color;
-        border-radius: 50%;
-      }
+      @include opacity(0.3);
+      @include animation(pulse 3s infinite);
+      color: $primary-color;
 
       @media #{$small-only} {
         padding: rem-calc(0 0 16 0);

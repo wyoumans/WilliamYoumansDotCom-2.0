@@ -12,12 +12,12 @@
 
 @include keyframes(pulse) {
   0% {
-    @include opacity(0.7);
-  }
-  50% {
     @include opacity(0.3);
   }
+  50% {
+    @include opacity(0.9);
+  }
   100% {
-    @include opacity(0.7);
+    @include opacity(0.3);
   }
 }
