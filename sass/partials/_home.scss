@@ -30,7 +30,7 @@ body.home {
         padding: rem-calc(0 16);
         position: absolute;
         @include inline-block;
-        @include text-shadow($primary-color 2px 2px 2px);
+        // @include text-shadow($primary-color 2px 2px 2px);
         font-size: rem-calc(55);
         width: 100%;
         line-height: normal;
@@ -38,24 +38,25 @@ body.home {
 
       .top, .bottom {
         white-space: nowrap;
+        display: none;
       }
 
       .top {
-        right: rem-calc(-2000);
+        right: rem-calc(-300);
       }
 
       .bottom {
         top: rem-calc(128);
-        left: rem-calc(-2000);
+        left: rem-calc(-500);
       }
 
       .fade-in-heading {
-        top: rem-calc(256);
+        top: rem-calc(206);
         display: none;
       }
 
       .go-to-contact {
-        @include text-shadow($black 2px 2px 2px);
+        // @include text-shadow($black 2px 2px 2px);
         @include inline-block;
         text-decoration: none;
         vertical-align: baseline;
@@ -83,7 +84,7 @@ body.home {
         }
 
         .fade-in-heading {
-          top: rem-calc(150);
+          top: rem-calc(100);
         }
       }
 
@@ -99,7 +100,7 @@ body.home {
         }
 
         .fade-in-heading {
-          top: rem-calc(130);
+          top: rem-calc(80);
         }
 
         .go-to-contact {

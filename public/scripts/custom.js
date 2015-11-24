@@ -6,7 +6,7 @@ $(function() {
 
   var animationSpeed = 1000,
     endPosition      = 0,
-    easing           = 'swing',
+    easing           = 'easeOutBack',
     $topText         = $('.animated-heading .top'),
     $bottomText      = $('.animated-heading .bottom'),
     $fadeInText      = $('.animated-heading .fade-in-heading');
@@ -18,7 +18,10 @@ $(function() {
       return function() {
         cb = cb || function() {};
 
-        $topText.animate({
+        $topText.fadeIn({
+          queue: false,
+          duration: 1500
+        }).animate({
           right: endPosition
         }, animationSpeed, easing, cb);
       }
@@ -28,7 +31,10 @@ $(function() {
       return function() {
         cb = cb || function() {};
 
-        $bottomText.stop(true, false).animate({
+        $bottomText.fadeIn({
+          queue: false,
+          duration: 1500
+        }).animate({
           left: endPosition
         }, animationSpeed, easing, cb);
       }
@@ -65,8 +71,16 @@ $(function() {
     },
 
     fadeInText: function() {
+      var top = $('.animated-heading .fade-in-heading').css('top');
+      top = parseInt(top, 10);
+
       setTimeout(function() {
-        $fadeInText.fadeIn('slow');
+        $fadeInText.fadeIn({
+          queue: false,
+          duration: 1000
+        }).animate({
+          top: top + 50
+        }, animationSpeed, easing);
 
         // automatically scroll down after pause
         setTimeout(function() {

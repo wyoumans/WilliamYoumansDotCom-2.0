@@ -55,7 +55,7 @@ function minifyJS(done) {
     fileIn: [
       // Libraries
       'public/bower_components/jquery/dist/jquery.js',
-      //- 'public/bower_components/jquery.easing/js/jquery.easing.js',
+      'public/bower_components/jquery.easing/js/jquery.easing.js',
       'public/bower_components/snabbt.js/snabbt.js',
       // 'public/bower_components/jquery-placeholder/jquery.placeholder.js',
       //- 'public/bower_components/jquery.cookie/jquery.cookie.js',
