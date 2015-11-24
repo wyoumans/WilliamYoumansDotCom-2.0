@@ -21,7 +21,7 @@ body.home {
 
     .animated-heading {
       position: relative;
-      margin-top: rem-calc(25);
+      margin-top: rem-calc(80);
       font-weight: 300;
 
       .top, .bottom, .fade-in-heading {
@@ -71,7 +71,7 @@ body.home {
       }
 
       @media #{$medium-only} {
-        margin-top: 0;
+        margin-top: rem-calc(48);
 
         .top, .bottom, .fade-in-heading {
           top: rem-calc(16);
@@ -88,7 +88,6 @@ body.home {
       }
 
       @media #{$small-only} {
-        margin-top: 0;
 
         .top, .bottom, .fade-in-heading {
           top: rem-calc(28);
@@ -125,9 +124,9 @@ body.home {
       animation: pulse 3s infinite;
 
       i {
-        height: rem-calc(82);
-        width: rem-calc(82);
-        line-height: rem-calc(75);
+        height: rem-calc(72);
+        width: rem-calc(72);
+        line-height: rem-calc(64);
         @include inline-block;
         background-color: $primary-color;
         border-radius: 50%;
