@@ -95,7 +95,7 @@ $(function() {
 
   // header animations
   if ($('.animated-heading').length) {
-    $('.animation-wrapper').height($(window).innerHeight());
+    // $('.animation-wrapper').height($(window).innerHeight());
 
     setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
 

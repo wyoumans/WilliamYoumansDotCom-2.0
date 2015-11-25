@@ -16,7 +16,8 @@
         .tweet
           a(href=tweet.href, target='_blank')
             span.content= tweet.content
-          a(href='https://www.twitter.com/' + tweet.username).smaller.text-right #{tweet.username}<br>#{tweet.date_formatted}
+          .smaller.text-right
+            a(href='https://www.twitter.com/' + tweet.username) #{tweet.username}<br>#{tweet.date_formatted}
     else
       p Nothing to report
 
