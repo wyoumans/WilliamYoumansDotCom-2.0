@@ -133,18 +133,14 @@ body {
   .footer-navigation {
     background-color: $footer-blue-tier2;
 
-    @media #{$small-only} {
-      padding-bottom: rem-calc(15);
-    }
-
     .services-navigation {
-      margin: rem-calc(20 0);
+      margin: rem-calc(0 0 16 0);
 
       @media #{$small-only} {
         margin: 0;
 
-        li{
-          margin: rem-calc(15 0 0 0);
+        li {
+          margin: rem-calc(0 0 16 0);
         }
       }
     }
