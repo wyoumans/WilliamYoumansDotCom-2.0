@@ -106,6 +106,14 @@ $(function() {
     });
   }
 
+  if ($('body').hasClass('home')) {
+    $('.projects .image').mouseenter(function() {
+      $(this).find('img.screenshot').stop(true, false).fadeOut(500);
+    }).mouseleave(function() {
+      $(this).find('img.screenshot').stop(true, false).fadeIn(500);
+    });
+  }
+
   // phone jiggle
   animation.phoneJiggle();
 });

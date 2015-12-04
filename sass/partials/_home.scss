@@ -159,6 +159,14 @@ body.home {
   .projects {
 
     .image {
+      position: relative;
+
+      img.screenshot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
 
       p {
         margin-top: rem-calc(20);
