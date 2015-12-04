@@ -51,7 +51,9 @@ $(function() {
         startDelay: 50,
         backSpeed: 0,
         backDelay: 1000,
-        callback: animation.fadeInText
+        callback: function() {
+          animation.fadeInText(true);
+        }
       });
     },
 
@@ -73,7 +75,7 @@ $(function() {
       });
     },
 
-    fadeInText: function() {
+    fadeInText: function(autoScroll) {
       var top = $('.animated-heading .fade-in-heading').css('top');
       top = parseInt(top, 10);
 
@@ -86,27 +88,51 @@ $(function() {
         }, animationSpeed, easing);
 
         // automatically scroll down after pause
-        setTimeout(function() {
-          scrollToDiv('#main-nav', true);
-        }, 5000);
+        if(autoScroll) {
+          setTimeout(function() {
+            scrollToDiv('#main-nav', true);
+          }, 5000);
+        }
       }, 500);
     }
   };
 
+  var jumpToAnimationEnd = function() {
+    $topText.show().css('right', endPosition);
+    $bottomText.show().css('left', endPosition);
+    $('#typed-text').text('big idea!');
+    $('.scroll-arrow').show();
+    animation.fadeInText(false);
+  };
+
   // header animations
   if ($('.animated-heading').length) {
-    $('.animation-wrapper').height($(window).innerHeight());
-
-    setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
-
     $('a.scroll-down').click(function(e) {
       e.preventDefault();
 
       scrollToDiv('#main-nav', true);
     });
 
-    // ensure the page is loaded at the top
-    scrollToDiv('#top', true);
+    var hasVisited = $.cookie('hide_animation');
+
+    if(!hasVisited) {
+      setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
+    } else {
+      scrollToDiv('#main-nav', false);
+      jumpToAnimationEnd();
+    }
+
+    $.cookie('hide_animation', 1, {
+      expires: 7
+    });
+  }
+
+  if ($('body').hasClass('home')) {
+    $('.projects .image').mouseenter(function() {
+      $(this).find('img.screenshot').stop(true, false).fadeOut(500);
+    }).mouseleave(function() {
+      $(this).find('img.screenshot').stop(true, false).fadeIn(500);
+    });
   }
 
   // phone jiggle
@@ -130,7 +156,8 @@ var scrollToDiv = function(selector, withAnimation, cb) {
       scrollTop: top
     }, 'fast', cb);
   } else {
-    $page.scrollTop(top);
+    // window.location.hash = selector;
+    document.getElementById(selector.slice(1)).scrollIntoView();
     cb();
   }
-}
+};

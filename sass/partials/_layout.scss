@@ -24,6 +24,9 @@ body {
 
   &.fixed {
     border-bottom: 1px solid $light-gray;
+  }
+
+  &.sticky {
 
     ul li {
 
@@ -130,18 +133,14 @@ body {
   .footer-navigation {
     background-color: $footer-blue-tier2;
 
-    @media #{$small-only} {
-      padding-bottom: rem-calc(15);
-    }
-
     .services-navigation {
-      margin: rem-calc(20 0);
+      margin: rem-calc(0 0 16 0);
 
       @media #{$small-only} {
         margin: 0;
 
-        li{
-          margin: rem-calc(15 0 0 0);
+        li {
+          margin: rem-calc(0 0 16 0);
         }
       }
     }
@@ -183,16 +182,16 @@ body {
     color: $white;
   }
 
+  h3 {
+
+    i {
+      @include inline-block;
+      margin-left: rem-calc(20);
+    }
+  }
+
   .footer-media {
     padding: rem-calc(5 0 20 0);
-
-    h3 {
-
-      i {
-        @include inline-block;
-        margin-left: rem-calc(20);
-      }
-    }
 
     .smaller {
       font-size: rem-calc(11);
@@ -202,7 +201,7 @@ body {
     .tweeting {
 
       .tweet {
-        margin-bottom: rem-calc(40);
+        margin-bottom: rem-calc(16);
         max-width: 90%;
         font-size: rem-calc(16);
 

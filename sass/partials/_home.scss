@@ -140,7 +140,8 @@ body.home {
       margin: rem-calc(0 5 5 0);
       height: auto;
       line-height: normal;
-      font-weight: 300;
+      background-color: $white;
+      border: 1px solid $light-blue;
     }
   }
 
@@ -159,6 +160,19 @@ body.home {
   .projects {
 
     .image {
+      position: relative;
+
+      img.screenshot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      p {
+        margin-top: rem-calc(20);
+      }
+
       @media #{$medium-only} {
         margin-bottom: rem-calc(30);
       }

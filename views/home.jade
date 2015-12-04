@@ -2,8 +2,43 @@ extends layouts/main
 
 block content
   .row
+    .small-12.columns
+      h1 I'm a freelance web developer from Charlotte, NC.
+
+  hr
+
+  .row
+    .small-12.columns
+      h2 Recent Projects
+
+  .row.projects.text-center
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-logomaker')
+        img.screenshot(src='/images/content/projects/screenshots/thumbs/logomaker.jpg', alt='Logo Maker', title='See more about the Logo Maker project.')
+        img.scene(src='/images/content/projects/scenes/thumbs/logomaker.jpg', alt='Logo Maker', title='See more about the Logo Maker project.')
+        p Logo Maker
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-onereview')
+        img.screenshot(src='/images/content/projects/screenshots/thumbs/onereview.jpg', alt='One Review', title='See more about the One Review project.')
+        img.scene(src='/images/content/projects/scenes/thumbs/onereview.jpg', alt='One Review', title='See more about the One Review project.')
+        p One Review
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-roamingfree')
+        img.screenshot(src='/images/content/projects/screenshots/thumbs/roamingfree.jpg', alt='Roaming Free', title='See more about the Roaming Free project.')
+        img.scene(src='/images/content/projects/scenes/thumbs/roamingfree.jpg', alt='Roaming Free', title='See more about the Roaming Free project.')
+        p Roaming Free
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-logodesign')
+        img.screenshot(src='/images/content/projects/screenshots/thumbs/logodesign.jpg', alt='Logo Design', title='See more about the Logo Design project.')
+        img.scene(src='/images/content/projects/scenes/thumbs/logodesign.jpg', alt='Logo Design', title='See more about the Logo Design project.')
+        p Logo Design
+
+  .row.section-heading
     .large-7.small-12.columns
-      h1 What can I do for you?
+      h2 What can I do for you?
 
       p
         | I'm <span itemprop="name">William Youmans</span>, a <span itemprop="jobtitle">freelance software developer and consultant
@@ -11,7 +46,7 @@ block content
         | <span itemprop="addressLocality">Charlotte</span>, <span itemprop="addressRegion">North Carolina</span></span>.
         | I develop web apps, implement web design, and create new business technology solutions.
 
-      h3 Specialties:
+      h3 Extensive experience with:
 
       ul.labels
         li.label.secondary.radius Javascript
@@ -26,6 +61,7 @@ block content
         li.label.secondary.radius Less
         li.label.secondary.radius Wordpress
         li.label.secondary.radius Laravel
+        li.label.secondary.radius Yii
         li.label.secondary.radius SEO
         li.label.secondary.radius Technical Project Management
         li.label.secondary.radius Server Administration
@@ -33,27 +69,6 @@ block content
     .large-5.small-12.columns
       .avatar.large-text-right.medium-text-center.small-text-center
         img.face#bowtie(src='/images/content/about/william-youmans.jpg', alt='William Youmans', title='Hire this amazing freelance web developer!')
-
-  .row.section-heading
-    .small-12.columns
-      h2 Recent Projects
-
-  .row.projects.text-center
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-logomaker')
-        img(src='/images/content/projects/thumbs/logomaker.jpg', alt='Logo Maker', title='Logo Maker')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-onereview')
-        img(src='/images/content/projects/thumbs/onereview.jpg', alt='One Review', title='One Review')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-roamingfree')
-        img(src='/images/content/projects/thumbs/roamingfree.jpg', alt='Roaming Free', title='Roaming Free')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-logodesign')
-        img(src='/images/content/projects/thumbs/logodesign.jpg', alt='Logo Design', title='Logo Design')
 
   .row.section-heading
     .small-12.columns
