@@ -159,6 +159,11 @@ body.home {
   .projects {
 
     .image {
+
+      p {
+        margin-top: rem-calc(20);
+      }
+
       @media #{$medium-only} {
         margin-bottom: rem-calc(30);
       }

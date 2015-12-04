@@ -2,8 +2,39 @@ extends layouts/main
 
 block content
   .row
+    .small-12.columns
+      h1 I'm a freelance web developer from Charlotte, NC.
+
+  hr
+
+  .row
+    .small-12.columns
+      h2 Recent Projects
+
+  .row.projects.text-center
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-logomaker')
+        img(src='/images/content/projects/thumbs/logomaker.jpg', alt='Logo Maker', title='Logo Maker')
+        p Logo Maker
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-onereview')
+        img(src='/images/content/projects/thumbs/onereview.jpg', alt='One Review', title='One Review')
+        p One Review
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-roamingfree')
+        img(src='/images/content/projects/thumbs/roamingfree.jpg', alt='Roaming Free', title='Roaming Free')
+        p Roaming Free
+
+    .large-3.medium-6.small-12.columns
+      a.image.th(href='/projects#project-logodesign')
+        img(src='/images/content/projects/thumbs/logodesign.jpg', alt='Logo Design', title='Logo Design')
+        p Logo Design
+
+  .row.section-heading
     .large-7.small-12.columns
-      h1 What can I do for you?
+      h2 What can I do for you?
 
       p
         | I'm <span itemprop="name">William Youmans</span>, a <span itemprop="jobtitle">freelance software developer and consultant
@@ -33,27 +64,6 @@ block content
     .large-5.small-12.columns
       .avatar.large-text-right.medium-text-center.small-text-center
         img.face#bowtie(src='/images/content/about/william-youmans.jpg', alt='William Youmans', title='Hire this amazing freelance web developer!')
-
-  .row.section-heading
-    .small-12.columns
-      h2 Recent Projects
-
-  .row.projects.text-center
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-logomaker')
-        img(src='/images/content/projects/thumbs/logomaker.jpg', alt='Logo Maker', title='Logo Maker')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-onereview')
-        img(src='/images/content/projects/thumbs/onereview.jpg', alt='One Review', title='One Review')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-roamingfree')
-        img(src='/images/content/projects/thumbs/roamingfree.jpg', alt='Roaming Free', title='Roaming Free')
-
-    .large-3.medium-6.small-12.columns
-      a.image.th(href='/projects#project-logodesign')
-        img(src='/images/content/projects/thumbs/logodesign.jpg', alt='Logo Design', title='Logo Design')
 
   .row.section-heading
     .small-12.columns

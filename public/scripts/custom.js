@@ -104,9 +104,6 @@ $(function() {
 
       scrollToDiv('#main-nav', true);
     });
-
-    // ensure the page is loaded at the top
-    scrollToDiv('#top', true);
   }
 
   // phone jiggle
