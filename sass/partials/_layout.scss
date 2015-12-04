@@ -182,16 +182,16 @@ body {
     color: $white;
   }
 
+  h3 {
+
+    i {
+      @include inline-block;
+      margin-left: rem-calc(20);
+    }
+  }
+
   .footer-media {
     padding: rem-calc(5 0 20 0);
-
-    h3 {
-
-      i {
-        @include inline-block;
-        margin-left: rem-calc(20);
-      }
-    }
 
     .smaller {
       font-size: rem-calc(11);
@@ -201,7 +201,7 @@ body {
     .tweeting {
 
       .tweet {
-        margin-bottom: rem-calc(40);
+        margin-bottom: rem-calc(16);
         max-width: 90%;
         font-size: rem-calc(16);
 

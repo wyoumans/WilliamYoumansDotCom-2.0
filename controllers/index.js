@@ -24,7 +24,7 @@ function getHome(req, res) {
       sort: {
         tweetDate: -1
       },
-      limit: 3
+      limit: 4
     }, function(err, tweets) {
       locals.footerContent = {};
 
