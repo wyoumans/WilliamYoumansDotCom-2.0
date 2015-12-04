@@ -58,8 +58,8 @@ function minifyJS(done) {
       'public/bower_components/jquery.easing/js/jquery.easing.js',
       'public/bower_components/snabbt.js/snabbt.js',
       // 'public/bower_components/jquery-placeholder/jquery.placeholder.js',
-      //- 'public/bower_components/jquery.cookie/jquery.cookie.js',
-      //- 'public/bower_components/fastclick/lib/fastclick.js',
+      'public/bower_components/jquery.cookie/jquery.cookie.js',
+      'public/bower_components/fastclick/lib/fastclick.js',
       'public/bower_components/typed.js/js/typed.js',
 
       // Foundation Core (only include those that are used)
