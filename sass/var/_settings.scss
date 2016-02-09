@@ -140,8 +140,8 @@ $primary-hover-color: #FF8000;
 $secondary-hover-color: $dark-blue;
 
 $footer-font-color: $white;
-$footer-link-color: $light-gray;
-$footer-link-hover-color: $white;
+$footer-link-color: $white;
+$footer-link-hover-color: $light-gray;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -1424,7 +1424,7 @@ $topbar-bg-color: $white;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(107);
+$topbar-height: rem-calc(104);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar

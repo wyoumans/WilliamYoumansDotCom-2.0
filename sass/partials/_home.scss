@@ -1,73 +1,133 @@
 body.home {
 
   .header {
-    text-align: center;
-    background: url(/images/header/clt-night.jpg) no-repeat center center;
+    background: url(/images/home/clt-night.jpg) no-repeat top center;
     @include background-size(cover);
-    height: rem-calc(550);
-    position: relative;
     width: 100%;
     overflow: hidden;
 
-    @media #{$medium-only} {
-      height: rem-calc(300);
-    }
+    .animation-wrapper {
+      min-height: rem-calc(630);
+      position: relative;
 
-    @media #{$small-only} {
-      height: rem-calc(200);
+      @media #{$medium-only} {
+        min-height: rem-calc(480);
+      }
+
+      @media #{$small-only} {
+        min-height: rem-calc(400);
+      }
     }
 
     .animated-heading {
+      position: relative;
+      margin-top: rem-calc(80);
+      font-weight: 300;
 
-      h1 {
-        position: relative;
-        margin-top: rem-calc(25);
+      .top, .bottom, .fade-in-heading {
+        color: $white;
+        top: rem-calc(50);
+        padding: rem-calc(0 16);
+        position: absolute;
+        @include inline-block;
+        font-size: rem-calc(55);
+        width: 100%;
+        line-height: normal;
+      }
 
-        span {
-          color: $white;
-          @include inline-block;
-          top: rem-calc(50);
-          padding: rem-calc(0 10 10 10);
-          white-space: nowrap;
-          position: absolute;
-          @include text-shadow($primary-color 1px 1px 1px);
-          font-size: rem-calc(70);
+      .top, .bottom {
+        white-space: nowrap;
+        display: none;
+      }
 
-          &.top {
-            left: rem-calc(-2000);
-          }
+      .top {
+        right: rem-calc(-200);
+      }
 
-          &.bottom {
-            top: rem-calc(195);
-            right: rem-calc(-2000);
-          }
-        }
+      .bottom {
+        top: rem-calc(140);
+        left: rem-calc(-200);
+      }
 
-        @media #{$medium-only} {
-          margin-top: 0;
+      .fade-in-heading {
+        top: rem-calc(227);
+        display: none;
+      }
 
-          span {
-            top: 0;
-            font-size: rem-calc(50);
+      .go-to-contact {
+        @include inline-block;
+        text-decoration: none;
+        vertical-align: baseline;
+        line-height: normal;
+        border-bottom: 3px solid $primary-color;
+        @include text-shadow($black 2px 2px 2px);
+      }
 
-            &.bottom {
-              top: rem-calc(85);
-            }
-          }
-        }
+      i.typing {
+        padding-right: rem-calc(10);
+        @include inline-block;
+        vertical-align: baseline;
+        line-height: normal;
 
         @media #{$small-only} {
-          margin-top: 0;
-
-          span {
-            top: 0;
-            font-size: rem-calc(30);
-
-            &.bottom {
-              top: rem-calc(45);
-            }
-          }
+          padding-right: rem-calc(3);
         }
+      }
+
+      @media #{$medium-only} {
+        margin-top: rem-calc(48);
+
+        .top, .bottom, .fade-in-heading {
+          top: rem-calc(16);
+          font-size: rem-calc(40);
+        }
+
+        .bottom {
+          top: rem-calc(60);
+        }
+
+        .fade-in-heading {
+          top: rem-calc(100);
+        }
+      }
+
+      @media #{$small-only} {
+
+        .top, .bottom, .fade-in-heading {
+          top: rem-calc(28);
+          font-size: rem-calc(24);
+        }
+
+        .bottom {
+          top: rem-calc(60);
+        }
+
+        .fade-in-heading {
+          top: rem-calc(80);
+        }
+
+        .go-to-contact {
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+
+    .scroll-arrow {
+      text-align: center;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      color: $white;
+      font-size: rem-calc(60);
+      padding: rem-calc(40 0);
+      display: none;
+      @include opacity(0.3);
+      @include animation(pulse 3s infinite);
+      color: $primary-color;
+
+      @media #{$small-only} {
+        padding: rem-calc(0 0 16 0);
       }
     }
   }
@@ -80,7 +140,46 @@ body.home {
       margin: rem-calc(0 5 5 0);
       height: auto;
       line-height: normal;
-      font-weight: 300;
+      background-color: $white;
+      border: 1px solid $light-blue;
+    }
+  }
+
+  .section-heading {
+    margin-top: rem-calc(80);
+
+    @media #{$medium-only} {
+      margin-top: rem-calc(50);
+    }
+
+    @media #{$small-only} {
+      margin-top: rem-calc(50);
+    }
+  }
+
+  .projects {
+
+    .image {
+      position: relative;
+
+      img.screenshot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      p {
+        margin-top: rem-calc(20);
+      }
+
+      @media #{$medium-only} {
+        margin-bottom: rem-calc(30);
+      }
+
+      @media #{$small-only} {
+        margin-bottom: rem-calc(20);
+      }
     }
   }
 }
