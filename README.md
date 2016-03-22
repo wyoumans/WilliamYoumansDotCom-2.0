@@ -37,4 +37,4 @@ make build
 
 ## License
 
-[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2015 William Youmans
+[MIT License](http://wy.mit-license.org/)  Copyright © 2012-2016 William Youmans
