@@ -1,29 +1,33 @@
 'use strict';
 
-var Twitter = require('node-twitter')
+var Twitter = require('twitter')
   , config  = require('../config')
   , logger  = require('../lib').logger
   , Tweet   = require('../models').Tweet
   , async   = require('async')
   ;
 
-var twitterRestClient = new Twitter.RestClient(
-  config.twitter.consumer_key,
-  config.twitter.consumer_secret,
-  config.twitter.token,
-  config.twitter.token_secret
-);
+var twitterRestClient = new Twitter({
+  consumer_key: config.twitter.consumer_key,
+  consumer_secret: config.twitter.consumer_secret,
+  access_token_key: config.twitter.token,
+  access_token_secret: config.twitter.token_secret
+});
 
 (function() {
 
   logger.info('Beginning Twitter Import');
 
-  twitterRestClient.statusesUserTimeline({
+  twitterRestClient.get('statuses/user_timeline', {
     count: 5,
     include_rts: false,
     exclude_replies: true,
     trim_user: true
-  }, function(err, tweets) {
+  }, function(err, tweets, response) {
+
+    // console.log(err);
+    // console.log(response);
+
     if (tweets && tweets.length > 0) {
 
       async.each(tweets, function(tweet, done) {
@@ -50,6 +54,13 @@ var twitterRestClient = new Twitter.RestClient(
         logger.info('Twitter Import Complete');
         process.exit();
       });
+    } else {
+      if (err) {
+        logger.error(err);
+      }
+
+      logger.info('Twitter Import Complete');
+      process.exit();
     }
   });
 })();
