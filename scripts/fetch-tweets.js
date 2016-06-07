@@ -25,9 +25,6 @@ var twitterRestClient = new Twitter({
     trim_user: true
   }, function(err, tweets, response) {
 
-    // console.log(err);
-    // console.log(response);
-
     if (tweets && tweets.length > 0) {
 
       async.each(tweets, function(tweet, done) {
@@ -35,8 +32,8 @@ var twitterRestClient = new Twitter({
           content: tweet.text,
           tweetDate: new Date(tweet.created_at),
 
-          // using id_str instead of id because they can be different. sometimes th id
-          // is interpreted incorrectly because it is a veryv large integer
+          // Using id_str instead of id because they can be different. sometimes th id
+          // is interpreted incorrectly because it is a very large integer.
           tweetid: tweet.id_str,
           href: 'http://www.twitter.com/' + config.twitter.username + '/status/' + tweet.id_str
         };
