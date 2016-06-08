@@ -12,7 +12,7 @@ module.exports.init = function(app) {
 function getBlog(req, res) {
   render(res, 'generic', {
     pageTitle: 'Blog',
-    metaDescription: 'The technical blog of Charlotte, North Carolina based website programmer, William Youmans'
+    metaDescription: 'The technical blog of Pennsylvania based website programmer, William Youmans'
   });
 }
 
