@@ -13,8 +13,9 @@ var ig     = require('instagram-node').instagram()
   logger.info('Beginning Instagram Import');
 
   ig.use({
-    client_id: config.instagram.key,
-    client_secret: config.instagram.secret
+    // client_id: config.instagram.key,
+    // client_secret: config.instagram.secret,
+    access_token: config.instagram.token
   });
 
   ig.user_media_recent(config.instagram.userid, function(err, medias, pagination, limit) {
