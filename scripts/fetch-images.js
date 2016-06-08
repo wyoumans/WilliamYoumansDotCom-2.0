@@ -42,6 +42,13 @@ var ig     = require('instagram-node').instagram()
         logger.info('Instagram Import Complete');
         process.exit();
       });
+    } else {
+      if (err) {
+        logger.error(err);
+      }
+
+      logger.info('Instagram Import Complete');
+      process.exit();
     }
   });
 })();
