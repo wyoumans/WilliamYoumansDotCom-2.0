@@ -10,6 +10,7 @@ Get the local config variables from the developer (not in git for security)
 Install Dependencies
 ```
 bundle install
+bower install
 npm install
 ```
 
