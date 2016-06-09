@@ -4,12 +4,12 @@ $(document).foundation();
 
 $(function() {
 
-  var animationSpeed = 1000,
-    endPosition      = 0,
-    easing           = 'easeOutBack',
-    $topText         = $('.animated-heading .top'),
-    $bottomText      = $('.animated-heading .bottom'),
-    $fadeInText      = $('.animated-heading .fade-in-heading');
+  var animationSpeed = 1000
+    , endPosition    = 0
+    , easing         = 'easeOutBack'
+    , $topText       = $('.animated-heading .top')
+    , $bottomText    = $('.animated-heading .bottom')
+    , $fadeInText    = $('.animated-heading .fade-in-heading');
 
   // object for all animation functions
   var animation = {
@@ -113,7 +113,7 @@ $(function() {
       scrollToDiv('#main-nav', true);
     });
 
-    var hasVisited = $.cookie('hide_animation');
+    var hasVisited = $.cookie('hide_animation_2016_06_09');
 
     if(!hasVisited) {
       setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
@@ -122,7 +122,7 @@ $(function() {
       jumpToAnimationEnd();
     }
 
-    $.cookie('hide_animation', 1, {
+    $.cookie('hide_animation_2016_06_09', 1, {
       expires: 7
     });
   }
