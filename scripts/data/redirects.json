@@ -107,6 +107,21 @@
   "before": "/wp-login.php",
   "after": "/"
 }, {
+  "before": "/wordpress",
+  "after": "/"
+}, {
+  "before": "/apple-app-site-association",
+  "after": "/"
+}, {
+  "before": "/administrator/index.php",
+  "after": "/"
+}, {
   "before": "/_asterisk",
   "after": "/"
+}, {
+  "before": "/services/north-carolina-website-consulting",
+  "after": "/services/pennsylvania-website-consulting"
+}, {
+  "before": "/services/charlotte-north-carolina-web-development-services",
+  "after": "/services/pennsylvania-web-development-services"
 }]
