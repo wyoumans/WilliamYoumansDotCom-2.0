@@ -113,7 +113,7 @@ $(function() {
       scrollToDiv('#main-nav', true);
     });
 
-    var hasVisited = $.cookie('hide_animation_2016_06_09');
+    var hasVisited = $.cookie('hide_animation_2016_06_08');
 
     if(!hasVisited) {
       setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
@@ -122,7 +122,7 @@ $(function() {
       jumpToAnimationEnd();
     }
 
-    $.cookie('hide_animation_2016_06_09', 1, {
+    $.cookie('hide_animation_2016_06_08', 1, {
       expires: 7
     });
   }
