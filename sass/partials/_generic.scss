@@ -66,6 +66,6 @@ input, textarea {
   color: $primary-color;
 
   &:hover{
-    text-shadow: 2px 2px lighten($black, 85%);
+    text-shadow: 1px 1px lighten($black, 85%);
   }
 }
