@@ -23,6 +23,9 @@ function getSitemap(req, res) {
     url: '/contact',
     priority: '0.9'
   }, {
+    url: '/blog',
+    priority: '0.9'
+  }, {
     url: '/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael',
     priority: '0.5'
   }];
