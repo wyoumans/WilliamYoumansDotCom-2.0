@@ -37,7 +37,7 @@
   "title": "Pennsylvania Website Consulting",
   "image": "5.jpg",
   "copy": [
-    "Need a Pennsylvania website consultant? I have more than seven years experience developing web applications and marketing websites for small businesses and entrepreneurs.",
+    "Need a Pennsylvania website consultant? I have more than eight years experience developing web applications and marketing websites for small businesses and entrepreneurs.",
     "If you are seeking advice on creating a new website or need input on ways to improve your established website, I can help. I'll leverage my experience and my network of top-notch developers and web designers to come up with a solution that is perfect for your small business."
   ]
 }, {
@@ -71,7 +71,7 @@
   "image": "8.jpg",
   "copy": [
     "Have a great idea for an online membership platform? Want monthly recurring passive income?",
-    "I have more than seven years of experience building user-friendly platforms for your custom membership systems. Do you need to offer free trials or coupon codes? Need to offer monthly, bi-monthly, or annual subscriptions on different payment tiers? Anything is possible with a custom platform that perfectly aligns with your business logic."
+    "I have more than eight years of experience building user-friendly platforms for your custom membership systems. Do you need to offer free trials or coupon codes? Need to offer monthly, bi-monthly, or annual subscriptions on different payment tiers? Anything is possible with a custom platform that perfectly aligns with your business logic."
   ],
   "cases": [
     "<a class='image th left-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/logodesign.jpg' alt='Logo Design' title='Logo Design'></a> <strong>Logo Design</strong>: I was contracted to develop a platform for logo designers to showcase their work. The platform features a tiered membership system with recurring monthly billing using the fast and secure Stripe API. I hand-coded the entire back-end using the Yii PHP framework and front-end using Compass/Sass, Browserify, and Mustache templates. The project includes custom integration with Wordpress allowing subscribed members to contribute to the Logo Design blog.",
@@ -83,7 +83,7 @@
   "title": "Tech Startup Consulting",
   "image": "3.jpg",
   "copy": [
-    "Every startup begins with a great idea. That is the easy part. Turning that great idea into a business is the hard part. I have more than seven years of experience working with early-stage startups. I can provide the technical know-how to bring your idea to life.",
+    "Every startup begins with a great idea. That is the easy part. Turning that great idea into a business is the hard part. I have more than eight years of experience working with early-stage startups. I can provide the technical know-how to bring your idea to life.",
     "I begin by sitting down with you, the entrepreneur, and really getting an understanding of the problem you are trying to solve. Then, I come up with the software requirements and business logic that will be used to make your product or service provide value in the best, most cost-effective way possible. Next, I help your decide which technology stack to use that will minimize cost, but also be maintainable long-term. Finally, I take care of developing the software according to the requirements we established. In the end, you get a solution that meets the needs of you and your customer and allows you to grow your business and change the world."
   ]
 }, {
