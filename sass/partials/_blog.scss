@@ -1,6 +1,6 @@
-body.projects {
+body.blog-index {
 
-  .portfolio-item {
+  .blog-item {
     margin-bottom: rem-calc(25);
 
     h2 {
@@ -8,4 +8,8 @@ body.projects {
       padding-top: 0;
     }
   }
+}
+
+body.post {
+
 }

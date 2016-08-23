@@ -11,9 +11,6 @@
   "before": "/photos",
   "after": "http://pics.williamyoumans.com"
 }, {
-  "before": "/blog",
-  "after": "/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael"
-}, {
   "before": "/daily",
   "after": "/blog"
 }, {
