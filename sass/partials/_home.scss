@@ -1,7 +1,7 @@
 body.home {
 
   .header {
-    background: url(/images/home/clt-night.jpg) no-repeat top center;
+    background: url(/images/home/lake-header.jpg) no-repeat top center;
     @include background-size(cover);
     width: 100%;
     overflow: hidden;
@@ -25,11 +25,12 @@ body.home {
       font-weight: 300;
 
       .top, .bottom, .fade-in-heading {
-        color: $white;
+        color: lighten($white, 15%);
         top: rem-calc(50);
         padding: rem-calc(0 16);
         position: absolute;
         @include inline-block;
+        @include text-shadow($black 3px 3px 3px 3px);
         font-size: rem-calc(55);
         width: 100%;
         line-height: normal;
@@ -59,8 +60,9 @@ body.home {
         text-decoration: none;
         vertical-align: baseline;
         line-height: normal;
-        border-bottom: 3px solid $primary-color;
-        @include text-shadow($black 2px 2px 2px);
+        color: $white;
+        border-bottom: 3px solid $white;
+        @include text-shadow($black 4px 4px 4px);
       }
 
       i.typing {

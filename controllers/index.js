@@ -54,7 +54,7 @@ function getHome(req, res) {
 function getProjects(req, res) {
   render(res, 'projects', {
     pageTitle: 'Projects',
-    metaDescription: 'See a showcase of recent projects completed by William Youmans, freelance website developer in Charlotte, North Carolina.'
+    metaDescription: 'See a showcase of recent projects completed by William Youmans, freelance website developer in Pennsylvania, Wilkes-Barre, Scranton, Hazelton, Philadephia.'
   });
 }
 
