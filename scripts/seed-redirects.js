@@ -14,17 +14,20 @@ var logger    = require('../lib').logger
   mongoose.connection.collections['redirects'].drop(function(err) {
     logger.info('Redirects dropped');
 
-    async.each(redirects, function(redirect, done) {
-      logger.info('inserting ' + redirect.before);
-      new Redirect(redirect).save(done);
+    Redirect.remove({}, function() {
 
-    }, function(err) {
-      if (err) {
-        logger.error(err);
-      }
+      async.each(redirects, function(redirect, done) {
+        logger.info('inserting ' + redirect.before);
+        new Redirect(redirect).save(done);
 
-      logger.info('redirect Import Complete');
-      process.exit();
+      }, function(err) {
+        if (err) {
+          logger.error(err);
+        }
+
+        logger.info('redirect Import Complete');
+        process.exit();
+      });
     });
   });
 })();
