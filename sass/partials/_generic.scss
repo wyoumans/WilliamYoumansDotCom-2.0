@@ -62,10 +62,3 @@ input, textarea {
 .orange-text {
   color: $primary-color;
 }
-.orange-hover {
-  color: $primary-color;
-
-  &:hover{
-    text-shadow: 1px 1px lighten($black, 85%);
-  }
-}
