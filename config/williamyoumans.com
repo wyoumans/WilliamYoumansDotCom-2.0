@@ -26,7 +26,7 @@ server {
   }
 
   location ~ ^/(fonts/|images/|scripts/|styles/|cache/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
-    root /home/william/app/williamyoumans/public;
+    root /home/ubuntu/app/williamyoumans/public;
     access_log off;
     expires max;
   }
