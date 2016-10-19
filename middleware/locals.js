@@ -22,6 +22,10 @@ module.exports = function() {
     res.locals.headerJS = false;
     res.locals.twitterId = config.twitter.id;
 
+    var hour = new Date().getHours();
+
+    // day is between 6AM and 7PM
+    res.locals.isDay = (hour > 6) && (hour < 19);
     next();
   };
 };
