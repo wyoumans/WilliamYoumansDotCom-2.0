@@ -4,13 +4,12 @@ $(document).foundation();
 
 $(function() {
 
-  var animationSpeed = 1000
-    , endPosition    = 0
-    , easing         = 'easeOutBack'
-    , $topText       = $('.animated-heading .top')
-    , $bottomText    = $('.animated-heading .bottom')
-    , $fadeInText    = $('.animated-heading .fade-in-heading')
-    ;
+  var animationSpeed = 1000,
+    endPosition = 0,
+    easing = 'easeOutBack',
+    $topText = $('.animated-heading .top'),
+    $bottomText = $('.animated-heading .bottom'),
+    $fadeInText = $('.animated-heading .fade-in-heading');
 
   // object for all animation functions
   var animation = {
@@ -90,6 +89,14 @@ $(function() {
 
         // automatically scroll down after pause
         if (autoScroll) {
+
+          // trigger footer CTA
+          var $cta = $('#sliding-cta');
+
+          $cta.animate({
+            bottom: 0
+          }, 2000, function() {});
+
           setTimeout(function() {
             scrollToDiv('#main-nav', true);
           }, 5000);
@@ -123,7 +130,7 @@ $(function() {
       jumpToAnimationEnd();
     }
 
-    $.cookie('hide_animation_2016_06_08', 1, {
+    $.cookie('hide_animation_2016_10_19', 1, {
       expires: 7
     });
   }
@@ -138,7 +145,7 @@ $(function() {
 
   var hideCTA = $.cookie('hide_cta_2016_10_19');
 
-  if (!hideCTA) {
+  if (!hideCTA && !($('body').hasClass('home') && !hasVisited)) {
 
     setTimeout(function() {
       var $cta = $('#sliding-cta');
@@ -175,10 +182,10 @@ $(function() {
 var scrollToDiv = function(selector, withAnimation, cb) {
   cb = cb || function() {};
 
-  var $page  = $('html, body'),
-      $div   = $(selector).first(),
-      top    = 0,
-      offset = $div.offset();
+  var $page = $('html, body'),
+    $div = $(selector).first(),
+    top = 0,
+    offset = $div.offset();
 
   if (offset) {
     top = offset.top;
