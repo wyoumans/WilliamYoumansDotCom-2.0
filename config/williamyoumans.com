@@ -26,14 +26,14 @@ server {
   }
 
   location ~ ^/(fonts/|images/|scripts/|styles/|cache/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
-    root /home/william/app/williamyoumans/public;
+    root /home/ubuntu/app/williamyoumans/public;
     access_log off;
     expires max;
   }
 
   location / {
     proxy_redirect off;
-    proxy_cache_valid 200 24h;
+    proxy_cache_valid 200 6h;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;

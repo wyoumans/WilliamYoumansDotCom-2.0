@@ -1,0 +1,33 @@
+extends layouts/main
+
+block content
+  .row
+    .large-12.columns
+      h1.main-page-title= pageTitle
+
+  .row
+    .large-12.columns
+      article.row.blog-item
+        .large-7.medium-5.small-12.columns
+          .image.th
+            img(src='/images/content/blog/full/part-1-interactive-javascript-map-of-canada-with-raphael.jpg', alt='Part 1: Interactive Javascript map of Canada with Raphaël', title='Part 1: Interactive Javascript map of Canada with Raphaël')
+        .description.large-5.medium-7.small-12.columns
+          h2.orange-text
+            a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael') Interactive Javascript map of Canada with Raphaël
+
+          p
+            | It seems like there is a plethora of examples of interactive maps of the United States, but the internet is, rather
+            | unsurprisingly, lacking in the area of maps of our great white neighbors to the north. So here is an example of how I
+            | created an interactive map of Canada using a handy little Javascript library called...
+
+          ul.labels
+            li.label.secondary.round Programming
+            li.label.secondary.round Javascript
+            li.label.secondary.round Raphaël.js
+
+  .row
+    .large-12.columns
+      h2 Questions?
+      p
+        | If you have any questions or comments about these posts, don&rsquo;t hesitate to <a href="/contact">get in touch</a>.
+        | I'd love to discuss what I can do for <a href="/contact">you</a>.

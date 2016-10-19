@@ -10,7 +10,7 @@ block content
 
       if service.image
         .section-wrapper.image.th
-          img(src="/images/content/services/#{service.image}", alt= pageTitle, itemprop="image")
+          img(src='/images/content/services/' + service.image, alt= pageTitle, itemprop="image")
 
       if service.copy && service.copy.length
         .section-wrapper.copy.clearfix

@@ -1,10 +1,20 @@
 body.home {
 
   .header {
-    background: url(/images/home/lake-header.jpg) no-repeat top center;
+    background-color: $dark-blue;
+    background-repeat: no-repeat;
+    background-position: top center;
     @include background-size(cover);
     width: 100%;
     overflow: hidden;
+
+    &.day {
+      background-image: url(/images/home/mountain.jpg);
+    }
+
+    &.night {
+      background-image: url(/images/home/city.jpg);
+    }
 
     .animation-wrapper {
       min-height: rem-calc(630);
@@ -89,7 +99,7 @@ body.home {
         }
 
         .fade-in-heading {
-          top: rem-calc(100);
+          top: rem-calc(80);
         }
       }
 
