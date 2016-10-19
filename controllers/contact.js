@@ -21,7 +21,8 @@ function getContact(req, res) {
   render(res, 'contact', {
     pageTitle: 'Request a Quote',
     showFooterCTA: false,
-    metaDescription: 'Contact the freelance developer for a free quote and website consultation.'
+    metaDescription: 'Contact the freelance developer for a free quote and website consultation.',
+    preMessage: req.query.consultation ? "Hi Will,\n\nPlease contact me ASAP for a free 1/2 hour consultation! \n\n(tell me more about your project here...)" : ''
   });
 }
 
