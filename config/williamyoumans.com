@@ -33,7 +33,7 @@ server {
 
   location / {
     proxy_redirect off;
-    proxy_cache_valid 200 24h;
+    proxy_cache_valid 200 6h;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
