@@ -159,7 +159,6 @@ $(function() {
 
     // set cookie here
 
-    e.preventDefault();
     $('#sliding-cta').fadeOut();
   });
 
