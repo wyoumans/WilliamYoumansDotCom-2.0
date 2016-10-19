@@ -1,6 +1,6 @@
 # WilliamYoumans.com
 
-Built with Node.JS, Jade/Pug, Zurb Fundation, and Compass
+Built with Node.JS, Pug (formerly Jade), Zurb Fundation, and Compass
 
 
 ## Getting Started
