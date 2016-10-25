@@ -35,7 +35,7 @@ block content
               .small-12.medium-2.large-2.columns
                 label.small-only-text-left.right.inline Message
               .small-12.medium-10.large-10.columns
-                textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=8, required)
+                textarea(id='contact_message', name='contact[message]', placeholder='What can I do for you?', rows=8, required)= locals.preMessage
                 small.error Please enter your message.
 
         .row
