@@ -12,15 +12,16 @@ block content
         - count++
         .section-wrapper.service.clearfix
           if count%2
-            .large-6.columns
+            .large-4.columns.text-left
               .icon-wrapper
                 i.fi-check
 
-          .large-6.columns
+          .large-8.columns
             h2: a(href='/' + locals.servicesBase + '/' + service.slug)= service.title
+            p= service.excerpt
 
           if !(count%2)
-            .large-6.columns
+            .large-4.columns.text-right
               .icon-wrapper
                 i.fi-check
 
