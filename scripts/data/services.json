@@ -1,4 +1,5 @@
 [{
+  "sort": 1,
   "column": "left",
   "slug": "custom-wordpress-themes",
   "title": "Custom Wordpress Themes",
@@ -11,6 +12,7 @@
     "<a class='image th left-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/roamingfree.jpg' alt='Roaming Free' title='Roaming Free'></a> <strong>Roaming Free</strong>: I was contracted to develop the travel blog for a full-time traveling entrepreneur. The project is a fully custom, responsive Wordpress theme providing the ability to easily share travel stories and track his travels all over the world."
   ]
 }, {
+  "sort": 2,
   "column": "left",
   "slug": "node-js-custom-web-application-development",
   "title": "Node.js Custom Web Application Development",
@@ -24,6 +26,7 @@
     "<a class='image th right-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: a platform for collecting and analyzing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsive user experience."
   ]
 }, {
+  "sort": 3,
   "column": "left",
   "slug": "woocommerce-store-development",
   "title": "Woocommerce Store Development",
@@ -32,6 +35,7 @@
     "Have something you want to sell online but don't know where to begin? Let me introduce you to WooCommerce. WooCommerce is a Wordpress plugin that provides a secure, easy to manage e-commerce solution for your website. I can provide custom WooCommerce integration into any Wordpress theme. You'll be selling your wares online right away."
   ]
 }, {
+  "sort": 4,
   "column": "left",
   "slug": "pennsylvania-website-consulting",
   "title": "Pennsylvania Website Consulting",
@@ -41,6 +45,7 @@
     "If you are seeking advice on creating a new website or need input on ways to improve your established website, I can help. I'll leverage my experience and my network of top-notch developers and web designers to come up with a solution that is perfect for your small business."
   ]
 }, {
+  "sort": 5,
   "column": "left",
   "slug": "small-business-marketing-websites",
   "title": "Small Business Marketing Websites",
@@ -54,6 +59,7 @@
     "<a class='image th right-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/chainsrequired.jpg' alt='Chains Required' title='Chains Required'></a> <strong>Chains Required</strong> is a small California-based business who needed a fresh site to promote it's services. The wordpress marketing website features large attractive images and information about the business' mission and products."
   ]
 }, {
+  "sort": 6,
   "column": "left",
   "slug": "search-engine-optimization",
   "title": "Search Engine Optimization (SEO)",
@@ -65,6 +71,7 @@
     "Finally, I'll iterate on the above steps until you are happy with your search engine rankings and increased web traffic."
   ]
 }, {
+  "sort": 7,
   "column": "left",
   "slug": "subscription-membership-systems",
   "title": "Subscription Membership Systems",
@@ -79,6 +86,7 @@
     "<a class='image th right-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: I was contracted to develop a platform for collecting unbiased hotel reviews. Hotels can subscribe to the system to gain access to a wealth of meaningful analytics about their hotel and other comparable hotels in the same market. I developed the back-end using the Sails real-time Node.js framework and the front-end using Bootstrap, Less, Grunt, AngularJS, and Chart.js."
   ]
 }, {
+  "sort": 8,
   "column": "right",
   "slug": "tech-startup-consulting",
   "title": "Tech Startup Consulting",
@@ -92,6 +100,7 @@
     "<a class='image th right-not-important' href='/projects'><img src='/images/content/projects/screenshots/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: An entrepreneur with the idea of disrupting the hotel ratings game by providing a platform for facilitating fair and honest hotel reviews hired me to provide technical consulting and development services. The project has been a huge success."
   ]
 }, {
+  "sort": 9,
   "column": "right",
   "slug": "responsive-website-development",
   "title": "Responsive Website Development",
@@ -101,6 +110,7 @@
     "What does this mean for you? It means I can develop your website once for all users instead of once for desktop users and another separate website for your mobile visitors. Now that's real savings."
   ]
 }, {
+  "sort": 10,
   "column": "right",
   "slug": "pennsylvania-web-development-services",
   "title": "Pennsylvania Web Development Services",
@@ -109,6 +119,7 @@
     "Looking for a web developer in Pennsylvania? Look no further. I provide web development and consulting services to entrepreneurs and businesses. Let's meet for coffee to discuss your project today!"
   ]
 }, {
+  "sort": 11,
   "column": "right",
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
@@ -118,6 +129,7 @@
     "I provide custom, hand-crafted web application development services. Let's bring your idea to life today!"
   ]
 }, {
+  "sort": 12,
   "column": "right",
   "slug": "php-laravel-development",
   "title": "PHP Laravel Development",
@@ -128,6 +140,7 @@
     "I have experience taking over maintenance for existing Laravel applications and starting from scratch by building a solution that is perfectly tailored for your online business."
   ]
 }, {
+  "sort": 13,
   "column": "right",
   "slug": "content-management-systems",
   "title": "Content Management Systems",
