@@ -34,7 +34,8 @@ var defaults = {
     "user": process.env.SENDGRID_USER,
     "key": process.env.SENDGRID_KEY
   },
-  "servicesBase": "services"
+  "servicesBase": "services",
+  "postsBase": "blog/detail"
 };
 
 var confrodo = require('confrodo')

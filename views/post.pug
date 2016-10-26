@@ -3,36 +3,24 @@ extends layouts/main
 block content
   .row
     .large-12.columns
-      h1.main-page-title= pageTitle
+      h1.main-page-title=locals.pageTitle
 
   .row
     .large-12.columns
-      p: img(src="/images/content/blog/wide/part-1-interactive-javascript-map-of-canada-with-raphael.jpg", alt="Part 1: Interactive Javascript map of Canada with Raphaël", itemprop="image")
+      p: img(src='/images/content/blog/wide/' + locals.post.slug + '.jpg', alt=locals.post.title, itemprop='image')
 
-      p
-        | It seems like there is a plethora of examples of interactive maps of the United States, but the internet is, rather
-        | unsurprisingly, lacking in the area of maps of our great white neighbors to the north. So here is an example of how I
-        | created an interactive map of Canada using a handy little Javascript library called <a href="https://github.com/DmitryBaranovskiy/raphael"
-        | target="_blank">Raphaël</a>.
+      if locals.post.tags && locals.post.tags.length
+        ul.labels
+          each tag in locals.post.tags
+            li.label.secondary.round= tag
 
-      p
-        | First, you actually need a map of Canada in SVG format. Wikipedia is a great source for free media. I found a very
-        | detailed SVG map of <a href="http://en.wikipedia.org/wiki/File:Canada_blank_map.svg" target="_blank">Canada here</a>.
+      if locals.post.copy && locals.post.copy.length
+        #main_post_content
+          each paragraph in locals.post.copy
+            p.clearfix!= paragraph
 
-      p
-        | Next, you need to convert the SVG file into a javascript object that can be added to the Raphaël paper. There are a
-        | few decent conversion tools for this. The one that worked for me is <a href="http://readysetraphael.com/"
-        | target="_blank">Ready Set Raphaël</a> Simply, upload the file, click “Check It”, and copy the resulting Javascript
-        | code. Your results may very depending on how cleanly the SVG was defined. In the case of the wikipedia file, the
-        | results are fantastic, but having had to use a specific designer's file for my work, I had to spend quite a bit of
-        | time cleaning up the resulting code. Just be patient and remember that you may have to remove a significant number
-        | of paths in an effort to simplify the script. As you are going through it, for your sanity, I recommend that you
-        | assign all of the paths to variables with meaningful names.
+      if locals.post.gistURL
+        script(src=locals.post.gistURL)
 
-      p
-        | Now, you have completed the most difficult part. Next, include the Raphaël library, create place to draw the map,
-        | and draw the map.
-
-      script(src="https://gist.github.com/wyoumans/3803346.js")
-
-      p: a(href="http://demos.williamyoumans.com/canada-interactive-map.php") See the full demo with the code.
+      if locals.post.demoURL
+        p: a(href=locals.post.demoURL) See the full demo with source code.

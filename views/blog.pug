@@ -1,0 +1,32 @@
+extends layouts/main
+
+block content
+  .row
+    .large-12.columns
+      h1.main-page-title=locals.pageTitle
+
+  .row
+    .large-12.columns
+      if locals.posts && locals.posts.length
+        each post in locals.posts
+          article.row.blog-item
+            .large-7.medium-5.small-12.columns
+              .image.th
+                img(src='/images/content/blog/full/' + post.slug + '.jpg', alt=post.title)
+            .description.large-5.medium-7.small-12.columns
+              h2.orange-text
+                a(href='/' + locals.postsBase + '/' + post.slug)= post.title
+
+              p= post.excerpt
+
+              if post.tags && post.tags.length
+                ul.labels
+                  each tag in post.tags
+                    li.label.secondary.round= tag
+
+  .row
+    .large-12.columns
+      h2 Questions?
+      p
+        | If you have any questions or comments about these posts, don&rsquo;t hesitate to <a href="/contact">get in touch</a>.
+        | I'd love to discuss what I can do for <a href="/contact">you</a>.

@@ -1,6 +1,8 @@
 'use strict';
 
 var render = require('../lib').render
+  , config = require('../config')
+  , models = require('../models')
   ;
 
 module.exports.init = function(app) {
@@ -25,9 +27,6 @@ function getSitemap(req, res) {
   }, {
     url: '/blog',
     priority: '0.9'
-  }, {
-    url: '/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael',
-    priority: '0.5'
   }];
 
   // services pages
@@ -48,10 +47,27 @@ function getSitemap(req, res) {
     });
   });
 
-  res.setHeader('Content-Type', 'application/xhtml+xml');
+  // blog posts
+  models.Post.find({}, 'slug', {
+    sort: {
+      publishedAt: -1
+    }
+  }, function(err, posts) {
 
-  render(res, 'sitemap', {
-    baseURL: req.protocol + '://' + req.get('host'),
-    pages: pages
+    if (!err && posts) {
+      posts.forEach(function(post) {
+        pages.push({
+          url: '/' + config.postsBase + '/' + post.slug,
+          priority: '0.5'
+        });
+      });
+    }
+
+    res.setHeader('Content-Type', 'application/xhtml+xml');
+
+    render(res, 'sitemap', {
+      baseURL: req.protocol + '://' + req.get('host'),
+      pages: pages
+    });
   });
 }

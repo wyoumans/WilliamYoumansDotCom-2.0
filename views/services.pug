@@ -3,30 +3,30 @@ extends layouts/main
 block content
   .row
     .large-12.columns
-      h1.main-page-title= pageTitle
+      h1.main-page-title=locals.pageTitle
 
   .row
     .large-12.columns
 
-      if service.image
+      if locals.service.image
         .section-wrapper.image.th
-          img(src='/images/content/services/' + service.image, alt= pageTitle, itemprop="image")
+          img(src='/images/content/services/' + locals.service.image, alt=locals.pageTitle, itemprop="image")
 
-      if service.copy && service.copy.length
+      if locals.service.copy && locals.service.copy.length
         .section-wrapper.copy.clearfix
-          each paragraph in service.copy
+          each paragraph in locals.service.copy
             p.clearfix!= paragraph
 
-      if service.cases && service.cases.length
+      if locals.service.cases && locals.service.cases.length
         .section-wrapper.cases.clearfix
           h2 Case Studies
-          each paragraph in service.cases
+          each paragraph in locals.service.cases
             p.clearfix!= paragraph
 
       .section-wrapper.bottom-copy.clearfix
         h2 Questions?
 
-        if service.cases && service.cases.length
+        if locals.service.cases && locals.service.cases.length
           p
             | If you'd like more information about these case studies or services, don't hesitate to get
             | in <a href="/contact">touch</a>. I'd love to discuss what I can do for <a href="/contact">you</a>.

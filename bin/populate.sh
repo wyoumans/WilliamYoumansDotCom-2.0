@@ -12,6 +12,10 @@ echo "seeding services..."
 node scripts/seed-services.js
 
 echo ""
+echo "seeding blog posts..."
+node scripts/seed-posts.js
+
+echo ""
 echo "fetching images from instagram..."
 node scripts/fetch-images.js
 
