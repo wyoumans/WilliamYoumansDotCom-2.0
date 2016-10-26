@@ -1,7 +1,9 @@
 'use strict';
 
-var render = require('../lib').render
-  , models = require('../models')
+var config   = require('../config')
+  , render   = require('../lib').render
+  , throw404 = require('../middleware').throw404
+  , Post     = require('../models').Post
   ;
 
 module.exports.init = function(app) {
@@ -10,9 +12,18 @@ module.exports.init = function(app) {
 };
 
 function getBlog(req, res) {
-  render(res, 'blog-index', {
-    pageTitle: 'Blog',
-    metaDescription: 'The technical blog of Pennsylvania based website programmer, William Youmans'
+  Post.find({}, 'title excerpt tags slug publishedAt', {
+    sort: {
+      publishedAt: -1
+    },
+    limit: 4
+  }, function(err, posts) {
+    render(res, 'blog', {
+      pageTitle: 'Blog',
+      metaDescription: 'The technical blog of Pennsylvania based website programmer, William Youmans',
+      posts: posts,
+      postsBase: config.postsBase
+    });
   });
 }
 

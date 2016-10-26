@@ -1,7 +1,7 @@
 'use strict';
 
 var logger    = require('../lib').logger
-  , services  = require('./data/posts')
+  , posts     = require('./data/posts')
   , Post      = require('../models').Post
   , async     = require('async')
   , mongoose  = require('mongoose')

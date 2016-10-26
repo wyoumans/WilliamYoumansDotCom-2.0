@@ -1,9 +1,9 @@
 'use strict';
 
-var config = require('../config')
-  , render = require('../lib').render
+var config   = require('../config')
+  , render   = require('../lib').render
   , throw404 = require('../middleware').throw404
-  , Service = require('../models').Service
+  , Service  = require('../models').Service
   ;
 
 module.exports.init = function(app) {

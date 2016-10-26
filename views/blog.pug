@@ -7,23 +7,22 @@ block content
 
   .row
     .large-12.columns
-      article.row.blog-item
-        .large-7.medium-5.small-12.columns
-          .image.th
-            img(src='/images/content/blog/full/part-1-interactive-javascript-map-of-canada-with-raphael.jpg', alt='Part 1: Interactive Javascript map of Canada with Raphaël', title='Part 1: Interactive Javascript map of Canada with Raphaël')
-        .description.large-5.medium-7.small-12.columns
-          h2.orange-text
-            a(href='/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael') Interactive Javascript map of Canada with Raphaël
+      if locals.posts && locals.posts.length
+        each post in locals.posts
+          article.row.blog-item
+            .large-7.medium-5.small-12.columns
+              .image.th
+                img(src='/images/content/blog/full/' + post.slug + '.jpg', alt=post.title)
+            .description.large-5.medium-7.small-12.columns
+              h2.orange-text
+                a(href='/' + locals.postsBase + '/' + post.slug)= post.title
 
-          p
-            | It seems like there is a plethora of examples of interactive maps of the United States, but the internet is, rather
-            | unsurprisingly, lacking in the area of maps of our great white neighbors to the north. So here is an example of how I
-            | created an interactive map of Canada using a handy little Javascript library called...
+              p= post.excerpt
 
-          ul.labels
-            li.label.secondary.round Programming
-            li.label.secondary.round Javascript
-            li.label.secondary.round Raphaël.js
+              if post.tags && post.tags.length
+                ul.labels
+                  each tag in post.tags
+                    li.label.secondary.round= tag
 
   .row
     .large-12.columns
