@@ -8,10 +8,11 @@ var config   = require('../config')
 
 module.exports.init = function(app) {
   app.get('/blog', getBlog);
-  app.get('/blog/detail/part-1-interactive-javascript-map-of-canada-with-raphael', getPost);
+  app.get('/' + config.postsBase + '/:slug', getPost);
 };
 
 function getBlog(req, res) {
+
   Post.find({}, 'title excerpt tags slug publishedAt', {
     sort: {
       publishedAt: -1
@@ -28,8 +29,18 @@ function getBlog(req, res) {
 }
 
 function getPost(req, res) {
-  render(res, 'post', {
-    pageTitle: 'Interactive Javascript map of Canada with Raphaël',
-    metaDescription: 'How to build an interactive map of Canada in pure Javacscript using Raphaël.js by William Youmans, a freelance web developer'
+
+  Post.findOne({
+    slug: req.params.slug
+  }, 'slug title copy gistURL demoURL tags metaDescription publishedAt', function(err, post) {
+    if (post) {
+      render(res, 'post', {
+        pageTitle: post.title,
+        metaDescription: post.metaDescription,
+        post: post
+      });
+    } else {
+      return throw404(req, res);
+    }
   });
 }
