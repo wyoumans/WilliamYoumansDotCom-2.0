@@ -3,7 +3,7 @@ extends layouts/main
 block content
   .row
     .large-12.columns
-      h1.main-page-title= pageTitle
+      h1.main-page-title=locals.pageTitle
 
       if locals.content
         != locals.content
