@@ -9,6 +9,7 @@ module.exports = function() {
 
     Service.find({}, 'slug title column', {
       sort: {
+        sort: 1,
         column: -1
       }
     }, function(err, services) {
