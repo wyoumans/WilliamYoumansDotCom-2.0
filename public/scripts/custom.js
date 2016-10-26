@@ -4,12 +4,14 @@ $(document).foundation();
 
 $(function() {
 
-  var animationSpeed = 1000,
-    endPosition = 0,
-    easing = 'easeOutBack',
-    $topText = $('.animated-heading .top'),
-    $bottomText = $('.animated-heading .bottom'),
-    $fadeInText = $('.animated-heading .fade-in-heading');
+  var cookiePostfix  = '_2016_10_25'
+    , animationSpeed = 1000
+    , endPosition    = 0
+    , easing         = 'easeOutBack'
+    , $topText       = $('.animated-heading .top')
+    , $bottomText    = $('.animated-heading .bottom')
+    , $fadeInText    = $('.animated-heading .fade-in-heading')
+    ;
 
   // object for all animation functions
   var animation = {
@@ -121,7 +123,7 @@ $(function() {
       scrollToDiv('#main-nav', true);
     });
 
-    var hasVisited = $.cookie('hide_animation_2016_10_19');
+    var hasVisited = $.cookie('hide_animation' + cookiePostfix);
 
     if (!hasVisited) {
       setTimeout(animation.inLeft(animation.inRight(animation.typing)), 1000);
@@ -130,7 +132,7 @@ $(function() {
       jumpToAnimationEnd();
     }
 
-    $.cookie('hide_animation_2016_10_19', 1, {
+    $.cookie('hide_animation' + cookiePostfix, 1, {
       expires: 7
     });
   }
@@ -143,7 +145,7 @@ $(function() {
     });
   }
 
-  var hideCTA = $.cookie('hide_cta_2016_10_19');
+  var hideCTA = $.cookie('hide_cta' + cookiePostfix);
 
   if (!hideCTA && !($('body').hasClass('home') && !hasVisited)) {
 
@@ -158,7 +160,7 @@ $(function() {
 
   $(document).on('click', '#sliding-cta .nope', function(e) {
 
-    $.cookie('hide_cta_2016_10_19', 1, {
+    $.cookie('hide_cta' + cookiePostfix, 1, {
       expires: 7
     });
 
@@ -168,7 +170,7 @@ $(function() {
 
   $(document).on('click', '#sliding-cta .yep', function(e) {
 
-    $.cookie('hide_cta_2016_10_19', 1, {
+    $.cookie('hide_cta' + cookiePostfix, 1, {
       expires: 7
     });
 
@@ -183,9 +185,9 @@ var scrollToDiv = function(selector, withAnimation, cb) {
   cb = cb || function() {};
 
   var $page = $('html, body'),
-    $div = $(selector).first(),
-    top = 0,
-    offset = $div.offset();
+      $div = $(selector).first(),
+      top = 0,
+      offset = $div.offset();
 
   if (offset) {
     top = offset.top;
