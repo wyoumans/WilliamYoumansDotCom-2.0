@@ -23,6 +23,7 @@ var ServiceSchema = new Schema({
   },
   icon: {
     type: String,
+    default: 'default.jpg',
     required: false
   },
   excerpt: {

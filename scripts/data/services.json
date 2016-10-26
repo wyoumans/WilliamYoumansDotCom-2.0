@@ -4,6 +4,7 @@
   "slug": "node-js-custom-web-application-development",
   "title": "Node.js Web Application Development",
   "image": "2.jpg",
+  "icon": "nodejs.jpg",
   "excerpt": "Need a wicked-fast, custom web application? Say hello to Javascript!",
   "copy": [
     "Javascript is here to stay.",
@@ -30,6 +31,7 @@
   "slug": "php-laravel-development",
   "title": "PHP Laravel Development",
   "image": "12.jpg",
+  "icon": "laravel.jpg",
   "excerpt": "Laravel is &ldquo;The PHP Framework For Web Artisans.&rdquo; It is the perfect platform for rapidly building secure web applications",
   "copy": [
     "Laravel is &ldquo;The PHP Framework For Web Artisans.&rdquo; It is the perfect platform for rapidly building secure small or large web applications that are maintainable long-term.",
@@ -42,6 +44,7 @@
   "slug": "custom-wordpress-themes",
   "title": "Custom Wordpress Themes",
   "image": "1.jpg",
+  "icon": "wordpress.jpg",
   "excerpt": "Need a custom theme or plugin for your Wordpress site?",
   "copy": [
     "Wordpress is very popular. However, it seems like most of the time, Wordpress projects end up being a collection of poorly hacked together plugins that make the system hard to use as an administrator and hard to navigate as an end-user. I know Wordpress inside and out. I know how to optimize the Wordpress theme and plugins to work together for you, not against you; to get out of your way so you can focus on more important things like blogging and adding valuable content for your visitors to consume."
@@ -54,8 +57,9 @@
   "sort": 5,
   "column": "left",
   "slug": "woocommerce-store-development",
-  "title": "Woocommerce Store Development",
+  "title": "WooCommerce Store Development",
   "image": "7.jpg",
+  "icon": "woocommerce.jpg",
   "excerpt": "Have something you want to sell online but don't know where to begin?",
   "copy": [
     "Have something you want to sell online but don't know where to begin? Let me introduce you to WooCommerce. WooCommerce is a Wordpress plugin that provides a secure, easy to manage e-commerce solution for your website. I can provide custom WooCommerce integration into any Wordpress theme. You'll be selling your wares online right away."

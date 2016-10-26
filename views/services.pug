@@ -12,20 +12,20 @@ block content
         - count++
         .section-wrapper.service.clearfix
           if count%2
-            .large-4.columns.text-left
-              .icon-wrapper
-                i.fi-check
+            .large-4.medium-4.small-12.columns.text-center
+              .icon-wrapper.image.th
+                img(src='/images/content/services/icons/' + service.icon, alt=service.title)
 
-          .large-8.columns
+          .large-8.medium-8.small-12.columns
             h2: a(href='/' + locals.servicesBase + '/' + service.slug)= service.title
             p= service.excerpt
             p: a(href='/' + locals.servicesBase + '/' + service.slug) Learn More &nbsp;
               i.fi-arrow-right
 
           if !(count%2)
-            .large-4.columns.text-right
-              .icon-wrapper
-                i.fi-check
+            .large-4.medium-4.small-12.columns.text-center
+              .icon-wrapper.image.th
+                img(src='/images/content/services/icons/' + service.icon, alt=service.title)
 
       .section-wrapper.bottom-copy.clearfix
         h2 Questions?

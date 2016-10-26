@@ -15,7 +15,7 @@ function getServices(req, res) {
 
   Service.find({
     showOnServicesIndex: true
-  }, 'title slug excerpt', {
+  }, 'title slug excerpt icon', {
     sort: {
       sort: 1
     }
