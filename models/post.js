@@ -21,8 +21,17 @@ var PostSchema = new Schema({
     required: true
   },
   copy: {
-    type: String,
+    type: Array,
+    default: [],
     required: true
+  },
+  gistURL: {
+    type: String,
+    required: false
+  },
+  demoURL: {
+    type: String,
+    required: false
   },
   tags: {
     type: Array,
