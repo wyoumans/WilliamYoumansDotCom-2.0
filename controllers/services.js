@@ -13,7 +13,9 @@ module.exports.init = function(app) {
 
 function getServices(req, res) {
 
-  Service.find({}, 'title slug excerpt', {
+  Service.find({
+    showOnServicesIndex: true
+  }, 'title slug excerpt', {
     sort: {
       sort: 1
     }

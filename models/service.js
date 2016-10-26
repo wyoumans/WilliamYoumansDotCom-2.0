@@ -21,9 +21,13 @@ var ServiceSchema = new Schema({
     type: String,
     required: false
   },
+  icon: {
+    type: String,
+    required: false
+  },
   excerpt: {
     type: String,
-    required: true
+    required: false
   },
   copy: {
     type: Array,
@@ -38,6 +42,16 @@ var ServiceSchema = new Schema({
   sort: {
     type: Number,
     default: 1,
+    required: false
+  },
+  showOnServicesIndex: {
+    type: Boolean,
+    default: true,
+    required: false
+  },
+  showOnFooter: {
+    type: Boolean,
+    default: true,
     required: false
   }
 });
