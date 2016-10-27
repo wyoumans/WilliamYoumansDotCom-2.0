@@ -3,9 +3,12 @@ body.projects {
   .portfolio-item {
     margin-bottom: rem-calc(25);
 
-    h2 {
-      margin-top: 0;
-      padding-top: 0;
+    @media #{$medium-up} {
+
+      h2 {
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
   }
 }

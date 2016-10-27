@@ -2,9 +2,6 @@
   "before": "/index.php",
   "after": "/"
 }, {
-  "before": "/services",
-  "after": "/"
-}, {
   "before": "/portfolio",
   "after": "/projects"
 }, {

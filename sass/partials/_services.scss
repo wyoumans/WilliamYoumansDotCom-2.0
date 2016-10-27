@@ -1,8 +1,11 @@
-body.services {
+body.service, body.services {
 
   .section-wrapper {
     margin: rem-calc(25 0 30 0);
   }
+}
+
+body.service {
 
   .cases {
 
@@ -36,6 +39,20 @@ body.services {
           float: none;
           margin-left: auto;
         }
+      }
+    }
+  }
+}
+
+body.services {
+
+  .service {
+
+    @media #{$medium-up} {
+
+      h2 {
+        margin-top: 0;
+        padding-top: 0;
       }
     }
   }

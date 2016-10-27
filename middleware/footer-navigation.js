@@ -7,8 +7,11 @@ var Service = require('../models').Service
 module.exports = function() {
   return function(req, res, next) {
 
-    Service.find({}, 'slug title column', {
+    Service.find({
+      showOnFooter: true
+    }, 'slug title column', {
       sort: {
+        sort: 1,
         column: -1
       }
     }, function(err, services) {

@@ -19,6 +19,9 @@ function getSitemap(req, res) {
     url: '/projects',
     priority: '0.9'
   }, {
+    url: '/services',
+    priority: '0.9'
+  }, {
     url: '/about',
     priority: '0.9'
   }, {

@@ -6,7 +6,8 @@ var Schema = require('mongoose').Schema
 var ServiceSchema = new Schema({
   column: {
     type: String,
-    required: true
+    default: 'left',
+    required: false
   },
   slug: {
     type: String,
@@ -20,6 +21,15 @@ var ServiceSchema = new Schema({
     type: String,
     required: false
   },
+  icon: {
+    type: String,
+    default: 'default.jpg',
+    required: false
+  },
+  excerpt: {
+    type: String,
+    required: false
+  },
   copy: {
     type: Array,
     default: [],
@@ -28,6 +38,21 @@ var ServiceSchema = new Schema({
   cases: {
     type: Array,
     default: [],
+    required: false
+  },
+  sort: {
+    type: Number,
+    default: 1,
+    required: false
+  },
+  showOnServicesIndex: {
+    type: Boolean,
+    default: true,
+    required: false
+  },
+  showOnFooter: {
+    type: Boolean,
+    default: true,
     required: false
   }
 });
