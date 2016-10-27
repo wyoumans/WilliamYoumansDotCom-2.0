@@ -19,7 +19,7 @@ function getBlog(req, res) {
     },
     limit: 4
   }, function(err, posts) {
-    render(res, 'blog', {
+    render(res, 'posts', {
       pageTitle: 'Blog',
       metaDescription: 'The technical blog of Pennsylvania based website programmer, William Youmans',
       posts: posts,
