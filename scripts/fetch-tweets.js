@@ -19,8 +19,8 @@ var twitterRestClient = new Twitter({
   logger.info('Beginning Twitter Import');
 
   twitterRestClient.get('statuses/user_timeline', {
-    count: 15, // retweets are included in this number even if excluded below
-    include_rts: false,
+    count: 10, // retweets are included in this number even if excluded below
+    // include_rts: false,
     exclude_replies: true,
     trim_user: true
   }, function(err, tweets, response) {
