@@ -20,6 +20,7 @@
   "slug": "responsive-website-development",
   "title": "Responsive Website Development",
   "image": "9.jpg",
+  "icon": "mobile.jpg",
   "excerpt": "Need to bring your website into the modern, mobile age at a fraction of the cost?",
   "copy": [
     "A website is responsive if the same interface is built to optimize the user experience for all devices. This means your website looks great and is easy to use for desktop computer users, tablet users, and mobile phone users. Responsive web design is built by leveraging CSS3 media queries and defining breakpoints so the content changes as the user's device width gets smaller.",
@@ -70,6 +71,7 @@
   "slug": "custom-web-applications",
   "title": "Custom Web Applications",
   "image": "10.jpg",
+  "icon": "gears.jpg",
   "excerpt": "Need software to accommodate unique, one-of-a-kind business logic? Let me provide the solution.",
   "copy": [
     "What is the difference between a website and a web application? A website is purely informational. It usually provides information about a company's products and services, and is used primarily as a marketing tool. A web application provides a dynamic experience for it's visitors. Web applications usually allow users to register an account and store data and preferences as they interact with the website. Facebook and Twitter are good examples of web applications.",
@@ -81,6 +83,7 @@
   "slug": "content-management-systems",
   "title": "Content Management Systems",
   "image": "4.jpg",
+  "icon": "edit.jpg",
   "excerpt": "Want an easy way to manage all of your website content without calling a developer for every little change?",
   "copy": [
     "The internet is constantly evolving and changing. Your website should too. You should be able to manage every aspect of your website content without having to call a web developer or marketing professional. A content management system (CMS) can provide you the flexibility of managing your content and publishing the results instantly.",
@@ -95,6 +98,7 @@
   "slug": "subscription-membership-systems",
   "title": "Subscription Membership Systems",
   "image": "8.jpg",
+  "icon": "users.jpg",
   "excerpt": "Have a great idea for an online membership platform? Want monthly recurring passive income?",
   "copy": [
     "Have a great idea for an online membership platform? Want monthly recurring passive income?",
@@ -123,6 +127,7 @@
   "slug": "small-business-marketing-websites",
   "title": "Small Business Marketing Websites",
   "image": "14.jpg",
+  "icon": "usd.jpg",
   "excerpt": "Every business needs a home on the web. I'll get you there.",
   "copy": [
     "Every business needs a website. Your customers need a way of learning more about your products and services and conveniently contacting you. A website that is fast, responsive, and easy to find and navigate could be the edge your business has over the competition. Let me take care of it for you."
@@ -138,6 +143,7 @@
   "slug": "search-engine-optimization",
   "title": "Search Engine Optimization (SEO)",
   "image": "6.jpg",
+  "icon": "google.jpg",
   "excerpt": "Are you looking to improve your online marketing? Do you need more traffic to your website? ",
   "copy": [
     "Are you looking to improve your online marketing? Do you need more traffic to your website? Let's leverage my proven strategy to optimize your website for search engine rankings to drive high quality traffic to your little home on the web.",
@@ -151,6 +157,7 @@
   "slug": "tech-startup-consulting",
   "title": "Tech Startup Consulting",
   "image": "3.jpg",
+  "icon": "chart.jpg",
   "excerpt": "Every startup begins with a great idea. That is the easy part. Turning that great idea into a business is the hard part.",
   "copy": [
     "Every startup begins with a great idea. That is the easy part. Turning that great idea into a business is the hard part. I have more than eight years of experience working with early-stage startups. I can provide the technical know-how to bring your idea to life.",
