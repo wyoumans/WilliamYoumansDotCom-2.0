@@ -17,7 +17,7 @@ block content
 
         .large-8.medium-8.small-12.columns
           h2: a(href='/' + locals.servicesBase + '/' + service.slug)= service.title
-          p= service.excerpt
+          p!= service.excerpt
           p: a(href='/' + locals.servicesBase + '/' + service.slug) Learn More &nbsp;
             i.fi-arrow-right
 
