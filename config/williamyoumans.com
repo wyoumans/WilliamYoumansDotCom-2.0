@@ -10,16 +10,15 @@ server {
 }
 
 server {
-  listen 443 default_server ssl;
+  listen 443 ssl http2 default_server;
+  listen [::]:443 ssl http2 default_server;
   access_log /var/log/nginx/www.williamyoumans.access.log;
   error_log  /var/log/nginx/www.williamyoumans.error.log debug;   log_subrequest on;
   server_name williamyoumans.com www.williamyoumans.com;
 
   ssl on;
-  ssl_certificate /etc/nginx/ssl/williamyoumans_com/ssl-bundle.crt;
-  ssl_certificate_key /etc/nginx/ssl/williamyoumans_com/williamyoumans.key;
-
-  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  include snippets/ssl-williamyoumans.com.conf;
+  include snippets/ssl-params.conf;
 
   if ($host = 'williamyoumans.com') {
     rewrite  ^/(.*)$  https://www.williamyoumans.com/$1  permanent;
