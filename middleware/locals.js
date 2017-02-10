@@ -10,6 +10,7 @@ module.exports = function() {
     res.locals.NODE_ENV = config.env;
     res.locals.useMinifiedAssets = config.useMinifiedAssets;
     res.locals.analytics = config.analytics;
+    res.locals.hotjarid = config.hotjarid;
     res.locals.showAnalytics = config.showAnalytics;
     res.locals.assetsVersion = assetsVersion;
     res.locals.supportsCaching = config.supportsCaching;
