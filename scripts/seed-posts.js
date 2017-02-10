@@ -23,7 +23,7 @@ var logger    = require('../lib').logger
 
     }, function(err) {
       if (err) {
-        logger.error(err);
+        logger.error(err.errors);
       }
 
       logger.info('Post Import Complete');

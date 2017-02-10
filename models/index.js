@@ -9,6 +9,7 @@ var fs         = require('fs')
   ;
 
 Mongoose.connect(config.mongoConnectionString);
+Mongoose.Promise = global.Promise; // native promises - http://mongoosejs.com/docs/promises.html
 
 (function() {
 
