@@ -32,7 +32,8 @@ var defaults = {
   },
   "sendgrid": {
     "user": process.env.SENDGRID_USER,
-    "key": process.env.SENDGRID_KEY
+    "key": process.env.SENDGRID_KEY,
+    "apikey": process.env.SENDGRID_API_KEY
   },
   "servicesBase": "services",
   "postsBase": "blog/detail"

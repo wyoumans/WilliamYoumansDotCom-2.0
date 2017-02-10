@@ -7,7 +7,7 @@ var config       = require('../config')
   , logger       = lib.logger
   , getEmailHTML = lib.getEmailHTML
   , getEmailText = lib.getEmailText
-  , sendgrid     = require('sendgrid')(config.sendgrid.user, config.sendgrid.key)
+  , sendgrid     = require('sendgrid')(config.sendgrid.apikey)
   ;
 
 module.exports.init = function(app) {
@@ -28,8 +28,7 @@ function getContact(req, res) {
 
 function postContact(req, res) {
   var formIsValid = false
-    , formValues = req.body.contact
-    ;
+    , formValues  = req.body.contact;
 
   var lead = new models.Lead({
     name: formValues.name,
@@ -42,14 +41,28 @@ function postContact(req, res) {
     if (err) {
       return res.redirect('/contact'); // prevent serving a cached version of this page
     } else {
-      sendgrid.send({
-        from: config.serverEmail,
-        to: config.adminEmail,
-        replyto: lead.email,
-        subject: 'Contact request from: ' + lead.name,
-        html: getEmailHTML('contact', lead),
-        text: getEmailText('contact', lead)
-      }, function(err, response) {
+
+      var mailHelper = require('sendgrid').mail;
+      var from_email = new mailHelper.Email(config.serverEmail);
+      var to_email = new mailHelper.Email(config.adminEmail);
+      var subject = 'Contact request from: ' + lead.name;
+
+      var textContent = new mailHelper.Content("text/plain", getEmailText('contact', lead));
+      var htmlContent = new mailHelper.Content("text/html", getEmailHTML('contact', lead));
+
+      var mail = new mailHelper.Mail(from_email, subject, to_email, textContent);
+      mail.addContent(htmlContent);
+
+      var reply_email = new mailHelper.Email(lead.email)
+      mail.setReplyTo(reply_email);
+
+      var request = sendgrid.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON(),
+      });
+
+      sendgrid.API(request, function(err, response) {
         if (err) {
           logger.error(err);
         }
