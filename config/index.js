@@ -11,6 +11,7 @@ var defaults = {
   "useMinifiedAssets": true,
   "showAnalytics": false,
   "analytics": process.env.GOOGLE_ANALYTICS,
+  "hotjarid": process.env.HOT_JAR_ID,
   "lastfm": {
     "username": "gotwilly",
     "key": process.env.LASTFM_KEY,
