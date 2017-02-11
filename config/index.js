@@ -10,6 +10,7 @@ var defaults = {
   "adminEmail": process.env.ADMIN_EMAIL,
   "useMinifiedAssets": true,
   "showAnalytics": false,
+  "showHotjar": false,
   "analytics": process.env.GOOGLE_ANALYTICS,
   "hotjarid": process.env.HOT_JAR_ID,
   "lastfm": {

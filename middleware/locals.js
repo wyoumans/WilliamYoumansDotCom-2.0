@@ -12,6 +12,7 @@ module.exports = function() {
     res.locals.analytics = config.analytics;
     res.locals.hotjarid = config.hotjarid;
     res.locals.showAnalytics = config.showAnalytics;
+    res.locals.showHotjar = config.showHotjar;
     res.locals.assetsVersion = assetsVersion;
     res.locals.supportsCaching = config.supportsCaching;
     res.locals.bodyClass = '';
