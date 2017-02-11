@@ -49,7 +49,7 @@ server {
     text/x-component;
   # text/html is always compressed by HttpGzipModule
 
-  location ~ ^/(fonts/|images/|scripts/|styles/|cache/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
+  location ~ ^/(fonts/|images/|scripts/|styles/|build/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
     root /home/ubuntu/app/williamyoumans/public;
     access_log off;
     expires max;
