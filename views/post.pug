@@ -7,7 +7,7 @@ block content
 
   .row
     .large-12.columns
-      p: img(src='/images/content/blog/wide/' + locals.post.slug + '.jpg', alt=locals.post.title, itemprop='image')
+      p: img(src='/build/images/content/blog/wide/' + locals.post.slug + '.jpg', alt=locals.post.title, itemprop='image')
 
       if locals.post.tags && locals.post.tags.length
         ul.labels

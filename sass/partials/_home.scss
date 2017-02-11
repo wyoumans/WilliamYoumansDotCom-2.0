@@ -9,11 +9,11 @@ body.home {
     overflow: hidden;
 
     &.day {
-      background-image: url(/images/home/mountain.jpg);
+      background-image: url(/build/images/home/mountain.jpg);
     }
 
     &.night {
-      background-image: url(/images/home/city.jpg);
+      background-image: url(/build/images/home/city.jpg);
     }
 
     .animation-wrapper {
