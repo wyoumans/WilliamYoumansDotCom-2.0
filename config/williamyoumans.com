@@ -24,6 +24,31 @@ server {
     rewrite  ^/(.*)$  https://www.williamyoumans.com/$1  permanent;
   }
 
+  # Compression
+  gzip on;
+  gzip_http_version  1.1;
+  gzip_comp_level    5;
+  gzip_min_length    256;
+  gzip_proxied       any;
+  gzip_vary          on;
+  gzip_types
+    application/atom+xml
+    application/javascript
+    application/json
+    application/rss+xml
+    application/vnd.ms-fontobject
+    application/x-font-ttf
+    application/x-web-app-manifest+json
+    application/xhtml+xml
+    application/xml
+    font/opentype
+    image/svg+xml
+    image/x-icon
+    text/css
+    text/plain
+    text/x-component;
+  # text/html is always compressed by HttpGzipModule
+
   location ~ ^/(fonts/|images/|scripts/|styles/|cache/|bower_components/|robots.txt|humans.txt|favicon.ico|\w+.png) {
     root /home/ubuntu/app/williamyoumans/public;
     access_log off;
