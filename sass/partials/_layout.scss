@@ -53,7 +53,7 @@ body {
       margin: 0;
       @include inline-block;
       vertical-align: middle;
-      background-image: url(/images/branding/logo-full.jpg);
+      background-image: url(/build/images/branding/logo-full.jpg);
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 247px 88px;
@@ -62,16 +62,16 @@ body {
       text-indent: -9999px;
 
       @media #{$retina} {
-        background-image: url(/images/branding/logo-full@2x.jpg);
+        background-image: url(/build/images/branding/logo-full@2x.jpg);
       }
 
       @media #{$small-only} {
         width: 82px;
-        background-image: url(/images/branding/small-logo.jpg);
+        background-image: url(/build/images/branding/small-logo.jpg);
         background-size: 82px 88px;
 
         @media #{$retina} {
-          background-image: url(/images/branding/small-logo@2x.jpg);
+          background-image: url(/build/images/branding/small-logo@2x.jpg);
         }
       }
     }

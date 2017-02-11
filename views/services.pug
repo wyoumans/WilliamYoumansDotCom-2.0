@@ -13,7 +13,7 @@ block content
         if count%2
           .large-4.medium-4.small-12.columns.text-center
             .icon-wrapper.image.th
-              img(src='/images/content/services/icons/' + service.icon, alt=service.title)
+              img(src='/build/images/content/services/icons/' + service.icon, alt=service.title)
 
         .large-8.medium-8.small-12.columns
           h2: a(href='/' + locals.servicesBase + '/' + service.slug)= service.title
@@ -24,7 +24,7 @@ block content
         if !(count%2)
           .large-4.medium-4.small-12.columns.text-center
             .icon-wrapper.image.th
-              img(src='/images/content/services/icons/' + service.icon, alt=service.title)
+              img(src='/build/images/content/services/icons/' + service.icon, alt=service.title)
   .row
     .large-12.columns
       .section-wrapper.bottom-copy.clearfix
