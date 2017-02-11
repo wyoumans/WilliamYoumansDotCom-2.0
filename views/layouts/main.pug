@@ -59,7 +59,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
 
     //- Styles
     if locals.useMinifiedAssets
-      link(rel='stylesheet', href='/cache/styles-' + locals.assetsVersion + '.min.css')
+      link(rel='stylesheet', href='/build/styles-' + locals.assetsVersion + '.min.css')
     else
       link(rel='stylesheet', href='/styles/styles.css')
 
@@ -106,7 +106,7 @@ html.no-js(lang='en', itemscope='', itemtype='http://schema.org/Person')
     script(src='/scripts/vendor/modernizr-custom.js')
 
     if locals.useMinifiedAssets
-      script(src='/cache/scripts-' + locals.assetsVersion + '.min.js')
+      script(src='/build/scripts-' + locals.assetsVersion + '.min.js')
     else
       //- Libraries
       script(src='/bower_components/jquery/dist/jquery.js')

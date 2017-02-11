@@ -7,7 +7,8 @@ var compressor = require('node-minify')
 
 var imagemin = require('imagemin')
   , imageminMozjpeg = require('imagemin-mozjpeg')
-  , imageminPngquant = require('imagemin-pngquant');
+  , imageminPngquant = require('imagemin-pngquant')
+  , imageminGifsicle = require('imagemin-gifsicle');
 
 console.log();
 console.log('Beginning minification');
@@ -27,13 +28,13 @@ async.series([
 });
 
 function deleteOldAssets(done) {
-  var cachePath = __dirname + '/../public/cache/';
+  var buildPath = __dirname + '/../public/build/';
 
-  fs.readdir(cachePath, function(err, files) {
+  fs.readdir(buildPath, function(err, files) {
 
     files.forEach(function(file) {
       if (/\.min\./.test(file)) {
-        fs.unlinkSync(cachePath + file);
+        fs.unlinkSync(buildPath + file);
       }
     });
 
@@ -50,7 +51,7 @@ function minifyCSS(done) {
   compressor.minify({
     compressor: 'yui-css',
     input: 'public/styles/styles.css',
-    output: 'public/cache/styles-' + assetsVersion + '.min.css',
+    output: 'public/build/styles-' + assetsVersion + '.min.css',
     callback: function(err) {
       console.log('Styles minified');
       return done(err);
@@ -97,7 +98,7 @@ function minifyJS(done) {
       // Custom Scripts
       'public/scripts/custom.js'
     ],
-    output: 'public/cache/scripts-' + assetsVersion + '.min.js',
+    output: 'public/build/scripts-' + assetsVersion + '.min.js',
     callback: function(err, min) {
       console.log('Javascript minified');
       return done(err);
@@ -110,23 +111,18 @@ function minifyJS(done) {
  * @param  Function done   Async callback
  */
 function minifyImages(done) {
-  imagemin(['public/images/**/*.{jpg,png}'], 'public/cache/images', {
+  imagemin(['public/images/**/*.{jpg,png,gif}'], 'public/build/images', {
     plugins: [
       imageminMozjpeg({
-        targa: true
+        quality: 80
       }),
       imageminPngquant({
         quality: '65-80'
-      })
+      }),
+      imageminGifsicle()
     ]
   }).then(function(files) {
-
-    console.log('');
-    console.log('');
-    console.log(files);
-    console.log('');
-    console.log('');
-
+    console.log('Images minified');
     return done();
   });
 }
