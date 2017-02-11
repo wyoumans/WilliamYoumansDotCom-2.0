@@ -33,6 +33,8 @@ async.series([
  * Recursivly removes files and folders
  */
 function removeFolder(location, next) {
+  mkDirSyncIfNotExists(location);
+
   fs.readdir(location, function(err, files) {
     async.each(files, function(file, cb) {
       file = location + '/' + file
