@@ -17,8 +17,8 @@ console.log('Beginning minification');
 
 async.series([
   deleteOldAssets,
-  // minifyCSS,
-  // minifyJS,
+  minifyCSS,
+  minifyJS,
   minifyImages
 ], function(err, results) {
   if (err) {
@@ -154,7 +154,7 @@ function minifyImages(done) {
 
   var inDir = __dirname + '/../public/images';
   var outDir = __dirname + '/../public/build/images';
-  var projectBase = __dirname.split(path.sep).slice(0, -1).join(path.sep);
+  var projectBase = __dirname.split(path.sep).slice(0, -1).join(path.sep) + path.sep;
 
   // walking to maintain the directory structure
   // fs.walk(inDir).on('data', function(item) {
@@ -182,28 +182,20 @@ function minifyImages(done) {
       // insure the images dir exists
       mkDirSyncIfNotExists(newFullPath);
 
-      // console.log('projectBase:', projectBase);
-      // console.log('basedir:', basedir);
-      // console.log('filename:', filename);
-      // console.log('fullPath:', fullPath);
-      console.log('relativePath:', relativePath);
-      // console.log('');
-
-      // imagemin([relativePath + '/*.{jpg,png,gif}'], newRelativePath, {
-      //   plugins: [
-      //     imageminMozjpeg({
-      //       quality: 80
-      //     }),
-      //     imageminPngquant({
-      //       quality: '65-80'
-      //     }),
-      //     imageminGifsicle()
-      //   ]
-      // }).then(function(files) {
-
-      //   return next();
-      // });
-
+      imagemin([relativePath + '/*.{jpg,png,gif}'], newRelativePath, {
+        plugins: [
+          imageminMozjpeg({
+            quality: 80
+          }),
+          imageminPngquant({
+            quality: '65-80'
+          }),
+          imageminGifsicle()
+        ]
+      }).then(function(files) {
+        return next();
+      });
+    } else {
       return next();
     }
   }, function(err) {
