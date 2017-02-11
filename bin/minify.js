@@ -5,10 +5,19 @@ var compressor = require('node-minify')
   , async = require('async')
   , assetsVersion = require('../lib').assetsVersion;
 
+var imagemin = require('imagemin')
+  , imageminMozjpeg = require('imagemin-mozjpeg')
+  , imageminPngquant = require('imagemin-pngquant');
+
 console.log();
 console.log('Beginning minification');
 
-async.series([deleteOldAssets, minifyCSS, minifyJS], function(err, results) {
+async.series([
+  deleteOldAssets,
+  minifyCSS,
+  minifyJS,
+  minifyImages
+], function(err, results) {
   if (err) {
     console.log(err);
   }
@@ -38,10 +47,10 @@ function deleteOldAssets(done) {
  * @param  Function done   Async callback
  */
 function minifyCSS(done) {
-  new compressor.minify({
-    type: 'yui-css',
-    fileIn: 'public/styles/styles.css',
-    fileOut: 'public/cache/styles-' + assetsVersion + '.min.css',
+  compressor.minify({
+    compressor: 'yui-css',
+    input: 'public/styles/styles.css',
+    output: 'public/cache/styles-' + assetsVersion + '.min.css',
     callback: function(err) {
       console.log('Styles minified');
       return done(err);
@@ -49,10 +58,14 @@ function minifyCSS(done) {
   });
 }
 
+/**
+ * Minifies the JS
+ * @param  Function done   Async callback
+ */
 function minifyJS(done) {
-  new compressor.minify({
-    type: 'uglifyjs',
-    fileIn: [
+  compressor.minify({
+    compressor: 'uglifyjs',
+    input: [
       // Libraries
       'public/bower_components/jquery/dist/jquery.js',
       'public/bower_components/jquery.easing/js/jquery.easing.js',
@@ -84,10 +97,36 @@ function minifyJS(done) {
       // Custom Scripts
       'public/scripts/custom.js'
     ],
-    fileOut: 'public/cache/scripts-' + assetsVersion + '.min.js',
+    output: 'public/cache/scripts-' + assetsVersion + '.min.js',
     callback: function(err, min) {
       console.log('Javascript minified');
       return done(err);
     }
+  });
+}
+
+/**
+ * Minifies the Images
+ * @param  Function done   Async callback
+ */
+function minifyImages(done) {
+  imagemin(['public/images/**/*.{jpg,png}'], 'public/cache/images', {
+    plugins: [
+      imageminMozjpeg({
+        targa: true
+      }),
+      imageminPngquant({
+        quality: '65-80'
+      })
+    ]
+  }).then(function(files) {
+
+    console.log('');
+    console.log('');
+    console.log(files);
+    console.log('');
+    console.log('');
+
+    return done();
   });
 }
