@@ -3,6 +3,8 @@
 var compressor = require('node-minify')
   , fs = require('fs')
   , async = require('async')
+  , walk = require('fs-walk')
+  , path = require('path')
   , assetsVersion = require('../lib').assetsVersion;
 
 var imagemin = require('imagemin')
@@ -15,8 +17,8 @@ console.log('Beginning minification');
 
 async.series([
   deleteOldAssets,
-  minifyCSS,
-  minifyJS,
+  // minifyCSS,
+  // minifyJS,
   minifyImages
 ], function(err, results) {
   if (err) {
@@ -27,19 +29,57 @@ async.series([
   console.log('Minification complete! Deploy at will.');
 });
 
-function deleteOldAssets(done) {
-  var buildPath = __dirname + '/../public/build/';
-
-  fs.readdir(buildPath, function(err, files) {
-
-    files.forEach(function(file) {
-      if (/\.min\./.test(file)) {
-        fs.unlinkSync(buildPath + file);
-      }
+/**
+ * Recursivly removes files and folders
+ */
+function removeFolder(location, next) {
+  fs.readdir(location, function(err, files) {
+    async.each(files, function(file, cb) {
+      file = location + '/' + file
+      fs.stat(file, function(err, stat) {
+        if (err) {
+          return cb(err);
+        }
+        if (stat.isDirectory()) {
+          removeFolder(file, cb);
+        } else {
+          fs.unlink(file, function(err) {
+            if (err) {
+              return cb(err);
+            }
+            return cb();
+          });
+        }
+      });
+    }, function(err) {
+      if (err) return next(err)
+      fs.rmdir(location, function(err) {
+        return next(err)
+      });
     });
+  });
+}
 
-    console.log('Old assets deleted');
-    done();
+function mkDirSyncIfNotExists(location) {
+
+  try {
+    fs.accessSync(location, fs.constants.R_OK | fs.constants.W_OK);
+  } catch (e) {
+    fs.mkdirSync(location);
+  }
+
+  return true;
+}
+
+function deleteOldAssets(done) {
+  var buildPath = path.resolve(__dirname + '/../public/build');
+
+  removeFolder(buildPath, function(err) {
+    if(err) {
+      console.log(err);
+    }
+
+    fs.mkdir(buildPath, done);
   });
 }
 
@@ -111,17 +151,66 @@ function minifyJS(done) {
  * @param  Function done   Async callback
  */
 function minifyImages(done) {
-  imagemin(['public/images/**/*.{jpg,png,gif}'], 'public/build/images', {
-    plugins: [
-      imageminMozjpeg({
-        quality: 80
-      }),
-      imageminPngquant({
-        quality: '65-80'
-      }),
-      imageminGifsicle()
-    ]
-  }).then(function(files) {
+
+  var inDir = __dirname + '/../public/images';
+  var outDir = __dirname + '/../public/build/images';
+  var projectBase = __dirname.split(path.sep).slice(0, -1).join(path.sep);
+
+  // walking to maintain the directory structure
+  // fs.walk(inDir).on('data', function(item) {
+  //   if (isImage(item.path)) {
+  //     var inPath = path.resolve(item.path);
+  //     var outPath = path.resolve(item.path.replace(n, o));
+
+  //     console.log(inPath, outPath);
+
+  //     // shelljs.echo(`${chalk.green('Minifying')}\n${inPath} to...\n${outPath}\n`)
+  //     // shelljs.exec(`mkdir -p ${path.dirname(outPath)}`)
+  //     // shelljs.exec(`node_modules/.bin/imagemin ${inPath} > ${outPath}`)
+  //   }
+  // });
+
+  mkDirSyncIfNotExists(outDir);
+
+  walk.walk(inDir, function(basedir, filename, stat, next) {
+    if (stat.isDirectory()) {
+      var fullPath = path.resolve(basedir + '/' + filename);
+      var newFullPath = fullPath.replace('images', 'build/images');
+      var relativePath = fullPath.replace(projectBase, '');
+      var newRelativePath = relativePath.replace('images', 'build/images');
+
+      // insure the images dir exists
+      mkDirSyncIfNotExists(newFullPath);
+
+      // console.log('projectBase:', projectBase);
+      // console.log('basedir:', basedir);
+      // console.log('filename:', filename);
+      // console.log('fullPath:', fullPath);
+      console.log('relativePath:', relativePath);
+      // console.log('');
+
+      // imagemin([relativePath + '/*.{jpg,png,gif}'], newRelativePath, {
+      //   plugins: [
+      //     imageminMozjpeg({
+      //       quality: 80
+      //     }),
+      //     imageminPngquant({
+      //       quality: '65-80'
+      //     }),
+      //     imageminGifsicle()
+      //   ]
+      // }).then(function(files) {
+
+      //   return next();
+      // });
+
+      return next();
+    }
+  }, function(err) {
+    if (err) {
+      console.log(err)
+    }
+
     console.log('Images minified');
     return done();
   });

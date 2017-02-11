@@ -5,7 +5,7 @@ add_import_path "public/bower_components/foundation/scss"
 http_path = "/"
 css_dir = "public/styles"
 sass_dir = "sass"
-images_dir = "public/images"
+images_dir = "public/build/images"
 javascripts_dir = "public/scripts"
 
 # You can select your preferred output style here (can be overridden via the command line)

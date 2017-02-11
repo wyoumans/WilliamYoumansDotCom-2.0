@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "compass": "0.1.1",
+    "fs-walk": "0.0.1",
     "imagemin": "5.2.2",
     "imagemin-mozjpeg": "6.0.0",
     "imagemin-pngquant": "5.0.0",
