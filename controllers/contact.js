@@ -18,11 +18,19 @@ module.exports.init = function(app) {
 };
 
 function getContact(req, res) {
+  var wantsConsultation = req.query.consultation == '1';
+  var metaDescription = 'Contact the freelance developer for a free quote and website consultation.';
+  var preMessage = '';
+
+  if(wantsConsultation) {
+    preMessage = "Hi Will,\n\nPlease contact me ASAP for a free 1/2 hour consultation! \n\n(tell me more about your project here...)";
+  }
+
   render(res, 'contact', {
     pageTitle: 'Request a Quote',
     showFooterCTA: false,
-    metaDescription: 'Contact the freelance developer for a free quote and website consultation.',
-    preMessage: req.query.consultation ? "Hi Will,\n\nPlease contact me ASAP for a free 1/2 hour consultation! \n\n(tell me more about your project here...)" : ''
+    metaDescription: metaDescription,
+    preMessage: preMessage
   });
 }
 
