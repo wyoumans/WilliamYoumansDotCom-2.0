@@ -17,7 +17,11 @@ block content
               h2.orange-text
                 a(href='/' + locals.postsBase + '/' + post.slug)= post.title
 
-              p!= post.excerpt + '&#8230;'
+              p.text-justify!= post.excerpt + '&#8230;'
+
+              p.text-right
+                a(href='/' + locals.postsBase + '/' + post.slug) read more &nbsp;
+                  i.fi-arrow-right
 
               if post.tags && post.tags.length
                 ul.labels
