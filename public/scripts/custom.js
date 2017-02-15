@@ -4,7 +4,7 @@ $(document).foundation();
 
 $(function() {
 
-  var cookiePostfix  = '_2017_02_14'
+  var cookiePostfix  = '_2017_02_15'
     , cookieExpiry   = 14
     , animationSpeed = 1000
     , endPosition    = 0
@@ -49,7 +49,7 @@ $(function() {
       cb = cb || function() {};
 
       $("#typed-text").typed({
-        strings: ['small business.', 'startup.', 'online store.', 'design agency.', 'big idea!'],
+        strings: ['startup.', 'online store.', 'subscription service.', 'design agency.', 'big idea!'],
         typeSpeed: 50,
         startDelay: 50,
         backSpeed: 0,
