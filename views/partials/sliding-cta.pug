@@ -3,9 +3,9 @@
     .large-8.medium-7.columns
 
       p.thin
-        a.yep(href='/contact?consultation=1') Have a few questions? Sign up now for a free 1/2 hour phone consultation!
+        a.yep.link-tracker(href='/contact?consultation=1', data-category='Contact Page CTA', data-label='Sliding Text Yes on ' + locals.currentPath) Have a few questions? Sign up now for a free 1/2 hour phone consultation!
 
     .large-4.medium-5.columns
       ul.actions
-        li: a.yep.button(href='/contact?consultation=1') Yes, please!
-        li: a.nope(href='#'): i.fi-x
+        li: a.yep.button.link-tracker(href='/contact?consultation=1', data-category='Contact Page CTA', data-label='Sliding Button Yes on ' + locals.currentPath) Yes, please!
+        li: a.nope.link-tracker(href='#', data-category='Contact Page CTA', data-label='Sliding X No on ' + locals.currentPath): i.fi-x

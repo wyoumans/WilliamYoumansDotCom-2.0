@@ -183,6 +183,26 @@ $(function() {
 
   // phone jiggle
   animation.phoneJiggle();
+
+  $(document).on('click', 'a.link-tracker', function(e) {
+
+    var eventObject = {
+      hitType: 'event',
+      eventCategory: $(this).data('category'),
+      eventAction: 'click',
+      eventLabel: $(this).data('label')
+    };
+
+    if (typeof ga == 'function') {
+      e.preventDefault();
+
+      var href = this.href;
+
+      ga('send', eventObject);
+
+      window.location = href;
+    }
+  });
 });
 
 var scrollToDiv = function(selector, withAnimation, cb) {

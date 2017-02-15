@@ -15,6 +15,8 @@ module.exports = function() {
     res.locals.showHotjar = config.showHotjar;
     res.locals.assetsVersion = assetsVersion;
     res.locals.supportsCaching = config.supportsCaching;
+    res.locals.twitterId = config.twitter.id;
+    res.locals.currentPath = req.path;
     res.locals.bodyClass = '';
     res.locals.metaDescription = 'Discover how a professional freelance web developer in NEPA, Wilkes-Barre, Scranton, Hazelton, Philadelphia Pennsylvania can improve your website to boost your profits.';
     res.locals.browserTitle = 'Freelance Laravel, Wordress, and Node.js Developer | Wilkes-Barre, Pennsylvania | William Youmans';
@@ -22,7 +24,6 @@ module.exports = function() {
     res.locals.showFooterMedia = false;
     res.locals.showFooterCTA = true;
     res.locals.headerJS = false;
-    res.locals.twitterId = config.twitter.id;
 
     var hour = new Date().getHours();
 
