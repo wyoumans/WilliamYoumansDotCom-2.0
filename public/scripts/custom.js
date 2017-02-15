@@ -4,7 +4,8 @@ $(document).foundation();
 
 $(function() {
 
-  var cookiePostfix  = '_2016_10_25'
+  var cookiePostfix  = '_2017_02_14'
+    , cookieExpiry   = 14
     , animationSpeed = 1000
     , endPosition    = 0
     , easing         = 'easeOutBack'
@@ -133,7 +134,8 @@ $(function() {
     }
 
     $.cookie('hide_animation' + cookiePostfix, 1, {
-      expires: 7
+      expires: cookieExpiry,
+      path: '/'
     });
   }
 
@@ -161,7 +163,8 @@ $(function() {
   $(document).on('click', '#sliding-cta .nope', function(e) {
 
     $.cookie('hide_cta' + cookiePostfix, 1, {
-      expires: 7
+      expires: cookieExpiry,
+      path: '/'
     });
 
     e.preventDefault();
@@ -171,7 +174,8 @@ $(function() {
   $(document).on('click', '#sliding-cta .yep', function(e) {
 
     $.cookie('hide_cta' + cookiePostfix, 1, {
-      expires: 7
+      expires: cookieExpiry,
+      path: '/'
     });
 
     $('#sliding-cta').fadeOut();
