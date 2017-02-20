@@ -118,4 +118,16 @@
 }, {
   "before": "/services/charlotte-north-carolina-web-development-services",
   "after": "/services/pennsylvania-web-development-services"
+}, {
+  "before": ".git",
+  "after": "/"
+}, {
+  "before": "/administrator",
+  "after": "/"
+}, {
+  "before": "/admin",
+  "after": "/"
+}, {
+  "before": "/wp-admin",
+  "after": "/"
 }]
