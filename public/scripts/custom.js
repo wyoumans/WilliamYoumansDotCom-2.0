@@ -4,7 +4,7 @@ $(document).foundation();
 
 $(function() {
 
-  var cookiePostfix  = '_2017_02_15'
+  var cookiePostfix  = '_20170220'
     , cookieExpiry   = 14
     , animationSpeed = 1000
     , endPosition    = 0
