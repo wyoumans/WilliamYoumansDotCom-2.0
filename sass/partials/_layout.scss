@@ -149,6 +149,7 @@ body {
   .extra-footer {
     background-color: $dark-blue;
     color: $footer-font-color;
+    padding-bottom: 70px;
 
     p {
       line-height: rem-calc(25);
