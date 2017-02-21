@@ -13,4 +13,12 @@
   "demoURL": "http://demos.williamyoumans.com/canada-interactive-map.php",
   "tags": ["Programming", "Javascript", "Raphaël.js"],
   "publishedAt": "2012/01/24 09:15"
+}, {
+  "slug": "understanding-the-one-to-one-relationships-in-laravel-eloquent",
+  "title": "Understanding the One to One Relationships in Laravel Eloquent",
+  "metaDescription": "One to One database relationships with the Laravel Eloquent ORM by William Youmans, a freelance Laravel developer",
+  "excerpt": "The foundation of any relational database management systems (RDBMS) is based upon the relationship between multiple tables in the database. The relationships between the tables are defined via Foreign Keys. There are three main types",
+  "copy": ["coming soon"],
+  "tags": ["Programming", "PHP", "Laravel"],
+  "publishedAt": "2017/02/24 09:15"
 }]
