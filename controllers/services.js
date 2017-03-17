@@ -33,7 +33,7 @@ function getService(req, res) {
 
   Service.findOne({
     slug: req.params.slug
-  }, 'title image copy cases', function(err, service) {
+  }, 'title image copy cases resourceSlug', function(err, service) {
     if (service) {
       render(res, 'service', {
         pageTitle: service.title,
