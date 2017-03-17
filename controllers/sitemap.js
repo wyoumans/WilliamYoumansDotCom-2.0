@@ -78,10 +78,10 @@ function getSitemap(req, res) {
         });
       }
 
-      res.setHeader('Content-Type', 'application/xhtml+xml');
+      res.setHeader('Content-Type', 'application/xml');
 
       render(res, 'sitemap', {
-        baseURL: req.protocol + '://' + req.get('host'),
+        baseURL: 'https://' + req.get('host'),
         pages: pages
       });
     });
