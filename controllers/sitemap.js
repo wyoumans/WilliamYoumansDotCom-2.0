@@ -51,9 +51,13 @@ function getSitemap(req, res) {
   });
 
   // blog posts
-  models.Post.find({}, 'slug', {
+  models.Post.find({
+    publishedAt: {
+      "$lt": new Date()
+    }
+  }, 'slug', {
     sort: {
-      publishedAt: -1
+      publishedAt: 1
     }
   }, function(err, posts) {
 
