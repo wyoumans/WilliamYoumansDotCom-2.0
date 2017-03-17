@@ -66,7 +66,7 @@ function getSitemap(req, res) {
       });
     }
 
-    res.setHeader('Content-Type', 'application/xhtml+xml');
+    res.setHeader('Content-Type', 'application/xml');
 
     render(res, 'sitemap', {
       baseURL: (req.secure ? 'https' : 'http' ) + '://' + req.get('host'),
