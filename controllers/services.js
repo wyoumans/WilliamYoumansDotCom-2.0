@@ -38,7 +38,8 @@ function getService(req, res) {
       render(res, 'service', {
         pageTitle: service.title,
         metaDescription: 'Learn about ' + service.title + ', a service provided by freelance web developer, William Youmans',
-        service: service
+        service: service,
+        relatedResource: '/' + config.resourcesBase + '/' + resource.resourceSlug
       });
     } else {
       return throw404(req, res);

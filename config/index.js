@@ -38,6 +38,7 @@ var defaults = {
     "apikey": process.env.SENDGRID_API_KEY
   },
   "servicesBase": "services",
+  "resourcesBase": "resources",
   "postsBase": "blog/detail"
 };
 

@@ -130,4 +130,7 @@
 }, {
   "before": "/wp-admin",
   "after": "/"
+}, {
+  "before": "/resources",
+  "after": "/services"
 }]
