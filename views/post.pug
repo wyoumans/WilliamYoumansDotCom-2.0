@@ -17,7 +17,7 @@ block content
       if locals.post.copy && locals.post.copy.length
         #main_post_content
           each paragraph in locals.post.copy
-            p.clearfix!= paragraph
+            .clearfix!= paragraph
 
       if locals.post.gistURL
         script(src=locals.post.gistURL)

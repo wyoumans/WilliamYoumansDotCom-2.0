@@ -50,20 +50,25 @@ function getSitemap(req, res) {
     });
   });
 
+
   // resources
   models.Resource.find({}, 'slug', {}, function(err, resources) {
 
-    if (!err && resources) {
-      resources.forEach(function(resource) {
-        pages.push({
-          url: '/' + config.resourcesBase + '/' + resource.slug,
-          priority: '0.6'
+      if (!err && resources) {
+        resources.forEach(function(resource) {
+          pages.push({
+            url: '/' + config.resourcesBase + '/' + resource.slug,
+            priority: '0.6'
+          });
         });
-      });
-    }
+      }
 
     // blog posts
-    models.Post.find({}, 'slug', {
+    models.Post.find({
+    publishedAt: {
+      "$lt": new Date()
+    }
+  }, 'slug', {
       sort: {
         publishedAt: -1
       }

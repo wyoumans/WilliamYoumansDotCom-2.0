@@ -13,7 +13,11 @@ module.exports.init = function(app) {
 
 function getBlog(req, res) {
 
-  Post.find({}, 'title excerpt tags slug publishedAt', {
+  Post.find({
+    publishedAt: {
+      "$lt": new Date()
+    }
+  }, 'title excerpt tags slug publishedAt', {
     sort: {
       publishedAt: -1
     },
@@ -31,7 +35,10 @@ function getBlog(req, res) {
 function getPost(req, res) {
 
   Post.findOne({
-    slug: req.params.slug
+    slug: req.params.slug,
+    publishedAt: {
+      "$lt": new Date()
+    }
   }, 'slug title copy gistURL demoURL tags metaDescription publishedAt', function(err, post) {
     if (post) {
       render(res, 'post', {
