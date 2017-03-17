@@ -54,6 +54,10 @@ var ServiceSchema = new Schema({
     type: Boolean,
     default: true,
     required: false
+  },
+  resourceSlug: {
+    type: String,
+    required: false
   }
 });
 

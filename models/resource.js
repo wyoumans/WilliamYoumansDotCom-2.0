@@ -26,10 +26,9 @@ var ResourceSchema = new Schema({
     default: [],
     required: false
   },
-  service: {
-    type: Number,
-    default: 1,
-    required: false
+  serviceSlug: {
+    type: String,
+    required: true
   }
 });
 

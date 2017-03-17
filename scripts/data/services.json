@@ -14,7 +14,8 @@
     "<a class='image th right-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/mcard-api.jpg' alt='Mobile Card Plus' title='Mobile Card Plus'></a> <strong>Mobile Card Plus</strong>: I provided consulting and development services for the Mobile Card Plus project. The project consisted of a subscription membership system powered by Stripe, a web interface powered by Node.js and AngularJS, and a mobile app for iOS and Android devices powered by the Ionic Framework.",
     "<a class='image th left-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/logodesign.jpg' alt='Logo Design' title='Logo Design'></a> <strong>Logo Design</strong>: I was contracted to develop a platform for logo designers to showcase their work. The platform features a tiered membership system with recurring monthly billing using the fast and secure Stripe API. I hand-coded the entire back-end using the Yii PHP framework and front-end using Compass/Sass, Browserify, and Mustache templates. The project includes custom integration with Wordpress allowing subscribed members to contribute to the Logo Design blog.",
     "<a class='image th right-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: I was contracted to develop a platform for collecting unbiased hotel reviews. Hotels can subscribe to the system to gain access to a wealth of meaningful analytics about their hotel and other comparable hotels in the same market. I developed the back-end using the Sails real-time Node.js framework and the front-end using Bootstrap, Less, Grunt, AngularJS, and Chart.js."
-  ]
+  ],
+  "resourceSlug": "membership-system-platform-selection-best-practices"
 }, {
   "sort": 2,
   "column": "right",
@@ -30,7 +31,8 @@
   ],
   "cases" : [
     "<a class='image th right-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/onereview.jpg' alt='One Review' title='One Review'></a> <strong>One Review</strong>: a platform for collecting and analyzing hotel reviews. It is built using Bootstrap, Node.js, Sails.js, MongoDB, and AngularJS to provide a fast, responsive user experience."
-  ]
+  ],
+  "resourceSlug": "node-js-project-evaluator-best-practices"
 }, {
   "sort": 3,
   "column": "left",
@@ -42,7 +44,8 @@
   "copy": [
     "A website is responsive if the same interface is built to optimize the user experience for all devices. This means your website looks great and is easy to use for desktop computer users, tablet users, and mobile phone users. Responsive web design is built by leveraging CSS3 media queries and defining breakpoints so the content changes as the user's device width gets smaller.",
     "What does this mean for you? It means I can develop your website once for all users instead of once for desktop users and another separate website for your mobile visitors. Now that's real savings."
-  ]
+  ],
+  "resourceSlug": "avoiding-mobile-website-mistakes-best-practices"
 }, {
   "sort": 4,
   "column": "right",
@@ -55,7 +58,8 @@
     "Laravel is &ldquo;The PHP Framework For Web Artisans.&rdquo; It is the perfect platform for rapidly building secure small or large web applications that are maintainable long-term.",
     "Laravel was initially released as an open-source project in June 2011, and has steadily gained popularity ever since. Today, Laravel is unanimously the most popular PHP framework in the world.",
     "I have experience taking over maintenance for existing Laravel applications and starting from scratch by building a solution that is perfectly tailored for your online business."
-  ]
+  ],
+  "resourceSlug": "laravel-project-troubleshooting-best-practices"
 }, {
   "sort": 5,
   "column": "left",
@@ -109,7 +113,8 @@
   ],
   "cases": [
     "<a class='image th left-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/mcard-api.jpg' alt='Mobile Card Plus' title='Mobile Card Plus'></a> <strong>Mobile Card Plus</strong>: I developed a fully custom, Node.js based, content management system for the Mobile Card Plus project allowing the administrator to manage all aspects of the marketing website quickly and easily without having to call a developer."
-  ]
+  ],
+  "resourceSlug": "custom-content-management-system-avoiding-pitfalls-traps-and-flops"
 }, {
   "sort": 9,
   "column": "left",
@@ -136,7 +141,8 @@
   "cases": [
     "<a class='image th right-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/logomaker.jpg' alt='Logo Maker' title='Logo Maker'></a> <strong>Logo Maker</strong>: I was contracted by a technology entrepreneur to build the newest version of his marketing website and blog with a focus on usability and search engine optimization. The result is a fully custom Wordpress theme, built utilizing the power of Zurb Foundation, Yoast SEO plugin, and Advanced Custom Fields.",
     "<a class='image th left-not-important' href='/projects'><img src='/build/images/content/projects/screenshots/thumbs/roamingfree.jpg' alt='Roaming Free' title='Roaming Free'></a> <strong>Roaming Free</strong>: I was contracted to develop the travel blog for a full-time traveling entrepreneur. The project is a fully custom, responsive Wordpress theme providing the ability to easily share travel stories and track his travels all over the world."
-  ]
+  ],
+  "resourceSlug": "custom-wordpress-theme-troubleshooting-flowchart"
 }, {
   "sort": 11,
   "column": "left",

@@ -1,0 +1,115 @@
+[{
+  "slug": "custom-content-management-system-avoiding-pitfalls-traps-and-flops",
+  "title": "Custom Content Management System: Avoiding Pitfalls, Traps, and Flops",
+  "description": "When off the shelf CMS isn't keeping up with production, it's time for a custom content management system. This short guide helps you avoid the biggest traps.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "content-management-systems"
+}, {
+  "slug": "custom-wordpress-theme-troubleshooting-flowchart",
+  "title": "Custom Wordpress Theme Troubleshooting: Flowchart",
+  "description": "This custom Wordpress theme troubleshooting flowchart helps drill down on interface, server, and code issues that may be plaguing your site.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "custom-wordpress-themes"
+}, {
+  "slug": "laravel-project-troubleshooting-best-practices",
+  "title": "Laravel Project Troubleshooting: Best Practices",
+  "description": "Implement these tips for troubleshooting Laravel projects. Get back on track, ready for production, and stay on schedule. Keep from getting bogged down.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "php-laravel-development"
+}, {
+  "slug": "avoiding-mobile-website-mistakes-best-practices",
+  "title": "Avoiding Mobile Website Mistakes: Best Practices",
+  "description": "Mobile website mistakes cause delay and user frustration. Avoid these developmental pitfalls. Ensure the success of your next mobile project.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "responsive-website-development"
+}, {
+  "slug": "membership-system-platform-selection-best-practices",
+  "title": "Membership System Platform Selection: Best Practices",
+  "description": "Evaluation tool guides you through your membership platform selection. Make sure you're getting the long-term performance and flexibility you need.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "subscription-membership-systems"
+}, {
+  "slug": "node-js-project-evaluator-best-practices",
+  "title": "Node.js Project Evaluator: Best Practices",
+  "description": "Determine if Node.js is right for your next project. The Node.js Project Evaluator asks the tough questions about performance, security, and timeframes.",
+  "copy": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci, ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam. Fusce a ipsum ut ligula elementum consectetur. Nam neque eros, sagittis.",
+    "Sed dictum at, volutpat elementum nulla. Donec sem nulla, lacinia vulputate fermentum non, vestibulum non erat. Nullam pretium viverra leo commodo malesuada. Nulla bibendum vitae augue non sodales. Mauris venenatis sapien vitae nunc euismod, vitae condimentum elit rhoncus.",
+  ],
+  "bullets": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "In quis nisl nec elit facilisis mattis. Vivamus porta malesuada orci.",
+    "ac maximus mauris gravida at. Duis mollis libero vel dolor sollicitudin.",
+    "bibendum. Sed luctus posuere tristique. Fusce sit amet luctus quam.",
+    "Fusce a ipsum ut ligula elementum consectetur. Nam neque eros.",
+    "sagittis sed dictum at, volutpat elementum nulla. Donec sem nulla"
+  ],
+  "serviceSlug": "node-js-custom-web-application-development"
+}]
