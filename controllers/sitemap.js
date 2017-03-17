@@ -50,27 +50,40 @@ function getSitemap(req, res) {
     });
   });
 
-  // blog posts
-  models.Post.find({}, 'slug', {
-    sort: {
-      publishedAt: -1
-    }
-  }, function(err, posts) {
+  // resources
+  models.Resource.find({}, 'slug', {}, function(err, resources) {
 
-    if (!err && posts) {
-      posts.forEach(function(post) {
+    if (!err && resources) {
+      resources.forEach(function(resource) {
         pages.push({
-          url: '/' + config.postsBase + '/' + post.slug,
-          priority: '0.5'
+          url: '/' + config.resourcesBase + '/' + resource.slug,
+          priority: '0.6'
         });
       });
     }
 
-    res.setHeader('Content-Type', 'application/xhtml+xml');
+    // blog posts
+    models.Post.find({}, 'slug', {
+      sort: {
+        publishedAt: -1
+      }
+    }, function(err, posts) {
 
-    render(res, 'sitemap', {
-      baseURL: req.protocol + '://' + req.get('host'),
-      pages: pages
+      if (!err && posts) {
+        posts.forEach(function(post) {
+          pages.push({
+            url: '/' + config.postsBase + '/' + post.slug,
+            priority: '0.5'
+          });
+        });
+      }
+
+      res.setHeader('Content-Type', 'application/xhtml+xml');
+
+      render(res, 'sitemap', {
+        baseURL: req.protocol + '://' + req.get('host'),
+        pages: pages
+      });
     });
   });
 }
