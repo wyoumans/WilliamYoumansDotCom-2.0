@@ -6,7 +6,7 @@ upstream williamyoumans {
 server {
   listen 80;
   server_name williamyoumans.com www.williamyoumans.com;
-  return 301 https://$server_name$request_uri;
+  return 301 https://www.williamyoumans.com$request_uri;
 }
 
 server {
