@@ -35,7 +35,7 @@ var getHistory = require('lastfm-history')
         album: trackData.album['#text'],
         imageSrc: _.last(trackData.image)['#text'], // largest image we can get
         scrobbleDate: scrobbleDate
-      }
+      };
 
       new Track(track).save(function(err) {
         done(null);
@@ -57,7 +57,7 @@ var getHistory = require('lastfm-history')
   });
 
   worker.on('error', function(err) {
-    console.log('Error communicating with lastFM');
+    logger.error('Error communicating with lastFM');
     logger.error(err.toString());
     process.exit();
   });

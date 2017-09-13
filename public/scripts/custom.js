@@ -27,7 +27,7 @@ $(function() {
         }).animate({
           right: endPosition
         }, animationSpeed, easing, cb);
-      }
+      };
     },
 
     inRight: function(cb) {
@@ -42,7 +42,7 @@ $(function() {
         }).animate({
           left: endPosition
         }, animationSpeed, easing, cb);
-      }
+      };
     },
 
     typing: function(cb) {
@@ -66,7 +66,7 @@ $(function() {
           rotation: [0, 0, Math.PI / 2],
           easing: 'spring',
           springConstant: 1.9,
-          springDeacceleration: .9
+          springDeacceleration: 0.9
         });
       }, 4000);
     },

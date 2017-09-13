@@ -27,7 +27,7 @@ var ig     = require('instagram-node').instagram()
           href: media.link,
           src: media.images.low_resolution.url,
           postDate: new Date(0).setUTCSeconds(media.created_time)
-        }
+        };
 
         new Image(image).save(function(err) {
 
